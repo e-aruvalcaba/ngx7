@@ -2,10 +2,13 @@
 import { IBucket, IBucketDetail, IUpdateBucket, IUpdateBucketDetail, IClone } from '../models/v3/oe/interfaces';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs'; //New import for observable objects
+// import { map } from 'rxjs/operators';
 import { of } from 'rxjs';
-import {  catchError as _catch } from 'rxjs/operators' ;
+// import {  catchError as _catch } from 'rxjs/operators' ;
+import 'rxjs/add/operator/catch'; //New import for catch
+import 'rxjs/add/operator/map'; //New import for map
+
 // import { _catch } from 'rxjs/operator/catch';
 import { Router, UrlHandlingStrategy } from '@angular/router';
 import { Subject } from 'rxjs';
