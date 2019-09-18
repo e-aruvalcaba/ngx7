@@ -1,0 +1,255 @@
+@import '../plant-capacity/plant-capacity.component.scss';
+
+.matrix-titlebar {
+  min-height: 3em;
+  font-weight: bold;
+}
+
+.matrix-titlebar__row-title {
+  text-align: left;
+}
+
+.matrix-titlebar__columns {
+}
+
+.matrix-titlebar__column-title {
+  text-align: right;
+}
+
+.matrix-titlebar__values {
+}
+
+.matrix-titlebar__value-title {
+  text-align: right;
+}
+
+.matrix-row {
+  min-height: 50px;
+  background-color: #e8ebef;
+}
+
+.matrix-row--alternate {
+  background-color: white;
+}
+
+.matrix-row__text {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+.matrix-row__columns {
+}
+
+.matrix-row__value {
+  text-align: right;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.matrix-row__value--danger {
+  color: red;
+  text-decoration: underline;
+}
+
+.matrix-row__value--warning {
+  color: #d4aa00;
+}
+
+.matrix-row__value--ok {
+  color: #008000;
+}
+
+.charts {
+  padding-top: 20px;
+}
+
+.back-button {
+  cursor: pointer;
+  color: #3FA9F5;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media only screen
+and (max-device-width: 426px) {
+  .matrix-titlebar__column-title {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+  }
+  .charts {
+    margin-top: 10px;
+    font-size: 80%;
+  }
+  .matrix-titlebar {
+    min-height: 11.5em;
+    font-weight: bold;
+  }
+  .matrix-row__value {
+    padding: 5px;
+  }
+  .matrix-row__text {
+    padding: 5px;
+  }
+}
+
+.charts__donut-nav {
+  padding-bottom: 10px;
+}
+
+.charts__donut-nav-cell {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.charts__donut-nav-cell-title {
+  font-size: 18pt;
+  font-weight: bold;
+
+  /*iPhone X */
+  @media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-device-pixel-ratio: 3) {
+    font-size: 10pt;
+  }
+
+  /*iPhone 6/7/8 */
+  @media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px) {
+    font-size: 10pt;
+  }
+
+  /*iPhone Plus */
+  @media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px) {
+    font-size: 10pt;
+  }
+
+  /*iPhone 5/SE */
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px) {
+    font-size: 10pt;
+  }
+
+    /*iPhone 2/4 */
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px) {
+    font-size: 10pt;
+  }
+
+  /* Generic Android */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 374px) {
+    font-size: 10pt;
+  }
+
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 374px)
+  and (orientation : landscape) {
+    font-size: 10pt;
+  }
+
+  @media only screen
+  and (min-device-width : 425px)
+  and (orientation: portrait) {
+    font-size: 10pt;
+  }
+}
+
+.donut-grid-totals {
+  padding-top: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3fa9f5;
+  width: 90%;
+  margin-left: 5%;
+  float: left;
+}
+
+.donut-grid-totals div {
+  float: left;
+}
+
+.donut-grid-totals__row {
+  width: 100%;
+  padding: 1px;
+}
+
+.donut-grid-totals__cell-title {
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.donut-grid-totals__cell {
+  width: 25%;
+  text-align: center;
+}
+
+.donut-grid-totals__cell--highlight {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.stacked-vertical-bar-chart {
+  width: 100%;
+  text-align: left;
+}
+
+dash-panel {
+  margin: 10px;
+}
+
+.dash-panel__upper-charts.dash-panel {
+  min-height: 500px;
+}
+
+.not-found {
+  padding: 25px;
+  background: #E7EAEE;
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 60px;
+    /* 5/5S/5SE/5C  Portrait and landscape */
+    @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+        margin-top: 15px;
+    }
+
+
+    /* iPhone 6/7/8 Portrait */
+    @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+        margin-top: 15px;
+    }
+
+    /* iPad 1, 2, Mini, Air Portrait */
+    @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1) {
+        margin-top: 15px;
+    }
+}
+
+.cmx-rccc-search-label {
+    margin-bottom: -18px;
+    font-size: 12px;
+}
+

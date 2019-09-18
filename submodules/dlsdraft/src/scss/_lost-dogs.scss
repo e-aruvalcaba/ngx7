@@ -1,0 +1,63 @@
+
+// this one might not be part of the spec.
+ul.nav li a {
+	color: 			$background-grey;
+    padding: 		16px 32px;
+    display: 		inline-block;
+    width: 			100%;
+    font-size: 		14px;
+    font-weight: 	normal;
+    transition: 	all 0.3s;
+    text-decoration: none;
+    
+    &:hover {
+    	color: 			$true-white;
+    	background: 	$deep-blue;
+    }
+    
+    &.active {
+    	color: 			$true-white;
+    	background: 	$bright-blue;
+    }
+}
+
+.page-wrapper{
+    a.card-container {
+		display: 			block;
+		text-decoration: 	none;
+		transition: 		all 0.2s;
+		color: 				$bright-blue;
+
+		.box {
+			background: 	$true-white;
+			border-radius: 	$radius-4;
+			min-height: 	146px;
+			margin-bottom: 	16px;
+			padding: 		8px;
+			border: 		1px solid $true-white;
+	    	box-shadow: 	0 1px 3px $disabled-grey;
+	    	display: 		flex;
+	    	align-items: 	center;
+	    	justify-content: space-around;
+
+			img {
+				width: 	30%;
+				padding: 	16px;
+			}
+
+			h2 {
+				width: 			50%;
+				font-size: 		$font-size-18;
+				font-weight: 	$font-bold;
+				font-family: 	$font-family;
+				color: 			$bright-blue;
+				line-height:    $line-height-24;
+				text-decoration: none;
+			}
+		}
+
+		&:hover {
+			box-shadow: 0 2px 6px $disabled-grey;
+		}
+	}
+}

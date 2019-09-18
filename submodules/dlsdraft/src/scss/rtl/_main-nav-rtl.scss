@@ -1,0 +1,140 @@
+// _main-nav-rtl.scss
+
+html[dir="rtl"] .cmx-logo {
+	
+	&__link {
+		margin-right: 1.75rem;
+		float: right;
+	}
+}
+
+html[dir="rtl"] .cmx-main-nav {
+
+	&__icon{
+		float: right;
+
+		&-label{
+			float: right;
+		}
+
+	}
+
+	&__items {
+		float: left;
+	}
+
+	&__item-separator {
+		float: right;
+	}
+
+	&__item {
+		float: right;
+	}
+
+	.cmx-sub-nav-loader {
+		
+		float: left;
+
+		@keyframes slideInFromRight {
+			0% {
+				transform: scaleX(0);
+				transform-origin: right;
+			}
+			100% {
+				transform: scaleX(1);
+				transform-origin: right;
+			}
+		}
+		animation: 1.5s ease-out 0.5s 1 slideInFromRight;
+	}
+}
+
+// CREATE styles for .cmx-notification-demo-wrapper -- targeting in-page demo purpose / positioning
+html[dir="rtl"] .cmx-notification-demo-wrapper {
+
+	position: relative;
+
+	button.demo-button {
+		left: 0;
+		right: auto;
+	}
+
+	.cmx-notifications__container {
+		position: absolute;
+		right: 0;
+		left: auto;
+	}
+}
+// END styles for .notification-demo-wrapper -- targeting in-page demo purpose / positioning
+
+html[dir="rtl"] .cmx-notifications {
+
+	&__container {
+		left: 0px;
+		right: auto;
+	}
+
+	&__main-call-to-action {
+		text-align: left;
+	}
+
+	&__entry {
+
+		&-icon {
+			margin-left: 1rem;
+			margin-right: 0;
+		}
+
+		&-cta {
+			text-align: left;
+			padding: 0.75rem 0 0 0;
+			display:block;
+		}
+
+		&:last-child{
+			&::after{
+				border-bottom:none;
+			}
+		} 
+	}
+}
+
+html[dir="rtl"] .cmx-user-menu {
+
+	&__user{
+		&-details {
+			padding-right: 1rem;
+			padding-left: 0rem; // had to be resetted;
+		}
+	}
+
+	&__container {
+		left: 0;
+		right: auto;
+	}
+}
+
+
+// only one rule needs changing for console menu
+html[dir="rtl"] .cmx-console-menu{
+
+	&__popout{
+		left:0; // modified
+		right: auto; // added
+		padding:1.5rem;
+	}
+}
+
+
+
+@media (max-width : 576px) {
+	html[dir="rtl"] .cmx {
+		
+		&-language {
+
+            &__footer{
+                text-align: left; // modified
+            }
+        }
+	}
+}

@@ -1,0 +1,513 @@
+@import "../variables/dls-icon-font";
+
+@font-face {
+  font-family: 'dls-icons';
+  src:  url('#{$icomoon-font-path}/dls-icons.eot?n7brvl');
+  src:  url('#{$icomoon-font-path}/dls-icons.eot?n7brvl#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/dls-icons.ttf?n7brvl') format('truetype'),
+    url('#{$icomoon-font-path}/dls-icons.woff?n7brvl') format('woff'),
+    url('#{$icomoon-font-path}/dls-icons.svg?n7brvl#dls-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dls-icons-rtl';
+  src:  url('#{$icomoon-font-path}/dls-icons-rtl.eot?n7brvl');
+  src:  url('#{$icomoon-font-path}/dls-icons-rtl.eot?n7brvl#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/dls-icons-rtl.ttf?n7brvl') format('truetype'),
+    url('#{$icomoon-font-path}/dls-icons-rtl.woff?n7brvl') format('woff'),
+    url('#{$icomoon-font-path}/dls-icons-rtl.svg?n7brvl#dls-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="cmx-icon-"], [class*=" cmx-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  &:before{
+    font-family: 'dls-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+[dir="rtl"] {
+	[class^="cmx-icon-"], [class*=" cmx-icon-"] {
+    &:before{
+      font-family: 'dls-icons-rtl' !important;
+    }
+  }
+}
+
+// legacy values for icon names (we'll erase this progressively)
+$list: cmx-icon-control-center, cmx-icon-user-profile, cmx-icon-scheduler, cmx-icon-track, cmx-icon-driver, cmx-icon-pricing, cmx-icon-payment, cmx-icon-ordering, cmx-icon-accepted-ok, cmx-icon-error, cmx-icon-warning-repeat, cmx-icon-warning, cmx-icon-calendar, cmx-icon-clock, cmx-icon-checkbox-active, cmx-icon-checkbox-static, cmx-icon-radio-active, cmx-icon-radio-static, cmx-icon-close, cmx-icon-plus, cmx-icon-minus, cmx-icon-collapse, cmx-icon-expand, cmx-icon-expand-move, cmx-icon-contract-move, cmx-icon-map-pin, cmx-icon-up-double, cmx-icon-down-double, cmx-icon-left-double, cmx-icon-right-double, cmx-icon-up-single, cmx-icon-down-single, cmx-icon-left-single, cmx-icon-right-single, cmx-icon-straight-arrow-up, cmx-icon-straight-arrow-down, cmx-icon-straight-arrow-left, cmx-icon-straight-arrow-right, cmx-icon-download-export, cmx-icon-magnifier-glass, cmx-icon-settings, cmx-icon-up-rounded-full, cmx-icon-up-rounded, cmx-icon-down-rounded-full, cmx-icon-down-rounded, cmx-icon-left-rounded-full, cmx-icon-left-rounded, cmx-icon-right-rounded-full, cmx-icon-right-rounded, cmx-icon-round-minus-full, cmx-icon-round-minus, cmx-icon-round-plus-full, cmx-icon-round-plus, cmx-icon-repeat, cmx-icon-trash, cmx-icon-favourite, cmx-icon-favourite-active, cmx-icon-logo-face, cmx-icon-check, cmx-icon-expand-control, cmx-icon-questionmark, cmx-icon-brakets, cmx-icon-picture, cmx-icon-language, cmx-icon-document, cmx-icon-logout, cmx-icon-quick-view, cmx-icon-burger-menu, cmx-icon-bulk-cement, cmx-icon-multi-products, cmx-icon-aggregates, cmx-icon-bag-cement, cmx-icon-ready-mix, cmx-icon-blocked, cmx-icon-attachment, cmx-icon-multiple-items, cmx-icon-edit, cmx-icon-clock-fill, cmx-icon-protected, cmx-icon-document-broken, cmx-icon-picture-fill, cmx-icon-picture-broken, cmx-icon-filter, cmx-icon-history, cmx-icon-question-rounded, cmx-icon-pin-error, cmx-icon-pin-poi, cmx-icon-pin-load, cmx-icon-pin-load-3rdparty, cmx-icon-pin-unload, cmx-icon-phone, cmx-icon-share, cmx-icon-upload, cmx-icon-save, cmx-icon-pickup, cmx-icon-print, cmx-icon-e-mail, cmx-icon-arrow-collapse;
+$values: "\e900", "\e901", "\e902", "\e903", "\e904", "\e905", "\e906", "\e907", "\e908", "\e909", "\e90a", "\e90b", "\e90e", "\e90f", "\e910", "\e911", "\e912", "\e913", "\e914", "\e915", "\e916", "\e917", "\e918", "\e919", "\e91a", "\e91b", "\e91c", "\e91d", "\e91e", "\e91f", "\e920", "\e921", "\e922", "\e923", "\e924", "\e925", "\e926", "\e927", "\e928", "\e929", "\e92a", "\e92b", "\e92c", "\e92d", "\e92e", "\e92f", "\e930", "\e931", "\e932", "\e933", "\e934", "\e935", "\e936", "\e937", "\e938", "\e939", "\e93a", "\e93b", "\e93c", "\e90c", "\e90d", "\e93d", "\e93e", "\e93f", "\e940", "\e941", "\e942", "\e943", "\e944", "\e945", "\e946", "\e947", "\e948", "\e949", "\e94a", "\e94b", "\e94c", "\e94d", "\e94e", "\e94f", "\e950", "\e951", "\e952", "\e953", "\e954", "\e955", "\e956", "\e957", "\e958", "\e959", "\e95a", "\e95b", "\e95c", "\e95d", "\e95e", "\e95f", "\e960", "\e961";
+
+@each $item in $list{
+  $i: index($list, $item);
+  .#{$item}:before{
+    content:nth($values,$i);
+  }
+}
+
+// new values for icon names (just cut and paste from icomoon output)
+
+.cmx-icon-module-control-center:before {
+	content: "\e900";
+}
+
+.cmx-icon-module-customer-information:before {
+	content: "\e901";
+}
+
+.cmx-icon-module-delivery-schedule:before {
+	content: "\e902";
+}
+
+.cmx-icon-module-track:before {
+	content: "\e903";
+}
+
+.cmx-icon-module-drivers:before {
+	content: "\e904";
+}
+
+.cmx-icon-module-invoices-payments:before {
+	content: "\e905";
+}
+
+.cmx-icon-module-payment:before {
+	content: "\e906";
+}
+
+.cmx-icon-module-order-product-catalogue:before {
+	content: "\e907";
+}
+
+.cmx-icon-check-rounded-active-fill:before {
+	content: "\e908";
+}
+
+.cmx-icon-error-rounded-fill:before {
+	content: "\e909";
+}
+
+.cmx-icon-information-rounded-fill:before {
+	content: "\e90a";
+}
+
+.cmx-icon-warning-rounded-fill:before {
+	content: "\e90b";
+}
+
+.cmx-icon-arrow-expand:before {
+	content: "\e90c";
+}
+
+.cmx-icon-question:before {
+	content: "\e90d";
+}
+
+.cmx-icon-calendar:before {
+	content: "\e90e";
+}
+
+.cmx-icon-clock:before {
+	content: "\e90f";
+}
+
+.cmx-icon-checkbox-active:before {
+	content: "\e910";
+}
+
+.cmx-icon-checkbox-static:before {
+	content: "\e911";
+}
+
+.cmx-icon-radio-active:before {
+	content: "\e912";
+}
+
+.cmx-icon-radio-static:before {
+	content: "\e913";
+}
+
+.cmx-icon-close:before {
+	content: "\e914";
+}
+
+.cmx-icon-plus:before {
+	content: "\e915";
+}
+
+.cmx-icon-minus:before {
+	content: "\e916";
+}
+
+.cmx-icon-collapse-square:before {
+	content: "\e917";
+}
+
+.cmx-icon-expand-square:before {
+	content: "\e918";
+}
+
+.cmx-icon-arrow-expand-move:before {
+	content: "\e919";
+}
+
+.cmx-icon-arrow-collapse-move:before {
+	content: "\e91a";
+}
+
+.cmx-icon-pin-current-location:before {
+	content: "\e91b";
+}
+
+.cmx-icon-arrow-up-double:before {
+	content: "\e91c";
+}
+
+.cmx-icon-arrow-down-double:before {
+	content: "\e91d";
+}
+
+.cmx-icon-arrow-left-double:before {
+	content: "\e91e";
+}
+
+.cmx-icon-arrow-right-double:before {
+	content: "\e91f";
+}
+
+.cmx-icon-arrow-up-single:before {
+	content: "\e920";
+}
+
+.cmx-icon-arrow-down-single:before {
+	content: "\e921";
+}
+
+.cmx-icon-arrow-left-single:before {
+	content: "\e922";
+}
+
+.cmx-icon-arrow-right-single:before {
+	content: "\e923";
+}
+
+.cmx-icon-arrow-up-straight:before {
+	content: "\e924";
+}
+
+.cmx-icon-arrow-down-straight:before {
+	content: "\e925";
+}
+
+.cmx-icon-arrow-left-straight:before {
+	content: "\e926";
+}
+
+.cmx-icon-arrow-right-straight:before {
+	content: "\e927";
+}
+
+.cmx-icon-download:before {
+	content: "\e928";
+}
+
+.cmx-icon-search:before {
+	content: "\e929";
+}
+
+.cmx-icon-settings:before {
+	content: "\e92a";
+}
+
+.cmx-icon-arrow-up-rounded-fill:before {
+	content: "\e92b";
+}
+
+.cmx-icon-arrow-up-rounded:before {
+	content: "\e92c";
+}
+
+.cmx-icon-arrow-down-rounded-fill:before {
+	content: "\e92d";
+}
+
+.cmx-icon-arrow-down-rounded:before {
+	content: "\e92e";
+}
+
+.cmx-icon-arrow-left-rounded:before {
+	content: "\e92f";
+}
+
+.cmx-icon-arrow-left-rounded2:before {
+	content: "\e930";
+}
+
+.cmx-icon-arrow-right-rounded-fill:before {
+	content: "\e931";
+}
+
+.cmx-icon-arrow-right-rounded:before {
+	content: "\e932";
+}
+
+.cmx-icon-minus-rounded-fill:before {
+	content: "\e933";
+}
+
+.cmx-icon-minus-rounded:before {
+	content: "\e934";
+}
+
+.cmx-icon-plus-rounded-fill:before {
+	content: "\e935";
+}
+
+.cmx-icon-plus-rounded:before {
+	content: "\e936";
+}
+
+.cmx-icon-repeat:before {
+	content: "\e937";
+}
+
+.cmx-icon-delete:before {
+	content: "\e938";
+}
+
+.cmx-icon-favourite:before {
+	content: "\e939";
+}
+
+.cmx-icon-favourite-active:before {
+	content: "\e93a";
+}
+
+.cmx-icon-logo:before {
+	content: "\e93b";
+}
+
+.cmx-icon-check:before {
+	content: "\e93c";
+}
+
+.cmx-icon-brakets:before {
+	content: "\e93d";
+}
+
+.cmx-icon-image:before {
+	content: "\e93e";
+}
+
+.cmx-icon-language:before {
+	content: "\e93f";
+}
+
+.cmx-icon-document:before {
+	content: "\e940";
+}
+
+.cmx-icon-logout:before {
+	content: "\e941";
+}
+
+.cmx-icon-quick-view:before {
+	content: "\e942";
+}
+
+.cmx-icon-menu:before {
+	content: "\e943";
+}
+
+.cmx-icon-product-line-bulk-cement:before {
+	content: "\e944";
+}
+
+.cmx-icon-product-line-multiproducts:before {
+	content: "\e945";
+}
+
+.cmx-icon-product-line-aggregates:before {
+	content: "\e946";
+}
+
+.cmx-icon-product-line-bag-cement:before {
+	content: "\e947";
+}
+
+.cmx-icon-product-line-readymix:before {
+	content: "\e948";
+}
+
+.cmx-icon-blocked:before {
+	content: "\e949";
+}
+
+.cmx-icon-attachment:before {
+	content: "\e94a";
+}
+
+.cmx-icon-multiple-items:before {
+	content: "\e94b";
+}
+
+.cmx-icon-edit:before {
+	content: "\e94c";
+}
+
+.cmx-icon-clock-fill:before {
+	content: "\e94d";
+}
+
+.cmx-icon-protected:before {
+	content: "\e94e";
+}
+
+.cmx-icon-document-broken:before {
+	content: "\e94f";
+}
+
+.cmx-icon-picture-fill:before {
+	content: "\e950";
+}
+
+.cmx-icon-picture-broken:before {
+	content: "\e951";
+}
+
+.cmx-icon-filter:before {
+	content: "\e952";
+}
+
+.cmx-icon-history:before {
+	content: "\e953";
+}
+
+.cmx-icon-question-rounded:before {
+	content: "\e954";
+}
+
+.cmx-icon-pin-error:before {
+	content: "\e955";
+}
+
+.cmx-icon-pin-poi:before {
+	content: "\e956";
+}
+
+.cmx-icon-pin-load:before {
+	content: "\e957";
+}
+
+.cmx-icon-pin-load-3rdparty:before {
+	content: "\e958";
+}
+
+.cmx-icon-pin-unload:before {
+	content: "\e959";
+}
+
+.cmx-icon-phone:before {
+	content: "\e95a";
+}
+
+.cmx-icon-share:before {
+	content: "\e95b";
+}
+
+.cmx-icon-upload:before {
+	content: "\e95c";
+}
+
+.cmx-icon-save:before {
+	content: "\e95d";
+}
+
+.cmx-icon-pin-pickup:before {
+	content: "\e95e";
+}
+
+.cmx-icon-print:before {
+	content: "\e95f";
+}
+
+.cmx-icon-e-mail:before {
+	content: "\e960";
+}
+
+.cmx-icon-arrow-collapse:before {
+	content: "\e961";
+}
+
+.cmx-icon-chat-outline:before {
+	content: "\e962";
+}
+
+.cmx-icon-chat-filled:before {
+	content: "\e963";
+}
+
+.cmx-icon-plane-side:before {
+	content: "\e964";
+}
+
+.cmx-icon-calendar-event-squares:before {
+	content: "\e965";
+}
+
+.cmx-icon-arrow-increase:before {
+	content: "\e966";
+}
+
+.cmx-icon-arrow-decrease:before {
+	content: "\e967";
+}
+
+.cmx-icon-arrow-continue-outline:before {
+	content: "\e968";
+}
+
+.cmx-icon-cross-cancel:before {
+	content: "\e969";
+}
+
+.cmx-icon-options-delivery:before {
+	content: "\e96a";
+}
+
+.cmx-icon-product-line-bag-multiproduct:before {
+	content: "\e96b";
+}
+
+.cmx-icon-module-user-management:before {
+	content: "\e96c";
+}
+
+.cmx-icon-module-commercial-condition:before {
+	content: "\e96d";
+}
+
+.cmx-icon-options-own-freight:before {
+	content: "\e96e";
+}
+
+.cmx-icon-options-pickup:before {
+	content: "\e96f";
+}
+
+.cmx-icon-pin-jobsite-worker:before {
+	content: "\e970";
+}

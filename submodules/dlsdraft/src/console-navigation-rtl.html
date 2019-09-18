@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Console Navigation - RTL</title>
+    <link href="partials/favicon.html" rel="import">
+</head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav-rtl.html" rel="import">
+        <link href="partials/sidenav-rtl.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Console Navigation Control</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="cmx-main-nav">
+                            <div class="cmx-logo">
+                                <a class="cmx-logo__link" href="index.html"><svg class="cmx-logo__image">
+                                <use xlink:href="#cmx-logo">
+                                </use></svg></a>
+                            </div>
+
+
+                            <div class="cmx-main-nav__items">
+                                <div class="cmx-main-nav__item nav-notifications-item">
+                                    <div class="cmx-notifications">
+                                        <div class="cmx-main-nav__icon-label hidden-xs-down">
+                                            Notifications
+                                        </div>
+
+
+                                        <div class="cmx-main-nav__icon cmx-main-nav__icon--alert">
+                                            99
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="cmx-main-nav__item-separator">
+                                </div>
+                                <!-- START CONSOLE NAVIGATION CODE -->
+
+
+                                <div class="cmx-main-nav__item cmx-console-menu">
+                                    <div class="popout__toggle" data-popout-target="#consolesPopout" role="button">
+                                        <div class="cmx-main-nav__icon cmx-console-menu__icon">
+                                            <span class="sr-only">Consoles</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="cmx-console-menu__popout popout popout--bottom-left popout--with-border hidden" id="consolesPopout">
+                                        <h3 class="cmx-console-menu__heading">Consoles</h3>
+
+
+                                        <ul class="cmx-console-menu__list">
+                                            <li class="cmx-console-menu__item" role="button">
+                                                <a class="cmx-console-menu__item-link" href="#"><span class="cmx-console-menu__item-icon"></span> <span class="cmx-console-menu__item-label">Invoice and Payments</span></a>
+                                            </li>
+
+
+                                            <li class="cmx-console-menu__item" role="button">
+                                                <a class="cmx-console-menu__item-link" href="#"><span class="cmx-console-menu__item-icon"></span> <span class="cmx-console-menu__item-label">Commercial Conditions</span></a>
+                                            </li>
+
+
+                                            <li class="cmx-console-menu__item" role="button">
+                                                <a class="cmx-console-menu__item-link" href="#"><span class="cmx-console-menu__item-icon"></span> <span class="cmx-console-menu__item-label">Track</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="cmx-main-nav__item-separator">
+                                </div>
+                                <!-- END CONSOLE NAVIGATION CODE -->
+
+
+                                <div class="cmx-main-nav__item user-menu">
+                                    <div class="cmx-user-menu__icon">
+                                        <div class="cmx-main-nav__icon cmx-main-nav__icon--inverted">
+                                            MW
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="cmx-sub-nav-loader">
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12" dir="ltr">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html">
+                                    <code class="language-html">
+&lt;!-- on the root element set the dir attribute for rtl display format --&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;rtl&quot;&gt;
+    [code goes here]
+&lt;/html&gt;
+
+&lt;div class=&quot;cmx-main-nav__item cmx-console-menu&quot;&gt;
+    &lt;div class=&quot;popout__toggle&quot; data-popout-target=&quot;#consolesPopout&quot; role=&quot;button&quot;&gt;
+        &lt;div class=&quot;cmx-main-nav__icon cmx-console-menu__icon&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;Consoles&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;consolesPopout&quot; class=&quot;cmx-console-menu__popout popout popout--bottom-left popout--with-border hidden&quot;&gt;
+        &lt;h3 class=&quot;cmx-console-menu__heading&quot;&gt;Consoles&lt;/h3&gt;
+        &lt;ul class=&quot; cmx-console-menu__list&quot;&gt;
+            &lt;li class=&quot;cmx-console-menu__item&quot; role=&quot;button&quot;&gt;
+                &lt;a class=&quot;cmx-console-menu__item-link&quot; href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;cmx-console-menu__item-icon&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;cmx-console-menu__item-label&quot;&gt;Invoice and Payments&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;cmx-console-menu__item&quot; role=&quot;button&quot;&gt;
+                &lt;a class=&quot;cmx-console-menu__item-link&quot; href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;cmx-console-menu__item-icon&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;cmx-console-menu__item-label&quot;&gt;Commercial Conditions&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;cmx-console-menu__item&quot; role=&quot;button&quot;&gt;
+                &lt;a class=&quot;cmx-console-menu__item-link&quot; href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;cmx-console-menu__item-icon&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;cmx-console-menu__item-label&quot;&gt;Track&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    </code>
+    <!-- end .language-html --></pre><!-- end data-lang html -->
+
+                                <pre data-lang="sass"><code class="language-css">// _main-nav-rtl.scss partial
+// only one rule needs changing for console menu
+html[dir=&quot;rtl&quot;] .cmx-console-menu{
+
+    &amp;__popout{
+        left:0; // modified
+        right: auto; // added
+        padding:1.5rem;
+    }
+}</code></pre>
+                            </div>
+                            <!-- end .data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+</body>
+</html>

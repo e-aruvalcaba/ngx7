@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Avatar</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Avatar</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Avatar</h2>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="cmx-avatar">
+                            <img alt="profile picture" class="cmx-avatar__image" src='/images/uploaded-picture.jpg'>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html"><code class="language-html">&lt;div class=&quot;cmx-avatar&quot;&gt;
+    &lt;img class=&quot;cmx-avatar__image&quot; src=&quot;/path_to_avatar/michael_wassermanm.jpg&quot; alt=&quot;Michael Wassermann&quot; /&gt;
+&lt;/div&gt;
+</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx-avatar {
+    // Default width and height
+    width: 60px;
+    height: 60px;
+
+    // In case we need a different size, we declare it like this.
+    &amp;--small{
+        width:32px;
+        height:32px;
+    }
+
+    &amp;__image {
+        // Round by default
+        clip-path: circle(50% at center);
+        width:100%;
+        height:100%;
+        object-fit: cover; // This prevents a non square image to be shown distorted
+
+        // In case we need a different shape, we declare it like this
+        &amp;--square{
+            clip-path: none;
+        }
+    }
+}</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-avatar {
+    width: 60px;
+    height: 60px;
+}
+.cmx-avatar--small {
+    width: 32px;
+    height: 32px;
+}
+.cmx-avatar__image {
+    -webkit-clip-path: circle(50% at center);
+    clip-path: circle(50% at center);
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.cmx-avatar__image--square {
+    -webkit-clip-path: none;
+    clip-path: none;
+}</code></pre>
+                            </div>
+                            <!-- end data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Avatar Manipulator</h2>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="demo-avatar-manipulator-wrap">
+                            <div class="cmx-avatar-manipulator">
+                                <div class="cmx-avatar-manipulator__mask">
+                                    <img alt="profile picture" class="avatar-manipulator__image" src='/images/uploaded-picture-2.jpg'>
+                                </div>
+
+
+                                <div class="spacer-32">
+                                </div>
+
+
+                                <div class="cmx-avatar-clipping-slider">
+                                    <div class="cmx-avatar-clipping-slider__col">
+                                        <span class="cmx-icon-picture cmx-avatar-clipping-slider__icon--small"></span>
+                                    </div>
+
+
+                                    <div class="cmx-avatar-clipping-slider__col">
+                                        <input class="cmx-slider" id="pictureSizeSlider" max="200" min="100" type="range" value="100"> 
+                                        <script>
+                                            if ((/Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor))||(/Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor))){
+                                                var slider = document.getElementById('pictureSizeSlider');
+                                                var updateSliderTrack = function(e,tgt){
+                                                    var t;
+                                                    if (typeof(tgt)!=='undefined'){
+                                                        t = tgt;
+                                                    } else {
+                                                        t = e.target;
+                                                    }
+                                                    
+
+                                                    var minVal = t.min;
+                                                    var maxVal = t.max;
+                                                    var val = t.value;
+
+                                                    var pc = ((val-minVal)*100) / (maxVal-minVal);
+                                                    pc = Math.ceil(pc);
+
+                                                    t.setAttribute('class','cmx-slider cmx-slider--pc-' + pc);
+                                                };
+                                                updateSliderTrack(null,slider);
+                                                slider.addEventListener('input',updateSliderTrack);
+                                                slider.addEventListener('change',updateSliderTrack);
+                                            }
+                                        </script>
+                                    </div>
+
+
+                                    <div class="cmx-avatar-clipping-slider__col">
+                                        <span class="cmx-icon-picture cmx-avatar-clipping-slider__icon--large"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .col-md-3 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html"><code class="language-html">&lt;div class=&quot;cmx-avatar-manipulator&quot;&gt;
+    &lt;div class=&quot;cmx-avatar-manipulator__mask&quot;&gt;
+        &lt;img class=&quot;cmx-avatar-manipulator__image&quot; src=&lt;%= require(&quot;./images/uploaded-picture-2.jpg&quot;) %&gt; alt=&quot;profile picture&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;cmx-avatar-clipping-slider&quot;&gt;
+        &lt;div class=&quot;cmx-avatar-clipping-slider__col&quot;&gt;
+            &lt;span class=&quot;cmx-icon-picture cmx-avatar-clipping-slider__icon--small&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;cmx-avatar-clipping-slider__col&quot;&gt;
+            &lt;input id=&quot;pictureSizeSlider&quot; class=&quot;cmx-slider&quot; type=&quot;range&quot; min=&quot;100&quot; max=&quot;200&quot; value=&quot;100&quot;&gt;
+            &lt;script&gt;
+                if ((/Chrome/.test(navigator.userAgent) &amp;&amp; /Google Inc/.test(navigator.vendor))||(/Safari/.test(navigator.userAgent) &amp;&amp; /Apple Computer/.test(navigator.vendor))){
+                    var slider = document.getElementById('pictureSizeSlider');
+                    var updateSliderTrack = function(e,tgt){
+                        var t;
+                        if (typeof(tgt)!=='undefined'){
+                            t = tgt;
+                        } else {
+                            t = e.target;
+                        }
+                        
+
+                        var minVal = t.min;
+                        var maxVal = t.max;
+                        var val = t.value;
+
+                        var pc = ((val-minVal)*100) / (maxVal-minVal);
+                        pc = Math.ceil(pc);
+
+                        t.setAttribute('class','cmx-slider cmx-slider--pc-' + pc);
+                    };
+                    updateSliderTrack(null,slider);
+                    slider.addEventListener('input',updateSliderTrack);
+                    slider.addEventListener('change',updateSliderTrack);
+                }
+            &lt;/script&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;cmx-avatar-clipping-slider__col&quot;&gt;
+            &lt;span class=&quot;cmx-icon-picture cmx-avatar-clipping-slider__icon--large&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx-avatar {
+    // the manipulator
+    &amp;-manipulator {
+        &amp;__mask{
+            background: $disabled-grey;
+            position: relative;
+            width:100%;
+            overflow: hidden;
+            margin: 0 auto;
+
+            // Default Size
+            width:250px;
+            height:250px;
+
+            // The round overlay
+            &amp;:before{
+                content:&quot; &quot;;
+                display: block;
+                background-image: url(data:image/svg+xml,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20272%20247%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%23ccc%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ctitle%3Eprofile-manipulator-mask%3C%2Ftitle%3E%0A%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M0%2C0V247H272V0ZM136%2C233.5a110%2C110%2C0%2C1%2C1%2C110-110A110%2C110%2C0%2C0%2C1%2C136%2C233.5Z%22%2F%3E%0A%3C%2Fsvg%3E%0A);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-size: 120%;
+                background-position: center;
+                opacity: 0.54;
+            }
+        }
+    
+        &amp;__image {
+            width:100%;
+            height:100%;
+            object-fit: cover; // this prevents a non square image to be shown distorted
+        }
+    }
+
+    // The clipping slider styles
+    &amp;-clipping-slider{
+        display:flex;
+        width:100%;
+        color: $gray-lightish;
+        align-items: center;
+        &amp;__col{
+            flex: 1 1 auto;
+            padding: 0 0.625rem;
+            &amp;:first-child,
+            &amp;:last-child{
+                padding: 0;
+                flex: 0 0 auto
+            }
+        }
+        &amp;__icon{
+            &amp;--small{
+                font-size: 1.5rem;
+            }
+            &amp;--large{
+                font-size: 2.43rem;
+            }
+        }
+    }
+}
+
+// The range input styles
+.slider {
+    -webkit-appearance: none;
+    margin: 0;
+    width: 100%;
+
+    &amp;:focus {
+        outline: none;
+    }
+
+    // since webkit doesnt have fill upper or fill lower to have a different color in the range and the remainant we hack it through CSS gradients and javascript;
+    @for $i from 0 through 100 {
+        &amp;--pc-#{$i}::-webkit-slider-runnable-track {
+            background: linear-gradient(to right, $bright-blue 0%,$bright-blue 0%+$i, $table-highlight-grey 0%+$i,$table-highlight-grey 100%);
+        }
+    }
+
+    &amp;::-webkit-slider-runnable-track {
+        height: 7px;
+        -webkit-appearance: none;
+        cursor: pointer;
+        background-color:$table-highlight-grey;
+        border-radius: 5px;
+    }
+    &amp;::-webkit-slider-thumb {
+        border-radius:50%;
+        height: 24px;
+        width: 24px;
+        background: $bright-blue;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -9px;
+    }
+    &amp;::-moz-range-track {
+        height: 7px;
+        cursor: pointer;
+        background-color:$table-highlight-grey;
+        border-radius: 5px;
+    }
+    &amp;::-moz-range-thumb {
+        border-radius:50%;
+        height: 24px;
+        width: 24px;
+        background: $bright-blue;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -9px;
+        border:0;
+    }
+    &amp;::-moz-range-progress {
+        background-color: $bright-blue;
+        height:7px;
+        border-radius:5px;
+    }
+    &amp;::-ms-track {
+        height: 7px;
+        cursor: pointer;
+        background-color:$table-highlight-grey;
+        border-radius: 5px;
+    }
+    &amp;::-ms-fill-lower {
+        background-color: $bright-blue;
+        height:7px;
+        border-radius:5px;
+    }
+    &amp;::-ms-fill-upper {
+        height: 7px;
+        background-color:$table-highlight-grey;
+        border-radius: 5px;
+    }
+    &amp;::-ms-thumb {
+        border-radius:50%;
+        height: 24px;
+        width: 24px;
+        background: $bright-blue;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -9px;
+        border:0;
+    }
+    &amp;:focus::-ms-fill-lower {
+        background: $bright-blue;
+    }
+    &amp;:focus::-ms-fill-upper {
+        background: $table-highlight-grey;
+    }
+}</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-avatar-manipulator__mask {
+    background: #D6D6D6;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+}
+.cmx-avatar-manipulator__mask:before {
+    content: &quot; &quot;;
+    display: block;
+    background-image: url(data:image/svg+xml,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20272%20247%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%23ccc%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ctitle%3Eprofile-manipulator-mask%3C%2Ftitle%3E%0A%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M0%2C0V247H272V0ZM136%2C233.5a110%2C110%2C0%2C1%2C1%2C110-110A110%2C110%2C0%2C0%2C1%2C136%2C233.5Z%22%2F%3E%0A%3C%2Fsvg%3E%0A);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 120%;
+    background-position: center;
+    opacity: 0.54;
+}
+.cmx-avatar-manipulator__image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.cmx-avatar-clipping-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    color: #B0B0B0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.cmx-avatar-clipping-slider__col {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0 0.625rem;
+}
+.cmx-avatar-clipping-slider__col:first-child,
+.cmx-avatar-clipping-slider__col:last-child {
+    padding: 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+.cmx-avatar-clipping-slider__icon--small {
+    font-size: 1.5rem;
+}
+.cmx-avatar-clipping-slider__icon--large {
+    font-size: 2.43rem;
+}
+.cmx-slider {
+    -webkit-appearance: none;
+    margin: 0;
+    width: 100%;
+}
+.cmx-slider:focus {
+    outline: none;
+}
+.cmx-slider--pc-0::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 0%, #E8EBEF 0%, #E8EBEF 100%);
+}
+.cmx-slider--pc-1::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 1%, #E8EBEF 1%, #E8EBEF 100%);
+}
+.cmx-slider--pc-2::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 2%, #E8EBEF 2%, #E8EBEF 100%);
+}
+.cmx-slider--pc-3::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 3%, #E8EBEF 3%, #E8EBEF 100%);
+}
+.cmx-slider--pc-4::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 4%, #E8EBEF 4%, #E8EBEF 100%);
+}
+.cmx-slider--pc-5::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 5%, #E8EBEF 5%, #E8EBEF 100%);
+}
+.cmx-slider--pc-6::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 6%, #E8EBEF 6%, #E8EBEF 100%);
+}
+.cmx-slider--pc-7::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 7%, #E8EBEF 7%, #E8EBEF 100%);
+}
+.cmx-slider--pc-8::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 8%, #E8EBEF 8%, #E8EBEF 100%);
+}
+.cmx-slider--pc-9::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 9%, #E8EBEF 9%, #E8EBEF 100%);
+}
+.cmx-slider--pc-10::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 10%, #E8EBEF 10%, #E8EBEF 100%);
+}
+.cmx-slider--pc-11::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 11%, #E8EBEF 11%, #E8EBEF 100%);
+}
+.cmx-slider--pc-12::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 12%, #E8EBEF 12%, #E8EBEF 100%);
+}
+.cmx-slider--pc-13::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 13%, #E8EBEF 13%, #E8EBEF 100%);
+}
+.cmx-slider--pc-14::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 14%, #E8EBEF 14%, #E8EBEF 100%);
+}
+.cmx-slider--pc-15::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 15%, #E8EBEF 15%, #E8EBEF 100%);
+}
+.cmx-slider--pc-16::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 16%, #E8EBEF 16%, #E8EBEF 100%);
+}
+.cmx-slider--pc-17::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 17%, #E8EBEF 17%, #E8EBEF 100%);
+}
+.cmx-slider--pc-18::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 18%, #E8EBEF 18%, #E8EBEF 100%);
+}
+.cmx-slider--pc-19::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 19%, #E8EBEF 19%, #E8EBEF 100%);
+}
+.cmx-slider--pc-20::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 20%, #E8EBEF 20%, #E8EBEF 100%);
+}
+.cmx-slider--pc-21::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 21%, #E8EBEF 21%, #E8EBEF 100%);
+}
+.cmx-slider--pc-22::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 22%, #E8EBEF 22%, #E8EBEF 100%);
+}
+.cmx-slider--pc-23::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 23%, #E8EBEF 23%, #E8EBEF 100%);
+}
+.cmx-slider--pc-24::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 24%, #E8EBEF 24%, #E8EBEF 100%);
+}
+.cmx-slider--pc-25::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 25%, #E8EBEF 25%, #E8EBEF 100%);
+}
+.cmx-slider--pc-26::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 26%, #E8EBEF 26%, #E8EBEF 100%);
+}
+.cmx-slider--pc-27::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 27%, #E8EBEF 27%, #E8EBEF 100%);
+}
+.cmx-slider--pc-28::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 28%, #E8EBEF 28%, #E8EBEF 100%);
+}
+.cmx-slider--pc-29::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 29%, #E8EBEF 29%, #E8EBEF 100%);
+}
+.cmx-slider--pc-30::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 30%, #E8EBEF 30%, #E8EBEF 100%);
+}
+.cmx-slider--pc-31::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 31%, #E8EBEF 31%, #E8EBEF 100%);
+}
+.cmx-slider--pc-32::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 32%, #E8EBEF 32%, #E8EBEF 100%);
+}
+.cmx-slider--pc-33::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 33%, #E8EBEF 33%, #E8EBEF 100%);
+}
+.cmx-slider--pc-34::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 34%, #E8EBEF 34%, #E8EBEF 100%);
+}
+.cmx-slider--pc-35::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 35%, #E8EBEF 35%, #E8EBEF 100%);
+}
+.cmx-slider--pc-36::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 36%, #E8EBEF 36%, #E8EBEF 100%);
+}
+.cmx-slider--pc-37::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 37%, #E8EBEF 37%, #E8EBEF 100%);
+}
+.cmx-slider--pc-38::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 38%, #E8EBEF 38%, #E8EBEF 100%);
+}
+.cmx-slider--pc-39::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 39%, #E8EBEF 39%, #E8EBEF 100%);
+}
+.cmx-slider--pc-40::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 40%, #E8EBEF 40%, #E8EBEF 100%);
+}
+.cmx-slider--pc-41::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 41%, #E8EBEF 41%, #E8EBEF 100%);
+}
+.cmx-slider--pc-42::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 42%, #E8EBEF 42%, #E8EBEF 100%);
+}
+.cmx-slider--pc-43::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 43%, #E8EBEF 43%, #E8EBEF 100%);
+}
+.cmx-slider--pc-44::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 44%, #E8EBEF 44%, #E8EBEF 100%);
+}
+.cmx-slider--pc-45::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 45%, #E8EBEF 45%, #E8EBEF 100%);
+}
+.cmx-slider--pc-46::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 46%, #E8EBEF 46%, #E8EBEF 100%);
+}
+.cmx-slider--pc-47::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 47%, #E8EBEF 47%, #E8EBEF 100%);
+}
+.cmx-slider--pc-48::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 48%, #E8EBEF 48%, #E8EBEF 100%);
+}
+.cmx-slider--pc-49::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 49%, #E8EBEF 49%, #E8EBEF 100%);
+}
+.cmx-slider--pc-50::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 50%, #E8EBEF 50%, #E8EBEF 100%);
+}
+.cmx-slider--pc-51::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 51%, #E8EBEF 51%, #E8EBEF 100%);
+}
+.cmx-slider--pc-52::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 52%, #E8EBEF 52%, #E8EBEF 100%);
+}
+.cmx-slider--pc-53::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 53%, #E8EBEF 53%, #E8EBEF 100%);
+}
+.cmx-slider--pc-54::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 54%, #E8EBEF 54%, #E8EBEF 100%);
+}
+.cmx-slider--pc-55::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 55%, #E8EBEF 55%, #E8EBEF 100%);
+}
+.cmx-slider--pc-56::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 56%, #E8EBEF 56%, #E8EBEF 100%);
+}
+.cmx-slider--pc-57::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 57%, #E8EBEF 57%, #E8EBEF 100%);
+}
+.cmx-slider--pc-58::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 58%, #E8EBEF 58%, #E8EBEF 100%);
+}
+.cmx-slider--pc-59::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 59%, #E8EBEF 59%, #E8EBEF 100%);
+}
+.cmx-slider--pc-60::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 60%, #E8EBEF 60%, #E8EBEF 100%);
+}
+.cmx-slider--pc-61::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 61%, #E8EBEF 61%, #E8EBEF 100%);
+}
+.cmx-slider--pc-62::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 62%, #E8EBEF 62%, #E8EBEF 100%);
+}
+.cmx-slider--pc-63::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 63%, #E8EBEF 63%, #E8EBEF 100%);
+}
+.cmx-slider--pc-64::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 64%, #E8EBEF 64%, #E8EBEF 100%);
+}
+.cmx-slider--pc-65::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 65%, #E8EBEF 65%, #E8EBEF 100%);
+}
+.cmx-slider--pc-66::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 66%, #E8EBEF 66%, #E8EBEF 100%);
+}
+.cmx-slider--pc-67::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 67%, #E8EBEF 67%, #E8EBEF 100%);
+}
+.cmx-slider--pc-68::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 68%, #E8EBEF 68%, #E8EBEF 100%);
+}
+.cmx-slider--pc-69::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 69%, #E8EBEF 69%, #E8EBEF 100%);
+}
+.cmx-slider--pc-70::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 70%, #E8EBEF 70%, #E8EBEF 100%);
+}
+.cmx-slider--pc-71::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 71%, #E8EBEF 71%, #E8EBEF 100%);
+}
+.cmx-slider--pc-72::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 72%, #E8EBEF 72%, #E8EBEF 100%);
+}
+.cmx-slider--pc-73::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 73%, #E8EBEF 73%, #E8EBEF 100%);
+}
+.cmx-slider--pc-74::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 74%, #E8EBEF 74%, #E8EBEF 100%);
+}
+.cmx-slider--pc-75::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 75%, #E8EBEF 75%, #E8EBEF 100%);
+}
+.cmx-slider--pc-76::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 76%, #E8EBEF 76%, #E8EBEF 100%);
+}
+.cmx-slider--pc-77::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 77%, #E8EBEF 77%, #E8EBEF 100%);
+}
+.cmx-slider--pc-78::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 78%, #E8EBEF 78%, #E8EBEF 100%);
+}
+.cmx-slider--pc-79::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 79%, #E8EBEF 79%, #E8EBEF 100%);
+}
+.cmx-slider--pc-80::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 80%, #E8EBEF 80%, #E8EBEF 100%);
+}
+.cmx-slider--pc-81::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 81%, #E8EBEF 81%, #E8EBEF 100%);
+}
+.cmx-slider--pc-82::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 82%, #E8EBEF 82%, #E8EBEF 100%);
+}
+.cmx-slider--pc-83::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 83%, #E8EBEF 83%, #E8EBEF 100%);
+}
+.cmx-slider--pc-84::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 84%, #E8EBEF 84%, #E8EBEF 100%);
+}
+.cmx-slider--pc-85::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 85%, #E8EBEF 85%, #E8EBEF 100%);
+}
+.cmx-slider--pc-86::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 86%, #E8EBEF 86%, #E8EBEF 100%);
+}
+.cmx-slider--pc-87::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 87%, #E8EBEF 87%, #E8EBEF 100%);
+}
+.cmx-slider--pc-88::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 88%, #E8EBEF 88%, #E8EBEF 100%);
+}
+.cmx-slider--pc-89::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 89%, #E8EBEF 89%, #E8EBEF 100%);
+}
+.cmx-slider--pc-90::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 90%, #E8EBEF 90%, #E8EBEF 100%);
+}
+.cmx-slider--pc-91::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 91%, #E8EBEF 91%, #E8EBEF 100%);
+}
+.cmx-slider--pc-92::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 92%, #E8EBEF 92%, #E8EBEF 100%);
+}
+.cmx-slider--pc-93::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 93%, #E8EBEF 93%, #E8EBEF 100%);
+}
+.cmx-slider--pc-94::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 94%, #E8EBEF 94%, #E8EBEF 100%);
+}
+.cmx-slider--pc-95::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 95%, #E8EBEF 95%, #E8EBEF 100%);
+}
+.cmx-slider--pc-96::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 96%, #E8EBEF 96%, #E8EBEF 100%);
+}
+.cmx-slider--pc-97::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 97%, #E8EBEF 97%, #E8EBEF 100%);
+}
+.cmx-slider--pc-98::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 98%, #E8EBEF 98%, #E8EBEF 100%);
+}
+.cmx-slider--pc-99::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 99%, #E8EBEF 99%, #E8EBEF 100%);
+}
+.cmx-slider--pc-100::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #3FA9F5 0%, #3FA9F5 100%, #E8EBEF 100%, #E8EBEF 100%);
+}
+.cmx-slider::-webkit-slider-runnable-track {
+    height: 7px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-color: #E8EBEF;
+    border-radius: 5px;
+}
+.cmx-slider::-webkit-slider-thumb {
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    background: #3FA9F5;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -9px;
+}
+.cmx-slider::-moz-range-track {
+    height: 7px;
+    cursor: pointer;
+    background-color: #E8EBEF;
+    border-radius: 5px;
+}
+.cmx-slider::-moz-range-thumb {
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    background: #3FA9F5;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -9px;
+    border: 0;
+}
+.cmx-slider::-moz-range-progress {
+    background-color: #3FA9F5;
+    height: 7px;
+    border-radius: 5px;
+}
+.cmx-slider::-ms-track {
+    height: 7px;
+    cursor: pointer;
+    background-color: #E8EBEF;
+    border-radius: 5px;
+}
+.cmx-slider::-ms-fill-lower {
+    background-color: #3FA9F5;
+    height: 7px;
+    border-radius: 5px;
+}
+.cmx-slider::-ms-fill-upper {
+    height: 7px;
+    background-color: #E8EBEF;
+    border-radius: 5px;
+}
+.cmx-slider::-ms-thumb {
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    background: #3FA9F5;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -9px;
+    border: 0;
+}
+.cmx-slider:focus::-ms-fill-lower {
+    background: #3FA9F5;
+}
+.cmx-slider:focus::-ms-fill-upper {
+    background: #E8EBEF;
+}</code></pre>
+                            </div>
+                            <!-- end data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                </div>
+                <!-- end .row -->
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

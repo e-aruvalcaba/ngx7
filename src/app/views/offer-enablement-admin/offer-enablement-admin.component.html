@@ -1,3 +1,446 @@
-<p>
-  offer-enablement-admin works!
-</p>
+<cmx-alert></cmx-alert>
+<div
+  [ngStyle.xl]="{'margin': '60px'}"
+  [ngStyle.lg]="{'margin': '60px'}"
+  [ngStyle.xs]="{'margin': '10px'}"
+  [ngStyle.sm]="{'margin': '40px'}"
+  [ngStyle.md]="{'margin': '60px'}">
+  <div fxLayout="row" [ngStyle.lg]="{'margin-bottom': '15px'}">
+    <a class="nav-bar-item">
+      <h2>{{ translate('rccc.landing_page.modules.rccc_short_title') }} <span aria-hidden="true" class="cmx-icon-right-single" style="color: #3FA9F5; font-size: 12pt;"></span> {{ translate(titleLanguageKey) }}</h2>
+    </a>
+  </div>
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutGap="15px"
+    fxLayoutGap.xs="-10px">
+    <div fxFlex="25">
+      <div
+        data-id="cmx-rccc-search-label"
+        class="cmx-rccc-search-label ">
+        {{translate('rccc.admin.search_label')}}
+      </div>
+      <cmx-dropdown
+        data-id="plantDropDown"
+        class="cmx-input"
+        [closeOnClick]="true"
+        [enableSearch]="true"
+        placeholder="{{selectedPlantDescription}}">
+        <cmx-dropdown-item
+          *ngFor="let plant of myPlants"
+          (click)="getProductTypes(plant)"
+          [searchValue]="plant.plantLabel">
+          {{plant.plantCode}} - {{plant.plantDesc}}
+        </cmx-dropdown-item>
+      </cmx-dropdown>
+    </div>
+
+    <div fxFlex="25">
+      <cmx-dropdown
+        data-id="productTypeDropDown"
+        class="cmx-input"
+        [closeOnClick]="true"
+        [enableSearch]="true"
+        placeholder="{{selectedProductTypeDescription}}">
+        <cmx-dropdown-item
+          *ngFor="let productType of productTypes"
+          (click)="setProductType(productType)"
+          [searchValue]="productType.productTypeDesc">
+          {{productType.productTypeCode}} - {{productType.productTypeDesc}}
+        </cmx-dropdown-item>
+      </cmx-dropdown>
+    </div>
+
+    <div fxFlex="25"
+    [class.datepicker--error]="datePickerError">
+      <input
+        data-id="dateInput"
+        class="datepicker-input"
+        placeholder="Fecha"
+        value="{{formattedDate}}"
+        (click)="updateDatePicker()"/>
+      <div [hidden]="!showDatePicker">
+        <cmx-datepicker
+          [singleDateSelection]="true"
+          data-id="dateDatePicker"
+          class="datepicker"
+          #datepicker
+          (select)="pickDate($event)"
+          (cancel)="cancelDatePicker()"
+          [tags]="datepickerTags"
+          [startWeekWith]="0"
+          [forbiddenWeekDays]="disabledWeekDays"
+          [disabledDates]="disabledDates">
+        </cmx-datepicker>
+      </div>
+    </div>
+    <div fxFlex="20" fxLayoutAlign="center center" *ngIf="haveCommercialManagement">
+      <button style="font-size: 1em;" cmx-button-link (click)="toggleFilters()">
+        <span
+          [class.cmx-icon-plus]="!isFiltersToggled"
+          [class.cmx-icon-minus]="isFiltersToggled"
+          aria-hidden="true"
+        ></span> {{translate(!isFiltersToggled ? 'views.global.btn_more': 'views.global.btn_less')}}
+      </button>
+    </div>
+  </div> 
+
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutGap="15px"
+    fxLayoutGap.xs="-10px"
+    *ngIf="isFiltersToggled && haveCommercialManagement">
+    <div fxFlex="25">
+      <cmx-dropdown
+        data-id="commercialManagementDropDown"
+        class="cmx-input"
+        [closeOnClick]="true"
+        [enableSearch]="true"
+        placeholder="{{selectedCommercialManagementDescription}}">
+        <cmx-dropdown-item
+          *ngFor="let cm of commercialManagementItems"
+          (click)="setCommercialManagement(cm)"
+          [searchValue]="cm.commercialManagementCode">
+          {{ (cm.commercialManagementCode == "") ? "-" : cm.commercialManagementCode }}
+        </cmx-dropdown-item>
+      </cmx-dropdown>
+    </div>
+    <div fxFlex="25">
+      <cmx-dropdown
+        data-id="customerDropdown"
+        class="cmx-input"
+        [closeOnClick]="true"
+        [enableSearch]="true"
+        placeholder="{{selectedCustomerDescription}}">
+        <cmx-dropdown-item
+          *ngFor="let customer of customersItems"
+          (click)="setCustomer(customer)"
+          [searchValue]="customer.customerCode">
+          {{ (customer.customerCode == "") ? "-" : customer.customerDesc }}
+        </cmx-dropdown-item>
+      </cmx-dropdown>
+    </div>
+    <!-- <div fxFlex="25">
+      <cmx-dropdown
+        data-id="materialDropDown"
+        class="cmx-input"
+        [closeOnClick]="true"
+        [enableSearch]="true"
+        placeholder="{{selectedMaterialDescription}}">
+        <cmx-dropdown-item
+          *ngFor="let material of materials"
+          (click)="setMaterial(material)"
+          [searchValue]="material.materialDesc">
+          {{ (material.materialDesc == "") ? "-" : material.materialDesc }}
+        </cmx-dropdown-item>
+      </cmx-dropdown>
+    </div> -->
+  </div>
+
+  <div style="width: 100%; height: 15px; min-height: 15px; float: left; display: float"></div>
+  <div class="not-found" *ngIf="!hasItems">
+    {{ translate('database.errors.no_results') }}
+  </div>
+  <div style="width: 100%;" fxFill *ngIf="hasItems">
+      <ul class="cmx-tabs" data-selected-text="Search Results">
+          <li class="cmx-tabs__tab active">
+            <a class="cmx-tabs__link">{{ translate('rccc.views.labels.search_result') }}</a>
+          </li>
+          <li class="cmx-tabs__tab" fxShow fxShow.xs="false">
+            <ul>
+              <li>
+                <button
+                  style="font-size: 1em;"
+                  cmx-button-link href="#"
+                  (click)="refresh()">
+                  <span
+                    class="cmx-icon-repeat"
+                    aria-hidden="true">
+                  </span>
+                  {{translate('views.global.btn_refresh')}}
+                </button>
+              </li>
+              <li>
+                <button
+                  style="font-size: 1em;"
+                  cmx-button-link
+                  href="#"
+                  (click)="openCopyDialog()"
+                  [disabled]="!canCopyModel">
+                  <span
+                    class="cmx-icon-document"
+                    aria-hidden="true">
+                  </span>
+                  {{translate('rccc.actions_bar.copy_model_button')}}
+                </button>
+              </li>
+              <li>
+                <button
+                  style="font-size: 1em;"
+                  cmx-button-link
+                  href="#"
+                  (click)="openImportFile(importFileInput)"
+                  [disabled]="!canImport">
+                  <span
+                    class="cmx-icon-upload"
+                    aria-hidden="true">
+                  </span>
+                  {{translate('rccc.actions_bar.import_button')}}
+                </button>
+              </li>
+            </ul>
+          </li>
+      </ul>
+  </div>
+  <div style="width: 100%;" *ngIf="hasItems">
+    <ul class="action-buttons" fxShow.xs="true" fxShow.xl="false" fxShow.lg="false" fxShow.md="false" fxShow.sm="false">
+      <li style="font-size: 1em;">
+        <button
+          style="font-size: 1em;"
+          cmx-button-link
+          href="#"
+          (click)="refresh()">
+          <span
+            class="cmx-icon-repeat"
+            aria-hidden="true">
+          </span>
+          {{translate('views.global.btn_refresh')}}
+        </button>
+      </li>
+      <li>
+        <button
+          style="font-size: 1em;"
+          cmx-button-link
+          href="#" (click)="openCopyDialog()" [disabled]="!canCopyModel">
+          <span class="cmx-icon-document" aria-hidden="true"></span> {{translate('rccc.actions_bar.copy_model_button')}}</button>
+      </li>
+      <li>
+        <button style="font-size: 1em;" cmx-button-link href="#" (click)="openImportFile(importFileInput)" [disabled]="!canImport">
+          <span class="cmx-icon-upload" aria-hidden="true"></span> {{translate('rccc.actions_bar.import_button')}}</button>
+      </li>
+    </ul>
+    <cmx-capacity-table
+      data-id="capacityTable"
+      fxFill
+      [headerStyle]="{'font-size': '15pt', 'color': '#fff !important', 'background': '#ccc !important'}"
+      *ngIf="capacityCheckItems && capacityCheckItems.length && (rol=='admin')"
+      [(value)]="capacityCheckItems"
+      (changed)="onItemsChanged($event)"
+      (editable)="onEditable($event)"
+      (valid)="onTableValidate($event)"
+      [hourLabel]="translate('views.capacity_table.hour_label')"
+      [offeredLabel]="translate('views.capacity_table.offered_label')"
+      [committedLabel]="translate('views.capacity_table.committed_label')"
+      [loadsInvalidTooltip]="translate('views.capacity_check_item.loads_invalid_tooltip')"
+      [loadsWarningTooltip]="translate('views.capacity_check_item.loads_warning_tooltip')"
+      [tonsInvalidTooltip]="translate('views.capacity_check_item.tons_invalid_tooltip')"
+      [tonsWarningTooltip]="translate('views.capacity_check_item.tons_warning_tooltip')"
+      [quantityLabel]="translate('views.capacity_check_item.quantity_label')"
+      [loadsLabel]="translate('views.capacity_check_item.loads_label')"
+      [customerType]="translate('_value.customerType')">
+    </cmx-capacity-table>
+
+    <cmx-capacity-distribution-table
+      fxFill
+      [headerStyle]="{'font-size': '10pt', 'background-color': 'transparent !important'}"
+      *ngIf="capacityCheckItems && capacityCheckItems.length && (rol=='planner')"
+      [tableType]="distribution"
+      [(value)]="capacityCheckItems"
+      (changed)="onItemsChanged($event)"
+      (editable)="onEditable($event)"
+      (valid)="onTableValidate($event)"
+      [itemStyle]="{'font-size': '8pt'}"
+      [headerStyle]="{'font-size': '10pt'}"
+      [totalOffer]="translate('rccc.customer_types.total_offer')"
+      [customerType]="[translate('rccc.customer_types.customer_delivered'),translate('rccc.customer_types.internal_supply'),translate('rccc.customer_types.customer_own_freight'),translate('rccc.customer_types.customer_pick_up')]"
+      [disableColumn]="disableColumn"
+      [hourLabel]="translate('views.capacity_table.hour_label')"
+      [offeredLabel]="translate('views.capacity_distribution_table.offered_label')"
+      [committedLabel]="translate('views.capacity_distribution_table.committed_label')"
+      [quantityLabel]="translate('views.capacity_check_item.quantity_label')"
+      [loadsLabel]="translate('views.capacity_check_item.loads_label')"
+      [exceedTooltip]="translate('views.capacity_distribution_item.exceed_tooltip')"
+      [loadsInvalidTooltip]="translate('views.capacity_check_item.loads_invalid_tooltip')"
+      [loadsWarningTooltip]="translate('views.capacity_check_item.loads_warning_tooltip')"
+      [tonsInvalidTooltip]="translate('views.capacity_check_item.tons_invalid_tooltip')"
+      [tonsWarningTooltip]="translate('views.capacity_check_item.tons_warning_tooltip')">
+    </cmx-capacity-distribution-table>
+  </div>
+  <div class="spacer">
+  </div>
+  <cmx-fixed-section
+    data-id="actionsFixedSection"
+    sectionBottom="60"
+    sectionRight="50"
+    backgroundColor="white"
+    [ngStyle.xs]="{'left': '20px !important'}">
+    <button cmx-button (click)="confirmDelete()" [color]="'blue-inverse'" [disabled]="!canDelete">
+      {{translate('rccc.actions_bar.delete_button')}}
+    </button>
+    <button data-id="saveButton" cmx-button (click)="save()" [color]="'blue'" [disabled]="!canSave">
+      {{translate('rccc.actions_bar.save_button')}}
+    </button>
+  </cmx-fixed-section>
+
+  <cmx-dialog
+    #cloneDialog
+    data-id="cloneDialog"
+    [enableFooter]="true"
+    [enableClose]="true"
+    backgroundColor="gray">
+    <cmx-dialog-body fxLayout="column" class="dialog-copy-model">
+      <div fxLayout="column" class="dialog-title" [ngStyle]="{'margin-top': '40px', 'margin-bottom':'100px'}">
+        <h2 class="copy-dialog-title">
+          {{translate('rccc.clone_dialog.title')}}
+        </h2>
+        <div class="copy-dialog-reference-date-title">
+            {{translate('rccc.clone_dialog.reference_date')}}: {{stringHelper.formatDate(date)}}
+            <p style="color: red">
+              {{cloneModelErrorText}}
+            </p>
+        </div>
+      </div>
+
+      <div fxFlex fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px" fxLAyoutGap.xs="100px" [ngStyle]="{'margin-left': '20px'}" [ngStyle.xs]="{'margin-left':'5px'}" style="margin-top: 30px;">
+        <div fxFlex="2 2 100%" fxLayoutAlign="center center">
+          <div fxFlex fxLayout="column">
+            <h5 class="datepicker-title">{{translate('rccc.clone_dialog.initial_date')}}:</h5>
+            <input
+              data-id="clone-dialog-datepicker-input-initial"
+              class="datepicker-input"
+              [placeholder]="formattedFromDate"
+              value="{{formattedFromDate}}"
+              (click)="updatePickerCloneInitial()"/>
+              <!-- toggleDatePickerCloneInitial() -->
+            <div [hidden]="!showDatePickerCloneInitial">
+              <cmx-datepicker
+                [singleDateSelection]="true"
+                data-id="clone-dialog-datepicker-initial"
+                class="datepicker"
+                #datepickerClonInitial
+                (select)="setFromDate($event)"
+                (cancel)="cancelDatePickerCloneInitial()"
+                [tags]="datepickerTags"
+                [startWeekWith]="0"
+                [forbiddenWeekDays]="disabledWeekDays"
+                [disabledDates]="disabledDates">
+              </cmx-datepicker>
+            </div>
+          </div>
+        </div>
+
+        <div fxFlex="2 2 100%" fxLayoutAlign="center center">
+          <div fxFlex fxLayout="column" [ngStyle.xs]="{'margin-top':'100px'}">
+            <h5 class="datepicker-title">{{translate('rccc.clone_dialog.final_date')}}:</h5>
+            <input
+              data-id="clone-dialog-datepicker-input-final"
+              class="datepicker-input"
+              [placeholder]="formattedToDate"
+              value="{{formattedToDate}}"
+              (click)="updatePickerCloneFinall()"/>
+            <div [hidden]="!showDatePickerCloneFinal">
+              <cmx-datepicker
+                [singleDateSelection]="true"
+                data-id="clone-dialog-datepicker-final"
+                class="datepicker"
+                #datepickerClonFinal
+                (select)="setToDate($event)"
+                (cancel)="cancelDatePickerCloneFinal()"
+                [tags]="datepickerTags"
+                [startWeekWith]="0"
+                [forbiddenWeekDays]="disabledWeekDays"
+                [disabledDates]="disabledDates">
+              </cmx-datepicker>
+            </div>
+          </div>
+        </div>
+      </div>
+    </cmx-dialog-body>
+    <cmx-dialog-footer style="text-align: center;">
+      <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="5px" fxLayoutAlign="end end">
+        <button
+          data-id="closeCloneDialogButton"
+          cmx-button
+          color="blue-inverse"
+          (click)="closeCloneDialog()">
+          {{translate('views.global.btn_cancel')}}
+        </button>
+        <button
+          data-id="copyModelButton"
+          cmx-button
+          color="blue"
+          (click)="copyModel()"
+          [disabled]="disableCopyModelInModal()">
+          {{translate('views.global.btn_confirm')}}
+        </button>
+      </div>
+    </cmx-dialog-footer>
+  </cmx-dialog>
+  <cmx-dialog
+    #confirmDialog
+    data-id="confirmDialog"
+    [enableFooter]="true"
+    [enableClose]="true"
+    backgroundColor="gray">
+    <cmx-dialog-body>
+      <div fxFlex fxLayout="column" *ngIf="isDelete" fxLayoutAlign="center center">
+        <h2 class="dialog-title">{{confirmMessage}}</h2>
+        <h3 class="dialog-subtitle">{{confirmMessageSubtitle}}</h3>
+      </div>
+      <div fxFlex fxLayout="column" *ngIf="!isDelete" fxLayoutAlign="center center">
+        <h3 class="dialog-title">{{confirmMessage}}</h3>
+      </div>
+    </cmx-dialog-body>
+    <cmx-dialog-footer style="text-align: center;">
+      <div fxLayout="row" fxLayoutGap="15px" fxLayoutGap.xs="5px" fxLayoutAlign="end end">
+        <button
+          data-id="closeConfirmDialogButton"
+          cmx-button
+          color="blue-inverse"
+          (click)="closeConfirmDialog()">
+          {{translate('views.global.btn_cancel')}}
+        </button>
+        <button
+          data-id="deleteButton"
+          cmx-button
+          color="blue"
+          (click)="delete()">
+          {{translate('views.global.btn_confirm')}}
+        </button>
+      </div>
+    </cmx-dialog-footer>
+  </cmx-dialog>
+  <cmx-dialog
+    #messageDialog
+    data-id="messageDialog"
+    [enableFooter]="true"
+    [enableClose]="true"
+    backgroundColor="gray">
+    <cmx-dialog-body fxFlex fxLayout="column" fxLayoutAlign="center center">
+      <img src="/graphics/error.svg" *ngIf="isErrorDialog" [ngStyle]="{'text-align': 'center'}" />
+      <h3 class="dialog-title">{{messageText}}</h3>
+    </cmx-dialog-body>
+    <cmx-dialog-footer style="text-align: center;">
+      <div fxLayout="row" fxLayoutAlign="end end">
+        <button
+          data-id="messageDialogConfirmButton"
+          cmx-button
+          color="blue"
+          (click)="closeMessageDialog()">
+          {{translate('views.global.btn_confirm')}}
+        </button>
+      </div>
+    </cmx-dialog-footer>
+  </cmx-dialog>
+</div>
+<form data-id="importForm" method="post" enctype="multipart/form-data" [action]="importFormActionUrl">
+  <input
+    #importFileInput
+    data-id="importFileInput"
+    name="excelFile"
+    type="file"
+    (change)="onImportFile($event)"
+    class="import-file-input" />
+</form>

@@ -1,0 +1,38 @@
+.cmx-popover {
+    width: 280px;
+    background: $true-white;
+    border-radius: $radius-2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-width: 12px;
+        border-style: solid;
+        border-color: transparent transparent $true-white $true-white;
+        bottom: -24px; // we leave as px because this relates to the border width
+        left: calc(50% - 17px); // we leave as px because this relates to the border width (17 is the hypotenuse of 12)
+        box-sizing: border-box;
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &__header {
+        background: $bright-blue;
+        color: $true-white;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        font-size: $font-size-16;
+        line-height: $line-height-16;
+        border-radius: $radius-2;
+        padding: 0.625rem 0.75rem;
+    }
+    &__body {
+        padding: 1rem;			
+    }
+    // end arrow down
+}

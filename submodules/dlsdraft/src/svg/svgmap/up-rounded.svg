@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3fa9f5;
+      }
+    </style>
+  </defs>
+  <title>up-rounded</title>
+  <path class="cls-1" d="M12,9.85l-6,5a.63.63,0,0,1-.8-1l6.41-5.34a.63.63,0,0,1,.4-.14.63.63,0,0,1,.4.14l6.41,5.34a.63.63,0,0,1-.8,1Z"/>
+  <path class="cls-1" d="M12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0Zm0,22.9A10.9,10.9,0,1,1,22.9,12,10.92,10.92,0,0,1,12,22.9Z"/>
+</svg>

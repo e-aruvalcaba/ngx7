@@ -1,0 +1,241 @@
+// Icons
+
+/* icons */
+[class*='icon-'] {
+	width: 24px;
+	height: 24px;
+}
+
+// Logo face
+.logo-shape-1 { fill: $true-red; }
+.logo-shape-2 { fill: $true-blue; }
+
+// Start Side navigation icons
+.icon-control-center 		{ fill: $true-white; }
+.icon-invoicing		 		{ fill: $true-white; }
+.icon-legal-entity		 	{ fill: $true-white; }
+.icon-orders 				{ fill: $true-white; }
+.icon-pricing 				{ fill: $true-white; }
+.icon-user-profile 			{ fill: $true-white; }
+.icon-scheduler 			{ fill: $true-white; }
+.icon-track 				{ fill: $true-white; }
+.icon-driver 				{ fill: $true-white; }
+.icon-payment 				{ fill: $true-white; }
+.icon-ordering 				{ fill: $true-white; }
+
+// Warning, success, alert icons
+.icon-accepted-ok 			{ fill: $bright-green; color: $bright-green; }
+.icon-error 				{ fill: $true-red; color:$true-red; }
+.icon-warning-repeat 		{ fill: $bright-orange; color:$bright-orange; }
+.icon-warning-repeat-sign 	{ fill: $true-white; color:$true-white; }
+.icon-warning-red 			{ fill: $true-red; color:$true-red; }
+.icon-warning-orange 		{ fill: $bright-orange; color:$bright-orange; }
+.icon-warning-mark 			{ fill: $true-white; color: $true-white }
+.icon-check 				{ fill: $bright-blue; color:$bright-blue; }
+
+// Time reference icons 
+.icon-calendar 				{ fill: $bright-blue; }
+.icon-clock 				{ fill: $bright-blue; }
+
+// Checkboxes and radio buttons
+	// .icon-checkbox-active 		{ fill: $bright-blue; }
+	// .icon-checkbox-hover 		{ fill: $bright-blue; }
+	// .icon-checkbox-static   	{ fill: $disabled-grey; }
+.icon-checkbox {
+	.icon-checkbox-inside {
+		fill: $true-white;
+	}
+	.icon-checkbox-stroke {
+		fill: #B0B0B0;
+	}
+}
+
+.icon-checkbox-hover {
+	.icon-checkbox-inside {
+		fill: #E8EBEF;
+	}
+	.icon-checkbox-stroke {
+		fill: #b0b0b0;
+	}
+}
+
+.icon-checkbox-active {
+	.icon-checkbox-inside {
+		fill: $bright-blue;
+	}
+	.icon-checkbox-stroke {
+		fill: $bright-blue;
+	}
+	.icon-checkbox-check-sign {
+		fill: $true-white;
+	}
+}
+
+.icon-checkbox-disabled {
+	.icon-checkbox-inside {
+		fill: #D6D6D6;
+	}
+	.icon-checkbox-stroke {
+		fill: #979797;
+	}
+}
+
+.icon-checkbox-error {
+	.icon-checkbox-inside {
+		fill: $true-white;
+	}
+	.icon-checkbox-stroke {
+		fill: $true-red;
+	}
+}
+
+	// .icon-radio-active 			{ fill: $bright-blue; }
+	// .icon-radio-active-circle 	{ fill: $medium-grey; }
+	// .icon-radio-active-dot 		{ fill: $bright-blue; }
+	// .icon-radio-hover 			{ fill: $bright-blue; }
+	// .icon-radio-static 			{ fill: $disabled-grey; }
+.icon-radio {
+	.icon-radio-fill {
+		fill: $true-white;
+	}
+	.icon-radio-stroke {
+		fill: #B0B0B0;
+	}
+}
+
+.icon-radio-hover {
+	.icon-radio-fill {
+		fill: #E8EBEF;
+	}
+	.icon-radio-stroke {
+		fill: #B0B0B0;
+	}
+}
+
+.icon-radio-active {
+	.icon-radio-fill {
+		fill: $true-white;
+	}
+	.icon-radio-stroke {
+		fill: #999999;
+	}
+	.icon-radio-dot {
+		fill: $bright-blue;
+	}
+}
+
+.icon-radio-active-hover {
+	.icon-radio-fill {
+		fill: $true-blue;
+	}
+	.icon-radio-stroke {
+		fill: #999999;
+	}
+	.icon-radio-dot {
+		fill: $true-white;
+	}
+}
+
+.icon-radio-disabled {
+	.icon-radio-fill {
+		fill: #D6D6D6;
+	}
+	.icon-radio-stroke {
+		fill: #979797;
+	}
+}
+
+.icon-radio-error {
+	.icon-radio-fill {
+		fill: $true-white;
+	}
+	.icon-radio-stroke {
+		fill: $true-red;
+	}
+}
+
+// Close icon
+.icon-close-black 			{ fill: $dark-grey; }
+.icon-close-blue 			{ fill: $bright-blue; }
+.icon-close-silver 			{ fill: $medium-grey; }
+
+// Collapse icon
+//.icon-plus-basic			{ fill: $bright-blue; }
+//.icon-minus-basic			{ fill: $bright-blue; }
+.icon-collapse-static 		{ fill: $medium-grey; }
+.icon-collapse-hover 		{ fill: $bright-blue; }
+.icon-expand-silver 		{ fill: $medium-grey; }
+.icon-expand-blue 			{ fill: $bright-blue; }
+.icon-expand-black 			{ fill: $dark-grey; }
+
+// Map pin icons
+.icon-map-location			{ fill: $bright-blue; }
+.icon-map-delivery-point	{ fill: $bright-green; }
+
+// Double arrows
+.icon-down-double-silver 	{ fill: $medium-grey; }
+.icon-down-double-blue 		{ fill: $bright-blue; }
+.icon-down-double-black 	{ fill: $dark-grey; }
+.icon-up-double-silver 		{ fill: $medium-grey; }
+.icon-up-double-blue 		{ fill: $bright-blue; }
+.icon-up-double-black 		{ fill: $dark-grey; }
+.icon-left-double-silver 	{ fill: $medium-grey; }
+.icon-left-double-blue 		{ fill: $bright-blue; }
+.icon-left-double-black 	{ fill: $dark-grey; }
+.icon-right-double-silver 	{ fill: $medium-grey; }
+.icon-right-double-blue 	{ fill: $bright-blue;}
+.icon-right-double-black 	{ fill: $dark-grey; }
+
+// Single arrows
+.icon-up-single-silver 		{ fill: $medium-grey; }
+.icon-up-single-blue 		{ fill: $bright-blue; }
+.icon-up-single-black 		{ fill: $dark-grey; }
+.icon-down-single-silver 	{ fill: $medium-grey; }
+.icon-down-single-blue 		{ fill: $bright-blue; }
+.icon-down-single-black 	{ fill: $dark-grey; }
+.icon-left-single-silver 	{ fill: $medium-grey; }
+.icon-left-single-blue 		{ fill: $bright-blue; }
+.icon-left-single-black 	{ fill: $dark-grey; }
+.icon-right-single-silver 	{ fill: $medium-grey; }
+.icon-right-single-blue 		{ fill: $bright-blue; }
+.icon-right-single-black 	{ fill: $dark-grey; }
+
+// Download or extract icon
+.icon-export-silver 		{ fill: $medium-grey; }
+.icon-export-blue 			{ fill: $bright-blue; }
+.icon-export-black 			{ fill: $dark-grey; }
+
+// Search icon
+.icon-magnifier-glass 		{ fill: $bright-blue; }
+
+// Rounded icons
+.icon-down-rounded-full 	{ fill: $bright-blue; }
+.icon-down-rounded 			{ fill: $bright-blue; }
+.icon-left-rounded-full 	{ fill: $bright-blue; }
+.icon-left-rounded 			{ fill: $bright-blue; }
+.icon-up-rounded-full 		{ fill: $bright-blue; }
+.icon-up-rounded 			{ fill: $bright-blue; }
+.icon-minus-full 			{ fill: $bright-blue; }
+.icon-minus-round 			{ fill: $bright-blue; }
+.icon-plus-full 			{ fill: $bright-blue; }
+.icon-plus 			 		{ fill: $bright-blue; }
+
+// Repeat, reset, refresh icons
+.icon-repeat-silver 		{ fill: $medium-grey; }
+.icon-repeat-blue 			{ fill: $bright-blue; }
+.icon-repeat-black 			{ fill: $dark-grey; }
+
+// Favourite icon
+.icon-favourite 			{ fill: $medium-grey; }
+.icon-favourite-active 		{ fill: $bright-orange; }
+
+// Erase, delete icon
+.icon-trash-silver 			{ fill: $medium-grey; }
+.icon-trash-blue 			{ fill: $bright-blue; }
+
+
+
+
+
+
+

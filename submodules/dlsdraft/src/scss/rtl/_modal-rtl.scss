@@ -1,0 +1,20 @@
+// START MODALS PAGE
+
+// _modal-rtl.scss
+
+
+html[dir="rtl"] .cmx-modal{
+    // we set the backdrop styles here
+    top:0;
+    right:0; // modified
+    left: auto; // added
+
+    &__close-button{
+        left:24px; // modified
+        right: auto; // added
+        top:24px; 
+    }
+}
+
+
+// END MODALS PAGE

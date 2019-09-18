@@ -1,0 +1,67 @@
+// INDEX PAGE REDESIGN
+.toc{
+	counter-reset: toc;
+
+	&__list {
+		list-style: none outside;
+		margin: 0;
+		padding: 0;
+		font-size: $font-size-14;
+		font-weight: bold;
+		margin-bottom: 20px;
+		position:relative;
+
+		li.coming-soon {
+			background: rgba(238, 61, 66, 0.89);	
+		}
+	
+		li,
+		.list-title {
+			margin-bottom: 1px;
+			color: $true-white;
+			text-transform: uppercase;
+			background: rgba(0, 57, 118, 0.77);
+			opacity: 0.9;
+			transition: all 0.2s;
+			font-size: 0.875rem;
+			padding:0;
+			display: flex;
+	
+			a {
+				color: $true-white;
+				display: inline-block;
+				text-decoration: none;
+				transition: all 0.2s;
+				padding: 0.5rem 1rem;
+				flex: 1 1 auto;
+				&::before{
+					content:counter(toc) ".";
+					display: inline-block;
+					margin-right:0.25rem;
+				}
+			}
+	
+			&:hover {
+				opacity: 1;
+				background: $medium-blue;
+	
+				a {
+					padding-left:1.5rem;
+				}
+			}
+		}
+		li{
+			counter-increment: toc;
+		}
+		.list-title {
+			background: $bright-blue;
+			opacity: 1;
+			font-weight: 700;
+			padding:0.5rem 1rem;
+	
+			&:hover {
+				background: $bright-blue;
+			}
+		}
+	}
+}

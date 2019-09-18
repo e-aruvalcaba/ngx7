@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Numeric Filter - RTL</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.0.0/nouislider.min.js">
+    </script>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav-rtl.html" rel="import">
+        <link href="partials/sidenav-rtl.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Numeric Filter</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="rules-box">
+                            <p><i>Note:</i> for the implementation of the double range selector the plugin nuoSlider was used. You can check out the specs of it <a href="https://refreshless.com/nouislider/" targer="_blank">here</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="cmx-num-filter">
+                            <h4 class="cmx-num-filter__heading">Price Range</h4>
+
+
+                            <div class="cmx-num-filter__range">
+                                <div class="cmx-num-filter__range-val">
+                                    $0
+                                </div>
+
+
+                                <div class="cmx-num-filter__range-slider">
+                                    <div id="zeSlider">
+                                        <!--slider will be inserted here via javaScript-->
+                                    </div>
+                                </div>
+
+
+                                <div class="cmx-num-filter__range-val">
+                                    $7000
+                                </div>
+                            </div>
+
+
+                            <div class="cmx-num-filter__footer">
+                                <button class="cmx-button cmx-button--link cmx-button--link-small margin-horizontal-md">Cancel</button><button class="cmx-button ripple">Filter</button>
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="cmx-num-filter">
+                            <h4 class="cmx-num-filter__heading">Price Range</h4>
+
+
+                            <div class="cmx-num-filter__inputs">
+                                <div class="cmx-form-group">
+                                    <label for="from">From</label> <input class="cmx-form-control" id="from" name="from" placeholder="$0" type="number" value="">
+                                </div>
+
+
+                                <div class="cmx-form-group">
+                                    <label for="to">To</label> <input class="cmx-form-control" id="to" name="to" placeholder="$120,000" type="number" value="">
+                                </div>
+                            </div>
+
+
+                            <div class="cmx-num-filter__footer">
+                                <button class="cmx-button cmx-button--link cmx-button--link-small margin-horizontal-md">Cancel</button><button class="cmx-button ripple">Filter</button>
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-9" dir="ltr">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html">
+                                    <code class="language-html">
+&lt;!-- on the root element set the dir attribute for rtl display format --&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;rtl&quot;&gt;
+    [code goes here]
+&lt;/html&gt;
+
+
+&lt;div class=&quot;cmx-num-filter&quot;&gt;
+    &lt;h4 class=&quot;cmx-num-filter__heading&quot;&gt;Price Range&lt;/h4&gt;
+    &lt;div class=&quot;cmx-num-filter__range&quot;&gt;
+        &lt;div class=&quot;cmx-num-filter__range-val&quot;&gt;$0&lt;/div&gt;
+        &lt;div class=&quot;cmx-num-filter__range-slider&quot;&gt;
+            &lt;div id=&quot;zeSlider&quot;&gt;&lt;!--slider will be inserted here via javaScript--&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;cmx-num-filter__range-val&quot;&gt;$7000&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;cmx-num-filter__footer&quot;&gt;&lt;button class=&quot;cmx-button cmx-button--link cmx-button--link-small margin-horizontal-md&quot;&gt;Cancel&lt;/button&gt;&lt;button class=&quot;cmx-button ripple&quot;&gt;Filter&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;cmx-num-filter&quot;&gt;
+    &lt;h4 class=&quot;cmx-num-filter__heading&quot;&gt;Price Range&lt;/h4&gt;
+    &lt;div class=&quot;cmx-num-filter__inputs&quot;&gt;
+        &lt;div class=&quot;cmx-form-group&quot;&gt;
+            &lt;label for=&quot;from&quot;&gt;From&lt;/label&gt;
+            &lt;input type=&quot;number&quot; class=&quot;cmx-form-control&quot; id=&quot;from&quot; placeholder=&quot;$0&quot; name=&quot;from&quot; value=&quot;&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;cmx-form-group&quot;&gt;
+            &lt;label for=&quot;to&quot;&gt;To&lt;/label&gt;
+            &lt;input type=&quot;number&quot; class=&quot;cmx-form-control&quot; id=&quot;to&quot; placeholder=&quot;$120,000&quot; name=&quot;to&quot; value=&quot;&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;cmx-num-filter__footer&quot;&gt;&lt;button class=&quot;cmx-button cmx-button--link cmx-button--link-small margin-horizontal-md&quot;&gt;Cancel&lt;/button&gt;&lt;button class=&quot;cmx-button ripple&quot;&gt;Filter&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+    </code>
+    <!-- end .language-html --></pre><!-- end data-lang html -->
+
+                                <pre data-lang="sass"><code class="language-css">//no modifications</code></pre>
+
+                                <pre data-lang="js"><code class="language-js">&lt;script&gt;
+
+    // IMPORTANT: the slider will change to RTL, by adding direction: 'rtl' in the define properties
+
+    // pick your slider element
+    var zeSlider = document.querySelector('#zeSlider');
+
+    // define the props of it
+    var sliderProps = {
+        start: [ 500,5000 ],
+        direction: 'rtl', // ! In a RTL scenario, specify direction as a property!
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 7000
+        },
+        labelPre:'$',
+        labelPost:''
+    }
+
+    // you shouldn't be editing past here, but feel free to do it if you want.
+
+    noUiSlider.create(zeSlider, sliderProps);
+
+    var rangeTagLower = document.createElement('div');
+    var rangeTagHigher = document.createElement('div');
+    rangeTagLower.classList.add('cmx-num-filter__range-label');
+    rangeTagHigher.classList.add('cmx-num-filter__range-label');
+    zeSlider.querySelector('.noUi-handle-lower').appendChild(rangeTagLower);
+    zeSlider.querySelector('.noUi-handle-upper').appendChild(rangeTagHigher);
+
+    zeSlider.noUiSlider.on('update', function( values, handle ) {
+        var value = values[handle];
+        if ( handle ) {
+            rangeTagHigher.innerHTML = sliderProps.labelPre + Math.round(value) + sliderProps.labelPost;
+        } else {
+            rangeTagLower.innerHTML = sliderProps.labelPre + Math.round(value) + sliderProps.labelPost;
+        }
+    });
+&lt;/script&gt;</code></pre>
+                            </div>
+                            <!-- end .data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+            </div>
+        </div>
+    </div>
+    <script>
+        // pick your slider element
+        var zeSlider = document.querySelector('#zeSlider');
+
+        // define the props of it
+        var sliderProps = {
+            start: [ 500,5000 ],
+            direction: 'rtl', // ! In a RTL scenario, specify direction as a property!
+            connect: true,
+            range: {
+                'min': 0,
+                'max': 7000
+            },
+            labelPre:'$',
+            labelPost:''
+        }
+
+        // you shouldn't be editing past here, but feel free to do it if you want.
+
+        noUiSlider.create(zeSlider, sliderProps);
+
+        var rangeTagLower = document.createElement('div');
+        var rangeTagHigher = document.createElement('div');
+        rangeTagLower.classList.add('cmx-num-filter__range-label');
+        rangeTagHigher.classList.add('cmx-num-filter__range-label');
+        zeSlider.querySelector('.noUi-handle-lower').appendChild(rangeTagLower);
+        zeSlider.querySelector('.noUi-handle-upper').appendChild(rangeTagHigher);
+
+        zeSlider.noUiSlider.on('update', function( values, handle ) {
+            var value = values[handle];
+            if ( handle ) {
+                rangeTagHigher.innerHTML = sliderProps.labelPre + Math.round(value) + sliderProps.labelPost;
+            } else {
+                rangeTagLower.innerHTML = sliderProps.labelPre + Math.round(value) + sliderProps.labelPost;
+            }
+        });
+    </script>
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

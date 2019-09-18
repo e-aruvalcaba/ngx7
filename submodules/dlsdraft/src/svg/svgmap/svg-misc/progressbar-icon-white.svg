@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 321.58 63.96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>progressbar-icon-white</title>
+  <path class="cls-1" d="M313.58,113.35H8a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8H313.58a8,8,0,0,0,8-8v-48A8,8,0,0,0,313.58,113.35Zm0,56L193,169l30-47.65h90.58Z" transform="translate(0 -113.35)"/>
+</svg>

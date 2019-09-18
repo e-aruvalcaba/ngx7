@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Modal - RTL</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav-rtl.html" rel="import">
+        <link href="partials/sidenav-rtl.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Modal</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Interactive Modal</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <button class="cmx-button ripple" onclick="launchModal('#interactiveModal')">Launch Modal</button>
+
+                        <div class="cmx-modal cmx-modal--interactive hidden" id="interactiveModal">
+                            <div class="cmx-modal__container">
+                                <button class="cmx-modal__close-button" onclick="closeModal()"><span aria-hidden="true" class="cmx-icon-close"></span> <span class="sr-only">Close</span></button>
+
+                                <div class="cmx-modal__content">
+                                    <div class="cmx-modal__section cmx-has-separator">
+                                        <h3 class="text-center">You have requested a revision to product:<br>
+                                        <span class="roboto-bold">#2000000051 | fc-100-10-20-14</span></h3>
+
+
+                                        <h3 class="text-center">Please give a reason for your revision request below.</h3>
+                                    </div>
+
+
+                                    <div class="cmx-modal__section">
+                                        <div class="cmx-form-group">
+                                            <label class="margin-vertical-md font-medium">Please Provide Reasoning for Request</label> 
+
+                                            <textarea class="cmx-form-control" placeholder="Examples: Different pricing shown than was agreed upon with sales representitve, need more quantity and would like to see if there is a different price for larger volume, etc."></textarea>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="cmx-modal__section">
+                                        <div class="text-left">
+                                            <button class="cmx-button cmx-button--support">Cancel</button> <button class="cmx-button cmx-button--primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-48">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-9" dir="ltr">
+                                <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                                    <div data-highlight="">
+                                        <pre data-lang="html">
+                                            <code class="language-html">
+&lt;!-- on the root element set the dir attribute for rtl display format --&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;rtl&quot;&gt;
+    [code goes here]
+&lt;/html&gt;
+
+&lt;button class=&quot;cmx-button ripple&quot; onClick=&quot;launchModal('#interactiveModal')&quot;&gt;Launch Modal&lt;/button&gt;
+&lt;div id=&quot;interactiveModal&quot; class=&quot;cmx-modal cmx-modal--interactive hidden&quot;&gt;
+    &lt;div class=&quot;cmx-modal__container&quot;&gt;
+        &lt;button class=&quot;cmx-modal__close-button&quot; onClick=&quot;closeModal()&quot;&gt;
+            &lt;span class=&quot;cmx-icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;cmx-modal__content&quot;&gt;
+            &lt;div class=&quot;cmx-modal__section cmx-has-separator&quot;&gt;
+                &lt;h3 class=&quot;text-center&quot;&gt;You have requested a revision to product: &lt;br /&gt;
+                    &lt;span class=&quot;roboto-bold&quot;&gt;#2000000051  | fc-100-10-20-14&lt;/span&gt;
+                &lt;/h3&gt;
+                &lt;h3 class=&quot;text-center&quot;&gt;
+                    Please give a reason for your revision request below.
+                &lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;cmx-modal__section&quot;&gt;
+                &lt;div class=&quot;cmx-form-group&quot;&gt;
+                    &lt;label class=&quot;margin-vertical-md font-medium&quot;&gt;Please Provide Reasoning for Request&lt;/label&gt;
+                    &lt;textarea class=&quot;cmx-form-control&quot; placeholder=&quot;Examples: Different pricing shown than was agreed upon with sales representitve, need more quantity and would like to see if there is a different price for larger volume, etc.&quot;&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;cmx-modal__section&quot;&gt;
+                &lt;div class=&quot;text-left&quot;&gt;
+                    &lt;button class=&quot;cmx-button cmx-button--support&quot;&gt;Cancel&lt;/button&gt;
+                    &lt;button class=&quot;cmx-button cmx-button--primary&quot;&gt;Submit&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    </code>
+    <!-- end .language-html --></pre><!-- end data-lang html -->
+
+                                        <pre data-lang="sass"><code class="language-css">// START MODALS PAGE
+
+// _modal-rtl.scss
+
+
+html[dir=&quot;rtl&quot;] .cmx-modal{
+    // we set the backdrop styles here
+    top:0;
+    right:0; // modified
+    left: auto; // added
+
+    &amp;__close-button{
+        left:24px; // modified
+        right: auto; // added
+        top:24px; 
+    }
+}
+
+
+// END MODALS PAGE</code></pre>
+                                    </div>
+                                    <!-- end .data-highlight -->
+                                </div>
+                                <!-- end .code-box -->
+                            </div>
+                            <!-- end .col-md-9 -->
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-48">
+                        </div>
+
+
+                        <h2>Confirmation Modal</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <button class="cmx-button ripple" onclick="launchModal('#confirmationModal')">Launch Modal</button>
+
+                        <div class="cmx-modal cmx-modal--confirmation hidden" id="confirmationModal">
+                            <div class="cmx-modal__container">
+                                <button class="cmx-modal__close-button" onclick="closeModal()"><span aria-hidden="true" class="cmx-icon-close"></span> <span class="sr-only">Close</span></button>
+
+                                <div class="cmx-modal__section">
+                                    <div class="icon-accepted-ok cmx-confirmation__icon cmx-icon-accepted-ok">
+                                    </div>
+
+
+                                    <h3 class="cmx-confirmation__message">Your revision request has been submitted.<br>
+                                    CEMEX will respond to you within 48 hours with a decision on the request.</h3>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-48">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-9" dir="ltr">
+                                <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                                    <div data-highlight="">
+                                        <pre data-lang="html">
+                                            <code class="language-html">
+&lt;!-- on the root element set the dir attribute for rtl display format --&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;rtl&quot;&gt;
+    [code goes here]
+&lt;/html&gt;
+
+&lt;button class=&quot;cmx-button ripple&quot; onClick=&quot;launchModal('#confirmationModal')&quot;&gt;Launch Modal&lt;/button&gt;
+&lt;div id=&quot;confirmationModal&quot; class=&quot;cmx-modal cmx-modal--confirmation hidden&quot;&gt;
+    &lt;div class=&quot;cmx-modal__container&quot;&gt;
+        &lt;button class=&quot;cmx-modal__close-button&quot; onClick=&quot;closeModal()&quot;&gt;
+            &lt;span class=&quot;cmx-icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;cmx-modal__section&quot;&gt;
+                &lt;div class=&quot;icon-accepted-ok cmx-confirmation__icon  cmx-icon-accepted-ok&quot;&gt;&lt;/div&gt;
+                &lt;h3 class=&quot;cmx-confirmation__message&quot;&gt;
+                Your revision request has been submitted. &lt;br /&gt;
+                CEMEX will respond to you within 48 hours with a decision on the request.
+            &lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    </code>
+    <!-- end .language-html --></pre><!-- end data-lang html -->
+
+                                        <pre data-lang="sass"><code class="language-css">// START MODALS PAGE
+
+// _modal-rtl.scss
+
+
+html[dir=&quot;rtl&quot;] .cmx-modal{
+    // we set the backdrop styles here
+    top:0;
+    right:0; // modified
+    left: auto; // added
+
+    &amp;__close-button{
+        left:24px; // modified
+        right: auto; // added
+        top:24px; 
+    }
+}
+
+
+// END MODALS PAGE</code></pre>
+                                    </div>
+                                    <!-- end .data-highlight -->
+                                </div>
+                                <!-- end .code-box -->
+                            </div>
+                            <!-- end .col-md-9 -->
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-48">
+                        </div>
+
+
+                        <h2>Informational Modal</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <button class="cmx-button ripple" onclick="launchModal('#termsModal')">Launch Modal</button>
+
+                        <div class="cmx-modal cmx-modal--terms hidden" id="termsModal">
+                            <div class="cmx-modal__container">
+                                <button class="cmx-modal__close-button" onclick="closeModal()"><span aria-hidden="true" class="cmx-icon-close"></span> <span class="sr-only">Close</span></button>
+
+                                <div class="cmx-modal__section flex flex--column">
+                                    <h3 class="margin-bottom flex__item--fixed">Terms + Conditions</h3>
+
+
+                                    <div class="flex__item position--relative">
+                                        <div class="scroller scroller--fade-bottom scroller--border-top">
+                                            <div class="scroller__content">
+                                                <p><span class="roboto-medium">9. DELIVERY AND INDEMNIFICATION.</span> Seller's responsibility for delivery shall cease FOB shipping point or, if Seller agrees to deliver FOB delivery site, at the curbside or street or frontage of the address of delivery. If Buyer requires Seller to cross a curb line or enter upon private property to make delivery on site, Buyer shall be responsible to provide safe and adequate access and such delivery shall be at the risk of Buyer. Following delivery, Buyer shall be responsible for compliance with all governmental regulations and ordinances with regard to disposal, storage or placement of the same and shall indemnify and hold Seller harmless against all claims for personal injuries, including death, and any damage to private or public property arising from the delivery, storage, use, disposal or handling of said Materials. Unless otherwise specifically agreed, shipments will be made only during normal business hours, but not Saturdays, Sundays, or holidays recognized by Seller or labor unions under contract with Seller. If Buyer is in default under this Agreement or any of its contracts or obligations with Seller, Seller may, at its sole option and without prejudice to any of its other remedies: (i) postpone further deliveries or shipments until such default is remedied; or (ii) terminate any and all obligations under any contract or obligation and refuse further performance without any liability to Buyer.</p>
+
+
+                                                <div class="spacer-16">
+                                                </div>
+
+
+                                                <p><span class="roboto-medium">10. TITLE OF SECTION</span> Seller's responsibility for delivery shall cease FOB shipping point or, if Seller agrees to deliver FOB delivery site, at the curbside or street or frontage of the address of delivery. If Buyer requires Seller to cross a curb line or enter upon private property to make delivery on site, Buyer shall be responsible to provide safe and adequate access and such delivery shall be at the risk of Buyer. Following delivery, Buyer shall be responsible for compliance with all governmental regulations and ordinances with regard to disposal, storage or placement of the same and shall indemnify and hold Seller harmless against all claims for personal injuries, including death, and any damage to private or public property</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-48">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-9" dir="ltr">
+                                <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                                    <div data-highlight="">
+                                        <pre data-lang="html">
+                                            <code class="language-html">
+&lt;!-- on the root element set the dir attribute for rtl display format --&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;rtl&quot;&gt;
+    [code goes here]
+&lt;/html&gt;
+
+&lt;button class=&quot;cmx-button ripple&quot; onClick=&quot;launchModal('#termsModal')&quot;&gt;Launch Modal&lt;/button&gt;
+&lt;div id=&quot;termsModal&quot; class=&quot;cmx-modal cmx-modal--terms hidden&quot;&gt;
+    &lt;div class=&quot;modal__container&quot;&gt;
+        &lt;button class=&quot;modal__close-button&quot; onClick=&quot;closeModal()&quot;&gt;
+            &lt;span class=&quot;cmx-icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;modal__section flex flex--column&quot;&gt;
+            &lt;h3 class=&quot;margin-bottom flex__item--fixed&quot;&gt;Terms + Conditions&lt;/h3&gt;
+            &lt;div class=&quot;flex__item position--relative&quot;&gt;
+                &lt;div class=&quot;scroller scroller--fade-bottom scroller--border-top&quot;&gt;
+                    &lt;div class=&quot;scroller__content&quot;&gt;
+                        &lt;p&gt;&lt;span class=&quot;roboto-medium&quot;&gt;9. DELIVERY AND INDEMNIFICATION.&lt;/span&gt; Seller's responsibility for delivery shall cease FOB shipping point or, if Seller agrees to deliver FOB delivery
+                        site, at the curbside or street or frontage of the address of delivery. If Buyer requires Seller to cross a curb line or enter upon private property to make delivery on site, Buyer shall be responsible to provide safe and adequate access and such delivery shall be at the risk of Buyer. Following delivery, Buyer shall be responsible for compliance with all governmental regulations and ordinances with regard to disposal, storage or placement of the same and shall indemnify and hold Seller harmless against all claims for personal injuries, including death, and any damage to private or public property arising from the delivery, storage, use, disposal or handling of said Materials. Unless otherwise specifically agreed, shipments will be made only during normal business hours, but not Saturdays, Sundays, or holidays recognized by Seller or labor unions under contract with Seller. If Buyer is in default under this Agreement or any of its contracts or obligations with Seller, Seller may, at its sole option and without prejudice to any of its other remedies: (i) postpone further deliveries or shipments until such default is remedied; or (ii) terminate any and all obligations under any contract or obligation and refuse further performance without any liability to Buyer.&lt;/p&gt;
+
+                        &lt;div class=&quot;spacer-16&quot;&gt;&lt;/div&gt;
+
+                        &lt;p&gt;&lt;span class=&quot;roboto-medium&quot;&gt;10. TITLE OF SECTION&lt;/span&gt; Seller's responsibility for delivery shall cease FOB shipping point or, if Seller agrees to deliver FOB delivery
+                        site, at the curbside or street or frontage of the address of delivery. If Buyer requires Seller to cross a curb line or enter upon private property to make delivery on site, Buyer shall be responsible to provide safe and adequate access and such delivery shall be at the risk of Buyer. Following delivery, Buyer shall be responsible for compliance with all governmental regulations and ordinances with regard to disposal, storage or placement of the same and shall indemnify and hold Seller harmless against all claims for personal injuries, including death, and any damage to private or public property&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    </code>
+    <!-- end .language-html --></pre><!-- end data-lang html -->
+
+                                        <pre data-lang="sass"><code class="language-css">// START MODALS PAGE
+
+// _modal-rtl.scss
+
+
+html[dir=&quot;rtl&quot;] .modal{
+    // we set the backdrop styles here
+    top:0;
+    right:0; // modified
+    left: auto; // added
+
+    &amp;__close-button{
+        left:24px; // modified
+        right: auto; // added
+        top:24px; 
+    }
+}
+
+
+// END MODALS PAGE</code></pre>
+                                    </div>
+                                    <!-- end .data-highlight -->
+                                </div>
+                                <!-- end .code-box -->
+                            </div>
+                            <!-- end .col-md-9 -->
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-48">
+                        </div>
+
+
+                        <h2>Chat Modal</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <button class="cmx-button ripple" onclick="launchModal('#chatModal')">Launch Modal</button>
+
+                        <div class="cmx-modal cmx-modal--chat hidden" id="chatModal">
+                            <div class="cmx-modal__container">
+                                <button class="cmx-modal__close-button" onclick="closeModal()"><span aria-hidden="true" class="cmx-icon-close"></span> <span class="sr-only">Close</span></button>
+
+                                <div class="cmx-modal__section flex flex--column">
+                                    <h3 class="margin-bottom flex__item--fixed text-center">Monday January 9, 2017</h3>
+
+
+                                    <div class="flex__item position--relative">
+                                        <div class="scroller scroller--border-top margin-horizontal-xxl">
+                                            <div class="scroller__content">
+                                                <div class="chat__stream pad-horizontal-sm">
+                                                    <span class="chat__bar chat__center"></span>
+
+                                                    <div class="chat__entry">
+                                                        <div class="chat__entry-content">
+                                                            <div class="chat__entry-header">
+                                                                <div class="time">
+                                                                    11:05 AM
+                                                                </div>
+
+
+                                                                <div class="author">
+                                                                    Paul Sherman
+                                                                </div>
+                                                            </div>
+                                                            <!-- end .chat__entry-header -->
+
+
+                                                            <div class="chat__entry-body">
+                                                                <h6>Disputed Created</h6>
+
+
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisi, bibendum pellentesque imperdiet vel, porttitor ac odio. Curabitur facilisis iaculis ante eget condimentum.</p>
+                                                            </div>
+                                                            <!-- end .chat__entry-body -->
+                                                        </div>
+                                                        <!-- end .chat__entry-content -->
+
+
+                                                        <div class="chat__bullet chat__center">
+                                                        </div>
+                                                    </div>
+                                                    <!-- end .chat__entry -->
+
+
+                                                    <div class="chat__entry">
+                                                        <div class="chat__entry-content">
+                                                            <div class="chat__entry-header">
+                                                                <div class="time">
+                                                                    11:15 AM
+                                                                </div>
+
+
+                                                                <div class="author">
+                                                                    CEMEX Representative
+                                                                </div>
+                                                            </div>
+                                                            <!-- end .chat__entry-header -->
+
+
+                                                            <div class="chat__entry-body">
+                                                                <h6>Disputed Created</h6>
+
+
+                                                                <p>Nulla ut lectus hendrerit, venenatis magna finibus, maximus magna. Vivamus viverra mauris nec tortor ultricies, et pellentesque eros dignissim. Donec feugiat ex dapibus, bibendum nibh eu, placerat diam.</p>
+                                                            </div>
+                                                            <!-- end .chat__entry-body -->
+                                                        </div>
+                                                        <!-- end .chat__entry-content -->
+
+
+                                                        <div class="chat__bullet chat__center">
+                                                        </div>
+                                                    </div>
+                                                    <!-- end .chat__entry -->
+
+
+                                                    <div class="chat__entry">
+                                                        <div class="chat__entry-content">
+                                                            <div class="chat__entry-header">
+                                                                <div class="time">
+                                                                    11:17 AM
+                                                                </div>
+
+
+                                                                <div class="author">
+                                                                    Paul Sherman
+                                                                </div>
+                                                            </div>
+                                                            <!-- end .chat__entry-header -->
+
+
+                                                            <div class="chat__entry-body">
+                                                                <h6>Disputed Created</h6>
+
+
+                                                                <p>Sed volutpat venenatis tellus eu pretium. Nunc tempus lacus fermentum, condimentum massa eu, semper ante. Pellentesque condimentum, nisi a tempor egestas, dolor dolor malesuada tellus, sed aliquet sapien lorem non risus. Nulla in orci non enim mattis dignissim vitae ut sapien. Ut lacinia quam sed urna placerat euismod. Sed laoreet quam purus, ac malesuada arcu rutrum vitae. Donec a dictum nisl.</p>
+                                                            </div>
+                                                            <!-- end .chat__entry-body -->
+                                                        </div>
+                                                        <!-- end .chat__entry-content -->
+
+
+                                                        <div class="chat__bullet chat__center">
+                                                        </div>
+                                                    </div>
+                                                    <!-- end .chat__entry -->
+
+
+                                                    <div class="chat__entry">
+                                                        <div class="chat__entry-content">
+                                                            <div class="chat__entry-header">
+                                                                <div class="time">
+                                                                    11:23 AM
+                                                                </div>
+
+
+                                                                <div class="author">
+                                                                    CEMEX Representative
+                                                                </div>
+                                                            </div>
+                                                            <!-- end .chat__entry-header -->
+
+
+                                                            <div class="chat__entry-body">
+                                                                <h6>Disputed Created</h6>
+
+
+                                                                <p>Pellentesque eget augue accumsan ligula facilisis aliquam. Aliquam cursus lacus eu eros condimentum ultricies. Sed congue augue tempus, efficitur augue sit amet, consequat arcu. Mauris feugiat nisi velit, sed interdum lectus rutrum at. Integer velit turpis, maximus sed massa...</p>
+                                                            </div>
+                                                            <!-- end .chat__entry-body -->
+                                                        </div>
+                                                        <!-- end .chat__entry-content -->
+
+
+                                                        <div class="chat__bullet chat__center">
+                                                        </div>
+                                                    </div>
+                                                    <!-- end .chat__entry -->
+
+
+                                                    <div class="chat__entry">
+                                                        <div class="chat__entry-content">
+                                                            <div class="chat__entry-header">
+                                                                <div class="time">
+                                                                    11:38 AM
+                                                                </div>
+
+
+                                                                <div class="author">
+                                                                    Paul Sherman
+                                                                </div>
+                                                            </div>
+                                                            <!-- end .chat__entry-header -->
+
+
+                                                            <div class="chat__entry-body">
+                                                                <h6>Disputed Created</h6>
+
+
+                                                                <p>Vestibulum molestie eu turpis sit amet commodo. Cras sollicitudin odio nec sem pharetra laoreet. Aliquam efficitur laoreet massa, id elementum est. In faucibus dapibus ligula, quis imperdiet libero aliquam pharetra. Nunc ultricies dui vel erat interdum, eu tincidunt turpis malesuada. Mauris tempor eget lorem et tempor.</p>
+                                                            </div>
+                                                            <!-- end .chat__entry-body -->
+                                                        </div>
+                                                        <!-- end .chat__entry-content -->
+
+
+                                                        <div class="chat__bullet chat__center">
+                                                        </div>
+                                                    </div>
+                                                    <!-- end .chat__entry -->
+                                                </div>
+                                                <!-- end .chat-stream -->
+                                            </div>
+                                            <!-- end .scroller__content -->
+                                        </div>
+                                        <!-- end .scroller -->
+                                    </div>
+                                    <!-- end .flex__item -->
+
+
+                                    <div class="chat__input">
+                                        <input name="" placeholder="Type text here..." type="text" value=""> <button class="cmx-button cmx-button--link cmx-button--link-medium" name="" type="submit">Send</button>
+                                    </div>
+                                    <!-- end .chat__input -->
+                                </div>
+                                <!-- end .modal__section -->
+                            </div>
+                            <!-- end .modal_container -->
+                        </div>
+                        <!-- end .modal .modal==chat -->
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-48">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-9" dir="ltr">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html">
+                                    <code class="language-html">
+&lt;!-- on the root element set the dir attribute for rtl display format --&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;rtl&quot;&gt;
+    [code goes here]
+&lt;/html&gt;
+
+&lt;button class=&quot;cmx-button ripple&quot; onClick=&quot;launchModal('#chatModal')&quot;&gt;Launch Modal&lt;/button&gt;
+    &lt;div id=&quot;chatModal&quot; class=&quot;cmx-modal cmx-modal--chat hidden&quot;&gt;
+        &lt;div class=&quot;cmx-modal__container&quot;&gt;
+            &lt;button class=&quot;cmx-modal__close-button&quot; onClick=&quot;closeModal()&quot;&gt;
+                &lt;span class=&quot;cmx-icon-close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+                &lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class=&quot;cmx-modal__section flex flex--column&quot;&gt;
+                &lt;h3 class=&quot;margin-bottom flex__item--fixed text-center&quot;&gt;Monday January 9, 2017&lt;/h3&gt;
+                &lt;div class=&quot;flex__item position--relative&quot;&gt;
+                    &lt;div class=&quot;scroller scroller--border-top  margin-horizontal-xxl&quot;&gt;
+                        &lt;div class=&quot;scroller__content&quot;&gt;
+
+
+                            &lt;div class=&quot;chat__stream pad-horizontal-sm&quot;&gt;
+                                &lt;span class=&quot;chat__bar chat__center&quot;&gt;&lt;/span&gt;
+                                &lt;div class=&quot;chat__entry&quot;&gt;
+                                    &lt;div class=&quot;chat__entry-content&quot;&gt;
+                                        &lt;div class=&quot;chat__entry-header&quot;&gt;
+                                            &lt;div class=&quot;time&quot;&gt;11:05 AM&lt;/div&gt;
+                                            &lt;div class=&quot;author&quot;&gt;Paul Sherman&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;!-- end .chat__entry-header --&gt;
+
+                                        &lt;div class=&quot;chat__entry-body&quot;&gt;
+                                            &lt;h6&gt;Disputed Created&lt;/h6&gt;
+                                            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisi, bibendum pellentesque imperdiet vel, porttitor ac odio. Curabitur facilisis iaculis ante eget condimentum. &lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;!-- end .chat__entry-body --&gt;
+                                    &lt;/div&gt;
+                                    &lt;!-- end .chat__entry-content --&gt;
+                                    &lt;div class=&quot;chat__bullet chat__center&quot;&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;!-- end .chat__entry --&gt;
+
+                                &lt;div class=&quot;chat__entry&quot;&gt;
+                                    &lt;div class=&quot;chat__entry-content&quot;&gt;
+                                        &lt;div class=&quot;chat__entry-header&quot;&gt;
+                                            &lt;div class=&quot;time&quot;&gt;11:15 AM&lt;/div&gt;
+                                            &lt;div class=&quot;author&quot;&gt;CEMEX Representative&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;!-- end .chat__entry-header --&gt;
+
+                                        &lt;div class=&quot;chat__entry-body&quot;&gt;
+                                            &lt;h6&gt;Disputed Created&lt;/h6&gt;
+                                            &lt;p&gt;Nulla ut lectus hendrerit, venenatis magna finibus, maximus magna. Vivamus viverra mauris nec tortor ultricies, et pellentesque eros dignissim. Donec feugiat ex dapibus, bibendum nibh eu, placerat diam.  &lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;!-- end .chat__entry-body --&gt;
+                                    &lt;/div&gt;
+                                    &lt;!-- end .chat__entry-content --&gt;
+                                    &lt;div class=&quot;chat__bullet chat__center&quot;&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;!-- end .chat__entry --&gt;
+
+                                &lt;div class=&quot;chat__entry&quot;&gt;
+                                    &lt;div class=&quot;chat__entry-content&quot;&gt;
+                                        &lt;div class=&quot;chat__entry-header&quot;&gt;
+                                            &lt;div class=&quot;time&quot;&gt;11:17 AM&lt;/div&gt;
+                                            &lt;div class=&quot;author&quot;&gt;Paul Sherman&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;!-- end .chat__entry-header --&gt;
+
+                                        &lt;div class=&quot;chat__entry-body&quot;&gt;
+                                            &lt;h6&gt;Disputed Created&lt;/h6&gt;
+                                            &lt;p&gt;Sed volutpat venenatis tellus eu pretium. Nunc tempus lacus fermentum, condimentum massa eu, semper ante. Pellentesque condimentum, nisi a tempor egestas, dolor dolor malesuada tellus, sed aliquet sapien lorem non risus. Nulla in orci non enim mattis dignissim vitae ut sapien. Ut lacinia quam sed urna placerat euismod. Sed laoreet quam purus, ac malesuada arcu rutrum vitae. Donec a dictum nisl. &lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;!-- end .chat__entry-body --&gt;
+                                    &lt;/div&gt;
+                                    &lt;!-- end .chat__entry-content --&gt;
+                                    &lt;div class=&quot;chat__bullet chat__center&quot;&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;!-- end .chat__entry --&gt;
+
+                                &lt;div class=&quot;chat__entry&quot;&gt;
+                                    &lt;div class=&quot;chat__entry-content&quot;&gt;
+                                        &lt;div class=&quot;chat__entry-header&quot;&gt;
+                                            &lt;div class=&quot;time&quot;&gt;11:23 AM&lt;/div&gt;
+                                            &lt;div class=&quot;author&quot;&gt;CEMEX Representative&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;!-- end .chat__entry-header --&gt;
+
+                                        &lt;div class=&quot;chat__entry-body&quot;&gt;
+                                            &lt;h6&gt;Disputed Created&lt;/h6&gt;
+                                            &lt;p&gt; Pellentesque eget augue accumsan ligula facilisis aliquam. Aliquam cursus lacus eu eros condimentum ultricies. Sed congue augue tempus, efficitur augue sit amet, consequat arcu. Mauris feugiat nisi velit, sed interdum lectus rutrum at. Integer velit turpis, maximus sed massa...  &lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;!-- end .chat__entry-body --&gt;
+                                    &lt;/div&gt;
+                                    &lt;!-- end .chat__entry-content --&gt;
+                                    &lt;div class=&quot;chat__bullet chat__center&quot;&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;!-- end .chat__entry --&gt;
+
+                                &lt;div class=&quot;chat__entry&quot;&gt;
+                                    &lt;div class=&quot;chat__entry-content&quot;&gt;
+                                        &lt;div class=&quot;chat__entry-header&quot;&gt;
+                                            &lt;div class=&quot;time&quot;&gt;11:38 AM&lt;/div&gt;
+                                            &lt;div class=&quot;author&quot;&gt;Paul Sherman&lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;!-- end .chat__entry-header --&gt;
+
+                                        &lt;div class=&quot;chat__entry-body&quot;&gt;
+                                            &lt;h6&gt;Disputed Created&lt;/h6&gt;
+                                            &lt;p&gt; Vestibulum molestie eu turpis sit amet commodo. Cras sollicitudin odio nec sem pharetra laoreet. Aliquam efficitur laoreet massa, id elementum est. In faucibus dapibus ligula, quis imperdiet libero aliquam pharetra. Nunc ultricies dui vel erat interdum, eu tincidunt turpis malesuada. Mauris tempor eget lorem et tempor. &lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;!-- end .chat__entry-body --&gt;
+                                    &lt;/div&gt;
+                                    &lt;!-- end .chat__entry-content --&gt;
+                                    &lt;div class=&quot;chat__bullet chat__center&quot;&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;!-- end .chat__entry --&gt;
+                            &lt;/div&gt;
+                            &lt;!-- end .chat-stream --&gt;
+
+
+                        &lt;/div&gt;
+                        &lt;!-- end .scroller__content --&gt;
+                    &lt;/div&gt;
+                    &lt;!-- end .scroller --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .flex__item --&gt;
+
+                &lt;div class=&quot;chat__input&quot;&gt;
+                    &lt;input type=&quot;text&quot; value=&quot;&quot; name=&quot;&quot; placeholder=&quot;Type text here...&quot; /&gt;
+                    &lt;button class=&quot;cmx-button cmx-button--link cmx-button--link-medium&quot; type=&quot;submit&quot; name=&quot;&quot;&gt;Send&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;!-- end .chat__input --&gt;
+            &lt;/div&gt;
+            &lt;!-- end .modal__section --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .modal_container --&gt;
+    &lt;/div&gt;
+    &lt;!-- end .modal .modal--chat --&gt;
+
+    </code>
+    <!-- end .language-html --></pre><!-- end data-lang html -->
+
+                                <pre data-lang="sass"><code class="language-css">// _chat-rtl.scss is the partial controlling the chat rtl display
+
+html[dir=&quot;rtl&quot;] .chat{
+    &amp;__input{
+
+        input[type=&quot;text&quot;] {
+        }
+
+        button{
+            left: 1.5rem; // modified
+            right: auto; // added;
+        }
+    }
+    
+    &amp;__entry {
+
+        &amp;:nth-child(even){
+
+            .chat__entry-content {
+                float: left; // modified
+            }
+        }
+        &amp;:nth-child(odd){
+            .chat__entry-body {
+                &amp;::before {
+                    left: auto; // modified
+                    right: 100%; // modified
+                    border-right: 8px solid #F4F6F9; // modified
+                    border-left: transparent; // modified
+                }   
+            }
+        }
+
+        &amp;-content {
+            float: right; // modified
+        }
+        &amp;-header {
+            float: right; // modified
+    
+            .time {
+                float: right; // modified
+            }
+        
+            .author {
+                float: left; // modified
+            }
+        }
+        &amp;-body {
+            &amp;::before {
+                right: auto; // modified
+                left: 100%; // modified
+                border-left: 8px solid $bright-blue; // modified
+                border-right: transparent; // modified
+            }
+        }
+    }
+}
+
+
+// change the look of the chat-modal on small screens
+
+@media (max-width: 48rem) {
+
+    html[dir=&quot;rtl&quot;] .chat{
+
+        &amp;__entry {
+
+            float: left; // modified
+
+            &amp;:nth-child(even){
+                .chat__entry{
+                    &amp;-content {
+                        float: left; // modified
+                        margin-left: 10px; // modified
+                        margin-right: 0; // added
+                    }
+                    &amp;-body {
+                        &amp;::before {
+                            left: auto; // modified
+                            right: 100%; // modified
+                            border-right: 8px solid $bright-blue; // modified
+                            border-left: transparent; // modified
+                        }
+                    }
+                }
+            } 
+
+            &amp;:nth-child(odd){
+                .chat__entry{
+                    &amp;-content {
+                        margin-right: 10px; // modified
+                        margin-left: 0; // added
+                    }
+                    &amp;-body {
+                        &amp;::before {
+                            right: auto; // modified
+                            left: 100%; // modified
+                            border-left: 8px solid #F4F6F9; // modified
+                            border-right: transparent; // modified
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// end .modal-chat</code></pre>
+                            </div>
+                            <!-- end .data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

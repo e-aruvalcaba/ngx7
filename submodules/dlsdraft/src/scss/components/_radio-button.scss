@@ -1,0 +1,40 @@
+// _radio-button.scss
+
+input {
+
+    &[type=radio] {
+        display: none;
+        
+        @include radio(unchecked);
+
+        &:checked {
+            @include radio(checked);
+            &:hover { @include radio(checked); }
+        }
+
+        &:hover { @include radio(hover); }
+        
+        &.error { 
+            @include radio(error);
+            
+            &:hover {
+                @include radio(hover);
+            }
+            
+            &:checked {
+                @include radio(checked);
+            } 
+        }
+
+        &[disabled] { @include radio(disabled); }
+
+        + label span {
+            vertical-align: top;
+            padding-left: .25em;
+        }
+
+        &[disabled] + label span {
+            // color: $disabled-grey;
+        }
+    }
+}

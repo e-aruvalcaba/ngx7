@@ -1,0 +1,375 @@
+<template>
+   <nav id="sidenav" class="cmx-navbar cmx-navbar-static-side">
+      <div class="cmx-navbar__trigger" onclick="toggleSidebar(event)">
+        <span class="cmx-icon-left-double font-true-white" aria-hidden="true"></span>
+        <span class="sr-only">Toggle Sidebar</span>
+      </div>
+      <ul class="cmx-navbar__menu single-tone flex__item--fixed mobile-only">
+          <li class="cmx-navbar__menu-item">
+            <button class="cmx-navbar__menu-link primary" onclick="toggleSidebar(event)">
+                <span class="cmx-navbar__menu-icon">
+                    <div class="cmx-main-nav__icon cmx-main-nav__icon--inverted">MW</div>
+                </span>
+                <span class="cmx-navbar__menu-label">Michael Wassermann</span>
+            </button>
+          </li>
+          <li class="cmx-navbar__menu-item">
+            <button class="cmx-navbar__menu-link primary popout__toggle" onclick="launchModal('#mobileNotificationSelection')">
+                <span class="cmx-navbar__menu-icon">
+                    <div class="cmx-main-nav__icon cmx-main-nav__icon--alert">99</div>
+                </span>
+                <span class="cmx-navbar__menu-label">Notifications</span>
+            </button>
+          </li>
+      </ul>
+      <div class="cmx-navbar__legal-entity">
+        <div role="button" onclick="toggleEntitySelector()">
+            <div class="cmx-navbar__legal-entity-name" id="legalEntityName">Acme Construction</div>
+            <div class="cmx-navbar__legal-entity-id"><span id="legalEntityId">#1233312</span> 
+                <span class="cmx-navbar__legal-entity-toggle cmx-icon-right-single font-true-white" aria-hidden="true"></span>
+                <span class="sr-only">Toggle Legal Entity Selector</span>
+            </div>
+        </div>
+        <div class="cmx-navbar__legal-entity-listing">
+            <div class="cmx-navbar__legal-entity-filtering">
+                <h2 class="cmx-navbar__legal-entity-filtering-header mobile-only">Customer Selection</h2>
+                <input class="cmx-navbar__legal-entity-filtering-input desktop-only" type="text" name="" value="" placeholder="Search" class="desktop-only" >
+                <div class="cmx-form-group mobile-only">
+                    <div class="cmx-form-control--icon-button-trail">
+                        <input type="text" class="cmx-form-control" id="name-field" placeholder="Search" name="" value="" />
+                        <button class="cmx-button cmx-button--icon">
+                            <span class="cmx-icon-magnifier-glass" aria-hidden="true"></span>
+                            <span class="sr-only">Search</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="cmx-navbar__legal-entity-items">
+                <div class="cmx-navbar__legal-entity-item">
+                    <div class="cmx-navbar__legal-entity-button" role="button" data-entity-id="#12313434" data-entity-name="Zotware Construction" onclick="chooseLegalEntity(this)">
+                        <div class="cmx-navbar__legal-entity-name">Zotware Construction</div>
+                        <div class="cmx-navbar__legal-entity-id">#12313434</div>
+                    </div>	
+                </div>
+                <div class="cmx-navbar__legal-entity-item">
+                    <div class="cmx-navbar__legal-entity-button" role="button" data-entity-id="#39485734" data-entity-name="Donaware" onclick="chooseLegalEntity(this)">
+                        <div class="cmx-navbar__legal-entity-name">Donaware</div> 
+                        <div class="cmx-navbar__legal-entity-id">#39485734</div>
+                    </div>		
+                </div>
+                <div class="cmx-navbar__legal-entity-item">
+                    <div class="cmx-navbar__legal-entity-button" role="button" data-entity-id="#2342345" data-entity-name="Terrace Buildings" onclick="chooseLegalEntity(this)">
+                        <div class="cmx-navbar__legal-entity-name">Terrace Buildings</div>
+                        <div class="cmx-navbar__legal-entity-id">#2342345</div>
+                    </div>		
+                </div>
+                <div class="cmx-navbar__legal-entity-item active">
+                    <div class="cmx-navbar__legal-entity-button" role="button" data-entity-id="#12313437" data-entity-name="Acme Construction" onclick="chooseLegalEntity(this)">
+                        <div class="cmx-navbar__legal-entity-name">Acme Construction</div>
+                        <div class="cmx-navbar__legal-entity-id">#12313437</div>
+                    </div>		
+                </div>
+                <div class="cmx-navbar__legal-entity-item">
+                    <div class="cmx-navbar__legal-entity-button" role="button" data-entity-id="#39485733" data-entity-name="Trep Builder Co." onclick="chooseLegalEntity(this)">
+                        <div class="cmx-navbar__legal-entity-name">Trep Builder Co.</div>
+                        <div class="cmx-navbar__legal-entity-id">#39485733</div>
+                    </div>	
+                </div>
+                <div class="cmx-navbar__legal-entity-item">
+                    <div class="cmx-navbar__legal-entity-button" role="button" data-entity-id="#12313434" data-entity-name="Baumar Co." onclick="chooseLegalEntity(this)">
+                        <div class="cmx-navbar__legal-entity-name">Baumar Co.</div>
+                        <div class="cmx-navbar__legal-entity-id">#12313434</div>
+                    </div>	
+                </div>
+                <div class="cmx-navbar__legal-entity-item">
+                    <div class="cmx-navbar__legal-entity-button" role="button" data-entity-id="#39485735" data-entity-name="Everglade" onclick="chooseLegalEntity(this)">
+                        <div class="cmx-navbar__legal-entity-name">Everglade</div> 
+                        <div class="cmx-navbar__legal-entity-id">#39485735</div>
+                    </div>		
+                </div>
+                <div class="cmx-navbar__legal-entity-item">
+                    <div class="cmx-navbar__legal-entity-button" role="button" data-entity-id="#2342346" data-entity-name="Batiments" onclick="chooseLegalEntity(this)">
+                        <div class="cmx-navbar__legal-entity-name">Batiments</div>
+                        <div class="cmx-navbar__legal-entity-id">#2342346</div>
+                    </div>		
+                </div>
+                <div class="cmx-navbar__legal-entity-item">
+                    <div class="cmx-navbar__legal-entity-button" role="button" data-entity-id="#12313438" data-entity-name="A&B Engeneering" onclick="chooseLegalEntity(this)">
+                        <div class="cmx-navbar__legal-entity-name">A&amp;B Engeneering</div>
+                        <div class="cmx-navbar__legal-entity-id">#12313438</div>
+                    </div>		
+                </div>
+                <div class="cmx-navbar__legal-entity-item">
+                    <div class="cmx-navbar__legal-entity-button" role="button" data-entity-id="#39485734" data-entity-name="Impregilo" onclick="chooseLegalEntity(this)">
+                        <div class="cmx-navbar__legal-entity-name">Impregilo</div>
+                        <div class="cmx-navbar__legal-entity-id">#39485734</div>
+                    </div>	
+                </div>
+            </div>
+            <div class="cmx-navbar__legal-entity-footer mobile-only">
+                <button class="cmx-button cmx-button--support ripple" onclick="toggleEntitySelector()">Cancel</button>
+                <button class="cmx-button ripple" onclick="toggleEntitySelector()">Apply</button>
+            </div>
+        </div>
+        <!-- end .legal-entity-listing -->
+    </div>
+    <!-- end .legal-entity -->
+      <ul class="cmx-navbar__menu">
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary active" href="index.html">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="start-icon-white">
+                     <use xlink:href="#start-icon-white"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">Start</span>
+            </a>
+         </li>
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="javascript:;" onclick="toggleSub(this)">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="grid-icon-white">
+                     <use xlink:href="#grid-icon-white"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">Guidelines</span>
+            </a>
+
+            <ul id="guidelinesSub" class="cmx-navbar__menu-sub">
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="design-principles.html">Design Principles</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="brand.html">Brand</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="content.html">Content</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="layout.html">Layout</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="motion.html">Motion</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="navigation.html">Navigation</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="recommendations.html">Recommendations</a>
+               </li>
+            </ul>
+         </li>
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="javascript:;" onclick="toggleSub(this)">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="colors-icon-white">
+                     <use xlink:href="#colors-icon-white"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">Style/Visual</span>
+            </a>
+
+            <ul class="cmx-navbar__menu-sub">
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="colors.html">Colors</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="grid-system.html">Grid System</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="units.html">Units &amp; Measurements</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="iconography.html">Iconography</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="typography.html">Typography</a>
+               </li>
+            </ul>
+         </li>
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="javascript:;" onclick="toggleSub(this)">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="tables-icon-white">
+                     <use xlink:href="#tables-icon-white"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">Components</span>
+            </a>
+
+            <ul class="cmx-navbar__menu-sub">
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="alert.html">Alert</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="avatar.html">Avatar</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="breadcrumb.html">Breadcrumb</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="buttons.html">Buttons and links</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="calendar.html">Calendar</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item"><a class="cmx-navbar__menu-sub-link" href="charts.html">Charts</a></li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="checkbox.html">Checkbox</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="console-navigation.html">Console Nav</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="content-heading.html">Content Headings</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="dashboard.html">Dashboard</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="dashboard-modules.html">Dashboard Modules</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="detail-page.html">Detail Page</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="dropdown.html">Dropdown</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="emails.html">Emails(wip)</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="errors.html">Errors</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="footer.html">Footer</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="forms.html">Forms</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="header-global.html">Header - Global</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="header-local.html">Header - Local</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="inline-dialogue.html">Inline Dialogue</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="language-selector.html">Language Selector</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="lightbox.html">Lightbox</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="loader.html">Loader</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="maps.html">Maps</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="modal.html">Modal</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="notification.html">Notification</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="numeric-filter.html">Numeric filter</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="pagination.html">Pagination</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="password-strenght.html">Password Strength</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="progress-bar.html">Progress bar</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="radio-button.html">Radio button</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="search-local.html">Search - local</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="status-indicator.html">Status indicator</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="stepper.html">Stepper</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="switch.html">Switch</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="tables.html">Tables</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="tabs.html">Tabs</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="tags.html">Tags</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="tooltips.html">Tooltips</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="dropzone.html">Dropzone</a>
+               </li>
+            </ul>
+         </li>
+
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="mobile-ui.html">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="mobile-icon-white">
+                     <use xlink:href="#mobile-icon-white"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">Mobile</span>
+            </a>
+         </li>
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="index-rtl.html">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="rtl-icon-white">
+                     <use xlink:href="#rtl-icon-white"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">Right to Left</span>
+            </a>
+         </li>
+        </ul>
+        <hr class="cmx-navbar__separator mobile-only" />
+      <ul class="cmx-navbar__menu single-tone flex__item--fixed mobile-only">
+            <li class="cmx-navbar__menu-item">
+              <button class="cmx-navbar__menu-link primary" onclick="showMobileLanguage(event)">
+                  <span class="cmx-navbar__menu-icon">
+                    <span class="cmx-icon-language" aria-hidden="true"></span>
+                  </span>
+                  <span class="cmx-navbar__menu-label">Language</span>
+                </button>
+            </li>
+            <li class="cmx-navbar__menu-item">
+              <button class="cmx-navbar__menu-link primary" onclick="launchModal('#tcModal')">
+                  <span class="cmx-navbar__menu-icon">
+                    <span class="cmx-icon-document" aria-hidden="true"></span>
+                  </span>
+                  <span class="cmx-navbar__menu-label">Legal</span>
+                </button>
+            </li>
+            <li class="cmx-navbar__menu-item">
+              <a class="cmx-navbar__menu-link primary" href="#">
+                  <span class="cmx-navbar__menu-icon">
+                    <span class="cmx-icon-logout" aria-hidden="true"></span>
+                  </span>
+                  <span class="cmx-navbar__menu-label">Sign Out</span>
+              </a>
+            </li>
+        </ul>
+        <hr class="cmx-navbar__separator mobile-only" />
+        <div class="cmx-navbar__text mobile-only">
+            Copyright © 2017, CEMEX International Holding AG. All rights reserved.
+        </div>
+   </nav>
+</template>

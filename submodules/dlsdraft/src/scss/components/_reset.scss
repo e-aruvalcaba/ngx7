@@ -1,0 +1,33 @@
+// RESET.SCSS
+// ----------
+
+// Resets the default browsers behavior. 
+// Used in order to avoid to create each time a new reset file.
+// Should be standard across web-apps and websites.
+
+// Requires: 
+// --------
+
+// _variables.scss from Variables.  
+// _mixins.scss from Mixins.
+// _normalize.scss from Utilities.
+// _reboot.scss from Utilities.
+
+// 
+// Variables
+// ---------
+
+@import "../variables/variables";
+
+//
+// Mixins
+// ------
+
+@import "../mixins/mixins";
+
+//
+// Utilities
+// ---------
+
+@import "../utilities/normalize";
+@import "../utilities/reboot";

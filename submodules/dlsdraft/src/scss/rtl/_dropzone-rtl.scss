@@ -1,0 +1,30 @@
+// _dropzone-rtl.scss 
+
+html[dir="rtl"] .cmx-dropzone { // was fileinput-button
+  > span {
+    float: right;
+  }
+}
+
+html[dir="rtl"] .cmx-preview-container {
+  float: right;
+}
+
+html[dir="rtl"] .cmx-error-message-container {
+  float: right;
+}
+
+html[dir="rtl"] .cmx-filesize { // was size
+  text-align: left;
+}
+
+html[dir="rtl"] .cmx-progress-bar-container { // was progress-bar-container
+  float: right;
+}
+
+html[dir="rtl"] .cmx-buttons-container {
+  button {
+    float: right; 
+  }
+}
+//** end basic styling

@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Forms</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Forms</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+
+
+                    <div class="col-md-9">
+                        <p>Used in step by step processes, forms contain multiple related fields that require user input. Form interactions are detailed on this page.</p>
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- text fields examples -->
+
+
+                        <form action="" method="">
+                            <h2>Text field</h2>
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group">
+                                <label for="name-field-1">Name</label> <input class="cmx-form-control" id="name-field-1" name="" placeholder="Enter name" type="text" value="">
+                            </div>
+                            <!-- end .cmx-form-group -->
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group">
+                                <label for="name-field-2">Password</label> <input class="cmx-form-control" id="name-field-2" name="" placeholder="Enter password" type="password" value="">
+                            </div>
+                            <!-- end .form-group -->
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group active">
+                                <label for="email-field">Email</label> <input class="cmx-form-control" id="email-field" name="" placeholder="Enter email address" type="email" value="">
+                            </div>
+                            <!-- end .form-group .active -->
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group error">
+                                <label for="address-field">Address</label> <input class="cmx-form-control" id="address-field" name="" placeholder="..." type="text" value=""> <span class="cmx-error-message">Address cannot be that short.</span>
+                            </div>
+                            <!-- end .form-group .error -->
+                        </form>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html"><code class="language-html">&lt;form action=&quot;&quot; method=&quot;&quot;&gt;
+    &lt;h2&gt;Text field&lt;/h2&gt;
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;cmx-form-group&quot;&gt;
+        &lt;label for=&quot;name-field&quot;&gt;Name&lt;/label&gt;
+        &lt;input type=&quot;text&quot; class=&quot;cmx-form-control&quot; id=&quot;name-field&quot; placeholder=&quot;Enter name&quot; name=&quot;&quot; value=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;!-- end .form-group --&gt;
+
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+    
+        &lt;div class=&quot;cmx-form-group&quot;&gt;
+            &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
+            &lt;input type=&quot;password&quot; class=&quot;cmx-form-control&quot; id=&quot;password&quot; placeholder=&quot;Enter password&quot; name=&quot;password&quot; value=&quot;&quot; /&gt;
+        &lt;/div&gt;
+        &lt;!-- end .form-group --&gt;
+    
+        &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;cmx-form-group active&quot;&gt;
+        &lt;label for=&quot;email-field&quot;&gt;Email&lt;/label&gt;
+        &lt;input type=&quot;email&quot; class=&quot;cmx-form-control&quot; id=&quot;email-field&quot; placeholder=&quot;Enter email address&quot; name=&quot;&quot; value=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;!-- end .form-group .active --&gt;  
+
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;cmx-form-group error&quot;&gt;
+        &lt;label for=&quot;address-field&quot;&gt;Address&lt;/label&gt;
+        &lt;input type=&quot;text&quot; class=&quot;cmx-form-control&quot; id=&quot;address-field&quot; placeholder=&quot;...&quot; name=&quot;&quot; value=&quot;&quot; /&gt;
+        &lt;span class=&quot;cmx-error-message&quot;&gt;Address cannot be that short.&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;!-- end .form-group .error --&gt;
+&lt;/form&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx-form-group {
+    label {
+        display: inline-block;
+        font-size: $font-size-12;
+        line-height: $line-height-12;
+        color: $deep-blue;
+        padding-bottom: 6px;
+        margin-bottom: 0px;
+        cursor: pointer;
+    } // end label
+
+    .cmx-form-control {
+        display: block;
+        width: 100%;
+        &amp;--icon-trail,
+        &amp;--icon-lead{
+                width:100%;
+                height:auto;
+                position: relative;
+                &amp;::before{
+                        position: absolute;
+                        line-height:1.5rem;
+                        font-size: 1.5rem;
+                        top:0.75rem;
+                        color:$bright-blue;
+                }
+        }
+        &amp;--icon-trail{
+                input[type]{
+                        padding-right: 2.5rem;
+                }
+                &amp;::before{
+                        position: absolute;
+                        right:1rem;
+                }
+        }
+        &amp;--icon-lead{
+                input[type]{
+                        padding-left: 2.5rem;
+                }
+                &amp;::before{
+                        left:1rem;
+                }
+        }
+    } // end form-control
+
+    &amp;.active {
+        input[type=&quot;text&quot;],
+        input[type=&quot;password&quot;],
+        input[type=&quot;email&quot;] {
+            border: 1px solid $bright-blue;
+            background: $true-white;
+        }
+    } // end active class
+
+    &amp;.error {
+        input[type=&quot;text&quot;],
+        input[type=&quot;password&quot;],
+        input[type=&quot;email&quot;] {
+            border:1px solid $true-red;
+            background: rgba(238, 61, 66, 0.05);
+
+            &amp;:active,
+            &amp;:focus,
+            &amp;.active,
+            &amp;.focus {
+                outline: 0 none;
+                border-color: $bright-blue;
+                background: $true-white;
+            }
+        }
+
+        .cmx-error-message {
+            font-size: $font-size-12;
+            color: $true-red;
+            width: 100%;
+            display: inline-block;
+            text-align: right;
+        }
+    } // end error class
+
+    input[type=&quot;text&quot;],
+    input[type=&quot;password&quot;],
+    input[type=&quot;email&quot;],
+    input[type=&quot;search&quot;] {
+        font-size: $font-size-16;
+        line-height: $line-height-16;
+        border-radius: $radius-3;
+        height: 48px;
+        padding: 16px;
+        border: 1px solid #ADAEBB;
+        background: $true-white;
+
+        &amp;:hover, 
+        &amp;:active,
+        &amp;:focus,
+        &amp;.hover,
+        &amp;.active,
+        &amp;.focus {
+            outline: 0 none;
+            border-color: $bright-blue;
+            background: $true-white;
+        }
+
+        &amp;::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: $medium-grey;
+          font-size: $font-size-16;
+        }
+
+        &amp;::-moz-placeholder { /* Firefox 19+ */
+          color: $medium-grey;
+          font-size: $font-size-16;
+        }
+
+        &amp;:-ms-input-placeholder { /* IE 10+ */
+          color: $medium-grey;
+          font-size: $font-size-16;
+        }
+
+        &amp;:-moz-placeholder { /* Firefox 18- */
+          color: $medium-grey;
+          font-size: $font-size-16;
+        }
+    } // end input(s) basic definition
+} // end form group</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-form-group label {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  color: #001B3A;
+  padding-bottom: 6px;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.cmx-form-group .cmx-form-control {
+  display: block;
+  width: 100%;
+}
+
+.cmx-form-group .cmx-form-control--icon-trail,
+.cmx-form-group .cmx-form-control--icon-lead {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.cmx-form-group .cmx-form-control--icon-trail::before,
+.cmx-form-group .cmx-form-control--icon-lead::before {
+    position: absolute;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    top: 0.75rem;
+    color: #3FA9F5;
+}
+
+.cmx-form-group .cmx-form-control--icon-trail input[type] {
+    padding-right: 2.5rem;
+}
+
+.cmx-form-group .cmx-form-control--icon-trail::before {
+    position: absolute;
+    right: 1rem;
+}
+
+.cmx-form-group .cmx-form-control--icon-lead input[type] {
+    padding-left: 2.5rem;
+}
+
+.cmx-form-group .cmx-form-control--icon-lead::before {
+    left: 1rem;
+}
+
+.cmx-form-group.active input[type="text"],
+.cmx-form-group.active input[type="password"],
+.cmx-form-group.active input[type="email"] {
+  border: 1px solid #3FA9F5;
+  background: #FFF;
+}
+
+.cmx-form-group.error input[type="text"],
+.cmx-form-group.error input[type="password"],
+.cmx-form-group.error input[type="email"] {
+  border: 1px solid #EE3D42;
+  background: rgba(238, 61, 66, 0.05);
+}
+
+.cmx-form-group.error input[type="text"]:active, 
+.cmx-form-group.error input[type="text"]:focus, 
+.cmx-form-group.error input[type="text"].active, 
+.cmx-form-group.error input[type="text"].focus,
+.cmx-form-group.error input[type="password"]:active, 
+.cmx-form-group.error input[type="password"]:focus, 
+.cmx-form-group.error input[type="password"].active, 
+.cmx-form-group.error input[type="password"].focus,
+.cmx-form-group.error input[type="email"]:active,
+.cmx-form-group.error input[type="email"]:focus,
+.cmx-form-group.error input[type="email"].active,
+.cmx-form-group.error input[type="email"].focus {
+  outline: 0 none;
+  border-color: #3FA9F5;
+  background: #FFF;
+}
+
+.cmx-form-group.error .cmx-error-message {
+  font-size: 0.75rem;
+  color: #EE3D42;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+}
+
+.cmx-form-group input[type="text"],
+.cmx-form-group input[type="password"],
+.cmx-form-group input[type="email"],
+.cmx-form-group input[type="search"] {
+  font-size: 1rem;
+  line-height: 1rem;
+  border-radius: 3px;
+  height: 48px;
+  padding: 16px;
+  border: 1px solid #ADAEBB;
+  background: #FFF;
+}
+
+.cmx-form-group input[type="text"]:hover, 
+.cmx-form-group input[type="text"]:active, 
+.cmx-form-group input[type="text"]:focus, 
+.cmx-form-group input[type="text"].hover, 
+.cmx-form-group input[type="text"].active, 
+.cmx-form-group input[type="text"].focus,
+.cmx-form-group input[type="password"]:hover, 
+.cmx-form-group input[type="password"]:active, 
+.cmx-form-group input[type="password"]:focus, 
+.cmx-form-group input[type="password"].hover, 
+.cmx-form-group input[type="password"].active, 
+.cmx-form-group input[type="password"].focus,
+.cmx-form-group input[type="email"]:hover,
+.cmx-form-group input[type="email"]:active,
+.cmx-form-group input[type="email"]:focus,
+.cmx-form-group input[type="email"].hover,
+.cmx-form-group input[type="email"].active,
+.cmx-form-group input[type="email"].focus,
+.cmx-form-group input[type="search"]:hover,
+.cmx-form-group input[type="search"]:active,
+.cmx-form-group input[type="search"]:focus,
+.cmx-form-group input[type="search"].hover,
+.cmx-form-group input[type="search"].active,
+.cmx-form-group input[type="search"].focus {
+  outline: 0 none;
+  border-color: #3FA9F5;
+  background: #FFF;
+}
+
+.cmx-form-group input[type="text"]::-webkit-input-placeholder,
+.cmx-form-group input[type="password"]::-webkit-input-placeholder,
+.cmx-form-group input[type="email"]::-webkit-input-placeholder,
+.cmx-form-group input[type="search"]::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #666;
+  font-size: 1rem;
+}
+
+.cmx-form-group input[type="text"]::-moz-placeholder,
+.cmx-form-group input[type="password"]::-moz-placeholder,
+.cmx-form-group input[type="email"]::-moz-placeholder,
+.cmx-form-group input[type="search"]::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #666;
+  font-size: 1rem;
+}
+
+.cmx-form-group input[type="text"]:-ms-input-placeholder,
+.cmx-form-group input[type="password"]:-ms-input-placeholder,
+.cmx-form-group input[type="email"]:-ms-input-placeholder,
+.cmx-form-group input[type="search"]:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #666;
+  font-size: 1rem;
+}
+
+.cmx-form-group input[type="text"]:-moz-placeholder,
+.cmx-form-group input[type="password"]:-moz-placeholder,
+.cmx-form-group input[type="email"]:-moz-placeholder,
+.cmx-form-group input[type="search"]:-moz-placeholder {
+  /* Firefox 18- */
+  color: #666;
+  font-size: 1rem;
+}</code></pre>
+                            </div>
+                            <!-- end data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+
+
+                        <div class="spacer-32">
+                        </div>
+                        <!-- text areas examples -->
+
+
+                        <form action="" method="">
+                            <h2>Text area element</h2>
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group">
+                                <label for="textarea-field">Text area element</label> 
+
+                                <textarea class="cmx-form-control" id="textarea-field"></textarea>
+                            </div>
+                            <!-- end .cmx-form-group -->
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group active">
+                                <label for="textarea-active-field">Text area element</label> 
+
+                                <textarea class="cmx-form-control" id="textarea-active-field"></textarea>
+                            </div>
+                            <!-- end .cmx-form-group .active -->
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group error">
+                                <label for="textarea-error-field">Text area element</label> 
+
+                                <textarea class="cmx-form-control" id="textarea-error-field"></textarea> <span class="cmx-error-message">Provide error message here, if any.</span>
+                            </div>
+                            <!-- end .cmx-form-group .error -->
+                        </form>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html"><code class="language-html">&lt;form action=&quot;&quot; method=&quot;&quot;&gt;
+    &lt;h2&gt;Text area element&lt;/h2&gt;
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;cmx-form-group&quot;&gt;
+        &lt;label for=&quot;textarea-field&quot;&gt;Text area element&lt;/label&gt;
+        &lt;textarea id=&quot;textarea-field&quot; class=&quot;cmx-form-control&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;!-- end .form-group --&gt;
+
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;cmx-form-group active&quot;&gt;
+        &lt;label for=&quot;textarea-active-field&quot;&gt;Text area element&lt;/label&gt;
+        &lt;textarea id=&quot;textarea-active-field&quot; class=&quot;cmx-form-control&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;!-- end .form-group .active --&gt;
+
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;cmx-form-group error&quot;&gt;
+        &lt;label for=&quot;textarea-error-field&quot;&gt;Text area element&lt;/label&gt;
+        &lt;textarea id=&quot;textarea-error-field&quot; class=&quot;cmx-form-control&quot;&gt;&lt;/textarea&gt;
+        &lt;span class=&quot;cmx-error-message&quot;&gt;Provide error message here, if any.&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;!-- end .form-group .error --&gt;
+&lt;/form&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx-form-group {
+
+        label {
+            display: inline-block;
+            font-size: $font-size-12;
+            line-height: $line-height-12;
+            color: $deep-blue;
+            padding-bottom: 6px;
+            margin-bottom: 0px;
+            cursor: pointer;
+        } // end label
+
+        .cmx-form-control {
+            display: block;
+            width: 100%;
+        } // end form-control
+
+        &amp;.active {
+            textarea {
+                border: 1px solid $bright-blue;
+                background: $true-white;
+            }
+        } // end active class
+
+        &amp;.error {
+            textarea {
+                border:1px solid $true-red;
+                background: rgba(238, 61, 66, 0.05);
+
+                &amp;:active,
+                &amp;:focus,
+                &amp;.active,
+                &amp;.focus {
+                    outline: 0 none;
+                    border-color: $bright-blue;
+                    background: $true-white;
+                }
+            }
+
+            .cmx-error-message {
+                font-size: $font-size-12;
+                color: $true-red;
+                width: 100%;
+                display: inline-block;
+                text-align: right;
+            }
+        } // end error class
+
+        textarea {
+            font-size: $font-size-16;
+            line-height: $line-height-16;
+            border-radius: $radius-3;
+            height: 48px;
+            padding: 16px;
+            border: 1px solid #ADAEBB;
+            background: $true-white;
+
+            &amp;:hover, 
+            &amp;:active,
+            &amp;:focus,
+            &amp;.hover,
+            &amp;.active,
+            &amp;.focus {
+                outline: 0 none;
+                border-color: $bright-blue;
+                background: $true-white;
+            }
+
+            &amp;::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+              color: $medium-grey;
+              font-size: $font-size-16;
+            }
+
+            &amp;::-moz-placeholder { /* Firefox 19+ */
+              color: $medium-grey;
+              font-size: $font-size-16;
+            }
+
+            &amp;:-ms-input-placeholder { /* IE 10+ */
+              color: $medium-grey;
+              font-size: $font-size-16;
+            }
+
+            &amp;:-moz-placeholder { /* Firefox 18- */
+              color: $medium-grey;
+              font-size: $font-size-16;
+            }
+        } // end input(s) basic definition
+
+        // textarea 
+        textarea {
+            min-height: 104px;
+            font-size: $font-size-16;
+            line-height: $line-height-18;
+
+            &amp;::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+              color: $medium-grey;
+              font-size: $font-size-16;
+              line-height: $line-height-18;
+            }
+
+            &amp;::-moz-placeholder { /* Firefox 19+ */
+              color: $medium-grey;
+              font-size: $font-size-16;
+              line-height: $line-height-18;
+            }
+
+            &amp;:-ms-input-placeholder { /* IE 10+ */
+              color: $medium-grey;
+              font-size: $font-size-16;
+              line-height: $line-height-18;
+            }
+
+            &amp;:-moz-placeholder { /* Firefox 18- */
+              color: $medium-grey;
+              font-size: $font-size-16;
+              line-height: $line-height-18;
+            }
+        }
+    } // end form group</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-form-group label {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  color: #001B3A;
+  padding-bottom: 6px;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.cmx-form-group .form-control {
+  display: block;
+  width: 100%;
+}
+
+.cmx-form-group.active textarea {
+  border: 1px solid #3FA9F5;
+  background: #FFF;
+}
+
+.cmx-form-group.error textarea {
+  border: 1px solid #EE3D42;
+  background: rgba(238, 61, 66, 0.05);
+}
+
+.cmx-form-group.error textarea:active, 
+.cmx-form-group.error textarea:focus, 
+.cmx-form-group.error textarea.active, 
+.cmx-form-group.error textarea.focus {
+  outline: 0 none;
+  border-color: #3FA9F5;
+  background: #FFF;
+}
+
+.cmx-form-group.error .cmx-error-message {
+  font-size: 0.75rem;
+  color: #EE3D42;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+}
+
+.cmx-form-group textarea {
+  font-size: 1rem;
+  line-height: 1rem;
+  border-radius: 3px;
+  height: 48px;
+  padding: 16px;
+  border: 1px solid #ADAEBB;
+  background: #FFF;
+}
+
+.cmx-form-group textarea:hover, 
+.cmx-form-group textarea:active, 
+.cmx-form-group textarea:focus, 
+.cmx-form-group textarea.hover, 
+.cmx-form-group textarea.active, 
+.cmx-form-group textarea.focus {
+  outline: 0 none;
+  border-color: #3FA9F5;
+  background: #FFF;
+}
+
+.cmx-form-group textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #666;
+  font-size: 1rem;
+}
+
+.cmx-form-group textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #666;
+  font-size: 1rem;
+}
+
+.cmx-form-group textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #666;
+  font-size: 1rem;
+}
+
+.cmx-form-group textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #666;
+  font-size: 1rem;
+}
+
+.cmx-form-group textarea {
+  min-height: 104px;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+.cmx-form-group textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+.cmx-form-group textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+.cmx-form-group textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+.cmx-form-group textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}</code></pre>
+                            </div>
+                            <!-- end data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+
+
+                        <div class="spacer-32">
+                        </div>
+                        <!-- select field examples -->
+
+
+                        <form>
+                            <h2>Select list - indent, padding</h2>
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group">
+                                <label for="country-field">Country</label> <select class="cmx-form-control" id="country-field">
+                                    <option>
+                                        Afghanistan
+                                    </option>
+
+                                    <option>
+                                        Albania
+                                    </option>
+
+                                    <option>
+                                        Algeria
+                                    </option>
+
+                                    <option>
+                                        Andorra
+                                    </option>
+
+                                    <option>
+                                        Angola
+                                    </option>
+
+                                    <option>
+                                        Argentina
+                                    </option>
+
+                                    <option>
+                                        France
+                                    </option>
+
+                                    <option>
+                                        Germany
+                                    </option>
+
+                                    <option>
+                                        USA
+                                    </option>
+                                </select>
+                            </div>
+                            <!-- end .cmx-form-group -->
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group active">
+                                <label for="country-field-active">Country</label> <select class="cmx-form-control" id="country-field-active">
+                                    <option>
+                                        Afghanistan
+                                    </option>
+
+                                    <option>
+                                        Albania
+                                    </option>
+
+                                    <option>
+                                        Algeria
+                                    </option>
+
+                                    <option>
+                                        Andorra
+                                    </option>
+
+                                    <option>
+                                        Angola
+                                    </option>
+
+                                    <option>
+                                        Argentina
+                                    </option>
+
+                                    <option>
+                                        France
+                                    </option>
+
+                                    <option>
+                                        Germany
+                                    </option>
+
+                                    <option>
+                                        USA
+                                    </option>
+                                </select>
+                            </div>
+                            <!-- end .cmx-form-group .active -->
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group error">
+                                <label for="country-field-error">Country</label> <select class="cmx-form-control" id="country-field-error">
+                                    <option>
+                                        Afghanistan
+                                    </option>
+
+                                    <option>
+                                        Albania
+                                    </option>
+
+                                    <option>
+                                        Algeria
+                                    </option>
+
+                                    <option>
+                                        Andorra
+                                    </option>
+
+                                    <option>
+                                        Angola
+                                    </option>
+
+                                    <option>
+                                        Argentina
+                                    </option>
+
+                                    <option>
+                                        France
+                                    </option>
+
+                                    <option>
+                                        Germany
+                                    </option>
+
+                                    <option>
+                                        USA
+                                    </option>
+                                </select>
+                            </div>
+                            <!-- end .cmx-form-group .error -->
+                        </form>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html"><code class="language-html">&lt;form action=&quot;&quot; method=&quot;&quot;&gt;
+    &lt;h2&gt;Select list - indent, padding&lt;/h2&gt;
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;cmx-form-group&quot;&gt;
+        &lt;label for=&quot;country-field&quot;&gt;Country&lt;/label&gt;
+        &lt;select id=&quot;country-field&quot; class=&quot;cmx-form-control&quot;&gt;
+            &lt;option ng-repeat+&gt;Afghanistan&lt;/option&gt;
+            &lt;option&gt;Albania&lt;/option&gt;
+            &lt;option&gt;Algeria&lt;/option&gt;
+            &lt;option&gt;Andorra&lt;/option&gt;
+            &lt;option&gt;Angola&lt;/option&gt;
+            &lt;option&gt;Argentina&lt;/option&gt;
+            &lt;option&gt;France&lt;/option&gt;
+            &lt;option&gt;Germany&lt;/option&gt;
+            &lt;option&gt;USA&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;!-- end .form-group --&gt;
+
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;cmx-form-group active&quot;&gt;
+        &lt;label for=&quot;country-field-active&quot;&gt;Country&lt;/label&gt;
+        &lt;select id=&quot;country-field-active&quot; class=&quot;cmx-form-control&quot;&gt;
+            &lt;option ng-repeat+&gt;Afghanistan&lt;/option&gt;
+            &lt;option&gt;Albania&lt;/option&gt;
+            &lt;option&gt;Algeria&lt;/option&gt;
+            &lt;option&gt;Andorra&lt;/option&gt;
+            &lt;option&gt;Angola&lt;/option&gt;
+            &lt;option&gt;Argentina&lt;/option&gt;
+            &lt;option&gt;France&lt;/option&gt;
+            &lt;option&gt;Germany&lt;/option&gt;
+            &lt;option&gt;USA&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;!-- end .form-group .active --&gt;
+
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;cmx-form-group error&quot;&gt;
+        &lt;label for=&quot;country-field-error&quot;&gt;Country&lt;/label&gt;
+        &lt;select id=&quot;country-field-error&quot; class=&quot;cmx-form-control&quot;&gt;
+            &lt;option ng-repeat+&gt;Afghanistan&lt;/option&gt;
+            &lt;option&gt;Albania&lt;/option&gt;
+            &lt;option&gt;Algeria&lt;/option&gt;
+            &lt;option&gt;Andorra&lt;/option&gt;
+            &lt;option&gt;Angola&lt;/option&gt;
+            &lt;option&gt;Argentina&lt;/option&gt;
+            &lt;option&gt;France&lt;/option&gt;
+            &lt;option&gt;Germany&lt;/option&gt;
+            &lt;option&gt;USA&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;!-- end .form-group .error --&gt;
+    &lt;/form&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx-form-group {
+
+        label {
+            display: inline-block;
+            font-size: $font-size-12;
+            line-height: $line-height-12;
+            color: $deep-blue;
+            padding-bottom: 6px;
+            margin-bottom: 0px;
+            cursor: pointer;
+        } // end label
+
+        .cmx-form-control {
+            display: block;
+            width: 100%;
+        } // end form-control
+
+        &amp;.active {
+            select {
+                border: 1px solid $bright-blue;
+                background: $true-white;
+            }
+
+            // select filed needs extra rules
+            select {
+                -webkit-appearance: none;
+                -webkit-border-radius: $radius-3;
+                background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'&gt;&lt;path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;);
+                background-position: 99% 55%;
+                background-repeat: no-repeat;
+            }   
+        } // end active class
+
+        &amp;.error {
+            select {
+                border:1px solid $true-red;
+                background: rgba(238, 61, 66, 0.05);
+
+                &amp;:active,
+                &amp;:focus,
+                &amp;.active,
+                &amp;.focus {
+                    outline: 0 none;
+                    border-color: $bright-blue;
+                    background: $true-white;
+                }
+            }
+
+            // select filed needs extra rules
+            select {
+                -webkit-appearance: none;
+                -webkit-border-radius: $radius-3;
+                background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'&gt;&lt;path fill='#EE3D42' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;);
+                background-position: 99% 55%;
+                background-repeat: no-repeat;
+
+                // rules need to apply also on states
+                &amp;:active,
+                &amp;:focus,
+                &amp;.active,
+                &amp;.focus {
+                    -webkit-appearance: none;
+                    -webkit-border-radius: $radius-3;
+                    background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'&gt;&lt;path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;);
+                    background-position: 99% 55%;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .cmx-error-message {
+                font-size: $font-size-12;
+                color: $true-red;
+                width: 100%;
+                display: inline-block;
+                text-align: right;
+            }
+        } // end error class
+
+        select {
+            font-size: $font-size-16;
+            line-height: $line-height-16;
+            border-radius: $radius-3;
+            height: 48px;
+            padding: 16px;
+            border: 1px solid #ADAEBB;
+            background: $true-white;
+
+            &amp;:hover, 
+            &amp;:active,
+            &amp;:focus,
+            &amp;.hover,
+            &amp;.active,
+            &amp;.focus {
+                outline: 0 none;
+                border-color: $bright-blue;
+                background: $true-white;
+            }
+
+            &amp;::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+              color: $medium-grey;
+              font-size: $font-size-16;
+            }
+
+            &amp;::-moz-placeholder { /* Firefox 19+ */
+              color: $medium-grey;
+              font-size: $font-size-16;
+            }
+
+            &amp;:-ms-input-placeholder { /* IE 10+ */
+              color: $medium-grey;
+              font-size: $font-size-16;
+            }
+
+            &amp;:-moz-placeholder { /* Firefox 18- */
+              color: $medium-grey;
+              font-size: $font-size-16;
+            }
+        } // end input(s) basic definition
+
+        // select
+        select {
+            font-size: $font-size-16;
+            line-height: $line-height-18;
+            border-radius: $radius-3;
+            height: 48px;
+            border: 1px solid #ADAEBB;
+            background: $true-white;
+            cursor: pointer;
+            text-indent: 7px;
+            padding: 7px;
+
+            -webkit-appearance: none;
+            -webkit-border-radius: $radius-3;
+            background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'&gt;&lt;path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;);
+            background-position: 99% 55%;
+            background-repeat: no-repeat;
+
+            &amp;:hover,
+            &amp;:focus,
+            &amp;:active,
+            &amp;.hover,
+            &amp;.focus,
+            &amp;.active {
+                outline: 0 none;
+                border-color: $bright-blue;
+                background: $true-white;
+
+                -webkit-appearance: none;
+                -webkit-border-radius: $radius-3;
+                background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'&gt;&lt;path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;);
+                background-position: 99% 55%;
+                background-repeat: no-repeat;
+            }
+        } // end select separate definition
+    } // end form group</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-form-group label {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  color: #001B3A;
+  padding-bottom: 6px;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.cmx-form-group .cmx-form-control {
+  display: block;
+  width: 100%;
+}
+
+.cmx-form-group.active select {
+  border: 1px solid #3FA9F5;
+  background: #FFF;
+}
+
+.cmx-form-group.active select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 3px;
+  background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'&gt;&lt;path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;);
+  background-position: 99% 55%;
+  background-repeat: no-repeat;
+}
+
+.cmx-form-group.error select {
+  border: 1px solid #EE3D42;
+  background: rgba(238, 61, 66, 0.05);
+}
+
+.cmx-form-group.error select:active, 
+.cmx-form-group.error select:focus, 
+.cmx-form-group.error select.active, 
+.cmx-form-group.error select.focus {
+  outline: 0 none;
+  border-color: #3FA9F5;
+  background: #FFF;
+}
+
+.cmx-form-group.error select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 3px;
+  background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'&gt;&lt;path fill='#EE3D42' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;);
+  background-position: 99% 55%;
+  background-repeat: no-repeat;
+}
+
+.cmx-form-group.error select:active, 
+.cmx-form-group.error select:focus, 
+.cmx-form-group.error select.active, 
+.cmx-form-group.error select.focus {
+  -webkit-appearance: none;
+  -webkit-border-radius: 3px;
+  background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'&gt;&lt;path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;);
+  background-position: 99% 55%;
+  background-repeat: no-repeat;
+}
+
+.cmx-form-group.error .cmx-error-message {
+  font-size: 0.75rem;
+  color: #EE3D42;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+}
+
+.cmx-form-group select {
+  font-size: 1rem;
+  line-height: 1rem;
+  border-radius: 3px;
+  height: 48px;
+  padding: 16px;
+  border: 1px solid #ADAEBB;
+  background: #FFF;
+}
+
+.cmx-form-group select:hover, 
+.cmx-form-group select:active, 
+.cmx-form-group select:focus, 
+.cmx-form-group select.hover, 
+.cmx-form-group select.active, 
+.cmx-form-group select.focus {
+  outline: 0 none;
+  border-color: #3FA9F5;
+  background: #FFF;
+}
+
+.cmx-form-group select::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #666;
+  font-size: 1rem;
+}
+
+.cmx-form-group select::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #666;
+  font-size: 1rem;
+}
+
+.cmx-form-group select:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #666;
+  font-size: 1rem;
+}
+
+.cmx-form-group select:-moz-placeholder {
+  /* Firefox 18- */
+  color: #666;
+  font-size: 1rem;
+}
+
+.cmx-form-group select {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  border-radius: 3px;
+  height: 48px;
+  border: 1px solid #ADAEBB;
+  background: #FFF;
+  cursor: pointer;
+  text-indent: 7px;
+  padding: 7px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 3px;
+  background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'&gt;&lt;path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;);
+  background-position: 99% 55%;
+  background-repeat: no-repeat;
+}
+
+.cmx-form-group select:hover, 
+.cmx-form-group select:focus, 
+.cmx-form-group select:active, 
+.cmx-form-group select.hover, 
+.cmx-form-group select.focus, 
+.cmx-form-group select.active {
+  outline: 0 none;
+  border-color: #3FA9F5;
+  background: #FFF;
+  -webkit-appearance: none;
+  -webkit-border-radius: 3px;
+  background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'&gt;&lt;path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'&gt;&lt;/path&gt;&lt;/svg&gt;&quot;);
+  background-position: 99% 55%;
+  background-repeat: no-repeat;
+}</code></pre>
+                            </div>
+                            <!-- end data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+
+
+                        <div class="spacer-32">
+                        </div>
+                        <!-- numbers field examples -->
+
+
+                        <form action="" method="">
+                            <h2>Number field</h2>
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group">
+                                <div class="cmx-number-field-wrapper">
+                                    <label for="number-field-1">Number field</label> <input class="cmx-form-control cmx-number-control" id="number-field-1" max="" min="" placeholder="0" step="" type="number" value=""> <span class="cmx-number-field-btn cmx-minus-btn ripple"><button class="cmx-number-field-btn__btn" type="button"><span class="cmx-number-field-btn cmx-minus-btn ripple"><span aria-hidden="true" class="cmx-icon-minus"></span> <span class="sr-only">Decrease</span></span></button></span> <span class="cmx-number-field-btn cmx-plus-btn ripple"><button class="cmx-number-field-btn__btn" type="button"><span class="cmx-number-field-btn cmx-plus-btn ripple"><span aria-hidden="true" class="cmx-icon-plus"></span> <span class="sr-only">Increase</span></span></button></span>
+                                </div>
+                                <!-- end .cmx-number-field-wrapper -->
+                            </div>
+                            <!-- end .cmx-form-group -->
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group active">
+                                <div class="cmx-number-field-wrapper">
+                                    <label for="number-field-2">Number field</label> <input class="cmx-form-control cmx-number-control" id="number-field-2" max="" min="" placeholder="0" type="number" value=""> <span class="cmx-number-field-btn cmx-minus-btn ripple"><button class="cmx-number-field-btn__btn" type="button"><span class="cmx-number-field-btn cmx-minus-btn ripple"><span aria-hidden="true" class="cmx-icon-minus"></span> <span class="sr-only">Decrease</span></span></button></span> <span class="cmx-number-field-btn cmx-plus-btn ripple"><button class="cmx-number-field-btn__btn" type="button"><span class="cmx-number-field-btn cmx-plus-btn ripple"><span aria-hidden="true" class="cmx-icon-plus"></span> <span class="sr-only">Increase</span></span></button></span>
+                                </div>
+                                <!-- end .number-field-wrapper -->
+                            </div>
+                            <!-- end .form-group -->
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group error">
+                                <div class="cmx-number-field-wrapper">
+                                    <label for="number-field-3">Number field</label> <input class="cmx-form-control cmx-number-control" id="number-field-3" max="" min="" placeholder="0" type="number" value=""> <span class="cmx-number-field-btn cmx-minus-btn ripple"><button class="cmx-number-field-btn__btn" type="button"><span class="cmx-number-field-btn cmx-minus-btn ripple"><span aria-hidden="true" class="cmx-icon-minus"></span> <span class="sr-only">Decrease</span></span></button></span> <span class="cmx-number-field-btn cmx-plus-btn ripple"><button class="cmx-number-field-btn__btn" type="button"><span class="cmx-number-field-btn cmx-plus-btn ripple"><span aria-hidden="true" class="cmx-icon-plus"></span> <span class="sr-only">Increase</span></span></button></span>
+                                </div>
+                                <!-- end .number-field-wrapper -->
+                                <span class="cmx-error-message">Provide error message here, if any.</span>
+                            </div>
+                            <!-- end .form-group -->
+                        </form>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html"><code class="language-html">&lt;!--REGULAR--&gt;
+&lt;div class="cmx-form-group"&gt;
+    &lt;div class="cmx-number-field-wrapper"&gt;
+        &lt;label for="number-field-1"&gt;Number field&lt;/label&gt;
+        &lt;input id="number-field-1" class="cmx-form-control cmx-number-control" type="number" value="" placeholder="0" min="" max="" step=""/&gt;
+        &lt;span class="cmx-number-field-btn cmx-minus-btn ripple"&gt;
+            &lt;button type="button" class="cmx-number-field-btn__btn"&gt;
+                &lt;span class="cmx-icon-minus" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="sr-only"&gt;Decrease&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/span&gt;
+        &lt;span class="cmx-number-field-btn cmx-plus-btn ripple"&gt;
+            &lt;button type="button" class="cmx-number-field-btn__btn"&gt;
+                &lt;span class="cmx-icon-plus" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="sr-only"&gt;Increase&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--ACTIVE--&gt;
+&lt;div class="cmx-form-group active"&gt;
+    &lt;div class="cmx-number-field-wrapper"&gt;
+        &lt;label for="number-field-2"&gt;Number field&lt;/label&gt;
+        &lt;input id="number-field-2" class="cmx-form-control cmx-number-control" type="number" value="" placeholder="0" min="" max="" /&gt;
+        &lt;span class="cmx-number-field-btn cmx-minus-btn ripple"&gt;
+            &lt;button type="button" class="cmx-number-field-btn__btn"&gt;
+                &lt;span class="cmx-icon-minus" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="sr-only"&gt;Decrease&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/span&gt;
+        &lt;span class="cmx-number-field-btn cmx-plus-btn ripple"&gt;
+            &lt;button type="button" class="cmx-number-field-btn__btn"&gt;
+                &lt;span class="cmx-icon-plus" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="sr-only"&gt;Increase&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ERROR --&gt;
+&lt;div class="cmx-form-group error"&gt;
+    &lt;div class="cmx-number-field-wrapper"&gt;
+        &lt;label for="number-field-3"&gt;Number field&lt;/label&gt;
+        &lt;input id="number-field-3" class="cmx-form-control cmx-number-control" type="number" value="" placeholder="0" min="" max="" /&gt;
+        &lt;span class="cmx-number-field-btn cmx-minus-btn ripple"&gt;
+            &lt;button type="button" class="cmx-number-field-btn__btn"&gt;
+                &lt;span class="cmx-icon-minus" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="sr-only"&gt;Decrease&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/span&gt;
+        &lt;span class="cmx-number-field-btn cmx-plus-btn ripple"&gt;
+            &lt;button type="button" class="cmx-number-field-btn__btn"&gt;
+                &lt;span class="cmx-icon-plus" aria-hidden="true"&gt;&lt;/span&gt;
+                &lt;span class="sr-only"&gt;Increase&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span class="cmx-error-message"&gt;Provide error message here, if any.&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx-form-group {
+
+        label {
+            display: inline-block;
+            font-size: $font-size-12;
+            line-height: $line-height-12;
+            color: $deep-blue;
+            padding-bottom: 6px;
+            margin-bottom: 0px;
+            cursor: pointer;
+        } // end label
+
+        .cmx-form-control {
+            display: block;
+            width: 100%;
+        } // end form-control
+
+        &amp;.active {
+            //number field treatment
+            .cmx-number-field-wrapper {
+                .cmx-number-field-btn {
+                    &amp;.cmx-minus-btn {
+                        border-right: 1px solid #ADAEBB;
+                        svg {
+                            fill: $bright-blue;
+                        }
+                    }
+                    &amp;.cmx-plus-btn {
+                        border-left: 1px solid #ADAEBB;
+                        svg {
+                            fill: $bright-blue;
+                        }
+                    }
+                }
+            } // end number-field-wrapper
+        } // end active class
+
+        &amp;.error {
+            .cmx-error-message {
+                font-size: $font-size-12;
+                color: $true-red;
+                width: 100%;
+                display: inline-block;
+                text-align: right;
+            }
+
+            //number field treatment
+            .cmx-number-field-wrapper {
+                .cmx-number-field-btn {
+                    &amp;.minus-btn {
+                        border-right: 1px solid $true-red;
+                        svg {
+                            fill: $true-red;
+                        }
+                    }
+                    &amp;.plus-btn {
+                        border-left: 1px solid $true-red;
+                        svg {
+                            fill: $true-red;
+                        }
+                    }
+                }
+
+                // a more complex hover interaction on the element
+                // because has the buttons (+/-) contained as sub-elements
+                &amp;:hover {
+                    .cmx-minus-btn,
+                    .cmx-plus-btn {
+                        svg {
+                            fill: $bright-blue;
+                        }
+                    }
+                    .cmx-minus-btn {
+                        border-right: 1px solid #ADAEBB;
+                    }
+                    .cmx-plus-btn {
+                        border-left: 1px solid #ADAEBB;
+                    }
+                } // end complex hover interaction
+            } // end number-field-wrapper   
+        } // end error class
+
+        // number type
+        input[type=&quot;number&quot;] {
+            text-align: center;
+        }
+
+        // hiding the number type spinner
+        input[type=&quot;number&quot;]::-webkit-outer-spin-button,
+        input[type=&quot;number&quot;]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=&quot;number&quot;] {
+            -moz-appearance: textfield;
+        }
+
+        .cmx-number-field-wrapper {
+            position: relative;
+
+            // button rules
+            button {
+                cursor: pointer;
+                background: none;
+                border: 0 none;
+                width: 46px;
+                height: 46px;
+                line-height: 46px;
+
+                &amp;:focus,
+                &amp;:active {
+                    outline: 0 none;
+                }
+            } // end buttons rules
+
+            .cmx-number-field-btn {
+                display: inline-block;
+                width: 46px;
+                height: 46px;
+                line-height: 46px;
+
+                // positioning the minus button
+                &amp;.cmx-minus-btn {
+                    position: absolute;
+                    bottom: 1px;
+                    left: 1px;
+                    border-right:1px solid #ADAEBB;
+
+                    svg {
+                        width: 16px;
+                        margin-top: 10px;
+                        fill: $bright-blue;
+                    }
+
+                    &amp;:hover,
+                    &amp;:focus,
+                    &amp;:active {
+                        border-right: 1px solid $bright-blue;
+                    }
+                } // end minus-btn
+
+                // positioning the plus button
+                &amp;.cmx-plus-btn {
+                    position: absolute;
+                    bottom: 1px;
+                    right: 1px;
+                    border-left: 1px solid #ADAEBB;
+
+                    svg {
+                        width: 16px;
+                        margin-top: 9px;
+                        fill: $bright-blue;
+                    }
+
+                    &amp;:hover,
+                    &amp;:focus,
+                    &amp;:active {
+                        border-left: 1px solid $bright-blue;
+                    }
+                } // end plus-btn
+            } // end number field btn
+        } // end number field wrapper
+    } // end form group</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-form-group label {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  color: #001B3A;
+  padding-bottom: 6px;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.cmx-form-group .cmx-form-control {
+  display: block;
+  width: 100%;
+}
+
+.cmx-form-group.active .cmx-number-field-wrapper .cmx-number-field-btn.cmx-minus-btn {
+  border-right: 1px solid #ADAEBB;
+}
+
+.cmx-form-group.active .cmx-number-field-wrapper .cmx-number-field-btn.cmx-minus-btn svg {
+  fill: #3FA9F5;
+}
+
+.cmx-form-group.active .cmx-number-field-wrapper .cmx-number-field-btn.cmx-plus-btn {
+  border-left: 1px solid #ADAEBB;
+}
+
+.cmx-form-group.active .cmx-number-field-wrapper .cmx-number-field-btn.cmx-plus-btn svg {
+  fill: #3FA9F5;
+}
+
+.cmx-form-group.error .cmx-error-message {
+  font-size: 0.75rem;
+  color: #EE3D42;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+}
+
+.cmx-form-group.error .cmx-number-field-wrapper .cmx-number-field-btn.cmx-minus-btn {
+  border-right: 1px solid #EE3D42;
+}
+
+.cmx-form-group.error .cmx-number-field-wrapper .cmx-number-field-btn.cmx-minus-btn svg {
+  fill: #EE3D42;
+}
+
+.cmx-form-group.error .cmx-number-field-wrapper .cmx-number-field-btn.cmx-plus-btn {
+  border-left: 1px solid #EE3D42;
+}
+
+.cmx-form-group.error .cmx-number-field-wrapper .cmx-number-field-btn.cmx-plus-btn svg {
+  fill: #EE3D42;
+}
+
+.cmx-form-group.error .cmx-number-field-wrapper:hover .cmx-minus-btn svg,
+.cmx-form-group.error .cmx-number-field-wrapper:hover .cmx-plus-btn svg {
+  fill: #3FA9F5;
+}
+
+.cmx-form-group.error .cmx-number-field-wrapper:hover .cmx-minus-btn {
+  border-right: 1px solid #ADAEBB;
+}
+
+.cmx-form-group.error .cmx-number-field-wrapper:hover .cmx-plus-btn {
+  border-left: 1px solid #ADAEBB;
+}
+
+.cmx-form-group input[type="number"] {
+  text-align: center;
+}
+
+.cmx-form-group input[type="number"]::-webkit-outer-spin-button,
+.cmx-form-group input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cmx-form-group input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.cmx-form-group .cmx-number-field-wrapper {
+  position: relative;
+}
+
+.cmx-form-group .cmx-number-field-wrapper button {
+  cursor: pointer;
+  background: none;
+  border: 0 none;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+}
+
+.cmx-form-group .cmx-number-field-wrapper button:focus, 
+.cmx-form-group .cmx-number-field-wrapper button:active {
+  outline: 0 none;
+}
+
+.cmx-form-group .cmx-number-field-wrapper .cmx-number-field-btn {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+}
+
+.cmx-form-group .cmx-number-field-wrapper .cmx-number-field-btn.cmx-minus-btn {
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  border-right: 1px solid #ADAEBB;
+}
+
+.cmx-form-group .cmx-number-field-wrapper .cmx-number-field-btn.cmx-minus-btn svg {
+  width: 16px;
+  margin-top: 10px;
+  fill: #3FA9F5;
+}
+
+.cmx-form-group .cmx-number-field-wrapper .cmx-number-field-btn.cmx-minus-btn:hover, 
+.cmx-form-group .cmx-number-field-wrapper .cmx-number-field-btn.cmx-minus-btn:focus, 
+.cmx-form-group .cmx-number-field-wrapper .cmx-number-field-btn.cmx-minus-btn:active {
+  border-right: 1px solid #3FA9F5;
+}
+
+.cmx-form-group .cmx-number-field-wrapper .cmx-number-field-btn.cmx-plus-btn {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  border-left: 1px solid #ADAEBB;
+}
+
+.cmx-form-group .cmx-number-field-wrapper .cmx-number-field-btn.cmx-plus-btn svg {
+  width: 16px;
+  margin-top: 9px;
+  fill: #3FA9F5;
+}
+
+.cmx-form-group .cmx-number-field-wrapper .cmx-number-field-btn.cmx-plus-btn:hover, 
+.cmx-form-group .cmx-number-field-wrapper .cmx-number-field-btn.cmx-plus-btn:focus, 
+.cmx-form-group .cmx-number-field-wrapper .cmx-number-field-btn.cmx-plus-btn:active {
+  border-left: 1px solid #3FA9F5;
+}
+</code></pre>
+                            </div>
+                            <!-- end data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end .container-fluid -->
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

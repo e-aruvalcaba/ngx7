@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Tooltips</title>
+    <link href="partials/favicon.html" rel="import">
+</head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Tooltips</h1>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <p>The Tooltip plugin is small pop-up box that appears when the user moves the mouse pointer over an element.</p>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-3">
+                        <div class="cmx-tooltip cmx-tooltip--down">
+                            96 HS Drive South Street
+                        </div>
+                        <!-- end .tooltip -->
+                    </div>
+
+
+                    <div class="col-3">
+                        <div class="cmx-tooltip cmx-tooltip--up">
+                            96 HS Drive South Street
+                        </div>
+                        <!-- end .tooltip -->
+                    </div>
+
+
+                    <div class="col-3">
+                        <div class="cmx-tooltip cmx-tooltip--left">
+                            96 HS Drive South Street
+                        </div>
+                        <!-- end .tooltip -->
+                    </div>
+
+
+                    <div class="col-3">
+                        <div class="cmx-tooltip cmx-tooltip--right">
+                            96 HS Drive South Street
+                        </div>
+                        <!-- end .tooltip -->
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-48">
+                </div>
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                    <div data-highlight="">
+                        <pre data-lang="html"><code class="language-html">&lt;!-- DOWN ARROW --&gt;
+  &lt;div class="cmx-tooltip cmx-tooltip--down"&gt;
+      96 HS Drive South Street
+  &lt;/div&gt;
+  
+  &lt;!-- UP ARROW --&gt;
+  &lt;div class="cmx-tooltip cmx-tooltip--up"&gt;
+      96 HS Drive South Street
+  &lt;/div&gt;
+  
+  &lt;!-- LEFT ARROW --&gt;
+  &lt;div class="cmx-tooltip cmx-tooltip--left"&gt;
+      96 HS Drive South Street
+  &lt;/div&gt;
+  
+  &lt;!-- RIGHT ARROW --&gt;
+  &lt;div class="cmx-tooltip cmx-tooltip--right"&gt;
+      96 HS Drive South Street
+  &lt;/div&gt;</code></pre>
+
+                        <pre data-lang="sass"><code class="language-css">// TOOLTIP
+.cmx-tooltip {
+  border: 1px solid $dark-grey;
+  border-radius: $radius-3;
+  color: $table-highlight-grey;
+  font-size: $font-size-12;
+  background: $dark-grey;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  font-weight: 500;
+
+  &amp;::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    bottom: -13px;
+    left: 50%;
+    box-sizing: border-box;
+    border: 6px solid black;
+    border-color: transparent transparent $dark-grey $dark-grey;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+  }
+  
+  &amp;--up{
+    &amp;::after{
+      border-color: $dark-grey $dark-grey transparent transparent;
+      bottom:auto;
+      top: 0;
+    }
+  }
+  
+  &amp;--left{
+    &amp;::after{
+      border-color: $dark-grey transparent transparent $dark-grey;
+      bottom:auto;
+      left: 1px;
+      top:50%
+    }
+  }
+  
+  &amp;--right{
+    &amp;::after{
+      border-color: transparent $dark-grey $dark-grey transparent;
+      bottom:auto;
+      right: -4px;
+      top:50%;
+      left:auto;
+    }
+  }
+}
+</code></pre>
+
+                        <pre data-lang="css"><code class="language-css">.cmx-tooltip {
+    border: 1px solid #333;
+    border-radius: 3px;
+    color: #E8EBEF;
+    font-size: 0.75rem;
+    background: #333;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    font-weight: 500;
+}
+
+.cmx-tooltip::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    bottom: -13px;
+    left: 50%;
+    box-sizing: border-box;
+    border: 6px solid black;
+    border-color: transparent transparent #333 #333;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.cmx-tooltip--up::after {
+    border-color: #333 #333 transparent transparent;
+    bottom: auto;
+    top: 0;
+}
+
+.cmx-tooltip--left::after {
+    border-color: #333 transparent transparent #333;
+    bottom: auto;
+    left: 1px;
+    top: 50%;
+}
+
+.cmx-tooltip--right::after {
+    border-color: transparent #333 #333 transparent;
+    bottom: auto;
+    right: -4px;
+    top: 50%;
+    left: auto;
+}</code></pre>
+                    </div>
+                    <!-- end data-highlight -->
+                </div>
+                <!-- end .code-box -->
+
+                <div class="spacer-32">
+                </div>
+            </div>
+            <!-- end .col-md-12 -->
+        </div>
+        <!-- end .row -->
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+</body>
+</html>

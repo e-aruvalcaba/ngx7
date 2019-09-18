@@ -1,0 +1,114 @@
+<template>
+    <nav class="main-nav">
+        <div class="cmx-logo">
+            <a class="cmx-logo__link" href="index-rtl.html">
+                <svg class="cmx-logo__image">
+                    <use xlink:href="#cmx-logo"></use>
+                </svg>
+            </a>
+        </div>
+        <!-- end cmx-logo -->
+        <div class="main-nav__items">
+            <div class="main-nav__item nav-notifications-item">
+                <div class="notifications popout__toggle" data-popout-target="#notificationsPopout">
+                    <div class="main-nav__icon-label hidden-xs-down">إخطارات</div>
+                    <div class="main-nav__icon main-nav__icon--alert">99</div>
+                </div>
+                <div id="notificationsPopout" class="notifications__container popout popout--bottom-left hidden">
+                    <div class="notifications__list">
+                        <div class="notifications__entry">
+                            <div class="notifications__entry-icon">
+                                <svg class="icon-warning-red">
+                                    <use xlink:href="#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="notifications__entry-data">
+                                <h4 class="notifications__entry-title">معلومات العميل</h4>
+                                <p class="notifications__entry-text">وقد تم للتو إنشاء موقع العمل وايلدر رانش. هل ترغب في وضع النظام؟</p>
+                                <a class="notifications__entry-cta" href="#">طلب</a>
+                            </div>
+                            <!-- end notifications__entry-data -->
+                        </div>
+                        <!-- end notifications__entry -->
+
+                        
+
+                        <div class="notifications__entry">
+                            <div class="notifications__entry-icon">
+                                <svg class="icon-warning-red">
+                                    <use xlink:href="#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="notifications__entry-data">
+                                <h4 class="notifications__entry-title">الاقتباس والتسعير</h4>
+                                <p class="notifications__entry-text">ريدباك فالي النهر الشرقي لديك اقتباس جديد جاهزة للمراجعة. - 2311112</p>
+                                <a class="notifications__entry-cta" href="#">إعادة النظر</a>
+                            </div>
+                            <!-- end notifications__entry-data -->
+                        </div>
+                        <!-- end notifications__entry -->
+
+                        
+
+                        <div class="notifications__entry">
+                            <div class="notifications__entry-icon">
+                                <svg class="icon-warning-red">
+                                    <use xlink:href="#icon-warning"></use>
+                                </svg>
+                            </div>
+                            <div class="notifications__entry-data">
+                                <h4 class="notifications__entry-title">المسار والتتبع</h4>
+                                <p class="notifications__entry-text">تسليم ل وايلدر مزرعة أوريندا في خطر بسبب حادث على الطريق بين الولايات مع عدم وجود طريق الخروج.</p>
+                                <a class="notifications__entry-cta" href="#">تدبير</a>
+                            </div>
+                            <!-- end notifications__entry-data -->
+                        </div>
+                        <!-- end notifications__entry -->
+                    </div>
+                    <!-- end notifications__list -->
+                    <a class="notifications__main-call-to-action" href="">عرض جميع الإشعارات</a>
+                </div>
+                <!-- end .notifications__container -->
+            </div>
+            <div class="main-nav__item-separator"></div>
+            <div class="main-nav__item user-menu">
+                <div class="user-menu__icon popout__toggle" data-popout-target="#userMenuPopout">
+                    <div class="main-nav__icon main-nav__icon--inverted">MW</div>
+                </div>
+                <div id="userMenuPopout" class="user-menu__container popout popout--bottom-left popout--with-border hidden">
+                    <div class="user-menu__user">
+                        <div class="main-nav__icon main-nav__icon--regular user-menu__user-icon">MW</div>
+                        <div class="user-menu__user-details">
+                            <h4 class="user-menu__user-name">مايكل أكواريوس</h4><span class="user-menu__user-email">michael.wassermann@cemex.com</span>
+                        </div>
+                        <!-- end .user-menu-details -->
+                    </div>
+                    <div class="language accordion open" >
+                        <div class="language__heading accordion__heading" role="button">
+                            لغة
+                        </div>
+                        <div class="language__options accordion__data">
+                            <ul class="language__options-list">
+                                <li class="language__options-item active" role="button">
+                                    English
+                                </li>
+                                <li class="language__options-item" role="button">
+                                    Español
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end .language -->
+                    <div class="user-menu__sign-out">
+                        <a class="user-menu__sign-out-link" href="#">خروج</a>
+                    </div>
+                    <!-- end .user-menu__sign-out -->
+                </div>
+                <!-- end .user-menu-container -->
+            </div>
+        </div>
+        <!-- end .main-nav__items -->
+        <div class="sub-nav-loader"></div>
+        <!-- end .sub-nav-loader -->
+    </nav>
+</template>

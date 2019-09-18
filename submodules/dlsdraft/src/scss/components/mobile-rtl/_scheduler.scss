@@ -1,0 +1,76 @@
+html[dir="rtl"] .mobile-scheduler {
+    
+        .mobile-scheduler-header {
+            width: 100%;
+            height: 44px;
+            background: $true-blue;
+            color: $true-white;
+            border-bottom: 1px solid #315884;
+    
+            a {
+                display: inline-block;
+                width: 44px;
+                height: 44px;
+                margin: 0;
+                float: left;
+    
+                svg {
+                    fill: $true-white;
+                    margin: 9px;
+                    padding: 4px;
+                }
+            }
+    
+            .current {
+                display: inline-block;
+                width: calc(100% - 88px);
+                margin: 0;
+                text-align: center;
+                height: 44px;
+                line-height: 44px;
+                text-transform: uppercase;
+                float: left;
+                font-weight: bold;
+                font-size: $font-size-14;
+            }
+        }
+    
+        .mobile-horizontal-sliding-wrapper {
+            height: 46px!important;
+            overflow-y: hidden!important;
+        }
+    
+        .mobile-horizontal-sliding-menu {
+            background: $true-blue;
+            width: 100%;
+            overflow-x: scroll;
+    
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                width: 1200px;
+    
+                li {
+                    display: inline-block;
+                    padding: 10px 16px;
+                    float: left;
+    
+                    a {
+                        color: $true-white;
+                        font-size: $font-size-14;
+                        opacity: 0.8;
+                    }
+    
+                    &.active {
+                        border-bottom: 2px solid $true-red;
+                    }
+    
+                    &.active a {
+                        font-weight: bold;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }

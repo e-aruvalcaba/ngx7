@@ -1,0 +1,34 @@
+// Buttons RTL _buttons-rtl.scss
+
+html[dir="rtl"] .cmx-button {
+	
+	// the styles for an icon within the button
+
+	&__icon {
+		float: right; // modified
+		margin-left: 8px; // modified
+		margin-right: 0px; // added
+	}
+
+	&.button--text--icon {
+		
+		// span containing the icon remains static
+		// we just float the text label to left, icon will move to the right
+
+		.button-text-label {
+			float: left;
+		}
+	}
+
+
+	// THE SUPPORT BUTTONS STYLES
+
+	&--support {
+		
+		// the styles for the icon within the support buttons
+		.button__icon {
+			float: right; // modified 
+		}
+	}
+}
+

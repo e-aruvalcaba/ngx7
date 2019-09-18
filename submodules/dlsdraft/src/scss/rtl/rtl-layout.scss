@@ -1,0 +1,8 @@
+// This rtl-layout.scss contains the re-defined styles for rtl layouts
+// It is targeting the classes using html[dir="rtl"] property
+
+html[dir="rtl"] {
+	.page-wrapper {
+		margin: 2px 160px 0 0;
+	}
+}

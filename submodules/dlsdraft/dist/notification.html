@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Notification</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Notification</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="rules-box">
+                            <p><i>Note:</i> The implementation demo can be found in the <a href="header-global.html">Navigation section</a>. Below are more details on the apperance and the behaviour of this specific element.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-48">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="cmx-notification-demo-wrapper">
+                            <button class="cmx-button demo-button ripple notifications popout__toggle text-right hidden-xs-down" data-popout-target="#demoNotifications">Trigger Demo Notification</button>
+
+                            <button class="cmx-button hidden-xs-up" onclick="launchModal('#mobileNotificationSelection')">Mobile Trigger</button>
+
+                            <div class="cmx-notifications__container popout popout--bottom-left hidden" id="demoNotifications">
+                                <div class="cmx-notifications__list">
+                                    <div class="cmx-notifications__entry">
+                                        <div class="cmx-notifications__entry-icon">
+                                            <svg class="icon-warning-red">
+                                            <use xlink:href="#icon-warning">
+                                            </use></svg>
+                                        </div>
+
+
+                                        <div class="cmx-notifications__entry-data">
+                                            <h4 class="cmx-notifications__entry-title">Customer Information</h4>
+
+
+                                            <p class="cmx-notifications__entry-text">The jobsite <strong>Wilder Ranch</strong> has just been created. Would you like to place an order?</p>
+                                            <a class="cmx-notifications__entry-cta" href="#">Order</a>
+                                        </div>
+                                        <!-- end notifications__entry-data -->
+                                    </div>
+                                    <!-- end notifications__entry -->
+
+
+                                    <div class="cmx-notifications__entry">
+                                        <div class="cmx-notifications__entry-icon">
+                                            <svg class="icon-warning-red">
+                                            <use xlink:href="#icon-warning">
+                                            </use></svg>
+                                        </div>
+
+
+                                        <div class="cmx-notifications__entry-data">
+                                            <h4 class="cmx-notifications__entry-title">Quotation and Pricing</h4>
+
+
+                                            <p class="cmx-notifications__entry-text"><strong>2311112 - Rideback Eastern River Valley</strong> You have a new quotation ready for review.</p>
+                                            <a class="cmx-notifications__entry-cta" href="#">Review</a>
+                                        </div>
+                                        <!-- end notifications__entry-data -->
+                                    </div>
+                                    <!-- end notifications__entry -->
+
+
+                                    <div class="cmx-notifications__entry">
+                                        <div class="cmx-notifications__entry-icon">
+                                            <svg class="icon-warning-red">
+                                            <use xlink:href="#icon-warning">
+                                            </use></svg>
+                                        </div>
+
+
+                                        <div class="cmx-notifications__entry-data">
+                                            <h4 class="cmx-notifications__entry-title">Track and Trace</h4>
+
+
+                                            <p class="cmx-notifications__entry-text">The delivery for <strong>Wilder Ranch Orinda</strong> is in jeopardy due to an accident on the interstate with no exit route.</p>
+                                            <a class="cmx-notifications__entry-cta" href="#">Manage</a>
+                                        </div>
+                                        <!-- end notifications__entry-data -->
+                                    </div>
+                                    <!-- end notifications__entry -->
+                                </div>
+                                <!-- end notifications__list -->
+                                <a class="cmx-notifications__main-call-to-action" href="">View All Notifications</a>
+                            </div>
+                            <!-- end .notifications__container -->
+                        </div>
+                        <!-- end .notification-demo-wrapper -->
+                    </div>
+                </div>
+
+
+                <div class="spacer-48">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2>Dropdown</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>When the user clicks on the notifications icon a dropdown is presented with the top 3 notifications only and a link to view all notifications. Upon clicking the view all notifications link, the user will be taken to a full page view of their notifications.</p>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>If a user clicks on one of the specific notifications they would be taken to that specific actionable item. In this example, if a user clicks on the notification that their new location was approved, they would be taken to place an order for that new location.</p>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>The items presented in this notification dropdown should always contain an action button relevant to that specific notification - the more tailored and proactive the action can be, the better. For example, when a new location is added, it is more proactive to ask if the user would like to place an order rather than simply &quot;view&quot; the approved jobsite.</p>
+                    </div>
+
+
+                    <div class="col-md-8 offset-md-1">
+                        <div class="demo-image-container"><img alt="notifications_01" class="img-responsive" src="./images/notifications_01.png">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-48">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2>Dropdown Detailed</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>With the location being at the forefront of the experience throughout this application, the location name in each of the notifications is the element that is given more prominence.</p>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>The notification dropdown should have a maximum of 3 notifications. The notifications shown should eb those requiring the most immediate action, relative to time. Users will have the ability to view all notifications through the &quot;View All Notifications&quot; button.</p>
+
+
+                        <div class="spacer-16">
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-8 offset-md-1">
+                        <div class="demo-image-container"><img alt="notifications_02" class="img-responsive" src="./images/notifications_02.png">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-48">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2>Full Page Notification Center</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>When the users clicks on view all notifications they are taken to a full page notification center experience.</p>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>Users can view their notifications and &quot;Dismiss&quot; or take action relative to the notification.</p>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>Notifications are removed from the overall total if an action is taken or if the user dismisses the notification.</p>
+                    </div>
+
+
+                    <div class="col-md-8 offset-md-1">
+                        <div class="demo-image-container"><img alt="notifications_03" class="img-responsive" src="./images/notifications_03.png">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

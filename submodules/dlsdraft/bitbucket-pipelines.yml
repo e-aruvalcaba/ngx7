@@ -1,0 +1,35 @@
+# This is a sample build configuration for .NET Core.
+# please dont remove any steps as they are here to test code is runnable
+# any doubts with Andres Santos (e-asantosb@neoris.com)
+# --------
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:6.9.4
+
+pipelines:
+  default:
+  - step:
+      script: # Modify the commands below to build your repository.
+        - echo "Hello there!"
+  branches:
+    development:
+      - step:
+          script:
+            - apt-get update && apt-get -y install xz-utils
+            - export GO_DEV="DEV"
+            - export NVM_DIR=/home/pipeline/nvm
+             
+            # - cd src/cemex
+            - npm install
+            - npm install webpack -g
+            - node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js --env.prod
+            - rm -rf node_modules/
+
+            - curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=6.33.1&source=github-rel" | tar -zx
+            - mv cf /usr/local/bin
+            - cf --version
+            - cf api https://api.ng.bluemix.net
+            - cf login -u $BMX_DEP_USER -p $BMX_DEP_PWD -o CROSSPRODUCT-GBL-ORG -s Development
+
+            
+            - ls
+            - cf push dls-showroom

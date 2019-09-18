@@ -1,0 +1,42 @@
+.cmx{
+    &-jumbotron{
+        height:calc(100vh - 55px - 25px);
+        display:flex;
+        align-items: center;
+    
+        h1{
+            font-size: 6.75rem;
+            line-height: 7.875rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+        h2{
+            font-size: 2.375rem;
+            line-height: 2.75rem;
+            font-weight: 500;
+            margin-bottom: 2.625rem;
+        }
+        p{
+            font-size: 1.75rem;
+            line-height: 2.375rem;
+            margin-bottom: 1.625rem;
+        }
+    }
+}
+
+@media (max-width : 576px) {
+    .cmx{
+        &-jumbotron{
+    
+            h1{
+                font-size: 5.5rem;
+            }
+            h2{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.25rem;
+            }
+        }
+    }
+}

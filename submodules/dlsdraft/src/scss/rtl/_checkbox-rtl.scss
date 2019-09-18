@@ -1,0 +1,26 @@
+// _checkbox-rtl.scss
+
+html[dir="rtl"] input {
+    &[type=checkbox] {
+        margin-left: 0.375rem; // modified
+        margin-right: 0; // added
+
+        & + label{
+            &::before{
+                margin-left: 0.375rem; // modified
+                margin-right: 0; // added
+            }
+        }
+
+        &:checked {
+            & + label{
+                &::after {
+                    content: ' ';
+                    top: 4px;
+                    right: 3px; // modified
+                    left: auto; // added
+                }
+            }
+        }
+    }
+}

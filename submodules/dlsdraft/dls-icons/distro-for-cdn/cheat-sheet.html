@@ -1,0 +1,159 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Cemex Design Language System Icon Font Cheatsheet</title>
+  <meta name="description" content="Cemex Design Language System Icon Font Cheatsheet">
+  <meta name="author" content="Cemex">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="cmx-dls-icons.css">
+  <style type="text/css">
+    body{
+        font-family: 'Roboto', sans-serif;
+    }
+    h1{
+        margin-bottom: 1rem;
+    }
+    .container{
+        margin-bottom:2rem;
+    }
+    pre{
+        border:1px dashed #ddd; background-color:#efefef; padding:1rem
+    }
+  </style>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Cemex Design Language System Icon Font Cheatsheet</h1>
+                <h2>Usage:</h2>
+                <pre>&lt;span class="cmx-icon-language" aria-hidden="true"&gt;&lt;/span&gt;
+
+&lt;!-- substitute the class in the span with your icon class of choice --&gt;</pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12"><h2>The Icons:</h2></div>
+        </div>
+        <div id="fontIcons" class="row">
+        </div>
+    </div>
+    <script>
+        var classNames = [
+        "cmx-icon-control-center", 
+        "cmx-icon-user-profile", 
+        "cmx-icon-scheduler", 
+        "cmx-icon-track", 
+        "cmx-icon-driver", 
+        "cmx-icon-pricing", 
+        "cmx-icon-payment", 
+        "cmx-icon-ordering", 
+        "cmx-icon-accepted-ok", 
+        "cmx-icon-error", 
+        "cmx-icon-warning-repeat", 
+        "cmx-icon-warning", 
+        "cmx-icon-calendar", 
+        "cmx-icon-clock", 
+        "cmx-icon-checkbox-active", 
+        "cmx-icon-checkbox-static", 
+        "cmx-icon-radio-active", 
+        "cmx-icon-radio-static", 
+        "cmx-icon-close", 
+        "cmx-icon-plus", 
+        "cmx-icon-minus", 
+        "cmx-icon-collapse", 
+        "cmx-icon-expand", 
+        "cmx-icon-expand-move", 
+        "cmx-icon-contract-move", 
+        "cmx-icon-map-pin", 
+        "cmx-icon-up-double", 
+        "cmx-icon-down-double", 
+        "cmx-icon-left-double", 
+        "cmx-icon-right-double", 
+        "cmx-icon-up-single", 
+        "cmx-icon-down-single", 
+        "cmx-icon-left-single", 
+        "cmx-icon-right-single", 
+        "cmx-icon-straight-arrow-up", 
+        "cmx-icon-straight-arrow-down", 
+        "cmx-icon-straight-arrow-left", 
+        "cmx-icon-straight-arrow-right", 
+        "cmx-icon-download-export", 
+        "cmx-icon-magnifier-glass", 
+        "cmx-icon-settings", 
+        "cmx-icon-up-rounded-full", 
+        "cmx-icon-up-rounded", 
+        "cmx-icon-down-rounded-full", 
+        "cmx-icon-down-rounded", 
+        "cmx-icon-left-rounded-full", 
+        "cmx-icon-left-rounded", 
+        "cmx-icon-right-rounded-full", 
+        "cmx-icon-right-rounded", 
+        "cmx-icon-round-minus-full", 
+        "cmx-icon-round-minus", 
+        "cmx-icon-round-plus-full", 
+        "cmx-icon-round-plus", 
+        "cmx-icon-repeat", 
+        "cmx-icon-trash", 
+        "cmx-icon-favourite", 
+        "cmx-icon-favourite-active", 
+        "cmx-icon-logo-face", 
+        "cmx-icon-check", 
+        "cmx-icon-expand-control", 
+        "cmx-icon-questionmark", 
+        "cmx-icon-brakets", 
+        "cmx-icon-picture", 
+        "cmx-icon-language", 
+        "cmx-icon-document", 
+        "cmx-icon-logout", 
+        "cmx-icon-quick-view", 
+        "cmx-icon-burger-menu", 
+        "cmx-icon-bulk-cement", 
+        "cmx-icon-multi-products", 
+        "cmx-icon-aggregates", 
+        "cmx-icon-bag-cement", 
+        "cmx-icon-ready-mix", 
+        "cmx-icon-blocked", 
+        "cmx-icon-attachment", 
+        "cmx-icon-multiple-items", 
+        "cmx-icon-edit", 
+        "cmx-icon-clock-fill", 
+        "cmx-icon-protected", 
+        "cmx-icon-document-broken", 
+        "cmx-icon-picture-fill", 
+        "cmx-icon-picture-broken", 
+        "cmx-icon-filter", 
+        "cmx-icon-history", 
+        "cmx-icon-question-rounded", 
+        "cmx-icon-pin-error", 
+        "cmx-icon-pin-poi", 
+        "cmx-icon-pin-load", 
+        "cmx-icon-pin-load-3rdparty", 
+        "cmx-icon-pin-unload", 
+        "cmx-icon-phone", 
+        "cmx-icon-share", 
+        "cmx-icon-upload", 
+        "cmx-icon-save", 
+        "cmx-icon-pickup", 
+        "cmx-icon-print", 
+        "cmx-icon-e-mail", 
+        "cmx-icon-arrow-collapse"
+        ];
+        let output = "";
+        for (className of classNames){
+        output += '<div class="col-md-4 demo-font-box"><span class="'+className+'"></span> <span class="mls">'+className+'</span></div>';
+        }
+        document.getElementById('fontIcons').innerHTML = output;
+    </script>
+</body>
+</html>
+

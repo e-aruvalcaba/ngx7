@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Progress Bar - RTL</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav-rtl.html" rel="import">
+        <link href="partials/sidenav-rtl.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Progress Bar</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <h2>Uploading Progress Bar</h2>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="cmx-progress-bar">
+                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="cmx-progress-bar__ammount success" role="progressbar" style="width: 100%">
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="cmx-progress-bar">
+                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="cmx-progress-bar__ammount" role="progressbar" style="width: 25%">
+                            </div>
+
+
+                            <div class="cmx-progress-bar__label text-right">
+                                30s remaining
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-16">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h2>Split Horizontal Progress Bar</h2>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-9">
+                        <div class="cmx-progress-bar">
+                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" class="cmx-progress-bar__ammount red" role="progressbar" style="width: 40%">
+                            </div>
+
+
+                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="cmx-progress-bar__ammount orange" role="progressbar" style="width: 60%">
+                            </div>
+                        </div>
+                        <!-- end .progress -->
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-legend row">
+                            <div class="col-md-2">
+                                <div class="cmx-legend__item">
+                                    <div class="cmx-legend__term red">
+                                    </div>
+
+
+                                    <div class="cmx-legend__value">
+                                        <strong class="cmx-legend__value-heading">$450.000</strong> <span class="cmx-legend__value-desc">Credit Available</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <div class="cmx-legend__item">
+                                    <div class="cmx-legend__term orange">
+                                    </div>
+
+
+                                    <div class="cmx-legend__value">
+                                        <strong class="cmx-legend__value-heading">$650.000</strong> <span class="cmx-legend__value-desc">Pending Orders</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end .row -->
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end. row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12" dir="ltr">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html">
+                                    <code class="language-html">
+&lt;!-- on the root element set the dir attribute for rtl display format --&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;rtl&quot;&gt;
+    [code goes here]
+&lt;/html&gt;
+
+
+&lt;!-- Uploading Progress Bar --&gt;
+&lt;div class=&quot;cmx-progress-bar&quot;&gt;
+    &lt;div class=&quot;cmx-progress-bar__ammount success&quot; role=&quot;progressbar&quot; style=&quot;width: 100%&quot; aria-valuenow=&quot;100&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;cmx-progress-bar&quot;&gt;
+    &lt;div class=&quot;cmx-progress-bar__ammount&quot; role=&quot;progressbar&quot; style=&quot;width: 25%&quot; aria-valuenow=&quot;25&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;cmx-progress-bar__label text-right&quot;&gt;
+        30s remaining
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+
+
+&lt;!-- Split Horizontal Progress Bar --&gt;
+&lt;div class=&quot;cmx-progress-bar&quot;&gt;
+  &lt;div class=&quot;cmx-progress-bar__ammount red&quot; role=&quot;progressbar&quot; style=&quot;width: 40%&quot; aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;cmx-progress-bar__ammount orange&quot; role=&quot;progressbar&quot; style=&quot;width: 60%&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end .progress --&gt;
+
+&lt;div class=&quot;spacer-16&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;cmx-legend row&quot;&gt;
+    &lt;div class=&quot;col-md-2&quot;&gt;
+        &lt;div class=&quot;cmx-legend__item&quot;&gt;
+            &lt;div class=&quot;cmx-legend__term red&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;cmx-legend__value&quot;&gt;
+                &lt;strong class=&quot;cmx-legend__value-heading&quot;&gt;$450.000&lt;/strong&gt; 
+                &lt;span class=&quot;cmx-legend__value-desc&quot;&gt;Credit Available&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-md-2&quot;&gt;
+        &lt;div class=&quot;cmx-legend__item&quot;&gt;
+            &lt;div class=&quot;cmx-legend__term orange&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;cmx-legend__value&quot;&gt;
+                &lt;strong class=&quot;cmx-legend__value-heading&quot;&gt;$650.000&lt;/strong&gt;
+                &lt;span class=&quot;cmx-legend__value-desc&quot;&gt;Pending Orders&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end .row --&gt;
+    </code>
+    <!-- end .language-html --></pre><!-- end data-lang html -->
+
+                                <pre data-lang="sass"><code class="language-css">// Basic progress bar
+// _progress-rtl.scss 
+
+
+html[dir=&quot;rtl&quot;] .cmx-progress-bar {
+  &amp;__label {
+    left:0; // modified
+    right: auto; // added
+    text-align: left; // modified
+  }
+}
+
+html[dir=&quot;rtl&quot;] .cmx-legend{
+  &amp;__item{
+    float: right; // modified
+  }
+  
+  &amp;__term{
+    float: right; // modified
+
+  }
+
+  &amp;__value{
+    margin-right: 8px; // modified
+    margin-left: 0; // added
+    float: right; // modified
+  }
+}</code></pre>
+                            </div>
+                            <!-- end .data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

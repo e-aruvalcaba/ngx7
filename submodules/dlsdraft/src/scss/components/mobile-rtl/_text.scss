@@ -1,0 +1,14 @@
+html[dir="rtl"] .mobile-h1 {
+    font-size: $font-size-30;
+    line-height: $line-height-30;
+
+    a {
+        color: #303030;
+        text-decoration: none;
+    }
+
+    svg {
+        width: 18px;
+        fill: #303030;
+    }
+}

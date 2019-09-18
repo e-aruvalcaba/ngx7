@@ -1,0 +1,198 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.cmx{
+  &-nav{
+    list-style: none;
+    padding: 	0;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    &-header{
+      min-height: 	88px;
+      background: 	$medium-blue;
+      padding: 		24px 16px;
+      color: 			$true-white;
+      font-family: 	$font-family;
+      font-size: 		$font-size-14;
+      
+      p {
+        font-weight: $font-regular;
+      }
+
+      a {
+        color: 		$true-white;
+        font-weight: $font-bold;
+      }
+    }
+
+    &-link{
+      display: block;
+      padding: $nav-link-padding;
+    
+      @include hover-focus {
+        text-decoration: none;
+      }
+    
+      // Disabled state lightens text and removes hover/tab effects
+      &.cmx-disabled {
+        color: $nav-disabled-link-color;
+        cursor: $cursor-disabled;
+      }
+    }
+
+    //
+    // Tabs
+    //
+
+    @mixin active-tab(){
+      color: $dark-grey;
+      background-color: transparent;
+      border-color: $disabled-grey $disabled-grey $background-grey;
+      border-top: 3px solid $bright-blue;
+      border-right:1px solid $disabled-grey;
+      border-left:1px solid $disabled-grey;
+      padding: 13px 24px 16px;
+    }
+
+    &-tabs{
+      overflow-y: hidden;
+
+      &-wrapper {
+        overflow: hidden;
+        height: 58px;
+      }
+
+      &-container {
+        overflow-x: auto;
+      }
+
+      &::after{
+        content:"";
+        flex: 1 1 auto;
+        border-bottom: 1px solid $disabled-grey;
+      }
+
+      .cmx{
+        &-nav{
+
+          &-item {
+            margin-bottom: -$nav-tabs-border-width;
+            white-space: nowrap;
+    
+            &.show .nav-link {
+              @include active-tab();
+            }
+          }
+    
+          &-link {
+            border-bottom:1px solid $disabled-grey;
+            font-weight: $font-medium;
+            color: $bright-blue;
+            font-size: 15px;
+            padding: 16px 24px 15px;
+            box-sizing: border-box;
+        
+            &:hover {
+              background: none;
+              color: $bright-blue;
+            }
+        
+            &.disabled {
+              color: $nav-disabled-link-color;
+              background-color: transparent;
+              border-color: transparent;
+            }
+    
+            &.active{
+              @include active-tab();
+            }
+          }
+        }
+
+        &-dropdown-menu {
+          // Make dropdown border overlap tab border
+          margin-top: -$nav-tabs-border-width;
+      
+          // Remove the top rounded corners here since there is a hard edge above the menu
+          @include border-top-radius(0);
+        }
+      }
+      
+    }
+
+    // Tabbable tabs
+    //
+    // Hide tabbable panes to start, show them when `.active`
+
+    &-tab{
+      &-content{
+        > .tab-pane {
+          display: none;
+        }
+        > .active {
+          display: block;
+        }
+      }
+    }
+
+    //
+    // Pills
+    //
+
+    @mixin active-pill(){
+      color: $nav-pills-active-link-color;
+      cursor: default;
+      background-color: $nav-pills-active-link-bg;
+    }
+
+    &-pills {
+
+      .cmx{
+        &-nav{
+          &-link {
+            @include border-radius($nav-pills-border-radius);
+            &.active{
+              @include active-pill();
+            }
+          }
+          &-item{
+            &.show{
+              .cmx-nav-link {
+                @include active-pill();
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //
+    // Justified variants
+    //
+
+    &-fill {
+      .cmx-nav-item {
+        flex: 1 1 auto;
+        text-align: center;
+      }
+    }
+
+    &-justified {
+      .cmx-nav-item {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &-navbar{
+    &-default{
+      background-color: $true-blue;
+    }
+  }
+}

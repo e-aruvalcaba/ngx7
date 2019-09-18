@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Progress Bar</title>
+    <link href="partials/favicon.html" rel="import">
+</head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Progress Bar</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <h2>Uploading Progress Bar</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <p>These bars are for progress and success of a document upload.<br>
+                            When the user is uploading a document, they will see color and progress tracking for the status of the upload.</p>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <p>Green will mean the document has been successfully and fully uploaded while blue will indicate the document is in the process of being uploaded and there will be a time stamp under the bar indicating the remaining time left.</p>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="cmx-progress-bar">
+                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="cmx-progress-bar__ammount success" role="progressbar" style="width: 100%">
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="cmx-progress-bar">
+                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" class="cmx-progress-bar__ammount" role="progressbar" style="width: 25%">
+                            </div>
+
+
+                            <div class="cmx-progress-bar__label text-right">
+                                30s remaining
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div data-highlight="">
+                            <pre data-lang="html"><code class="language-html">&lt;!-- FULL PROGRESSBAR --&gt;
+
+&lt;div class="cmx-progress-bar"&gt;
+    &lt;div class="cmx-progress-bar__ammount success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--PARTIAL PROGRESSBAR--&gt;  
+
+&lt;div class="cmx-progress-bar"&gt;
+    &lt;div class="cmx-progress-bar__ammount" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+    &lt;div class="cmx-progress-bar__label text-right"&gt;
+        30s remaining
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <!-- end data-highlight -->
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-16">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h2>Split Horizontal Progress Bar</h2>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-9">
+                        <div class="cmx-progress-bar">
+                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" class="cmx-progress-bar__ammount red" role="progressbar" style="width: 40%">
+                            </div>
+
+
+                            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="cmx-progress-bar__ammount orange" role="progressbar" style="width: 60%">
+                            </div>
+                        </div>
+                        <!-- end .progress -->
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-legend row">
+                            <div class="col-md-2">
+                                <div class="cmx-legend__item">
+                                    <div class="cmx-legend__term red">
+                                    </div>
+
+
+                                    <div class="cmx-legend__value">
+                                        <strong class="cmx-legend__value-heading">$450.000</strong> <span class="cmx-legend__value-desc">Credit Available</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <div class="cmx-legend__item">
+                                    <div class="cmx-legend__term orange">
+                                    </div>
+
+
+                                    <div class="cmx-legend__value">
+                                        <strong class="cmx-legend__value-heading">$650.000</strong> <span class="cmx-legend__value-desc">Pending Orders</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div data-highlight="">
+                            <pre data-lang="html"><code class="language-html">&lt;!-- SPLIT PROGRESSBAR --&gt;
+
+&lt;div class="cmx-progress-bar"&gt;
+    &lt;div class="cmx-progress-bar__ammount red" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+    &lt;div class="cmx-progress-bar__ammount orange" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- LEGEND ITEMS --&gt;
+
+&lt;div class="cmx-legend__item"&gt;
+    &lt;div class="cmx-legend__term red"&gt;&lt;/div&gt;
+    &lt;div class="cmx-legend__value"&gt;
+        &lt;strong class="cmx-legend__value-heading"&gt;$450.000&lt;/strong&gt; 
+        &lt;span class="cmx-legend__value-desc"&gt;Credit Available&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="cmx-legend__item"&gt;
+    &lt;div class="cmx-legend__term orange"&gt;&lt;/div&gt;
+    &lt;div class="cmx-legend__value"&gt;
+        &lt;strong class="cmx-legend__value-heading"&gt;$650.000&lt;/strong&gt;
+        &lt;span class="cmx-legend__value-desc"&gt;Pending Orders&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <!-- end data-highlight -->
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end. row -->
+
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h2>... and the CSS code</h2>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div data-highlight="">
+                            <pre data-lang="scss"><code class="language-css">// Basic progress bar
+.cmx-progress-bar {
+  position: relative;
+  display:flex;
+  font-size: $progress-font-size;
+  line-height: $progress-height;
+  background-color: $disabled-grey;
+
+
+  &amp;__ammount {
+    height: $progress-height;
+    color: $progress-bar-color;
+    background-color: $bright-blue;
+
+    &amp;.success{
+      background-color: $bright-green;
+    }
+    &amp;.warning{
+      background-color: $bright-orange;
+    }
+    &amp;.error{
+      background-color: $true-red;
+    }
+    // and the color codes (for color purposes)
+    &amp;.red{
+      background-color: $true-red;
+    }
+    &amp;.orange{
+      background-color: $bright-orange;
+    }
+    &amp;.green{
+      background-color: $bright-green;
+    }
+  }
+
+  &amp;__label {
+    position: absolute;
+    right:0;
+    top: $progress-height;
+    font-size: $font-size-10;
+    color: #818C9E;
+    text-align: right;
+  }
+}
+
+.cmx-legend{
+  &amp;__item{
+    float: left;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  
+  &amp;__term{
+    display: inline-block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: $disabled-grey;
+    margin-top: 4px;
+
+    &amp;.blue {
+      background: $bright-blue;
+    }
+
+    &amp;.green {
+      background: $bright-green;
+    }
+
+    &amp;.red {
+      background: $true-red;
+    }
+
+    &amp;.orange {
+      background: $bright-orange;
+    }
+  }
+
+  &amp;__value{
+    margin-left: 8px;
+    width: calc(100% - 32px);
+    float: left;
+
+    &amp;-heading {
+      font-size: $font-size-18;
+      font-weight: bold;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    &amp;-desc {
+      line-height: $line-height-18;
+    }
+  }
+}</code></pre>
+
+                            <pre data-lang="css"><code class="language-css">.cmx-progress-bar {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    background-color: #D6D6D6;
+}
+
+.cmx-progress-bar__ammount {
+    height: 0.75rem;
+    color: #fff;
+    background-color: #3FA9F5;
+}
+
+.cmx-progress-bar__ammount.success {
+    background-color: #7AC943;
+}
+
+.cmx-progress-bar__ammount.warning {
+    background-color: #FBB03B;
+}
+
+.cmx-progress-bar__ammount.error {
+    background-color: #EE3D42;
+}
+
+.cmx-progress-bar__ammount.red {
+    background-color: #EE3D42;
+}
+
+.cmx-progress-bar__ammount.orange {
+    background-color: #FBB03B;
+}
+
+.cmx-progress-bar__ammount.green {
+    background-color: #7AC943;
+}
+
+.cmx-progress-bar__label {
+    position: absolute;
+    right: 0;
+    top: 0.75rem;
+    font-size: 0.625rem;
+    color: #818C9E;
+    text-align: right;
+}
+
+.cmx-legend__item {
+    float: left;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.cmx-legend__term {
+    display: inline-block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: #D6D6D6;
+    margin-top: 4px;
+}
+
+.cmx-legend__term.blue {
+    background: #3FA9F5;
+}
+
+.cmx-legend__term.green {
+    background: #7AC943;
+}
+
+.cmx-legend__term.red {
+    background: #EE3D42;
+}
+
+.cmx-legend__term.orange {
+    background: #FBB03B;
+}
+
+.cmx-legend__value {
+    margin-left: 8px;
+    width: calc(100% - 32px);
+    float: left;
+}
+
+.cmx-legend__value-heading {
+    font-size: 1.125rem;
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.cmx-legend__value-desc {
+    line-height: 1.125rem;
+}</code></pre>
+                        </div>
+                        <!-- end data-highlight -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+</body>
+</html>

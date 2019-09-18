@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Switch - RTL</title>
+    <link href="partials/favicon.html" rel="import">
+</head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav-rtl.html" rel="import">
+        <link href="partials/sidenav-rtl.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Switch Input</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="rules-box">
+                        <p>The switch input should be used only to turn something on/off, or choose between yes and no.</p>
+
+
+                        <p>This could be in an email preference setting, to say if a location is maneuverable, etc..</p>
+
+
+                        <p>For other cases when switching between views, utilize the Switch Control.</p>
+                    </div>
+
+
+                    <div class="spacer-32">
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div>
+                                <input class="cmx-switch" type="checkbox"><label>Switch Label</label>
+                            </div>
+
+
+                            <div>
+                                <input class="cmx-switch" disabled="disabled" type="checkbox"><label>Disabled</label>
+                            </div>
+                        </div>
+                        <!-- end .col-md-12 -->
+                    </div>
+                    <!-- end .row -->
+                    <!--
+                    <div class="spacer-32"></div>
+                        
+                    <div class="width-full">
+                        <div class="toggle">
+                            <div class="toggle__option active">Calendar View</div>
+                            <div class="toggle__option">List View</div>
+                        </div>
+                    </div>
+                -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12" dir="ltr">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html">
+                                    <code class="language-html">
+&lt;!-- on the root element set the dir attribute for rtl display format --&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;rtl&quot;&gt;
+    [code goes here]
+&lt;/html&gt;
+
+&lt;!-- html of the element doesn't change from LTR --&gt;
+    </code>
+    <!-- end .language-html --></pre><!-- end data-lang html -->
+
+                                <pre data-lang="sass"><code class="language-css">// _switch-rtl.scss
+
+html[dir=&quot;rtl&quot;] input {
+    &amp;[type=checkbox].cmx-switch {
+        margin-right: 0rem; // modified
+        margin-left: 0.375rem; // added
+
+        &amp; + label{
+
+            &amp;::before{
+                margin-right: 0rem; // modified
+                margin-left: 0.375rem; // added
+            }
+
+            &amp;::after{
+                right: 2px; // added
+                left: 0; 
+            }
+        }
+
+        &amp;:checked {
+            &amp; + label{
+                &amp;::after {
+                    top: 2px;
+                    left: 0px; // modified
+                    right: 26px; // added
+                }
+            }
+        }
+    }
+}</code></pre>
+                            </div>
+                            <!-- end .data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+            </div>
+            <!-- end .container-fluid -->
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+</body>
+</html>

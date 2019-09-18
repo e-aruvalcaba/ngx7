@@ -1,0 +1,194 @@
+html[dir="rtl"] .mobile-reveal-menu {
+    position: absolute;
+    z-index: 100;
+    width: 85%;
+    height: 100%;
+    background: $true-blue;
+    top: 0;
+    overflow-y: scroll;
+
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+
+    &::-webkit-scrollbar {
+        display: none; // Safari and Chrome
+    } 
+
+    .legal-entity {
+        background: $medium-blue;
+        padding: 20px 40px 20px 20px;
+        width: 100%;
+        float: left;
+
+        a {
+            display: inline-block;
+            float: left;
+            clear: both;
+            width: 100%;
+            position: relative;
+
+            &:hover,
+            &:active {
+                text-decoration: none;
+            }
+        }
+
+        svg {
+            fill: #fff;
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 10px;
+            right: -20px;
+        }
+    }
+
+    .legal-entity-name {
+        font-weight: $font-medium;
+        color: $true-white;
+        font-size: $font-size-14;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .legal-entity-id {
+        color: $true-white;
+        font-size: $font-size-10;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+
+            a { 
+                display: block;
+                color: $true-white;
+                font-size: $font-size-14;
+                font-weight: $font-medium;
+                text-decoration: none;
+                line-height: 48px;
+
+                &.active {
+                    // background: linear-gradient(to right, #021A35 43px, #002A59 42px);
+                    background: #002A59;
+
+                    span.icon {
+                        background: #021A35;
+                    }
+                }
+            }
+                
+            .icon {
+                display: inline-block;
+                background: $medium-blue;
+                width: 48px;
+                height: 48px;
+                text-align: center;
+
+                svg {
+                    fill: $true-white;
+                    position: relative;
+                    top: 6px;
+                }
+            }
+
+            .menu-label {
+                padding-right: 10px; // modified
+                padding-left: 0; //added
+            }
+        }
+
+        &.menu-secondary-actions {
+            // the elements with icon on the left in secondary listings
+            a {
+                span.icon {
+                    background: none;
+                }
+
+                &.active {
+                    span.icon {
+                        background: #002A59;
+                    }
+                }
+            }
+            
+            // the subnav in secondary navs looks a bit different
+            .subnav {
+                li {
+                    a {
+                        background: none;
+
+                        &.active {
+                            background: #012F63;
+
+                            span.icon { 
+                                background: red; 
+                            }
+                        }
+                    }
+                } 
+            } 
+        } // end &.menu-secondary-actions
+    }
+
+    .subnav {
+        border-bottom: 1px solid #4D6F96;
+
+        li {
+            a {
+                padding-right: 62px; // modified
+                padding-left: 0; // added
+                background: linear-gradient(to left, #002A59 48px, #003876 47px); // modified
+
+                &.active {
+                    background: linear-gradient(to left, #002A59 48px, #012F63 47px); // modified
+                }
+            }
+        }
+    }
+
+    .mobile-side-menu-delimiter {
+        height: 1px;
+        width: 100%;
+        background: #4D6F96;
+    }
+
+    .circle {
+        font-weight: $font-bold;
+        font-size: $font-size-10;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        color: $true-white;
+        text-align: center;
+        line-height: $line-height-24;
+        float: right; // modified
+        margin: 12px 14px;
+        font-weight: bold;
+
+        &.red-circle {
+            background: $true-red;	
+        }
+        &.deep-blue-circle {
+            background: $deep-blue;
+        }
+        &.white-circle {
+            background: $true-white;
+            color: $true-blue;
+        }
+    }
+
+    .copyright {
+        color: $disabled-grey;
+        font-size: 8px;
+        background: $true-blue;
+        width: 100%;
+        padding-left: 16px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+    }
+}

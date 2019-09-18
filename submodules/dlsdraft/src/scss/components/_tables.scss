@@ -1,0 +1,354 @@
+//
+// Basic Bootstrap table
+//
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $spacer;
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: top;
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  tbody + tbody {
+    border-top: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  .table {
+    background-color: $body-bg;
+  }
+}
+
+
+//
+// Condensed table w/ half padding
+//
+
+.table-sm {
+  th,
+  td {
+    padding: $table-sm-cell-padding;
+  }
+}
+
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered {
+  border: $table-border-width solid $table-border-color;
+
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: (2 * $table-border-width);
+    }
+  }
+}
+
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+  tbody tr:nth-of-type(odd) {
+    //background-color: $table-bg-accent;
+    background-color: rgba(0, 57, 118, 0.12);
+  }
+}
+
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+
+.table-hover {
+  tbody tr {
+    @include hover {
+      background-color: $table-bg-hover;
+    }
+  }
+}
+
+
+// Table backgrounds
+//
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+
+// Generate the contextual variants
+@include table-row-variant(active, $table-bg-active);
+@include table-row-variant(success, $state-success-bg);
+@include table-row-variant(info, $state-info-bg);
+@include table-row-variant(warning, $state-warning-bg);
+@include table-row-variant(danger, $state-danger-bg);
+
+
+// Inverse styles
+//
+// Same table markup, but inverted color scheme: dark background and light text.
+
+.thead-inverse {
+  th {
+    color: $table-inverse-color;
+    background-color: $table-inverse-bg;
+  }
+}
+
+.thead-default {
+  th {
+    color: $table-head-color;
+    background-color: $table-head-bg;
+  }
+}
+
+.table-inverse {
+  color: $table-inverse-color;
+  background-color: $table-inverse-bg;
+
+  th,
+  td,
+  thead th {
+    border-color: $body-bg;
+  }
+
+  &.table-bordered {
+    border: 0;
+  }
+}
+
+
+
+// Responsive tables
+//
+// Add `.table-responsive` to `.table`s and we'll make them mobile friendly by
+// enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+
+  // Prevent double border on horizontal scroll due to use of `display: block;`
+  &.table-bordered {
+    border: 0;
+  }
+}
+
+
+
+
+// START TABLES PAGE
+
+
+.cmx-table-container {
+  
+  // make a reset of the line-height
+  line-height: 1;
+  font-size: $font-size-14;
+  width:100%;
+
+  /*
+   * Define the widths: play around with these to get a best fit.
+   */
+  $cell-40: 40px;
+  $cell-60: 60px;
+  $cell-120: 120px;
+  $cell-180: 180px;
+  $cell-280: 280px;
+  
+
+  // Main container: initialize the flex, direction is row
+  .cmx-table-row {
+    display: flex;           
+    flex-direction: row;     
+    flex-grow: 0;            
+    flex-wrap: wrap;         
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: $line-height-20;
+  }
+
+  // Text based cells: grow, truncate and show ellipsis when there is not enough space
+  .cmx-table-row > *:not(.cell-40), .cell-280, .cell-180, .cell-120, .cell-60 {
+    flex: 1 1 auto;           
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  // Fix the minimum width of the leaf level cells
+  .cmx-cell-280 {
+    width: $cell-280;
+  }
+
+  .cmx-cell-180 {
+    width: $cell-180;
+  }
+
+  .cmx-cell-120 {
+    width: $cell-120;
+  }
+
+  .cmx-cell-60 {
+    width: $cell-60;
+  }
+
+  .cmx-cell-40 {
+    width: $cell-40;
+  }
+
+  /*
+   * General good-look styles, not mandatory.
+   */
+
+
+
+  &.striped {
+    .cmx-table-row {
+      &:nth-child(odd) {
+        background: $true-white;
+      }
+  
+      &:nth-child(even) {
+        background: $table-highlight-grey;
+      }
+    }
+  }
+
+  .cmx-table-row {
+    border-collapse: collapse;
+    margin-bottom: .25rem;
+    padding: .625rem 0px;
+    transition: all 0.3s;
+
+      &.cmx-table-row-tall {
+        padding: 1.375rem 0;
+        margin-bottom: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+        border-radius: $radius-2;
+      }
+
+      &.cmx-table-row-light {
+        background: $true-white;
+      }
+
+      &.cmx-table-row-dark {
+        background: $table-highlight-grey;
+      }
+
+      &.cmx-active-row {
+        background: $table-row-active;
+      }
+
+      &.cmx-header {
+
+        color: $deep-blue;
+        font-weight: $font-bold;
+
+        a {
+          color: $deep-blue;
+          font-weight: $font-bold;
+          text-decoration: none;
+        }
+
+        .cmx-icon-list-arrow {
+          width: 10px;
+          height: 10px;
+          margin-left: 0.25rem;
+          fill: $bright-blue;
+        }
+      }
+  }
+
+  ul.cmx-table-link-list {
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-left: 1rem;
+      font-weight: $font-medium;
+      a {
+        cursor: pointer;
+        &.secondary {
+          color: $medium-grey;
+        }
+      }
+    }
+  }
+
+  label {
+    margin-bottom: 0;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  
+}
+
+.cmx-large-header {
+  background: $true-white;
+  border-radius: $radius-2;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+
+  h1 {
+    font-weight: $font-bold;
+  }
+
+  h4 {
+    font-weight: $font-medium;
+  }
+
+  .cmx-flag-status {
+    margin-top: 2px;
+  }
+  
+  .cmx-status {
+    font-size: .875rem;
+    font-weight: $font-bold;
+    color: $deep-blue;
+    margin-bottom: .875rem;
+  }
+
+  .cmx-location {
+    color: $deep-blue;
+    margin-bottom: 3rem;
+  }
+
+  .cmx-extra-info {
+    font-size: $font-size-14;
+    line-height: $line-height-18;
+    color: $deep-blue;
+  }
+
+  .cmx-pre-header {
+    font-size: $font-size-18;
+    color: $deep-blue;
+  }
+}
+
+
+// END TABLES PAGE

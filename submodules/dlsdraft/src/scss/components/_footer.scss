@@ -1,0 +1,47 @@
+// FOOTER
+// this element is fixed (always sticks at the bottom of the page)
+
+.cmx-footer {
+	position: fixed;
+	z-index: 2002;
+	width: 100%;
+	min-height: 24px;
+	background: $medium-blue;
+	color: $true-white;
+	bottom:0;
+	padding: 0 1.25rem;
+	display:flex;
+	align-items: center;
+
+	&__copyright{
+		font-size: $font-size-12;
+		flex:1 1 auto;
+	}
+
+	&__menu {
+		flex:0 0 auto;
+		display:flex;
+		list-style:none outside;
+		align-items: center;
+
+		&-item {
+			margin-right: 1.25rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&-link {
+			color: $true-white;
+			display: inline-block;
+			font-size: $font-size-12;
+		}
+	}
+}
+// end FOOTER
+
+@media (max-width : 576px) {
+	.cmx-footer{
+		display: none;
+	}
+}

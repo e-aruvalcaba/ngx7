@@ -1,0 +1,24 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 338.5 338.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3fa9f5;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke: #4197d3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6px;
+        stroke-dasharray: 20;
+      }
+    </style>
+  </defs>
+  <title>date-time-icon</title>
+  <g id="icons_icon" data-name="icons icon">
+    <path class="cls-1" d="M169.25,6.86A162.76,162.76,0,1,1,53.68,55.17l.75-.75A161.32,161.32,0,0,1,169.25,6.86m0-6.86A169.25,169.25,0,1,0,338.49,169.25h0A169.25,169.25,0,0,0,169.25,0Z" transform="translate(0.01 0)"/>
+    <path class="cls-2" d="M71.18,159.42" transform="translate(0.01 0)"/>
+    <path class="cls-1" d="M251.84,182.21H167.63v-116a6,6,0,0,0-12,0v122a6,6,0,0,0,6,6h90.21a6,6,0,1,0,0-12Z" transform="translate(0.01 0)"/>
+  </g>
+</svg>

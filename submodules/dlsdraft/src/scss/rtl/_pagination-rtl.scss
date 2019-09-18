@@ -1,0 +1,12 @@
+// _pagination-rtl.scss
+
+html[dir="rtl"] .cmx-pagination {
+
+    &__prev,
+    &__next {
+
+        // transform: rotate(180deg); // added
+        // [ not needed anymore since the dls-icons-rtl is loaded ]
+    }
+
+}

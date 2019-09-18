@@ -1,0 +1,28 @@
+// Forms Mixins
+
+@mixin radio($state) {
+    + label svg.icon-radio {
+        @if $state == unchecked { display: initial; }
+        @else { display: none; }
+    }
+    + label svg.icon-radio-hover {
+        @if $state == hover { display: initial; }
+        @else { display: none; }
+    }
+    + label svg.icon-radio-active {
+        @if $state == 'checked' { display: initial; }
+        @else { display: none; }
+    }
+    + label svg.icon-radio-active-hover {
+        @if $state == active-hover { display: initial; }
+        @else { display: none; }
+    }
+    + label svg.icon-radio-disabled {
+        @if $state == disabled { display: initial; }
+        @else { display: none; }
+    }
+    + label svg.icon-radio-error {
+        @if $state == error { display: initial; }
+        @else { display: none; }
+    }
+}

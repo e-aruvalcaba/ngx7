@@ -1,3 +1,15 @@
-<p>
-  cmx-calendar-month works!
-</p>
+<div fxLayout="column" class="cmx-calendar-month">
+  <div fxFlex="14" class="cmx-calendar-month__title">
+    {{ month.name }}
+  </div>
+  <div fxFlex="14" fxFlexLayout="row" class="cmx-calendar-month__weekday-initials">
+    <div fxFlex class="cmx-calendar-month__weekday-slot" *ngFor="let weekDay of weekDays">
+      {{ weekDay.shortName }}
+    </div>
+  </div>
+  <cmx-calendar-week
+    fxFlex="14" *ngFor="let week of month.weeks"
+    [week]="week"
+    (onSelectedDay)="selectDay($event)">
+  </cmx-calendar-week>
+</div>

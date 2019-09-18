@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3fa9f5;
+      }
+    </style>
+  </defs>
+  <title>right-rounded-full</title>
+  <path class="cls-1" d="M12,24A12,12,0,1,0,0,12,12,12,0,0,0,12,24ZM10,6.14a.64.64,0,1,1,1-.8l5.27,6.4a.62.62,0,0,1,0,.8L10.93,19a.64.64,0,1,1-1-.8l5-6Z"/>
+</svg>

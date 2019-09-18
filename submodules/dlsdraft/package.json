@@ -1,0 +1,59 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "Testing space",
+  "main": "index.js",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie < 11"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist/*",
+    "dev": "webpack-dev-server",
+    "build": "webpack",
+    "start-full": "npm run build && webpack-dev-server",
+    "stage": "npm run clean && webpack -d --watch",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "test",
+    "space",
+    "webpack",
+    "sass"
+  ],
+  "author": "Vlad Tudor",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.0",
+    "ejs": "^2.5.7",
+    "ejs-html-loader": "^3.1.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "gulp": "^3.9.1",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.28.0",
+    "image-webpack-loader": "^2.0.0",
+    "node-sass": "^4.5.2",
+    "postcss-loader": "^1.3.3",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "clipboard": "^1.7.1",
+    "jquery": "^3.2.1",
+    "js-cookie": "^2.1.4",
+    "express": "4.15.x",
+    "cfenv": "1.0.x"
+  },
+  "private": true,
+  "repository": {},
+  "engines": {
+    "node": "6.x"
+  }
+}

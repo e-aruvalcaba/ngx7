@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Developers</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Developers</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>Overview</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>This <strong>CEMEX Design Language CSS Styleguide</strong> can be installed as a <a href="https://bitbucket.org/cemex/dlsdraft.git"><strong>bundle</strong></a> or as <a href="https://bitbucket.org/cemex/dlsdraft.git"><strong>separate CSS files</strong></a> to stylize HTML5 websites or components (Angular, React).</p>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>Developers can clone the <a href="https://bitbucket.org/cx-dls/cx-quickstart-angular">components example repository</a> to find examples on how to apply the DLS styles into existing components. Reference components can also be found in the package, they can be used as reference or be extended.</p>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>Developers are also welcome to contribute with features or fixes by <a href="https://bitbucket.org/cx-dls/cx-quickstart-angular/pull-requests/new">opening a pull request</a>.</p>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <span class="roboto-medium"><strong>Installation</strong></span>
+
+                            <div class="spacer-16">
+                            </div>
+
+
+                            <p>Plain CSS: <a href="">Download a distribution package</a> from the DSL Styleguide repository</p>
+
+
+                            <p>Angular: Clone the <a href="">components example repository for Angular</a></p>
+
+
+                            <p>React: Clone the <a href="">components example repository for React</a></p>
+                        </div>
+                    </div>
+                    <!-- end .col-md-8 -->
+
+
+                    <div class="spacer-48">
+                    </div>
+
+
+                    <div class="col-md-8">
+                        <h2>Installation</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <strong>CSS Styleguide and distribution</strong>
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre data-lang="osx / linux"><small># Note: In this example you are cloning into <code style="display:inline">~/dev/dls</code> and your project is in <code style="display:inline">~/dev/my-project</code>.</small>
+                        <code class="language-bash">git clone https://bitbucket.org/cemex/dlsdraft.git ~/dev/dls
+cp -r ~/dev/dls/dist ~/dev/my-project/css</code></pre>
+
+                            <pre data-lang="windows"><small>rem Note: In this example you are cloning into c:\dev\dls and your project is in <code style="display:inline">c:\dev\my-project</code>.</small>
+                        <code class="language-bash">git clone https://bitbucket.org/cemex/dlsdraft.git c:\dev\dls
+xcopy /e c:\dev\dls\dist c:\dev\my-project</code></pre>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <strong>Angular reference components</strong>
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre data-lang="osx / linux"><code class="language-bash">git clone https://bitbucket.org/cx-dls/cx-quickstart-angular.git --branch development
+cd cx-quickstart-angular
+npm install
+npm start</code></pre>
+
+                            <pre data-lang="windows"><code class="language-bash">git clone https://bitbucket.org/cx-dls/cx-quickstart-angular.git --branch development
+cd cx-quickstart-angular
+npm install
+npm start</code></pre>
+                        </div>
+                    </div>
+
+
+                    <div class="spacer-48">
+                    </div>
+
+
+                    <div class="col-md-8">
+                        <h2>Code examples</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <p>The following section demonstrates the DSL Framework CSS Styleguide and provides reference code for different technologies.</p>
+
+
+                        <div class="spacer-48">
+                        </div>
+
+
+                        <h2>Buttons</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <a class="cmx-button" href="#">Button</a> &nbsp;&nbsp; <span class="float-right">The most basic button</span>
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre class="line-numbers" data-lang="html"><small style="color:gray">&lt;!-- In HTML, just include the cmx-button class. --&gt;</small><code class="language-html">&lt;a class="cmx-button"&gt;Button&lt;/a&gt;</code></pre>
+
+                            <pre class="line-numbers" data-lang="angular"><small style="color:gray">// In Angular, use ´button.component.css´ or extend the reference component.</small><code class="language-html">&lt;cx-button title="Button"&gt;&lt;/cx-button&gt;</code></pre>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <a class="cmx-button cmx-button--support" href="#">Button</a> &nbsp;&nbsp; <span class="float-right">An outlined button</span>
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre class="line-numbers" data-lang="html"><small style="color:gray">&lt;!-- use the `cmx-button--support` class --&gt;</small><code class="language-html">&lt;a class="cmx-button cmx-button--support"&gt;Outlined&lt;/a&gt;</code></pre>
+
+                            <pre class="line-numbers" data-lang="angular"><small style="color:gray">// Use the `outlined` attribute</small><code class="language-html">&lt;cx-button outlined="outlined" title="Outlined"&gt;&lt;/cx-button&gt;</code></pre>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <a class="cmx-button cmx-button--link cmx-button--link-small" href="#">Pay</a> &nbsp;&nbsp; <a class="cmx-button cmx-button--link cmx-button--link-medium" href="#">Manage</a> &nbsp;&nbsp; <span class="float-right">Text links, small and medium sized.</span>
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre class="line-numbers" data-lang="html"><small style="color:gray">&lt;!-- use the `cmx-button--link` classes: --&gt;</small><code class="language-html">&lt;a class="cmx-button cmx-button--link cmx-button--link-small" href="#"&gt;Pay&lt;/a&gt;
+&lt;a class="cmx- cmx-button--link cmx-button--link-medium" href="#"&gt;Manage&lt;/a&gt;</code></pre>
+
+                            <pre class="line-numbers" data-lang="angular"><small style="color:gray">// Use the `display="link"` attribute</small><code class="language-html">&lt;cx-button display="link" title="Pay" size="small"&gt;&lt;/cx-button&gt;
+&lt;cx-button display="link" title="Manage" size="medium"&gt;&lt;/cx-button&gt;</code></pre>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <a class="button button--primary" href="#">Pay</a> <a class="button" href="#"><span class="button__icon"><svg class="icon-magnifier-glass">
+                        <use xlink:href="#icon-magnifier-glass">
+                        </use></svg></span> WITH ICON</a> <span class="float-right">&nbsp; Colored buttons and icons. See <a href="colors.html">colors</a> and <a href="icons.html">icons</a> sections.</span>
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre class="line-numbers" data-lang="html"><small style="color:gray">&lt;!-- You can set icons and colors with the following classes: --&gt;</small><code class="language-html">&lt;a class="button button--primary" href="#"&gt;Pay&lt;/a&gt;
+&lt;a class="button icon-magnifier-glass" href="#"&gt;With icon&lt;/a&gt;</code></pre>
+
+                            <pre class="line-numbers" data-lang="angular"><small style="color:gray">// Use the `display="link"` attribute</small><code class="language-html">&lt;cx-button type="confirmed" title="Pay"&gt;&lt;/cx-button&gt;
+&lt;cx-button icon="magnifier-glass" title="with icon"&gt;&lt;/cx-button&gt;</code></pre>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <a class="button disabled" href="#">Not available</a> <a class="button--support disabled" href="#">Not available</a> <span class="float-right">&nbsp; Buttons and other controls can be disabled.</span>
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre class="line-numbers" data-lang="html"><small style="color:gray">&lt;!-- Use the `disabled` class: --&gt;</small><code class="language-html">&lt;a class="button disabled" href="#"&gt;Not available&lt;/a&gt;
+&lt;a class="button--support disabled" href="#"&gt;Not available&lt;/a&gt;</code></pre>
+
+                            <pre class="line-numbers" data-lang="angular"><small style="color:gray">// Use `disabled` attribute</small><code class="language-html">&lt;cx-button disabled="disabled" title="Not available"&gt;&lt;/cx-button&gt;
+&lt;cx-button outlined="outlined" disabled="disabled" title="Not available"&gt;&lt;/cx-button&gt;</code></pre>
+                        </div>
+
+
+                        <div class="spacer-48">
+                        </div>
+
+
+                        <h2>Form controls</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="name-field">Name</label> <input class="form-control" id="name-field" name="" placeholder="Enter name" type="text" value="">
+                        </div>
+                        <br>
+                        <span class="float-right">A basic text input field.</span>
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre class="line-numbers" data-lang="html"><small style="color:gray">&lt;!-- HTML --&gt;</small><code class="language-html">&lt;div class="form-group"&gt;
+  &lt;label for="name-field"&gt;Name&lt;/label&gt;
+  &lt;input type="text" class="form-control" id="name-field" placeholder="Enter name" name="" value="" /&gt;
+&lt;/div&gt;</code></pre>
+
+                            <pre class="line-numbers" data-lang="angular"><small style="color:gray">// Angular reference component</small><code class="language-html">&lt;cx-text label="Name" placeholder="Enter a name"&gt;&lt;/cx-text&gt;</code></pre>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="form-group error">
+                            <label for="name-field">Name</label> <input class="form-control" id="name-field" name="" placeholder="Enter name" type="text" value=""> <span class="error-message">Error message displayed here.</span>
+                        </div>
+                        <br>
+                        <span class="float-right">A text input field displaying a validation error.</span>
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre class="line-numbers" data-lang="html"><small style="color:gray">&lt;!-- HTML --&gt;</small><code class="language-html">&lt;div class="form-group error"&gt;
+  &lt;label for="name-field"&gt;Name&lt;/label&gt;
+  &lt;input type="text" class="form-control" id="name-field" placeholder="Enter name" name="" value="" /&gt;
+  &lt;span class="error-message"&gt;Error message displayed here.&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+                            <pre class="line-numbers" data-lang="angular"><small style="color:gray">// Angular reference component</small><code class="language-html">&lt;cx-text error="Error message displayed here." label="Name" placeholder="Enter a name"&gt;&lt;/cx-text&gt;</code></pre>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="textarea-field">Comments</label> 
+
+                            <textarea class="form-control" id="textarea-field" placeholder="Enter your comments"></textarea>
+                        </div>
+                        <br>
+                        <span class="float-right">A text area component.</span>
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre class="line-numbers" data-lang="html"><small style="color:gray">&lt;!-- HTML --&gt;</small><code class="language-html">&lt;div class="form-group"&gt;
+&lt;label for="textarea-field"&gt;Comments&lt;/label&gt;
+&lt;textarea id="textarea-field" placeholder="Enter your comments" class="form-control"&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+
+                            <pre class="line-numbers" data-lang="angular"><small style="color:gray">// Angular reference component</small><code class="language-html">&lt;cx-textarea label="Comments" placeholder="Enter your comments"&gt;&lt;/cx-textarea&gt;</code></pre>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="my-field">Numbers</label> <select class="form-control" id="my-field">
+                                <option>
+                                    One
+                                </option>
+
+                                <option>
+                                    Two
+                                </option>
+
+                                <option>
+                                    Three
+                                </option>
+                            </select>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <span class="float-right">A select component.</span>
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre class="line-numbers" data-lang="html"><small style="color:gray">&lt;!-- HTML --&gt;</small><code class="language-html">&lt;div class="form-group"&gt;                                          
+&lt;label for="my-field"&gt;Numbers&lt;/label&gt;
+&lt;select id="my-field" class="form-control"&gt;
+    &lt;option&gt;One&lt;/option&gt;
+    &lt;option&gt;Two&lt;/option&gt;
+    &lt;option&gt;Three&lt;/option&gt;
+&lt;/select&gt;
+&lt;/div&gt;</code></pre>
+
+                            <pre class="line-numbers" data-lang="angular"><small style="color:gray">// Angular reference component</small><code class="language-html">&lt;cx-select [model]="['One', 'Two', 'Tree']" label="Numbers"&gt;&lt;/cx-select&gt;</code></pre>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="select-dd">
+                            <div class="select-dd__options">
+                                <div class="select-dd__option">
+                                    Alabama
+                                </div>
+
+
+                                <div class="select-dd__option">
+                                    Alaska
+                                </div>
+
+
+                                <div class="select-dd__option">
+                                    Arizona
+                                </div>
+
+
+                                <div class="select-dd__option">
+                                    Arkansas
+                                </div>
+
+
+                                <div class="select-dd__option">
+                                    California
+                                </div>
+
+
+                                <div class="select-dd__option">
+                                    Colorado
+                                </div>
+
+
+                                <div class="select-dd__option">
+                                    Connecticut
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <span class="float-right">An expanded dropdown component.</span>
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre data-lang="html"><code class="language-html">&lt;div class="select-dd"&gt;
+    &lt;div class="select-dd__options"&gt;
+        &lt;div class="select-dd__option"&gt;Alabama&lt;/div&gt;
+        &lt;div class="select-dd__option"&gt;Alaska&lt;/div&gt;
+        &lt;div class="select-dd__option"&gt;Arizona&lt;/div&gt;
+        &lt;div class="select-dd__option"&gt;Alabama&lt;/div&gt;
+        &lt;div class="select-dd__option"&gt;Arkansas&lt;/div&gt;
+        &lt;div class="select-dd__option"&gt;California&lt;/div&gt;
+        &lt;div class="select-dd__option"&gt;Colorado&lt;/div&gt;
+        &lt;div class="select-dd__option"&gt;Connecticut&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                            <pre class="line-numbers" data-lang="angular"><small style="color:gray">// Angular reference component</small><code class="language-html">&lt;cx-select dropdown [model]="['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut']" label="States"&gt;&lt;/cx-select&gt;</code></pre>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <svg style="display:none;">
+                        <defs>
+                            <symbol id="icon-checkbox-active" viewbox="0 0 16 16">
+                                <title>checkbox-active</title>
+                                <path class="icon-checkbox-active" d="M15,0H1A1,1,0,0,0,0,1V15a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V1A1,1,0,0,0,15,0ZM6.44,13.11,2,8.88,4,7,6.44,9.34,12,4l2,1.89Z"></path>
+                            </symbol>
+
+                            <symbol id="icon-checkbox" viewbox="0 0 16 16">
+                                <title>icon-checkbox</title>
+                                <path class="icon-checkbox" d="M14.5,16H1.5A1.5,1.5,0,0,1,0,14.5V1.5A1.5,1.5,0,0,1,1.5,0h13A1.5,1.5,0,0,1,16,1.5v13A1.5,1.5,0,0,1,14.5,16ZM1.5,1a.5.5,0,0,0-.5.5v13a.5.5,0,0,0,.5.5h13a.5.5,0,0,0,.5-.5V1.5a.5.5,0,0,0-.5-.5Z"></path>
+                            </symbol>
+
+                            <symbol id="icon-radio-active" viewbox="0 0 17 17">
+                                <title>radio-active</title>
+                                <path class="icon-radio-active-circle" d="M9,17.5A8.5,8.5,0,1,1,17.5,9,8.51,8.51,0,0,1,9,17.5Zm0-16A7.5,7.5,0,1,0,16.5,9,7.51,7.51,0,0,0,9,1.5Z" transform="translate(-0.5 -0.5)"></path>
+                                <circle class="icon-radio-active-dot" cx="8.5" cy="8.5" r="4"></circle>
+                            </symbol>
+
+                            <symbol id="icon-radio" viewbox="0 0 17 17">
+                                <title>radio-active</title>
+                                <path class="icon-radio" d="M9,17.5A8.5,8.5,0,1,1,17.5,9,8.51,8.51,0,0,1,9,17.5Zm0-16A7.5,7.5,0,1,0,16.5,9,7.51,7.51,0,0,0,9,1.5Z" transform="translate(-0.5 -0.5)"></path>
+                            </symbol>
+                        </defs></svg>
+
+                        <div class="form-field">
+                            <input checked="checked" id="checkbox" type="checkbox"> <label for="checkbox"><span>Checked checkbox</span></label>
+                        </div>
+
+
+                        <div class="form-field">
+                            <input checked="checked" id="radio" name="options" type="radio"> <label for="radio"><svg class="icon-radio-active">
+                            <use xlink:href="#icon-radio-active">
+                            </use></svg> <svg class="icon-radio-static">
+                            <use xlink:href="#icon-radio">
+                            </use></svg> <svg class="icon-radio-hover">
+                            <use xlink:href="#icon-radio">
+                            </use></svg> <span>Radio option 1</span></label>
+                        </div>
+                        <br>
+                        <span class="float-right">Checkboxes and radio buttons.</span>
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="" data-state="expanded">
+                            <pre class="line-numbers" data-lang="html"><small style="color:gray">&lt;!-- HTML --&gt;</small><code class="language-html">&lt;div class="form-field"&gt;
+    &lt;input type="checkbox" id="checkbox" checked="checked" /&gt;
+    &lt;label for="checkbox"&gt;
+        &lt;span&gt;Checked checkbox&lt;/span&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-field"&gt;
+    &lt;input type="radio" id="radio" name="options" checked="checked" /&gt;
+    &lt;label for="radio"&gt;
+        &lt;span&gt;Radio option 1&lt;/span&gt;
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+                            <pre class="line-numbers" data-lang="angular"><small style="color:gray">// Angular reference component</small><code class="language-html">&lt;cx-check label="Checkbox"&gt;&lt;/cx-check&gt;
+&lt;cx-radio name="radio" [model]="[
+    {
+        label: 'Option 1',
+        value: 1
+    }
+]"&gt;&lt;/cx-radio&gt;</code></pre>
+                        </div>
+                    </div>
+                    <!-- end .col-md-8 -->
+
+
+                    <div class="spacer-48">
+                    </div>
+
+
+                    <div class="spacer-48">
+                    </div>
+
+
+                    <div class="spacer-48">
+                    </div>
+
+
+                    <div class="spacer-48">
+                    </div>
+                </div>
+                <!-- end .row -->
+            </div>
+            <!-- end .container-fluid -->
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

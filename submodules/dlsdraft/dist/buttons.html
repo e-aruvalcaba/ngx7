@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Buttons</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Buttons</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-9">
+                        <div class="paragraph-group">
+                            <p>Buttons should always be actions, and the language should be clear and concise.</p>
+
+
+                            <p>Buttons can contain simplistic iconography (an arrow to signify continuing in a process, a plus sign to signify adding) but nothing more complex.</p>
+
+
+                            <div class="spacer-16">
+                            </div>
+
+
+                            <p>Primary actions that move the user forward in a process should always be styled with the filled in button, while exiting, cancelling, or unprioritized actions should be outlined.</p>
+
+
+                            <div class="spacer-16">
+                            </div>
+
+
+                            <p>Buttons should remain disabled until the user has completed any required actions to move onto the next step.</p>
+
+
+                            <div class="spacer-16">
+                            </div>
+
+
+                            <p>Button height and text size stays  consistent across all buttons.</p>
+
+
+                            <p>The height is a fixed height of 32px. Buttons have a minumum width of 85px and a maximum width of 280px.</p>
+
+
+                            <p>The font size is always Roboto Bold 16, with a line-height of 16.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h2>Primary Button</h2>
+
+
+                        <div class="spacer-8">
+                        </div>
+
+
+                        <p>Use in: Primary Actions like PAY, SAVE, SEND. Use them at the end of a complete flow.</p>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Buttons</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--primary ripple">Pay</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--primary ripple" disabled="disabled">Pay</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <h3>Links</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--primary ripple" href="javascript:;">Pay</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--primary ripple disabled" href="javascript:;">Pay</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <pre data-lang="html"><code class="language-html">&lt;!-- button --&gt;
+&lt;button class="cmx-button cmx-button--primary ripple"&gt;Pay&lt;/button&gt;
+
+&lt;!-- button disabled --&gt;
+&lt;button class="cmx-button cmx-button--primary ripple" disabled="disabled"&gt;Pay&lt;/button&gt;
+
+&lt;!-- link --&gt;
+&lt;a class="cmx-button cmx-button--primary ripple" href="javascript:;"&gt;Pay&lt;/a&gt;
+
+&lt;!-- link with disabled class --&gt;
+&lt;a class="cmx-button cmx-button--primary ripple disabled" href="javascript:;"&gt;Pay&lt;/a&gt;</code></pre><!-- end .code-box -->
+
+
+                                <div class="spacer-32">
+                                </div>
+                            </div>
+                            <!-- end .col-md-12 -->
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h2>Regular / Action Button</h2>
+
+
+                        <div class="spacer-8">
+                        </div>
+
+
+                        <p>Use in: Actions like OK, ADD NEW</p>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Buttons</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button ripple">Ok</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button" disabled="disabled">Ok</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <h3>Links</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button ripple" href="javascript:;">Ok</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button disabled ripple" href="javascript:;">Ok</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <pre data-lang="html"><code class="language-html">&lt;!-- button --&gt;
+&lt;button class="cmx-button ripple"&gt;Ok&lt;/button&gt;
+
+&lt;!-- button disabled --&gt;
+&lt;button class="cmx-button" disabled="disabled"&gt;Ok&lt;/button&gt;
+
+&lt;!-- link --&gt;
+&lt;a class="cmx-button ripple" href="javascript:;"&gt;Ok&lt;/a&gt;
+
+&lt;!-- link with disabled class --&gt;
+&lt;a class="cmx-button ripple disabled" href="javascript:;"&gt;Ok&lt;/a&gt;</code></pre><!-- end .code-box -->
+
+
+                                <div class="spacer-32">
+                                </div>
+                            </div>
+                            <!-- end .col-md-12 -->
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h2>Support / Ghost Button</h2>
+
+
+                        <div class="spacer-8">
+                        </div>
+
+
+                        <p>Use in: Secondary or Tertiary content like, SKIP, BACK</p>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Buttons</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--support ripple">Back</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--support ripple" disabled="disabled">Back</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <h3>Links</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--support ripple" href="javascript:;">Back</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--support ripple disabled" href="javascript:;">Back</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <pre data-lang="html"><code class="language-html">&lt;!-- button --&gt;
+&lt;button class="cmx-button cmx-button--support ripple"&gt;Back&lt;/button&gt;
+
+&lt;!-- button disabled --&gt;
+&lt;button class="cmx-button cmx-button--support ripple" disabled="disabled"&gt;Back&lt;/button&gt;
+
+&lt;!-- link --&gt;
+&lt;a class="cmx-button cmx-button--support ripple" href="javascript:;"&gt;Back&lt;/a&gt;
+
+&lt;!-- link with disabled class --&gt;
+&lt;a class="cmx-button cmx-button--support ripple disabled" href="javascript:;"&gt;Back&lt;/a&gt;</code></pre>
+
+                                <div class="spacer-32">
+                                </div>
+                            </div>
+                            <!-- end .col-md-12 -->
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h2>Solid White Backgrounds</h2>
+
+
+                        <div class="spacer-8">
+                        </div>
+
+
+                        <p>Some buttons might looked inverted due to the colored border and text, but not the background.</p>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Buttons</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--support is-full ripple">On Route</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--support is-full ripple" disabled="disabled">On Route</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <h3>Links</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--support is-full ripple" href="javascript:;">On Route</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--support is-full ripple disabled" href="javascript:;">On Route</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <pre data-lang="html"><code class="language-html">&lt;!-- button --&gt;
+&lt;button class="cmx-button cmx-button--support is-full ripple"&gt;On Route&lt;/button&gt;
+
+&lt;!-- button disabled --&gt;
+&lt;button class="cmx-button cmx-button--support is-full ripple" disabled="disabled"&gt;On Route&lt;/button&gt;
+
+&lt;!-- link --&gt;
+&lt;a class="cmx-button cmx-button--support is-full ripple" href="javascript:;"&gt;On Route&lt;/a&gt;
+
+&lt;!-- link with disabled class --&gt;
+&lt;a class="cmx-button cmx-button--support is-full ripple disabled" href="javascript:;"&gt;On Route&lt;/a&gt;</code></pre>
+
+                                <div class="spacer-32">
+                                </div>
+                            </div>
+                            <!-- end .col-md-12 -->
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h2>Buttons with icons</h2>
+
+
+                        <div class="spacer-8">
+                        </div>
+
+
+                        <p>Use when adding a new line of information to a form. This includes: adding a new product, adding a new time.</p>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Regular Buttons</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button ripple"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button ripple" disabled="disabled"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <h3>Regular Links</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button ripple" href="javascript:;"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button ripple disabled" href="javascript:;"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Primary Buttons</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button button--primary ripple"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--primary ripple" disabled="disabled"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <h3>Primary Links</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--primary ripple" href="javascript:;"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--primary ripple disabled" href="javascript:;"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Support Buttons</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--support ripple"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--support ripple" disabled="disabled"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <h3>Support Links</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--support ripple" href="javascript:;"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--support ripple disabled" href="javascript:;"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Support Full Buttons</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--support ripple is-full"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--support ripple is-full" disabled="disabled"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <h3>Support Full Links</h3>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--support ripple is-full" href="javascript:;"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--support ripple disabled is-full" href="javascript:;"><span aria-hidden="true" class="cmx-button__icon cmx-icon-plus"></span> Add New</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <pre data-lang="html"><code class="language-html">&lt;!-- 
+Composing a button with an icon is straightforward. 
+
+Just use the code of any of the button styles
+and insert an SVG icon within a span with class 
+"button__icon" right before your button text.
+--&gt;
+
+&lt;!-- button --&gt;
+&lt;button class="cmx-button ripple"&gt;
+    &lt;!-- the icon --&gt;
+    &lt;span class="cmx-button__icon cmx-icon-plus" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;!-- the text --&gt;
+    Add New
+&lt;/button&gt;
+
+&lt;!-- button disabled --&gt;
+&lt;button class="cmx-button ripple" disabled="disabled"&gt;
+    &lt;!-- the icon --&gt;
+    &lt;span class="cmx-button__icon cmx-icon-plus" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;!-- the text --&gt;
+    Add New
+&lt;/button&gt;
+
+&lt;!-- link --&gt;
+&lt;a class="cmx-button ripple" href="javascript:;"&gt;
+    &lt;!-- the icon --&gt;
+    &lt;span class="cmx-button__icon cmx-icon-plus" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;!-- the text --&gt;
+    Add New
+&lt;/a&gt;
+
+&lt;!-- link with disabled class --&gt;
+&lt;a class="cmx-button ripple disabled" href="javascript:;"&gt;
+    &lt;!-- the icon --&gt;
+    &lt;span class="cmx-button__icon cmx-icon-plus" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;!-- the text --&gt;
+    Add New
+&lt;/a&gt;</code></pre>
+
+                                <div class="spacer-32">
+                                </div>
+                            </div>
+                            <!-- end .col-md-12 -->
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h2>Text Buttons</h2>
+
+
+                        <div class="spacer-8">
+                        </div>
+
+
+                        <p>Text buttons should be used for actions happening inside of modules, and graphic buttons should be used for higher level actions.</p>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h3>Small</h3>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Buttons</h4>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--link cmx-button--link-small">Action</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--link cmx-button--link-small" disabled="disabled">Action</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <h4>Links</h4>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--link cmx-button--link-small" href="javascript:;">Action</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--link cmx-button--link-small disabled" href="javascript:;">Action</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h3>Medium</h3>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Buttons</h4>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--link cmx-button--link-medium">Action</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--link cmx-button--link-medium" disabled="disabled">Action</button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <h4>Links</h4>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--link cmx-button--link-medium" href="javascript:;">Action</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--link cmx-button--link-medium disabled" href="javascript:;">Action</a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h2>Icon Buttons</h2>
+
+
+                        <div class="spacer-8">
+                        </div>
+
+
+                        <p>Use for self descriptive icons like DELETE, VIEW, SEARCH</p>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Buttons</h4>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-trash"></span> <span class="sr-only">Delete</span></button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                    <!-- end .col-md-6 -->
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--icon" disabled="disabled"><span aria-hidden="true" class="cmx-icon-trash"></span> <span class="sr-only">Delete</span></button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                    <!-- end .col-md-6 -->
+                                </div>
+                                <!-- end .row -->
+                            </div>
+                            <!-- end .col-md-6 -->
+
+
+                            <div class="col-md-6">
+                                <h4>Links</h4>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--icon" href="javascript:;"><span aria-hidden="true" class="cmx-icon-trash"></span> <span class="sr-only">Delete</span></a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                    <!-- end .col-md-6 -->
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--icon disabled" href="javascript:;"><span aria-hidden="true" class="cmx-icon-trash"></span> <span class="sr-only">Delete</span></a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                    <!-- end .col-md-6 -->
+                                </div>
+                                <!-- end .row -->
+                            </div>
+                            <!-- end .col-md-6 -->
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <h4>Buttons Text With Icon</h4>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--icon cmx-button--text--icon"><span aria-hidden="true" class="cmx-icon-trash"></span> <span class="sr-only">Delete</span> <span class="cmx-button-text-label">Delete</span></button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                    <!-- end .col-md-6 -->
+
+
+                                    <div class="col-md-6">
+                                        <button class="cmx-button cmx-button--icon cmx-button--text--icon" disabled="disabled"><span aria-hidden="true" class="cmx-icon-trash"></span> <span class="sr-only">Delete</span> <span class="cmx-button-text-label">Delete</span></button>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                    <!-- end .col-md-6 -->
+                                </div>
+                                <!-- end .row -->
+                            </div>
+                            <!-- end .col-md-6 -->
+
+
+                            <div class="col-md-6">
+                                <h4>Links Text with Icon</h4>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--icon cmx-button--text--icon" href="javascript:;"><span aria-hidden="true" class="cmx-icon-trash"></span> <span class="sr-only">Delete</span> <span class="cmx-button-text-label">Delete</span></a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                    <!-- end .col-md-6 -->
+
+
+                                    <div class="col-md-6">
+                                        <a class="cmx-button cmx-button--icon cmx-button--text--icon disabled" href="javascript:;"><span aria-hidden="true" class="cmx-icon-trash"></span> <span class="sr-only">Delete</span> <span class="cmx-button-text-label">Delete</span></a>
+
+                                        <div class="spacer-8">
+                                        </div>
+                                    </div>
+                                    <!-- end .col-md-6 -->
+                                </div>
+                                <!-- end .row -->
+                            </div>
+                            <!-- end .col-md-6 -->
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <pre data-lang="html"><code class="language-html">&lt;!-- button --&gt;
+&lt;button class="cmx-button cmx-button--icon"&gt;
+    &lt;span class="cmx-icon-trash" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;span class="sr-only"&gt;Delete&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- button disabled --&gt;
+&lt;button class="cmx-button cmx-button--icon" disabled="disabled"&gt;
+    &lt;span class="cmx-icon-trash" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;span class="sr-only"&gt;Delete&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- link --&gt;
+&lt;a class="cmx-button cmx-button--icon" href="javascript:;"&gt;
+    &lt;span class="cmx-icon-trash" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;span class="sr-only"&gt;Delete&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- link with disabled class --&gt;
+&lt;a class="cmx-button cmx-button--icon disabled" href="javascript:;"&gt;
+    &lt;span class="cmx-icon-trash" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;span class="sr-only"&gt;Delete&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+
+                                <div class="spacer-32">
+                                </div>
+                            </div>
+                            <!-- end .col-md-12 -->
+                        </div>
+                        <!-- end .row -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>The SASS/CSS styles of the whole button suite</h2>
+
+
+                                <div class="spacer-16">
+                                </div>
+
+
+                                <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                                    <div data-highlight="">
+                                        <pre data-lang="sass"><code class="language-css">// Buttons
+
+.cmx-button {
+    
+    // WE DEFAULT TO THE BRIGHT BLUE BUTTON
+
+    display:                inline-block;
+    min-width:              85px;
+    border-radius:          $radius-2;
+    border:                 $solid-1-bright-blue;
+    padding:                8px 16px;
+    font-family:            $font-family;
+    font-size:              $font-size-16;
+    line-height:            $line-height-16;
+    font-weight:            $font-bold;
+    color:                  $true-white;
+    background:             $bright-blue;
+    text-align:             center;
+    cursor:                 pointer;
+    transition:             all 0.2s;
+    overflow:               hidden;
+    vertical-align:         bottom; //added to prevent padding on hyperlink button
+    white-space:            nowrap;
+
+    // the variant with 100% width
+
+    &amp;--block {
+        width: 100%;
+        display: block;
+    }
+
+    // THE BRIGHT GREEN VARIANT
+
+    &amp;--primary {
+        background:         $bright-green;
+        border:             $solid-1-bright-green;
+    }
+
+    // interactive states of buttons - definitions of the hover and focus states
+
+    &amp;:hover,
+    &amp;:focus{
+        text-decoration:    none;
+        color:              $true-white;
+        box-shadow:         0 2px 4px rgba(0,0,0,0.45);
+        outline:            0;
+
+        &amp;.cmx-button--support-full {
+            color:          $bright-blue;
+        }
+    }
+
+    // active and active focused states
+
+    &amp;:active,
+    &amp;:active:focus{
+        text-decoration:    none;
+        color:              $true-white;
+        box-shadow:         none;
+    }
+
+    &amp;.cmx-button--text--icon {
+        &amp;:hover,
+        &amp;:focus {
+            span[class*='cmx-icon'] {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.45);
+                text-decoration: none;
+            }
+            .cmx-button-text-label {
+                box-shadow: none;
+                text-shadow: none;
+                text-decoration: underline;
+            }
+        }
+
+        &amp;:focus {
+            span[class*='cmx-icon'] {
+                color: $true-blue;
+            }
+            .cmx-button-text-label {
+                color: $true-blue;
+            }
+        }
+
+        &amp;[disabled=&quot;disabled&quot;], 
+        &amp;.disabled {
+            &amp;:hover,
+            &amp;:focus {
+                span[class*=&quot;cmx-icon&quot;],
+                .cmx-button-text-label {
+                    text-shadow:none;
+                    text-decoration: none;
+                    color: $disabled-grey;
+                    border: none;
+                }
+            }
+        }
+		&amp;.cmx-button--icon{
+			text-shadow: none;
+		}
+    }
+
+    // the disabled button styles
+
+    &amp;.disabled,
+    &amp;[disabled=&quot;disabled&quot;] {
+        transition:         none;
+        cursor:             not-allowed;
+        background:         $disabled-grey;
+        border:             $solid-1-disabled-grey;
+        color:              $true-white;
+        overflow:           hidden;
+
+        &amp;:hover {
+            box-shadow:     none;
+            text-decoration: none;
+        }
+        &amp;::after{
+            display:none !important;
+        }
+    }
+
+    // the styles for an icon within the button
+
+    &amp;__icon {
+        width: 16px;
+        height: 16px;
+        float: left;
+        display: inline-block;
+        margin-right: 8px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: $true-white;
+        }
+    }
+
+
+    // THE BACK TO TOP BUTTONS
+
+    &amp;.back-top-button {
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        border-radius: 50%;
+        background: $bright-blue;
+        text-align: center;
+        min-width: auto;
+        padding: 0;
+
+        svg {
+            fill: $true-white;
+            width: 17px;
+            margin-top: 4px;
+        }
+
+        &amp;:active,
+        &amp;:focus {
+            background: $active-blue;
+        }
+    }
+
+
+
+    // THE SUPPORT BUTTONS STYLES
+
+    &amp;--support {
+        border:                 $solid-1-bright-blue;
+        color:                  $bright-blue;
+        background:             transparent;
+
+
+        // the styles for the icon within the support buttons
+        .cmx-button__icon {
+            width: 16px;
+            height: 16px;
+            float: left;
+            display: inline-block;
+            margin-right: 8px;
+    
+            svg {
+                width: 16px;
+                height: 16px;
+                fill: $bright-blue;
+            }
+        }
+        
+        
+        // support buttons have a variant with white fill
+        &amp;.is-full{
+            background:         $true-white;
+            color:              $bright-blue;
+            border:             $solid-1-bright-blue;
+        }
+    
+        // hover and focus stules for support buttons
+        &amp;:hover,
+        &amp;:focus{
+            text-decoration: none;
+            color:              $bright-blue;
+            box-shadow:         0 2px 4px rgba(0,0,0,0.45);
+            outline:            0;
+        }
+
+        // active and active-focused styles for support buttons
+        &amp;:active,
+        &amp;:active:focus{
+            text-decoration:    none;
+            color:              $bright-blue;
+            box-shadow:         none;
+        }
+    
+        // disabled styles for support and support with white background buttons
+        &amp;.disabled,
+        &amp;[disabled=&quot;disabled&quot;],
+        &amp;.is-full.disabled,
+        &amp;.is-full[disabled=&quot;disabled&quot;] {
+            transition:         none;
+            cursor:             not-allowed;
+            border:             $solid-1-disabled-grey;
+            color:              $disabled-grey;
+            overflow:           hidden;
+            background:         transparent;
+            box-shadow:         none;
+
+            // style for icon before the button label
+            .cmx-button__icon {
+                svg {
+                    fill: $disabled-grey;
+                }
+            } 
+
+            // reaffirmation of the color in the active/disabled style that is available for links (that do not respoect a disabled attribute)
+            &amp;:active,
+            :active:focus{
+                color:              $disabled-grey;
+            }
+            
+            // reaffirmation of the hover state in the active/disabled style that is available for links (that do not respoect a disabled attribute)
+            &amp;:hover {
+                box-shadow:     none;
+            }
+        }
+
+        // reaffirmation of the qhite background color within the disabled version of the full support buttons
+        &amp;.is-full.disabled,
+        &amp;.is-full[disabled=&quot;disabled&quot;] {
+            background:         $true-white;
+        }
+    }
+
+
+    // link buttons (cause sometimes we need a button that looks like a link)
+    &amp;--link,
+    &amp;--icon {
+
+        // essentially we are resetting the button defaults
+        min-width:              0;
+        border-radius:          0;
+        border:                 none;
+        padding:                0;
+        line-height:            $line-height-16;
+        font-weight:            normal;
+        color:                  $bright-blue;
+        background:             none;
+        text-align:             left;
+        cursor:                 pointer;
+        transition:             all 0.2s;
+        overflow:               visible;
+        vertical-align:         bottom; //added to prevent padding on hyperlink button
+        white-space:            normal;
+        font-family:            &quot;Roboto&quot;, sans-serif;
+        font-weight:            $font-medium;
+        font-size:              $font-size-14;
+        line-height:            $line-height-16;
+    }
+    
+    &amp;--link{
+        
+        // the medium size styles
+        &amp;-medium {
+            font-size:          $font-size-18;
+            line-height:        $line-height-24;
+        }
+
+        // the hover and focus states
+        &amp;:hover,
+        &amp;:focus{
+            color:              $bright-blue;
+            text-decoration:    underline;
+            background:         none;
+            box-shadow:         none;
+        }
+
+        // the active and active focus states of the link variant
+        &amp;:active,
+        &amp;:active:focus{
+            color:              $active-blue;
+            text-decoration:    underline;
+        }
+
+        // the disabled styles of the link button
+        &amp;[disabled=&quot;disabled&quot;],
+        &amp;.disabled{
+            background:         none;
+            color:              $disabled-grey;
+            border:             none;
+
+            &amp;:hover,
+            &amp;:focus{
+                text-decoration: none;
+            }
+
+            &amp;:active,
+            &amp;:active:focus{
+                color:          $disabled-grey;
+            }
+        }
+    }
+
+    &amp;--icon{
+        &amp;__icon{
+            width:1rem;
+            height:1rem;
+        }
+        &amp;:hover,&amp;:focus {
+            color: $bright-blue;
+            box-shadow: none;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.45);
+        }
+        &amp;:active, &amp;:active:focus, &amp;:active:hover, &amp;:active:hover:focus {
+            color: $bright-blue-dark;
+            text-shadow: none;
+            box-shadow: none;
+        }
+
+        &amp;[disabled=&quot;disabled&quot;], 
+        &amp;.disabled {
+            background: transparent;
+            color: $disabled-grey;
+            border: none;
+            &amp;:hover{
+                text-shadow:none;
+            }
+            &amp;:active, &amp;:active:focus, &amp;:active:hover, &amp;:active:hover:focus {
+                color: $disabled-grey;
+                text-shadow: none;
+                box-shadow: none;
+            }
+        }
+    }
+}</code></pre>
+
+                                        <pre data-lang="css"><code class="language-css">.cmx-button {
+    display: inline-block;
+    min-width: 85px;
+    border-radius: 2px;
+    border: 1px solid #3FA9F5;
+    padding: 8px 16px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 700;
+    color: #FFF;
+    background: #3FA9F5;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    overflow: hidden;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+.cmx-button--block {
+    width: 100%;
+    display: block;
+}
+
+.cmx-button--primary {
+    background: #7AC943;
+    border: 1px solid #7AC943;
+}
+
+.cmx-button:hover,
+.cmx-button:focus {
+    text-decoration: none;
+    color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+    outline: 0;
+}
+
+.cmx-button:hover.cmx-button--support-full,
+.cmx-button:focus.cmx-button--support-full {
+    color: #3FA9F5;
+}
+
+.cmx-button:active,
+.cmx-button:active:focus {
+    text-decoration: none;
+    color: #FFF;
+    box-shadow: none;
+}
+
+.cmx-button.cmx-button--text--icon:hover span[class*='cmx-icon'],
+.cmx-button.cmx-button--text--icon:focus span[class*='cmx-icon'] {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+    text-decoration: none;
+}
+
+.cmx-button.cmx-button--text--icon:hover .cmx-button-text-label,
+.cmx-button.cmx-button--text--icon:focus .cmx-button-text-label {
+    box-shadow: none;
+    text-shadow: none;
+    text-decoration: underline;
+}
+
+.cmx-button.cmx-button--text--icon:focus span[class*='cmx-icon'] {
+    color: #003876;
+}
+
+.cmx-button.cmx-button--text--icon:focus .cmx-button-text-label {
+    color: #003876;
+}
+
+.cmx-button.cmx-button--text--icon[disabled="disabled"]:hover span[class*="cmx-icon"],
+.cmx-button.cmx-button--text--icon[disabled="disabled"]:hover .cmx-button-text-label,
+.cmx-button.cmx-button--text--icon[disabled="disabled"]:focus span[class*="cmx-icon"],
+.cmx-button.cmx-button--text--icon[disabled="disabled"]:focus .cmx-button-text-label,
+.cmx-button.cmx-button--text--icon.disabled:hover span[class*="cmx-icon"],
+.cmx-button.cmx-button--text--icon.disabled:hover .cmx-button-text-label,
+.cmx-button.cmx-button--text--icon.disabled:focus span[class*="cmx-icon"],
+.cmx-button.cmx-button--text--icon.disabled:focus .cmx-button-text-label {
+    text-shadow: none;
+    text-decoration: none;
+    color: #D6D6D6;
+    border: none;
+}
+
+.cmx-button.cmx-button--text--icon.cmx-button--icon {
+    text-shadow: none;
+}
+
+.cmx-button.disabled,
+.cmx-button[disabled="disabled"] {
+    transition: none;
+    cursor: not-allowed;
+    background: #D6D6D6;
+    border: 1px solid #D6D6D6;
+    color: #FFF;
+    overflow: hidden;
+}
+
+.cmx-button.disabled:hover,
+.cmx-button[disabled="disabled"]:hover {
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.cmx-button.disabled::after,
+.cmx-button[disabled="disabled"]::after {
+    display: none !important;
+}
+
+.cmx-button__icon {
+    width: 16px;
+    height: 16px;
+    float: left;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.cmx-button__icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #FFF;
+}
+
+.cmx-button.back-top-button {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #3FA9F5;
+    text-align: center;
+    min-width: auto;
+    padding: 0;
+}
+
+.cmx-button.back-top-button svg {
+    fill: #FFF;
+    width: 17px;
+    margin-top: 4px;
+}
+
+.cmx-button.back-top-button:active,
+.cmx-button.back-top-button:focus {
+    background: #2684C7;
+}
+
+.cmx-button--support {
+    border: 1px solid #3FA9F5;
+    color: #3FA9F5;
+    background: transparent;
+}
+
+.cmx-button--support .cmx-button__icon {
+    width: 16px;
+    height: 16px;
+    float: left;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.cmx-button--support .cmx-button__icon svg {
+    width: 16px;
+    height: 16px;
+    fill: #3FA9F5;
+}
+
+.cmx-button--support.is-full {
+    background: #FFF;
+    color: #3FA9F5;
+    border: 1px solid #3FA9F5;
+}
+
+.cmx-button--support:hover,
+.cmx-button--support:focus {
+    text-decoration: none;
+    color: #3FA9F5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+    outline: 0;
+}
+
+.cmx-button--support:active,
+.cmx-button--support:active:focus {
+    text-decoration: none;
+    color: #3FA9F5;
+    box-shadow: none;
+}
+
+.cmx-button--support.disabled,
+.cmx-button--support[disabled="disabled"],
+.cmx-button--support.is-full.disabled,
+.cmx-button--support.is-full[disabled="disabled"] {
+    transition: none;
+    cursor: not-allowed;
+    border: 1px solid #D6D6D6;
+    color: #D6D6D6;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: none;
+}
+
+.cmx-button--support.disabled .cmx-button__icon svg,
+.cmx-button--support[disabled="disabled"] .cmx-button__icon svg,
+.cmx-button--support.is-full.disabled .cmx-button__icon svg,
+.cmx-button--support.is-full[disabled="disabled"] .cmx-button__icon svg {
+    fill: #D6D6D6;
+}
+
+.cmx-button--support.disabled:active,
+.cmx-button--support.disabled :active:focus,
+.cmx-button--support[disabled="disabled"]:active,
+.cmx-button--support[disabled="disabled"] :active:focus,
+.cmx-button--support.is-full.disabled:active,
+.cmx-button--support.is-full.disabled :active:focus,
+.cmx-button--support.is-full[disabled="disabled"]:active,
+.cmx-button--support.is-full[disabled="disabled"] :active:focus {
+    color: #D6D6D6;
+}
+
+.cmx-button--support.disabled:hover,
+.cmx-button--support[disabled="disabled"]:hover,
+.cmx-button--support.is-full.disabled:hover,
+.cmx-button--support.is-full[disabled="disabled"]:hover {
+    box-shadow: none;
+}
+
+.cmx-button--support.is-full.disabled,
+.cmx-button--support.is-full[disabled="disabled"] {
+    background: #FFF;
+}
+
+.cmx-button--link,
+.cmx-button--icon {
+    min-width: 0;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    line-height: 1rem;
+    font-weight: normal;
+    color: #3FA9F5;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+    overflow: visible;
+    vertical-align: bottom;
+    white-space: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+}
+
+.cmx-button--link-medium {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+
+.cmx-button--link:hover,
+.cmx-button--link:focus {
+    color: #3FA9F5;
+    text-decoration: underline;
+    background: none;
+    box-shadow: none;
+}
+
+.cmx-button--link:active,
+.cmx-button--link:active:focus {
+    color: #2684C7;
+    text-decoration: underline;
+}
+
+.cmx-button--link[disabled="disabled"],
+.cmx-button--link.disabled {
+    background: none;
+    color: #D6D6D6;
+    border: none;
+}
+
+.cmx-button--link[disabled="disabled"]:hover,
+.cmx-button--link[disabled="disabled"]:focus,
+.cmx-button--link.disabled:hover,
+.cmx-button--link.disabled:focus {
+    text-decoration: none;
+}
+
+.cmx-button--link[disabled="disabled"]:active,
+.cmx-button--link[disabled="disabled"]:active:focus,
+.cmx-button--link.disabled:active,
+.cmx-button--link.disabled:active:focus {
+    color: #D6D6D6;
+}
+
+.cmx-button--icon__icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.cmx-button--icon:hover,
+.cmx-button--icon:focus {
+    color: #3FA9F5;
+    box-shadow: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+}
+
+.cmx-button--icon:active,
+.cmx-button--icon:active:focus,
+.cmx-button--icon:active:hover,
+.cmx-button--icon:active:hover:focus {
+    color: #01579B;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.cmx-button--icon[disabled="disabled"],
+.cmx-button--icon.disabled {
+    background: transparent;
+    color: #D6D6D6;
+    border: none;
+}
+
+.cmx-button--icon[disabled="disabled"]:hover,
+.cmx-button--icon.disabled:hover {
+    text-shadow: none;
+}
+
+.cmx-button--icon[disabled="disabled"]:active,
+.cmx-button--icon[disabled="disabled"]:active:focus,
+.cmx-button--icon[disabled="disabled"]:active:hover,
+.cmx-button--icon[disabled="disabled"]:active:hover:focus,
+.cmx-button--icon.disabled:active,
+.cmx-button--icon.disabled:active:focus,
+.cmx-button--icon.disabled:active:hover,
+.cmx-button--icon.disabled:active:hover:focus {
+    color: #D6D6D6;
+    text-shadow: none;
+    box-shadow: none;
+}</code></pre>
+                                    </div>
+                                    <!-- end data-highlight -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+            </div>
+            <!-- end .container-fluid -->
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

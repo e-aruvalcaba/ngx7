@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Avatar - RTL</title>
+    <link href="partials/favicon.html" rel="import">
+</head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav-rtl.html" rel="import">
+        <link href="partials/sidenav-rtl.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Avatar</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Avatar</h2>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="cmx-avatar">
+                            <img alt="profile picture" class="cmx-avatar__image" src='/images/uploaded-picture.jpg'>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Avatar Manipulator</h2>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="demo-avatar-manipulator-wrap">
+                            <div class="cmx-avatar-manipulator">
+                                <div class="cmx-avatar-manipulator__mask">
+                                    <img alt="profile picture" class="cmx-avatar-manipulator__image" src='/images/uploaded-picture-2.jpg'>
+                                </div>
+
+
+                                <div class="spacer-32">
+                                </div>
+
+
+                                <div class="cmx-avatar-clipping-slider">
+                                    <div class="cmx-avatar-clipping-slider__col">
+                                        <span class="cmx-icon-picture cmx-avatar-clipping-slider__icon--small"></span>
+                                    </div>
+
+
+                                    <div class="cmx-avatar-clipping-slider__col">
+                                        <input class="cmx-slider" id="pictureSizeSlider" max="200" min="100" type="range" value="100"> 
+                                        <script>
+                                            if ((/Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor))||(/Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor))){
+                                                var slider = document.getElementById('pictureSizeSlider');
+                                                var updateSliderTrack = function(e,tgt){
+                                                    var t;
+                                                    if (typeof(tgt)!=='undefined'){
+                                                        t = tgt;
+                                                    } else {
+                                                        t = e.target;
+                                                    }
+                                                    
+
+                                                    var minVal = t.min;
+                                                    var maxVal = t.max;
+                                                    var val = t.value;
+
+                                                    var pc = ((val-minVal)*100) / (maxVal-minVal);
+                                                    pc = Math.ceil(pc);
+
+                                                    t.setAttribute('class','cmx-slider cmx-slider--pc-' + pc);
+                                                };
+                                                updateSliderTrack(null,slider);
+                                                slider.addEventListener('input',updateSliderTrack);
+                                                slider.addEventListener('change',updateSliderTrack);
+                                            }
+                                        </script>
+                                    </div>
+
+
+                                    <div class="cmx-avatar-clipping-slider__col">
+                                        <span class="cmx-icon-picture cmx-avatar-clipping-slider__icon--large"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .col-md-3 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-9" dir="ltr">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html">
+                                    <code class="language-html">
+&lt;!-- on the root element set the dir attribute for rtl display format --&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;rtl&quot;&gt;
+    [code goes here]
+&lt;/html&gt;
+
+&lt;!-- html markup same as ltr --&gt;
+&lt;div class=&quot;cmx-avatar&quot;&gt;
+    &lt;img class=&quot;cmx-avatar__image&quot; src=&lt;%= require(&quot;./images/uploaded-picture.jpg&quot;) %&gt; alt=&quot;profile picture&quot; /&gt;
+&lt;/div&gt;
+
+&lt;!-- html markup same as ltr --&gt;
+&lt;div class=&quot;cmx-avatar-manipulator&quot;&gt;
+    &lt;div class=&quot;cmx-avatar-manipulator__mask&quot;&gt;
+        &lt;img class=&quot;cmx-avatar-manipulator__image&quot; src=&lt;%= require(&quot;./images/uploaded-picture-2.jpg&quot;) %&gt; alt=&quot;profile picture&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;cmx-avatar-clipping-slider&quot;&gt;
+        &lt;div class=&quot;cmx-avatar-clipping-slider__col&quot;&gt;
+            &lt;span class=&quot;cmx-icon-picture cmx-avatar-clipping-slider__icon--small&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;cmx-avatar-clipping-slider__col&quot;&gt;
+            &lt;input id=&quot;pictureSizeSlider&quot; class=&quot;cmx-slider&quot; type=&quot;range&quot; min=&quot;100&quot; max=&quot;200&quot; value=&quot;100&quot;&gt;
+            &lt;script&gt;
+                if ((/Chrome/.test(navigator.userAgent) &amp;&amp; /Google Inc/.test(navigator.vendor))||(/Safari/.test(navigator.userAgent) &amp;&amp; /Apple Computer/.test(navigator.vendor))){
+                    var slider = document.getElementById('pictureSizeSlider');
+                    var updateSliderTrack = function(e,tgt){
+                        var t;
+                        if (typeof(tgt)!=='undefined'){
+                            t = tgt;
+                        } else {
+                            t = e.target;
+                        }
+                        
+
+                        var minVal = t.min;
+                        var maxVal = t.max;
+                        var val = t.value;
+
+                        var pc = ((val-minVal)*100) / (maxVal-minVal);
+                        pc = Math.ceil(pc);
+
+                        t.setAttribute('class','cmx-slider cmx-slider--pc-' + pc);
+                    };
+                    updateSliderTrack(null,slider);
+                    slider.addEventListener('input',updateSliderTrack);
+                    slider.addEventListener('change',updateSliderTrack);
+                }
+            &lt;/script&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;cmx-avatar-clipping-slider__col&quot;&gt;
+            &lt;span class=&quot;cmx-icon-picture cmx-avatar-clipping-slider__icon--large&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    </code>
+    <!-- end .language-html --></pre><!-- end data-lang html -->
+
+                                <pre data-lang="sass"><code class="language-css">
+// we change from .profile-circle to avatar cause circle describes the shape 
+// and in the future the profile pic might not be circular
+
+// Small partial appended for override.
+// _avatar-rtl.scss
+
+
+// we have changed the slider from a fake one to a real input type=&quot;range&quot;, which is available in HTML5
+html[dir=&quot;rtl&quot;] .cmx-slider {
+    
+    // since webkit doesnt have fill upper or fill lower to have a different color in the range and the remainant we hack it through CSS gradients and javascript;
+    @for $i from 0 through 100 {
+        &amp;--pc-#{$i}::-webkit-slider-runnable-track {
+            background: linear-gradient(to left, $bright-blue 0%,$bright-blue 0%+$i, $table-highlight-grey 0%+$i,$table-highlight-grey 100%); // modified
+        }
+    }
+  }
+</code></pre>
+                            </div>
+                            <!-- end .data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+</body>
+</html>

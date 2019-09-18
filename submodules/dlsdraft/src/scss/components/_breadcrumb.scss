@@ -1,0 +1,19 @@
+.cmx-breadcrumb {
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    list-style-type: none;
+    padding:0;
+    margin:0 0 0.75rem 0;
+    display:flex;
+
+    &__item{
+        &::before{
+            content:"\2022";
+            display:inline-block;
+            margin: 0 0.5rem;
+        }
+        &:first-child::before{
+            display:none;
+        }
+    }
+}

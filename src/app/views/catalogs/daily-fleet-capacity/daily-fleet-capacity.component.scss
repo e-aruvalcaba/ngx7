@@ -1,0 +1,316 @@
+@import '../../../../../submodules/dlsdraft/src/scss/variables/_colors.scss';
+@import '../../plant-capacity/plant-capacity.component.scss';
+
+.toggler {
+    position: relative;
+}
+
+.floating {
+    position: absolute;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.input-date {
+    padding: 0.5rem;
+    height: 48px;
+    border: 1px solid #ADAEBB;
+    background: white;
+    color: black;
+    border-radius: 3px;
+}
+
+.input-date__icon {
+    fill: #37a8f8;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.input-date__input {
+  font-family: "Roboto",sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.transparent {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.cmx-input__div--align {
+    color: #001C3B;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 -12px 0;
+}
+
+.stretch {
+  width: 100%;
+}
+
+.spacer {
+  height: 20px;
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+.import-file-input {
+  display: none;
+}
+
+.dialog-copy-model {
+  font-size: 0.9rem;
+}
+
+.dialog-title {
+  border-bottom: 1px solid lightgray;
+  text-align: center;
+}
+
+.capacity-table {
+  border: none;
+}
+
+.capacity-table__header {
+  color: black;
+  font-size: 10pt;
+  font-weight: bold;
+  height: 75px;
+  border-radius: 3px;
+}
+
+.capacity-table__header-column {
+  height: 45px;
+}
+
+.capacity-check-item {
+  border: none;
+}
+
+.capacity-check-item > div {
+  height: 45px;
+}
+
+.capacity-check-item__hour-cell {
+  font-size: 9pt;
+  font-weight: bold;
+  color: #003876;
+}
+
+.capacity-check-item__edit-input, .capacity-check-item__label {
+  font-size: 10pt;
+  text-align: center;
+  margin: 1px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.capacity-check-item__edit-input--editable {
+  color: #37a8f8;
+  font-weight: bold;
+  text-align: center;
+}
+
+.capacity-check-item__edit-input--danger {
+  color: red;
+  font-weight: bold;
+  border: 1px solid red;
+  outline-color: red;
+  text-align: center;
+}
+
+.capacity-check-item__edit-input--warning {
+  color: #fbb03b;
+  font-weight: bold;
+  border: 1px solid #fbb03b;
+  outline-color: #fbb03b;
+  text-align: center;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip__tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltip--danger {
+  visibility: visible;
+  background-color: red;
+  color: white;
+}
+
+.tooltip:hover .tooltip--warning {
+  visibility: visible;
+  background-color: #fbb03b;
+  color: black;
+}
+
+.capacity-check-item__edit-input--parent-danger,
+.capacity-check-item__edit-input--parent-danger {
+  color: red;
+  font-weight: bold;
+}
+
+.not-found {
+  padding: 25px;
+  background: #E7EAEE;
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 60px;
+    /* 5/5S/5SE/5C  Portrait and landscape */
+    @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+        margin-top: 10px;
+    }
+
+
+    /* iPhone 6/7/8 Portrait */
+    @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+        margin-top: 15px;
+    }
+
+    /* iPad 1, 2, Mini, Air Portrait */
+    @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1) {
+        margin-top: 15px;
+    }
+}
+
+.cmx{
+  &-tabs{
+      list-style:none outside;
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      overflow-x: auto;
+      margin: 0 0 1.25rem 0;
+      padding:0;
+
+      &::before{
+          content:"tabs_on_desktop"; // just a test to se if it's mobile or desktop
+          display:none;
+      }
+
+      &::after{
+          content:" ";
+          border-bottom: 1px solid $disabled-grey;
+          flex: 1 1 auto;
+      }
+
+      &__tab{
+          &:last-child {
+              display: block;
+              float: right;
+              width: 100%;
+              border-bottom: 1px solid $disabled-grey;
+
+              > ul {
+                  float: right;
+                  list-style: none outside;
+                  display: flex;
+
+                  > li {
+                      margin: 10px;
+                      > a {
+                          text-decoration: none;
+                      }
+                  }
+              }
+          }
+          &.active{
+              .cmx-tabs__link{
+                  border-bottom-color: transparent;
+                  border-top-color: $bright-blue;
+                  border-left: 1px solid $disabled-grey;
+                  border-right: 1px solid $disabled-grey;
+                  color: #333;
+                  padding: 1rem 1.25rem;
+              }
+          }
+      }
+      &__link{
+          white-space: nowrap;
+          font-weight: 500;
+          border-bottom: 1px solid $disabled-grey;
+          border-top: 3px solid transparent;
+          padding: 1rem calc(1.25rem + 1px); // adding that pixel to the sides to compensate for the border
+          display: block;
+
+          &:active{
+              color: #333;
+          }
+
+          &:focus,&:hover{
+              text-decoration: none;
+          }
+      }
+      &__content{
+          display: none;
+          &.active{
+              display: block;
+          }
+      }
+
+  }
+}
+
+.action-buttons {
+    float: right;
+    list-style: none outside;
+    display: flex;
+
+    > li {
+        margin: 10px;
+        float: left;
+        > a {
+            text-decoration: none;
+        }
+    }
+}
+
+.capacity-charts {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  border-radius: 2px;
+
+  & .total-charts-title {
+    background-color: #001c3b !important;
+    padding: 5px;
+    background-color: #FFFFFF;
+
+    > h1 {
+      color: #ffffff;
+      font-size: 20px;
+      line-height: 2rem;
+      margin: 5px;
+    }
+  }
+}

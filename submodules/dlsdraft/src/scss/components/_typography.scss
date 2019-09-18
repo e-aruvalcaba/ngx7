@@ -1,0 +1,342 @@
+// Typography
+
+// Font name
+$font-name:			'Roboto';
+
+// Font family
+$font-family: 		$font-name, sans-serif;
+
+// Font weights - styles
+$font-bold: 		700;
+$font-medium: 		500;
+$font-regular: 		400;
+$font-light: 		300;
+$font-thin: 		100;
+
+// Font sizes
+$font-size-10: 		0.625rem; 	// 10px
+$font-size-12: 		0.75rem; 	// 12px
+$font-size-14: 		0.875rem; 	// 14px
+$font-size-15: 		0.9375rem; 	// 15px
+$font-size-16: 		1rem; 		// 16px
+$font-size-18: 		1.125rem; 	// 18px
+$font-size-20: 		1.25rem; 	// 20px
+$font-size-22:		1.375rem;	// 22px
+$font-size-24: 		1.5rem;		// 24px
+$font-size-26: 		1.625rem; 	// 26px
+$font-size-30:		1.875rem;   // 30px
+$font-size-32: 		2rem;		// 32px
+$font-size-48: 		3rem;		// 48px
+$font-size-56: 		3.5rem;		// 56px
+
+
+// Line heights
+$line-height-10:	0.625rem;	// 10px
+$line-height-12: 	0.75rem;	// 12px
+$line-height-14: 	0.875rem;	// 14px
+$line-height-16: 	1rem;		// 16px
+$line-height-18: 	1.125rem; 	// 18px
+$line-height-20: 	1.25rem;	// 20px
+$line-height-24: 	1.5rem;		// 24px
+$line-height-26: 	1.625rem;	// 26px
+$line-height-30:	1.875rem;   // 30px
+$line-height-32: 	2rem;		// 32px
+$line-height-48: 	3rem;		// 48px
+$line-height-56: 	3.5rem;		// 56px
+
+// Font imports
+
+//roboto
+
+@font-face {
+	font-family: $font-name;
+	src: url('https://www.cemexgo.com/cdn/fonts/#{ $font-name }-Thin.ttf');
+	font-weight:100;
+}
+@font-face {
+  font-family: $font-name;
+  src: url('https://www.cemexgo.com/cdn/fonts/#{ $font-name }-Light.ttf');
+  font-weight:300;
+}
+@font-face {
+  font-family: $font-name;
+  src: url('https://www.cemexgo.com/cdn/fonts/#{ $font-name }-Regular.ttf');
+  font-weight:400;
+}
+@font-face {
+  font-family: $font-name;
+  src: url('https://www.cemexgo.com/cdn/fonts/#{ $font-name }-Italic.ttf');
+  font-weight:400;
+  font-style: italic;
+}
+@font-face {
+	font-family: $font-name;
+	src: url('https://www.cemexgo.com/cdn/fonts/#{ $font-name }-Medium.ttf');
+	font-weight:500;
+}
+@font-face {
+	font-family: $font-name;
+	src: url('https://www.cemexgo.com/cdn/fonts/#{ $font-name }-Bold.ttf');
+	font-weight:700;
+}
+@font-face {
+	font-family: $font-name;
+	src: url('https://www.cemexgo.com/cdn/fonts/#{ $font-name }-Black.ttf');
+	font-weight:800;
+}
+
+
+// Font weight classes
+.roboto-bold {
+    font-family: '#{ $font-name }'; 
+    font-weight: $font-bold;
+}
+.roboto-medium {
+    font-family: '#{ $font-name }'; 
+    font-weight: $font-medium;
+}
+.roboto-regular {
+    font-family: '#{ $font-name }'; 
+    font-weight: $font-regular;
+}
+.roboto-light {
+    font-family: '#{ $font-name }'; 
+    font-weight: $font-light;
+}
+.roboto-thin {  
+    font-family: '#{ $font-name }'; 
+    font-weight: $font-thin;
+}
+.roboto-italic {
+    font-family: '#{ $font-name }'; 
+    font-style: italic;
+}
+
+.font-bold {
+    font-weight: $font-bold;
+}
+.font-medium {
+    font-weight: $font-medium;
+}
+.font-regular {
+    font-weight: $font-regular;
+}
+.font-light {
+    font-weight: $font-light;
+}
+.font-thin {  
+    font-weight: $font-thin;
+}
+.font-italic {
+    font-style: italic;
+}
+
+
+// Headings, elements with role of headings
+h1, .h1-role {
+	font-family: 	$font-family;
+	font-size: 	 	$font-size-30;
+	line-height: 	$line-height-30;
+	font-weight: 	$font-bold;
+	color: 		 	$deep-blue;
+}
+
+h2, .h2-role {
+	font-family: 	$font-family;
+	font-size:   	$font-size-24;
+	line-height: 	$line-height-24;
+	font-weight: 	$font-medium;
+	color:       	$deep-blue;
+}
+
+h3, .h3-role {
+	font-family: 	$font-family;
+	font-size:   	$font-size-18;
+	line-height: 	$line-height-18;
+	font-weight: 	$font-regular;
+	color:       	$deep-blue;
+}
+
+h4, .h4-role {
+	font-family: 	$font-family;
+	font-size:   	$font-size-16;
+	line-height: 	$line-height-16;
+	font-weight: 	$font-regular;
+	color:       	$deep-blue;
+}
+
+h5, .h5-role {
+	font-family: 	$font-family;
+	font-size:   	$font-size-14;
+	line-height: 	$line-height-16;
+	font-weight: 	$font-medium;
+	color:       	$deep-blue;
+	text-transform: uppercase;
+}
+
+h6, .h6-role {
+	font-family: 	$font-family;
+	font-size:   	$font-size-12;
+	line-height: 	$line-height-16;
+	font-weight: 	$font-medium;
+	color:       	$deep-blue;
+}
+
+// Table entries styles
+.table-entry {
+	font-family: 	$font-family;
+	font-size: 		$font-size-14;
+	line-height: 	$line-height-16;
+	color: 			$dark-grey;
+}
+
+.table-entry-strong {
+	font-family: 	$font-family;
+	font-size: 		$font-size-14;
+	line-height: 	$line-height-16;
+	color: 			$dark-grey;
+	font-weight: 	$font-bold;
+}
+
+.cmx-breadcrumb {
+	font-family:    $font-family;
+	font-size:      $font-size-18;
+	color: 			$deep-blue;
+}
+
+// Links style
+a { 
+	text-decoration: 		none;
+	color: 					$bright-blue;
+	&:hover {
+		text-decoration: 	underline;
+		color: 				$bright-blue;
+	}
+	&:active {
+		text-decoration: 	underline;
+		color: 				$true-blue;
+	}
+	&.disabled {
+		text-decoration: 	none;
+		color: 				$medium-grey;
+		cursor: 			not-allowed;	
+	}
+
+	&.table-entry {
+		font-size: $font-size-14;
+		color: $bright-blue;
+	}
+}
+
+.link {
+	text-decoration: 		none;
+	color: 					$bright-blue;
+	&:hover {
+		text-decoration: 	underline;
+		color: 				$bright-blue;
+	}
+	&:active {
+		text-decoration: 	underline;
+		color: 				$true-blue;
+	}
+	&.disabled {
+		text-decoration: 	none;
+		color: 				$medium-grey;
+		cursor: 			not-allowed;
+	}
+}
+
+.table-entry {
+	font-size: $font-size-14;
+	color: $dark-grey;
+}
+
+
+// Input and placeholders style
+.input-placeholder {
+	font-family: 	$font-family;
+	font-size: 		$font-size-14;
+	line-height: 	$line-height-16;
+	color: 			$medium-grey;
+}
+
+.input-text {
+	font-family: 	$font-family;
+	font-size: 		$font-size-14;
+	line-height: 	$line-height-16;
+	color: 			$dark-grey;
+}
+
+// Prices style
+.size-14 {
+	font-size: 		$font-size-14;	
+}
+
+.size-48 {
+	font-size: 		$font-size-48;
+}
+
+// WE'LL HAVE TO MOVE TO MIXINS
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}-left   { text-align: left !important; }
+    .text#{$infix}-right  { text-align: right !important; }
+    .text#{$infix}-center { text-align: center !important; }
+  }
+}
+
+// WE'LL HAVE TO MOVE TO MIXINS
+// Flex variation
+//
+// Custom styles for additional flex alignment options.
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .flex#{$infix}-first     { order: -1; }
+    .flex#{$infix}-last      { order: 1; }
+    .flex#{$infix}-unordered { order: 0; }
+
+    .flex#{$infix}-row            { flex-direction: row !important; }
+    .flex#{$infix}-column         { flex-direction: column !important; }
+    .flex#{$infix}-row-reverse    { flex-direction: row-reverse !important; }
+    .flex#{$infix}-column-reverse { flex-direction: column-reverse !important; }
+
+    .flex#{$infix}-wrap         { flex-wrap: wrap !important; }
+    .flex#{$infix}-nowrap       { flex-wrap: nowrap !important; }
+    .flex#{$infix}-wrap-reverse { flex-wrap: wrap-reverse !important; }
+
+    .justify-content#{$infix}-start   { justify-content: flex-start !important; }
+    .justify-content#{$infix}-end     { justify-content: flex-end !important; }
+    .justify-content#{$infix}-center  { justify-content: center !important; }
+    .justify-content#{$infix}-between { justify-content: space-between !important; }
+    .justify-content#{$infix}-around  { justify-content: space-around !important; }
+
+    .align-items#{$infix}-start    { align-items: flex-start !important; }
+    .align-items#{$infix}-end      { align-items: flex-end !important; }
+    .align-items#{$infix}-center   { align-items: center !important; }
+    .align-items#{$infix}-baseline { align-items: baseline !important; }
+    .align-items#{$infix}-stretch  { align-items: stretch !important; }
+
+    .align-content#{$infix}-start   { align-content: flex-start !important; }
+    .align-content#{$infix}-end     { align-content: flex-end !important; }
+    .align-content#{$infix}-center  { align-content: center !important; }
+    .align-content#{$infix}-between { align-content: space-between !important; }
+    .align-content#{$infix}-around  { align-content: space-around !important; }
+    .align-content#{$infix}-stretch { align-content: stretch !important; }
+
+    .align-self#{$infix}-auto     { align-self: auto !important; }
+    .align-self#{$infix}-start    { align-self: flex-start !important; }
+    .align-self#{$infix}-end      { align-self: flex-end !important; }
+    .align-self#{$infix}-center   { align-self: center !important; }
+    .align-self#{$infix}-baseline { align-self: baseline !important; }
+    .align-self#{$infix}-stretch  { align-self: stretch !important; }
+  }
+}
+
+

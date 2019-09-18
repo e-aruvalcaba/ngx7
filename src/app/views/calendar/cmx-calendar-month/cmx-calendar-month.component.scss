@@ -1,0 +1,19 @@
+.cmx-calendar-month {
+    border: 0px solid black;
+    padding: 0px 10px 10px 10px;
+}
+
+.cmx-calendar-month__title {
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    border-bottom: 1px solid lightgray;
+}
+
+.cmx-calendar-month__weekday-initials {
+    border-bottom: 1px solid lightgray;
+}
+
+.cmx-calendar-month__weekday-initials {
+  text-align: center;
+}

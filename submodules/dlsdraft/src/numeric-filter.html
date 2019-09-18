@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Numeric Filter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.0.0/nouislider.min.js">
+    </script>
+    <link href="partials/favicon.html" rel="import">
+</head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Numeric Filter</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>The Numeric Filter is designed to select a range (Min - Max) of numeric data.</p>
+
+
+                        <p>There are two options depending on the Screnario:</p>
+
+
+                        <ul>
+                            <li><strong>Numeric Filer with Slider:</strong><br>
+                            Use it when the user doesn´t need an exact min or max number, only and aproximation</li>
+
+
+                            <li><strong>Numeric Filter with Text Input:</strong><br>
+                            Use it when the user needs to input a specific range, i.e. Min = 10.23, Max = 354.21</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="spacer-32">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="rules-box">
+                            <p><i>Note:</i> for the implementation of the double range selector the plugin nuoSlider was used. You can check out the specs of it <a href="https://refreshless.com/nouislider/" targer="_blank">here</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="cmx-num-filter">
+                            <h4 class="cmx-num-filter__heading">Price Range</h4>
+
+
+                            <div class="cmx-num-filter__range">
+                                <div class="cmx-num-filter__range-val">
+                                    $0
+                                </div>
+
+
+                                <div class="cmx-num-filter__range-slider">
+                                    <div id="zeSlider">
+                                        <!--slider will be inserted here via javaScript-->
+                                    </div>
+                                </div>
+
+
+                                <div class="cmx-num-filter__range-val">
+                                    $7000
+                                </div>
+                            </div>
+
+
+                            <div class="cmx-num-filter__footer">
+                                <button class="cmx-button cmx-button--link cmx-button--link-small margin-horizontal-md">Cancel</button><button class="cmx-button ripple">Filter</button>
+                            </div>
+                        </div>
+
+
+                        <div data-highlight="">
+                            <pre data-lang="html"><code class="language-html">&lt;div class="cmx-num-filter"&gt;
+    &lt;h4 class="cmx-num-filter__heading"&gt;Price Range&lt;/h4&gt;
+    &lt;div class="cmx-num-filter__range"&gt;
+        &lt;div class="cmx-num-filter__range-val"&gt;$0&lt;/div&gt;
+        &lt;div class="cmx-num-filter__range-slider"&gt;
+            &lt;div id="zeSlider"&gt;&lt;!--slider will be inserted here via javaScript--&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="cmx-num-filter__range-val"&gt;$7000&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="cmx-num-filter__footer"&gt;&lt;button class="cmx-button cmx-button--link cmx-button--link-small margin-horizontal-md"&gt;Cancel&lt;/button&gt;&lt;cmx-button class="cmx-button ripple"&gt;Filter&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <!-- end data-highlight -->
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="cmx-num-filter">
+                            <h4 class="cmx-num-filter__heading">Price Range</h4>
+
+
+                            <div class="cmx-num-filter__inputs">
+                                <div class="cmx-form-group">
+                                    <label for="from">From</label> <input class="cmx-form-control" id="from" name="from" placeholder="$0" type="number" value="">
+                                </div>
+
+
+                                <div class="cmx-form-group">
+                                    <label for="to">To</label> <input class="cmx-form-control" id="to" name="to" placeholder="$120,000" type="number" value="">
+                                </div>
+                            </div>
+
+
+                            <div class="cmx-num-filter__footer">
+                                <button class="cmx-button cmx-button--link cmx-button--link-small margin-horizontal-md">Cancel</button><button class="cmx-button ripple">Filter</button>
+                            </div>
+                        </div>
+
+
+                        <div data-highlight="">
+                            <pre data-lang="html"><code class="language-html">&lt;div class="cmx-num-filter"&gt;
+    &lt;h4 class="cmx-num-filter__heading"&gt;Price Range&lt;/h4&gt;
+    &lt;div class="cmx-num-filter__inputs"&gt;
+        &lt;div class="cmx-form-group"&gt;
+            &lt;label for="from"&gt;From&lt;/label&gt;
+            &lt;input type="number" class="cmx-form-control" id="from" placeholder="$0" name="from" value="" /&gt;
+        &lt;/div&gt;
+        &lt;div class="cmx-form-group"&gt;
+            &lt;label for="to"&gt;To&lt;/label&gt;
+            &lt;input type="number" class="cmx-form-control" id="to" placeholder="$120,000" name="to" value="" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="cmx-num-filter__footer"&gt;&lt;button class="cmx-button cmx-button--link button--link-small margin-horizontal-md"&gt;Cancel&lt;/button&gt;&lt;button class="cmx-button ripple"&gt;Filter&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <!-- end data-highlight -->
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>... and the SASS, CSS, javaScript code</h2>
+
+
+                        <div data-highlight="">
+                            <div class="demo-wrap-code code-4">
+                                <pre data-lang="sass"><code class="language-css">.cmx-num-filter{
+    width: 320px;
+    background: $true-white;
+    border-radius: $radius-2;
+    border-top: 3px solid $bright-blue;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.14);
+    padding: 1.25rem;
+    font-size: 0.875rem;
+
+    &amp;__heading{
+        font-size:0.875rem;
+        font-weight: 500;
+    }
+    &amp;__inputs{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 0.5rem;
+        margin: 1rem 0 1.5rem;
+        .form-group{
+            input[type="number"]{
+                text-align: right;
+            }
+        }
+    }
+    &amp;__range{
+        display:flex;
+        align-items: center;
+
+        &amp;-label{
+            position: absolute;
+            margin: -28px -40px;// we leave this in px cause it relates to the self dimensions and not to general layout
+            text-align: center;
+            width: 100px;
+            color:$gray-light;
+        }
+
+        &amp;-val{
+            flex: 0 0 auto;
+        }
+
+        &amp;-slider{
+            margin:3.5rem 0.625rem 2rem;
+            flex:1 1 auto;
+        }
+    }
+    &amp;__footer{
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+
+
+// noUiSlider
+
+/*! nouislider - 11.0.0 - 2018-01-12 20:37:52 */
+
+
+/* Functional styling;
+* These styles are required for noUiSlider to function.
+* You don't need to change these rules to apply your design.
+*/
+
+.noUi-target,
+.noUi-target * {
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.noUi-target {
+    position: relative;
+    direction: ltr;
+}
+
+.noUi-base,
+.noUi-connects {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Wrapper for all connect elements.
+*/
+
+.noUi-connects {
+    overflow: hidden;
+    z-index: 0;
+}
+
+.noUi-connect,
+.noUi-origin {
+    will-change: transform;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+
+/* Give origins 0 height/width so they don't interfere with clicking the
+* connect elements.
+*/
+
+.noUi-vertical .noUi-origin {
+    width: 0;
+}
+
+.noUi-horizontal .noUi-origin {
+    height: 0;
+}
+
+.noUi-handle {
+    position: relative;
+    &amp;:focus {
+        outline: none;
+    }
+}
+
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+    -webkit-transition: transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.noUi-state-drag * {
+    cursor: inherit !important;
+}
+
+
+/* Slider size and handle placement;
+*/
+
+.noUi-horizontal {
+    height: 4px;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 20px;
+    height: 20px;
+    left: -9.5px;
+    top: -8px;
+}
+
+.noUi-vertical {
+    width: 18px;
+}
+
+.noUi-vertical .noUi-handle {
+    width: 20px;
+    height: 20px;
+    left: -6px;
+    top: -17px;
+}
+
+
+/* Styling;
+* Giving the connect element a border radius causes issues with using transform: scale
+*/
+
+.noUi-target {
+    background: $gray-lighter;
+    border-radius: 4px;
+}
+
+.noUi-connects {
+    border-radius: 3px;
+}
+
+.noUi-connect {
+    background: $bright-blue;
+}
+
+
+/* Handles and cursors;
+*/
+
+.noUi-draggable {
+    cursor: ew-resize;
+}
+
+.noUi-vertical .noUi-draggable {
+    cursor: ns-resize;
+}
+
+.noUi-handle {
+    border: none;
+    border-radius: 50%;
+    background: $bright-blue;
+    cursor: default;
+}
+
+.noUi-active {}
+
+
+/* Disabled state;
+*/
+
+[disabled] .noUi-connect {
+    background: #B8B8B8;
+}
+
+[disabled].noUi-target,
+[disabled].noUi-handle,
+[disabled] .noUi-handle {
+    cursor: not-allowed;
+}
+
+
+/* Base;
+*
+*/
+
+.noUi-pips,
+.noUi-pips * {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.noUi-pips {
+    position: absolute;
+    color: #999;
+}
+
+
+/* Values;
+*
+*/
+
+.noUi-value {
+    position: absolute;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.noUi-value-sub {
+    color: #ccc;
+    font-size: 10px;
+}
+
+
+/* Markings;
+*
+*/
+
+.noUi-marker {
+    position: absolute;
+    background: #CCC;
+}
+
+.noUi-marker-sub {
+    background: #AAA;
+}
+
+.noUi-marker-large {
+    background: #AAA;
+}
+
+
+/* Horizontal layout;
+*
+*/
+
+.noUi-pips-horizontal {
+    padding: 10px 0;
+    height: 80px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+.noUi-value-horizontal {
+    -webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+}
+
+.noUi-rtl .noUi-value-horizontal {
+    -webkit-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
+}
+
+.noUi-marker-horizontal.noUi-marker {
+    margin-left: -1px;
+    width: 2px;
+    height: 5px;
+}
+
+.noUi-marker-horizontal.noUi-marker-sub {
+    height: 10px;
+}
+
+.noUi-marker-horizontal.noUi-marker-large {
+    height: 15px;
+}
+
+
+/* Vertical layout;
+*
+*/
+
+.noUi-pips-vertical {
+    padding: 0 10px;
+    height: 100%;
+    top: 0;
+    left: 100%;
+}
+
+.noUi-value-vertical {
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%, 0);
+    padding-left: 25px;
+}
+
+.noUi-rtl .noUi-value-vertical {
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+}
+
+.noUi-marker-vertical.noUi-marker {
+    width: 5px;
+    height: 2px;
+    margin-top: -1px;
+}
+
+.noUi-marker-vertical.noUi-marker-sub {
+    width: 10px;
+}
+
+.noUi-marker-vertical.noUi-marker-large {
+    width: 15px;
+}
+
+.noUi-tooltip {
+    display: block;
+    position: absolute;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    background: #fff;
+    color: #000;
+    padding: 5px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.noUi-horizontal .noUi-tooltip {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 120%;
+}
+
+.noUi-vertical .noUi-tooltip {
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 50%;
+    right: 120%;
+}</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-num-filter {
+    width: 320px;
+    background: #FFF;
+    border-radius: 2px;
+    border-top: 3px solid #3FA9F5;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.14);
+    padding: 1.25rem;
+    font-size: 0.875rem;
+}
+
+.cmx-num-filter__heading {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.cmx-num-filter__inputs {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 0.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.cmx-num-filter__inputs .form-group input[type="number"] {
+    text-align: right;
+}
+
+.cmx-num-filter__range {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.cmx-num-filter__range-label {
+    position: absolute;
+    margin: -28px -40px;
+    text-align: center;
+    width: 100px;
+    color: #636c72;
+}
+
+.cmx-num-filter__range-val {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.cmx-num-filter__range-slider {
+    margin: 3.5rem 0.625rem 2rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.cmx-num-filter__footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+/*! nouislider - 11.0.0 - 2018-01-12 20:37:52 */
+
+
+/* Functional styling;
+* These styles are required for noUiSlider to function.
+* You don't need to change these rules to apply your design.
+*/
+
+.noUi-target,
+.noUi-target * {
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.noUi-target {
+    position: relative;
+    direction: ltr;
+}
+
+.noUi-base,
+.noUi-connects {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Wrapper for all connect elements.
+*/
+
+.noUi-connects {
+    overflow: hidden;
+    z-index: 0;
+}
+
+.noUi-connect,
+.noUi-origin {
+    will-change: transform;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+
+/* Give origins 0 height/width so they don't interfere with clicking the
+* connect elements.
+*/
+
+.noUi-vertical .noUi-origin {
+    width: 0;
+}
+
+.noUi-horizontal .noUi-origin {
+    height: 0;
+}
+
+.noUi-handle {
+    position: relative;
+}
+
+.noUi-handle:focus {
+    outline: none;
+}
+
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.noUi-state-drag * {
+    cursor: inherit !important;
+}
+
+
+/* Slider size and handle placement;
+*/
+
+.noUi-horizontal {
+    height: 4px;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 20px;
+    height: 20px;
+    left: -9.5px;
+    top: -8px;
+}
+
+.noUi-vertical {
+    width: 18px;
+}
+
+.noUi-vertical .noUi-handle {
+    width: 20px;
+    height: 20px;
+    left: -6px;
+    top: -17px;
+}
+
+
+/* Styling;
+* Giving the connect element a border radius causes issues with using transform: scale
+*/
+
+.noUi-target {
+    background: #eceeef;
+    border-radius: 4px;
+}
+
+.noUi-connects {
+    border-radius: 3px;
+}
+
+.noUi-connect {
+    background: #3FA9F5;
+}
+
+
+/* Handles and cursors;
+*/
+
+.noUi-draggable {
+    cursor: ew-resize;
+}
+
+.noUi-vertical .noUi-draggable {
+    cursor: ns-resize;
+}
+
+.noUi-handle {
+    border: none;
+    border-radius: 50%;
+    background: #3FA9F5;
+    cursor: default;
+}
+
+
+/* Disabled state;
+*/
+
+[disabled] .noUi-connect {
+    background: #B8B8B8;
+}
+
+[disabled].noUi-target,
+[disabled].noUi-handle,
+[disabled] .noUi-handle {
+    cursor: not-allowed;
+}
+
+
+/* Base;
+*
+*/
+
+.noUi-pips,
+.noUi-pips * {
+    box-sizing: border-box;
+}
+
+.noUi-pips {
+    position: absolute;
+    color: #999;
+}
+
+
+/* Values;
+*
+*/
+
+.noUi-value {
+    position: absolute;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.noUi-value-sub {
+    color: #ccc;
+    font-size: 10px;
+}
+
+
+/* Markings;
+*
+*/
+
+.noUi-marker {
+    position: absolute;
+    background: #CCC;
+}
+
+.noUi-marker-sub {
+    background: #AAA;
+}
+
+.noUi-marker-large {
+    background: #AAA;
+}
+
+
+/* Horizontal layout;
+*
+*/
+
+.noUi-pips-horizontal {
+    padding: 10px 0;
+    height: 80px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+.noUi-value-horizontal {
+    -webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+}
+
+.noUi-rtl .noUi-value-horizontal {
+    -webkit-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
+}
+
+.noUi-marker-horizontal.noUi-marker {
+    margin-left: -1px;
+    width: 2px;
+    height: 5px;
+}
+
+.noUi-marker-horizontal.noUi-marker-sub {
+    height: 10px;
+}
+
+.noUi-marker-horizontal.noUi-marker-large {
+    height: 15px;
+}
+
+
+/* Vertical layout;
+*
+*/
+
+.noUi-pips-vertical {
+    padding: 0 10px;
+    height: 100%;
+    top: 0;
+    left: 100%;
+}
+
+.noUi-value-vertical {
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%, 0);
+    padding-left: 25px;
+}
+
+.noUi-rtl .noUi-value-vertical {
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+}
+
+.noUi-marker-vertical.noUi-marker {
+    width: 5px;
+    height: 2px;
+    margin-top: -1px;
+}
+
+.noUi-marker-vertical.noUi-marker-sub {
+    width: 10px;
+}
+
+.noUi-marker-vertical.noUi-marker-large {
+    width: 15px;
+}
+
+.noUi-tooltip {
+    display: block;
+    position: absolute;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    background: #fff;
+    color: #000;
+    padding: 5px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.noUi-horizontal .noUi-tooltip {
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 120%;
+}
+
+.noUi-vertical .noUi-tooltip {
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 50%;
+    right: 120%;
+}</code></pre>
+
+                                <pre data-lang="javaScript"><code class="language-js">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.0.0/nouislider.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    // pick your slider element
+    var zeSlider = document.querySelector('#zeSlider');
+
+    // define the props of it
+    var sliderProps = {
+        start: [ 500,5000 ],
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 7000
+        },
+        labelPre:'$',
+        labelPost:''
+    }
+
+    // you shouldn't be editing past here, but feel free to do it if you want.
+
+    noUiSlider.create(zeSlider, sliderProps);
+
+    var rangeTagLower = document.createElement('div');
+    var rangeTagHigher = document.createElement('div');
+    rangeTagLower.classList.add('cmx-num-filter__range-label');
+    rangeTagHigher.classList.add('cmx-num-filter__range-label');
+    zeSlider.querySelector('.noUi-handle-lower').appendChild(rangeTagLower);
+    zeSlider.querySelector('.noUi-handle-upper').appendChild(rangeTagHigher);
+
+    zeSlider.noUiSlider.on('update', function( values, handle ) {
+        var value = values[handle];
+        if ( handle ) {
+            rangeTagHigher.innerHTML = sliderProps.labelPre + Math.round(value) + sliderProps.labelPost;
+        } else {
+            rangeTagLower.innerHTML = sliderProps.labelPre + Math.round(value) + sliderProps.labelPost;
+        }
+    });
+&lt;/script&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <script>
+        // pick your slider element
+        var zeSlider = document.querySelector('#zeSlider');
+
+        // define the props of it
+        var sliderProps = {
+            start: [ 500,5000 ],
+            connect: true,
+            range: {
+                'min': 0,
+                'max': 7000
+            },
+            labelPre:'$',
+            labelPost:''
+        }
+
+        // you shouldn't be editing past here, but feel free to do it if you want.
+
+        noUiSlider.create(zeSlider, sliderProps);
+
+        var rangeTagLower = document.createElement('div');
+        var rangeTagHigher = document.createElement('div');
+        rangeTagLower.classList.add('cmx-num-filter__range-label');
+        rangeTagHigher.classList.add('cmx-num-filter__range-label');
+        zeSlider.querySelector('.noUi-handle-lower').appendChild(rangeTagLower);
+        zeSlider.querySelector('.noUi-handle-upper').appendChild(rangeTagHigher);
+
+        zeSlider.noUiSlider.on('update', function( values, handle ) {
+            var value = values[handle];
+            if ( handle ) {
+                rangeTagHigher.innerHTML = sliderProps.labelPre + Math.round(value) + sliderProps.labelPost;
+            } else {
+                rangeTagLower.innerHTML = sliderProps.labelPre + Math.round(value) + sliderProps.labelPost;
+            }
+        });
+    </script>
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+</body>
+</html>

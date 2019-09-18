@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #111;
+      }
+    </style>
+  </defs>
+  <title>close-black</title>
+  <path id="Fill-1" class="cls-1" d="M6.83,6l5-5A.58.58,0,0,0,11,.17l-5,5-5-5A.58.58,0,0,0,.17,1l5,5-5,5a.58.58,0,0,0,.41,1A.58.58,0,0,0,1,11.83l5-5,5,5a.58.58,0,0,0,.83,0,.58.58,0,0,0,0-.83Z" transform="translate(0 0)"/>
+</svg>

@@ -1,0 +1,74 @@
+// select dropdown
+.cmx-select-dd {
+    width: auto;
+    position: relative; // or absolute
+    border-top: 3px solid $bright-blue;
+    background: $true-white;
+    border-radius: $radius-3;
+    box-shadow: 0 8px 13px rgba(0,0,0,0.3);
+    min-height: 160px;
+    max-height: 220px;
+    display: flex;
+    flex-direction: column;
+
+    &__filter{
+        background: $true-white;
+        border-bottom: 1px solid #dadada;
+        margin: 0 1rem;
+        display:flex;
+        align-items: center;
+        flex: 0 0 auto;
+    
+        &-icon{
+            color:$bright-blue;
+            padding-top: 2px;
+        }
+
+        &-input {
+            border:0;
+            width: 100%;
+            display: inline-block;
+            height: 3rem;
+            line-height:3rem;
+            font-size: $font-size-14;
+
+            &:focus {
+                outline: 0 none;
+            }
+        }
+    }
+
+    &__options,
+    &__options--checks{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    &__option {
+        padding: 0.625rem 2rem;
+        cursor:pointer;
+        
+        &:hover {
+            background-color: $background-grey;
+        }
+
+        &:first-child {
+            margin-top: 1.5rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__options--checks{
+        
+        .cmx-select-dd__option{
+            cursor: default;
+            
+            &:hover{
+                background-color: inherit;
+            }
+        }
+    }
+}

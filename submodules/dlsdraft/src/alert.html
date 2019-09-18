@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Alert</title>
+    <link href="partials/favicon.html" rel="import">
+</head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <!-- start alerts -->
+            <div id="alertsWrapper" class="cmx-alert-wrapper">
+            </div>
+            <!-- end alerts -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-12">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Alerts</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="paragraph-group">
+                            <p>Bar alerts are reserved for higher level actions being completed, or errors that need the users immediate attention.</p>
+
+
+                            <div class="spacer-16">
+                            </div>
+
+
+                            <p>Use these when an error or success is happening in an area that the user currently is not in (IE if they are placing an order for one location, they may wish to be notified if a different location of theirs had a new invoice payment processed).</p>
+
+
+                            <div class="spacer-16">
+                            </div>
+
+
+                            <p>Be careful to use these within the parameters of the user’s permissions for what they can and cannot view.</p>
+
+
+                            <div class="spacer-16">
+                            </div>
+                        </div>
+
+
+                        <div class="rules-box">
+                            <span class="roboto-bold">Rules:</span>
+
+                            <p>1. Use very sparingly, and for high level actions<br>
+                            2. Do not use for form submission or form errors - these errors should all be dealt with in the form itself</p>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-32"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                            <h2>Alerts Generator</h2>
+                            <div class="spacer-16"></div>
+                            <form onsubmit="fireAlert(event)">
+                                <div class="cmx-form-group">
+                                    <label>Alert Type</label>
+                                </div>
+                                <div class="flex flex--wrap">
+                                    <div class="padding-right-md"><input type="radio" name="alertType" value="error" checked="checked" /><label><div class="cmx-flag-status cmx-flag-status--alert"></div><span class="cmx-flag-status__label">Error</span></label></div>
+                                    <div class="padding-right-md"><input type="radio" name="alertType" value="warning" /><label><div class="cmx-flag-status cmx-flag-status--warning"></div><span class="cmx-flag-status__label">Warning</span></label></div>
+                                    <div class="padding-right-md"><input type="radio" name="alertType" value="info" /><label><div class="cmx-flag-status cmx-flag-status--info"></div><span class="cmx-flag-status__label">Info</span></label></div>
+                                    <div><input type="radio" name="alertType" value="success" /><label><div class="cmx-flag-status cmx-flag-status--success"></div><span class="cmx-flag-status__label">Success</span></label></div>
+                                </div>
+                                <div class="spacer-16"></div>
+                                <div class="cmx-form-group">
+                                    <label for="alert-message">Message</label> <input class="cmx-form-control" id="alertMessage" name="alertMessage" placeholder="Enter Alert Message" type="text" value = "Order number 9213827389 was placed for this jobsite. "/>
+                                </div>
+                                <div class="spacer-16"></div>
+                                <div class="cmx-form-group">
+                                    <label for="alert-cta">Call To Action</label> <input class="cmx-form-control" id="alertCta" name="alertCta" placeholder="Enter Alert Call To Action Message" type="text" value="Go to your orders." />
+                                </div>
+                                <div class="spacer-16"></div>
+                                <div class="cmx-form-group">
+                                    <label for="alert-ctaf">Call To Action Function</label> <textarea class="cmx-form-control" id="alertCtaFn" name="alertCtaFn">alert('Call to action has been fired');</textarea>
+                                </div>
+                                <div class="spacer-16"></div>
+                                <button type="submit" class="cmx-button ripple">Submit</button>
+                            </form>
+                        </div>
+                </div>
+                <div class="spacer-48"></div>
+                <div class="row">
+
+                    <div class="col-md-12 col-12">
+                        <h2>Examples</h2>
+                        <div class="spacer-16"></div>
+                        <div class="cmx-alert-bar cmx-alert-bar--error">
+                            <p class="cmx-alert-bar__message">Order number 9213827389 was placed for this jobsite. <a class="cmx-alert-bar__action" href="#">Go to your orders</a>.</p>
+                            <button class="cmx-alert-bar__close"><span aria-hidden="true" class="cmx-icon-close"></span><span class="sr-only">Dismiss Alert</span></button>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="cmx-alert-bar cmx-alert-bar--warning">
+                            <p class="cmx-alert-bar__message">Order number 9213827389 was placed for this jobsite. <a class="cmx-alert-bar__action" href="#">Go to your orders</a>.</p>
+                            <button class="cmx-alert-bar__close"><span aria-hidden="true" class="cmx-icon-close"></span><span class="sr-only">Dismiss Alert</span></button>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="cmx-alert-bar cmx-alert-bar--info">
+                            <p class="cmx-alert-bar__message">Order number 9213827389 was placed for this jobsite. <a class="cmx-alert-bar__action" href="#">Go to your orders</a>.</p>
+                            <button class="cmx-alert-bar__close"><span aria-hidden="true" class="cmx-icon-close"></span><span class="sr-only">Dismiss Alert</span></button>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="cmx-alert-bar cmx-alert-bar--success">
+                            <p class="cmx-alert-bar__message">Order number 9213827389 was placed for this jobsite. <a class="cmx-alert-bar__action" href="#">Go to your orders</a>.</p>
+                            <button class="cmx-alert-bar__close"><span aria-hidden="true" class="cmx-icon-close"></span><span class="sr-only">Dismiss Alert</span></button>
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html"><code class="language-html"> &lt;!-- start alerts --&gt;
+&lt;div id="alertsWrapper" class="cmx-alert-wrapper"&gt;
+    &lt;div class="cmx-alert-bar cmx-alert-bar--error"&gt;
+        &lt;p class="cmx-alert-bar__message"&gt;Order number 9213827389 was placed for this jobsite. &lt;a class="cmx-alert-bar__action" href="#"&gt;Go to your orders&lt;/a&gt;.&lt;/p&gt;
+        &lt;button class="cmx-alert-bar__close"&gt;
+            &lt;span class="cmx-icon-close" aria-hidden="true"&gt;&lt;/span&gt;&lt;span class="sr-only"&gt;Dismiss Alert&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="cmx-alert-bar cmx-alert-bar--warning"&gt;
+        &lt;p class="cmx-alert-bar__message"&gt;Order number 9213827389 was placed for this jobsite. &lt;a class="cmx-alert-bar__action" href="#"&gt;Go to your orders&lt;/a&gt;.&lt;/p&gt;
+        &lt;button class="cmx-alert-bar__close"&gt;
+            &lt;span class="cmx-icon-close" aria-hidden="true"&gt;&lt;/span&gt;&lt;span class="sr-only"&gt;Dismiss Alert&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="cmx-alert-bar cmx-alert-bar--info"&gt;
+        &lt;p class="cmx-alert-bar__message"&gt;Order number 9213827389 was placed for this jobsite. &lt;a class="cmx-alert-bar__action" href="#"&gt;Go to your orders&lt;/a&gt;.&lt;/p&gt;
+        &lt;button class="cmx-alert-bar__close"&gt;
+            &lt;span class="cmx-icon-close" aria-hidden="true"&gt;&lt;/span&gt;&lt;span class="sr-only"&gt;Dismiss Alert&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="cmx-alert-bar cmx-alert-bar--success"&gt;
+        &lt;p class="cmx-alert-bar__message"&gt;Order number 9213827389 was placed for this jobsite. &lt;a class="cmx-alert-bar__action" href="#"&gt;Go to your orders&lt;/a&gt;.&lt;/p&gt;
+        &lt;button class="cmx-alert-bar__close"&gt;
+            &lt;span class="cmx-icon-close" aria-hidden="true"&gt;&lt;/span&gt;&lt;span class="sr-only"&gt;Dismiss Alert&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end alerts --&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">// START ALERTS DEMO PAGE
+.cmx{
+    &amp;-alert{
+        &amp;-bar{
+            display: flex;
+            color: $true-white;
+            font-size: $font-size-14;
+            line-height: $line-height-16;
+            overflow:hidden;
+            max-height: 65px;
+            transition: max-height 500ms ease;
+        
+            &amp;__action {
+                font-size: $font-size-14;
+                color: $true-white;
+                line-height: $line-height-16;
+                text-decoration: underline;
+                display: inline-block;
+                background: none;
+                border:none;
+                font-family: $font-family;
+                font-weight: $font-bold;
+                margin:0;
+                padding:0;
+                cursor:pointer;
+                &amp;:focus{
+                    outline:none;
+                }
+        
+                &amp;:hover{
+                    color: $true-white;
+                }
+            }
+        
+            &amp;__message {
+                flex: 1 1 auto;
+                padding: 0.5rem 1rem;
+                font-size: $font-size-14;
+                line-height: $line-height-16;
+                font-family: "Roboto",sans-serif;
+                font-weight: 500;
+            }
+            &amp;__close {
+                flex: 0 0 auto;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                background: none;
+                border: none;
+                color: $true-white;
+                font-size: 1rem;
+        
+                &amp;:focus{
+                    outline: 0;
+                }
+            }
+        
+            &amp;--error {
+                background: $true-red;
+            }
+        
+            &amp;--warning {
+                background: $bright-orange;
+            }
+        
+            &amp;--info {
+                background: $bright-blue;
+            }
+        
+            &amp;--success {
+                background: $bright-green;
+            }
+
+            &amp;.hidden{
+                max-height:0;
+                transition: max-height 500ms ease;
+                overflow: hidden;
+            }
+        }
+        &amp;-wrapper{
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+        }
+    }
+}
+@media (max-width : 576px) {
+    .cmx{
+        &amp;-alert{
+            &amp;-wrapper{
+                position: fixed;
+            }
+        }
+    }
+}
+// END ALERTS DEMO PAGE</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-alert-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #FFF;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    overflow: hidden;
+    max-height: 65px;
+    transition: max-height 500ms ease;
+}
+
+.cmx-alert-bar__action {
+    font-size: 0.875rem;
+    color: #FFF;
+    line-height: 1rem;
+    text-decoration: underline;
+    display: inline-block;
+    background: none;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.cmx-alert-bar__action:focus {
+    outline: none;
+}
+
+.cmx-alert-bar__action:hover {
+    color: #FFF;
+}
+
+.cmx-alert-bar__message {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.cmx-alert-bar__close {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 1rem;
+}
+
+.cmx-alert-bar__close:focus {
+    outline: 0;
+}
+
+.cmx-alert-bar--error {
+    background: #EE3D42;
+}
+
+.cmx-alert-bar--warning {
+    background: #FBB03B;
+}
+
+.cmx-alert-bar--info {
+    background: #3FA9F5;
+}
+
+.cmx-alert-bar--success {
+    background: #7AC943;
+}
+
+.cmx-alert-bar.hidden {
+    max-height: 0;
+    transition: max-height 500ms ease;
+    overflow: hidden;
+}
+
+.cmx-alert-wrapper {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    .cmx-alert-wrapper {
+        position: fixed;
+    }
+}</code></pre>
+<pre data-lang="javaScript"><code class="language-javaScript">module.exports = function() {
+    window.slideToTop = function(){
+        var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        if (currentScroll &gt; 0) {
+            window.requestAnimationFrame(window.slideToTop);
+            window.scrollTo (0,currentScroll - (currentScroll/5));
+        }
+    }
+    window.dismissAlert = function(theAlert){
+        theAlert.addEventListener('transitionend',()=&gt;{
+            theAlert.parentNode.removeChild(theAlert);
+        });
+        theAlert.classList.add('hidden');
+    }
+    window.createAlert = function(parent,type,message,actionMessage=false,actionFn=()=&gt;{}){
+        let alert = document.createElement('div');
+        alert.setAttribute('class','cmx-alert-bar cmx-alert-bar--'+type+' hidden');
+
+        let alertText = document.createElement('p');
+        alertText.setAttribute('class','cmx-alert-bar__message')
+        alertText.textContent = message;
+
+        if(actionMessage) {
+            let alertAction = document.createElement('button');
+            alertAction.setAttribute('class','cmx-alert-bar__action');
+            alertAction.addEventListener('click',actionFn);
+            alertAction.textContent = actionMessage;
+            alertText.appendChild(alertAction);
+        }
+
+        alert.appendChild(alertText);
+
+        let alertDismiss = document.createElement('button');
+        alertDismiss.setAttribute('class','cmx-alert-bar__close');
+        alertDismiss.innerHTML = '&lt;span aria-hidden="true" class="cmx-icon-close"&gt;&lt;/span&gt;&lt;span class="sr-only"&gt;Dismiss Alert&lt;/span&gt;';
+        alertDismiss.addEventListener('click',()=&gt;{
+            window.dismissAlert(alert);
+        });
+
+        alert.appendChild(alertDismiss);
+
+        let numAlerts = parent.querySelectorAll('.cmx-alert-bar');
+        if(numAlerts.length&gt;2){
+            parent.removeChild(parent.childNodes[0]);
+        }
+
+        parent.appendChild(alert);
+        window.slideToTop();
+        alert.classList.remove('hidden');
+
+        window.setTimeout(()=&gt;{
+            window.dismissAlert(alert);
+        },10000);
+    };
+
+    // this one is for demo purposes only
+    window.fireAlert = function(e){
+        e.preventDefault();
+        let target = document.querySelector('#alertsWrapper');
+        let form = e.target;
+        let type = form.alertType.value;
+        let message = form.alertMessage.value;
+        let cta = form.alertCta.value;
+        let ctaFn = function(){
+            eval(form.alertCtaFn.value);
+        }
+        window.createAlert(target, type, message, cta, ctaFn);
+    };
+}
+</code></pre>
+                            </div>
+                            <!-- end .data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                </div>
+            </div>
+            <!-- end .container-fluid -->
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+</body>
+</html>

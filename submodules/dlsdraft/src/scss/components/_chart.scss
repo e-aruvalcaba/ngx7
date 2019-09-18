@@ -1,0 +1,29 @@
+// Chart page
+
+.cmx-chart-text {
+    fill: #303030;
+    -moz-transform: translateY(0.25em);
+    -ms-transform: translateY(0.25em);
+    -webkit-transform: translateY(0.25em);
+    transform: translateY(0.25em);
+}
+
+.cmx-chart-number {
+    font-weight: $font-bold;
+    font-size: 0.25em;
+    line-height: 1;
+    text-anchor: middle;
+    -moz-transform: translateY(-0.45em);
+    -ms-transform: translateY(-0.45em);
+    -webkit-transform: translateY(-0.45em);
+    transform: translateY(-0.45em);
+}
+
+.cmx-chart-label {
+    font-size: 0.2rem;
+    text-anchor: middle;
+    -moz-transform: translateY(0.35em);
+    -ms-transform: translateY(0.35em);
+    -webkit-transform: translateY(0.35em);
+    transform: translateY(0.35em);
+}

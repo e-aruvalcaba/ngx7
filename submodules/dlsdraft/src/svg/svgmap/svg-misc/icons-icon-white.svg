@@ -1,0 +1,23 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 338.5 338.5">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #4197d3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6px;
+        stroke-dasharray: 20;
+      }
+    </style>
+  </defs>
+  <title>icons-icon-white</title>
+  <g id="icons_icon" data-name="icons icon">
+    <path class="cls-1" d="M169.2,42.22A127.35,127.35,0,1,1,78.77,80l.59-.59A126.23,126.23,0,0,1,169.2,42.22m0-42.22A169.25,169.25,0,1,0,338.48,169.26h0A169.25,169.25,0,0,0,169.24,0Z" transform="translate(0.02 0)"/>
+    <path class="cls-2" d="M71.18,159.42" transform="translate(0.02 0)"/>
+    <path class="cls-1" d="M185.56,254.88H152.7V129.27h32.86ZM169.19,118.36c-5.7,0-10.21-1.68-13.38-5a17,17,0,0,1-4.74-12.26,17.43,17.43,0,0,1,4.74-12.43c3.18-3.35,7.69-5.05,13.4-5.05s10.21,1.7,13.43,5a17.3,17.3,0,0,1,4.82,12.44,17,17,0,0,1-4.84,12.29c-3.24,3.38-7.75,5-13.43,5Z" transform="translate(0.02 0)"/>
+  </g>
+</svg>

@@ -1,3 +1,332 @@
-<p>
-  dashboard works!
-</p>
+<cmx-alert></cmx-alert>
+<div
+  [ngStyle.xl]="{'margin': '60px'}"
+  [ngStyle.lg]="{'margin': '60px'}"
+  [ngStyle.xs]="{'margin': '10px'}"
+  [ngStyle.sm]="{'margin': '40px'}"
+  [ngStyle.md]="{'margin': '60px'}">
+  <div fxLayout="row">
+    <a class="nav-bar-item">
+      <h2>{{ translate('rccc.landing_page.modules.rccc_short_title') }} <span aria-hidden="true" class="cmx-icon-right-single" style="color: #3FA9F5; font-size: 12pt;"></span> {{ translate(titleLanguageKey) }}</h2>
+    </a>
+  </div>
+  <div
+    *ngIf="viewType == 'header'"
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutGap="15px"
+    fxLayoutGap.xs="-10px">
+    <div fxFlex="35">
+      <div
+        data-id="cmx-rccc-search-from-date-label"
+        class="cmx-rccc-search-label ">
+        {{translate('rccc.admin.search_from_date_label')}}
+      </div>
+      <div
+        [class.datepicker--error]="datePickerError">
+        <input
+          data-id="fromDateDatePickerInput"
+          class="datepicker-input"
+          [placeholder]="formattedFromDate"
+          value="{{formattedFromDate}}"
+          (click)="toggleDatePickerCloneInitial()"/>
+        <div [hidden]="!showDatePickerCloneInitial">
+          <cmx-datepicker
+            [singleDateSelection]="true"
+            data-id="fromDateDatePicker"
+            class="datepicker"
+            (select)="pickFromDate($event)"
+            (cancel)="cancelDatePickerCloneInitial()"
+            [tags]="datepickerTags"
+            [startWeekWith]="0"
+            [forbiddenWeekDays]="disabledWeekDays"
+            [disabledDates]="disabledDates">
+          </cmx-datepicker>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="35">
+      <div
+        data-id="cmx-rccc-search-to-date-label"
+        class="cmx-rccc-search-label ">
+        {{translate('rccc.admin.search_to_date_label')}}
+      </div>
+      <div
+        class="cmx-input__div--align stretch"
+        [class.datepicker--error]="datePickerError"
+        [ngStyle]="{'margin-top':'18px'}">
+        <input
+          data-id="clone-dialog-datepicker-input-final"
+          class="datepicker-input"
+          [placeholder]="formattedToDate"
+          value="{{formattedToDate}}"
+          (click)="toggleDatePickerCloneFinal()"/>
+        <div [hidden]="!showDatePickerCloneFinal">
+          <cmx-datepicker
+            [singleDateSelection]="true"
+            data-id="clone-dialog-datepicker-final"
+            class="datepicker"
+            (select)="pickToDate($event)"
+            (cancel)="cancelDatePickerCloneFinal()"
+            [tags]="datepickerTags"
+            [startWeekWith]="0"
+            [forbiddenWeekDays]="disabledWeekDays"
+            [disabledDates]="disabledDates">
+          </cmx-datepicker>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    *ngIf="viewType == 'header'"
+    data-id="rccc-charts-headers"
+    class="charts"
+    [ngStyle.xs]="{'margin-top': '10px'}">
+    <div *ngIf="!(items) || (items.length == 0)" class="not-found">
+      {{ translate('database.errors.no_results') }}
+    </div>
+
+    <h3
+      *ngIf="rows && (rows.length > 0)"
+      style="margin-top: 15px; margin-bottom: 15px">{{translate('rccc.catalogs.fleet_type_bu.business_unit')}}</h3>
+    <div fxLayout="row" fxLayoutAlign="end center" fxFill *ngIf="rows && (rows.length > 0)">
+      <a
+        class="cmx-button-link"
+        download="rcccIndex.xlsx"
+        [href]="sanitize(exportUrl)"
+        target="_blank">
+        {{translate('rccc.labels.excel_export')}}
+      </a>
+    </div>
+    <div
+      *ngIf="rows && (rows.length > 0)"
+      data-id="rccc-matrix"
+      #rcccMatrix
+      fxLayout="column"
+      fxFill>
+      <div
+        fxLayout="row"
+        data-id="rccc-matrix-titlebar"
+        class="matrix-titlebar">
+        <div
+          fxFlex.xs="25"
+          data-id="rccc-matrix-row-title"
+          class="matrix-titlebar__row-title">
+          {{rows[0].title}}
+        </div>
+        <div
+          *ngFor="let column of rows[0].columns; let i = index"
+          fxFlex
+          fxLayout="column"
+          data-id="rccc-matrix-columns"
+          class="matrix-titlebar__columns">
+          <div
+            fxFlex
+            fxFlex.xs="75"
+            fxLayoutAlign="end end"
+            [attr.data-id]="'rccc-matrix-column-title-' + i"
+            class="matrix-titlebar__column-title">{{column.text}}</div>
+          <div
+            fxFlex
+            fxFlex.xs="25"
+            fxLayout="row"
+            class="matrix-titlebar__values">
+            <div
+              fxFlex
+              *ngFor="let value of column.values; let j = index"
+              [attr.data-id]="'rccc-matrix-value-title-' + i + '-' + j"
+              class="matrix-titlebar__value-title">
+              {{value.title}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        *ngFor="let row of rows; let i = index"
+        fxLayout="row"
+        class="matrix-row"
+        [class.matrix-row--alternate]="row.alternate">
+        <div fxFlex.xs="25" class="matrix-row__text" [attr.data-id]="'matrix-row-text-' + i">{{row.text}}</div>
+        <div *ngFor="let column of row.columns" fxFlex fxLayout="row" class="matrix-row__columns">
+          <div
+            *ngFor="let value of column.values; let j = index"
+            fxFlex
+            class="matrix-row__value"
+            [class.matrix-row__value--ok]="value.indicatorLevel == 1"
+            [class.matrix-row__value--warning]="value.indicatorLevel == 2"
+            [class.matrix-row__value--danger]="value.indicatorLevel == 3"
+            [attr.data-id]="'matrix-row-value-' + i + '-' + j"
+            (click)="showDetail(row.text, column.text)">
+            {{value.value}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3
+      *ngIf="(fleetRows && (fleetRows.length > 0)) && versionToggle.isFleetEnabled()"
+      style="margin-top: 15px; margin-bottom: 15px">{{translate('rccc.catalogs.fleet_type_bu.fleet_type')}}</h3>
+    <div
+      *ngIf="fleetRows && (fleetRows.length > 0) && versionToggle.isFleetEnabled()"
+      data-id="rccc-fleet-matrix"
+      fxLayout="column"
+      fxFill
+      >
+      <div
+        fxLayout="row"
+        data-id="rccc-fleet-matrix-titlebar"
+        class="matrix-titlebar">
+        <div
+          fxFlex.xs="25"
+          data-id="rccc-fleet-matrix-row-title"
+          class="matrix-titlebar__row-title">
+          {{fleetRows[0].title}}
+        </div>
+        <div
+          *ngFor="let column of fleetRows[0].columns; let i = index"
+          fxFlex
+          fxLayout="column"
+          data-id="rccc-fleet-matrix-columns"
+          class="matrix-titlebar__columns">
+          <div
+            fxLayoutAlign="end end"
+            [attr.data-id]="'rccc-fleet-matrix-column-title-' + i"
+            class="matrix-titlebar__column-title">{{column.text}}</div>
+        </div>
+      </div>
+      <div
+        *ngFor="let row of fleetRows; let i = index"
+        fxLayout="row"
+        class="matrix-row"
+        [class.matrix-row--alternate]="row.alternate">
+        <div fxFlex.xs="25" class="matrix-row__text" [attr.data-id]="'matrix-row-text-' + i">{{row.text}}</div>
+        <div *ngFor="let column of row.columns" fxFlex fxLayout="row" class="matrix-row__columns">
+          <div
+            *ngFor="let value of column.values; let j = index"
+            fxFlex
+            class="matrix-row__value"
+            [class.matrix-row__value--ok]="value.indicatorLevel == 1"
+            [class.matrix-row__value--warning]="value.indicatorLevel == 2"
+            [class.matrix-row__value--danger]="value.indicatorLevel == 3"
+            [attr.data-id]="'matrix-row-value-' + i + '-' + j">
+            {{value.value}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div data-id="rccc-charts-detail" *ngIf="viewType == 'detail'">
+    <div fxLayout="row" class="back-button" (click)="backToHeader()">
+      &lt;&lt; {{translate('rccc.views.labels.go_back')}}
+    </div>
+    <div data-id="record-table">
+      <div fxFill fxLayout="row" class="matrix-titlebar">
+        <div fxFlex="25" class="matrix-titlebar__row-title">
+          {{translate('rccc.catalogs.fleet_type_bu.business_unit')}}
+        </div>
+        <div fxFlex="25" class="matrix-titlebar__row-title">
+          {{translate('rccc.catalogs.fleet_type_bu.material_type')}}
+        </div>
+        <div
+          fxFlex="10"
+          fxLayoutAlign="end end"
+          class="matrix-titlebar__row-title">
+            {{translate('rccc.views.labels.indicators.tn')}}
+        </div>
+        <div
+          fxFlex="10"
+          fxLayoutAlign="end end"
+          class="matrix-titlebar__row-title">
+            {{translate('rccc.views.labels.indicators.ld')}}
+        </div>
+      </div>
+      <div
+        fxFill
+        fxLayout="row"
+        *ngFor="let row of recordTable; let i = index"
+        class="matrix-row"
+        [class.matrix-row--alternate]="i % 2 > 0">
+        <div fxFlex="25" class="matrix-row__text">
+          {{row.businessUnitDesc}}
+        </div>
+        <div fxFlex="25" class="matrix-row__text">
+          {{row.materialTypeDesc}}
+        </div>
+        <div
+          fxFlex="10"
+          fxLayoutAlign="end end"
+          class="matrix-row__value"
+          [class.matrix-row__value--ok]="row.tonsIndicatorLevel == 1"
+          [class.matrix-row__value--warning]="row.tonsIndicatorLevel == 2"
+          [class.matrix-row__value--danger]="row.tonsIndicatorLevel == 3"
+          [attr.data-id]="'detail-record-table-row-tons-value-' + i">
+          {{row.tonsRate}}%
+        </div>
+        <div
+          fxFlex="10"
+          fxLayoutAlign="end end"
+          class="matrix-row__value"
+          [class.matrix-row__value--ok]="row.loadsIndicatorLevel == 1"
+          [class.matrix-row__value--warning]="row.loadsIndicatorLevel == 2"
+          [class.matrix-row__value--danger]="row.loadsIndicatorLevel == 3"
+          [attr.data-id]="'detail-record-table-row-loads-value-' + i">
+          {{row.loadsRate}}%
+        </div>
+      </div>
+    </div>
+    <div data-id="customer-types-table">
+      <div
+        fxLayout="row"
+        class="matrix-titlebar">
+        <div fxFlex="25" fxLayoutAlign="start end" class="matrix-titlebar__row-title">
+            {{translate('rccc.customer_types')}}
+        </div>
+        <div
+          fxFlex="10"
+          fxLayoutAlign="end end"
+          class="matrix-titlebar__row-title">
+            {{translate('rccc.views.labels.indicators.tn')}}
+        </div>
+        <div
+          fxFlex="10"
+          fxLayoutAlign="end end"
+          class="matrix-titlebar__row-title">
+            {{translate('rccc.views.labels.indicators.ld')}}
+        </div>
+      </div>
+      <div
+        fxFill
+        fxLayout="row"
+        *ngFor="let row of customerTypeTable; let i = index"
+        class="matrix-row"
+        [class.matrix-row--alternate]="i % 2 > 0">
+        <div fxFlex="25" class="matrix-row__text">
+          {{row.customerTypeDesc}}
+        </div>
+        <div
+          fxFlex="10"
+          fxLayoutAlign="end end"
+          class="matrix-row__value"
+          [class.matrix-row__value--ok]="row.tonsIndicatorLevel == 1"
+          [class.matrix-row__value--warning]="row.tonsIndicatorLevel == 2"
+          [class.matrix-row__value--danger]="row.tonsIndicatorLevel == 3"
+          [attr.data-id]="'detail-record-table-row-tons-value-' + i">
+          {{row.tonsRate}}%
+        </div>
+        <div
+          fxFlex="10"
+          fxLayoutAlign="end end"
+          class="matrix-row__value"
+          [class.matrix-row__value--ok]="row.loadsIndicatorLevel == 1"
+          [class.matrix-row__value--warning]="row.loadsIndicatorLevel == 2"
+          [class.matrix-row__value--danger]="row.loadsIndicatorLevel == 3"
+          [attr.data-id]="'detail-record-table-row-loads-value-' + i">
+          {{row.loadsRate}}%
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

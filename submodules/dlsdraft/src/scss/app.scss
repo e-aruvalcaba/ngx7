@@ -1,0 +1,326 @@
+// ╔════════════════════════════════════════════════════╗
+// ║  APP.SCSS                                          ║
+// ║  THIS FILE CONTAINS THE IMPORTS OF ALL THE         ║
+// ║  ELEMENTS OF THE CSS SPEC.                         ║
+// ║                                                    ║
+// ║  PICK THE PARTS YOU NEED FOR YOUR PROJECT.         ║
+// ╚════════════════════════════════════════════════════╝
+
+
+// ╔════════════════════════════════════════════════════╗
+// ║  BASIC STUFF, MOST LIKELY YOU'LL USE ALL OF THESE  ║
+// ╚════════════════════════════════════════════════════╝
+
+@import "components/reset";
+@import "components/grid";
+
+// Import floats
+@import "mixins/float";
+
+// Import colors
+@import "variables/colors";
+
+// Import radius
+@import "variables/radius";
+
+// Import borders
+@import "variables/borders";
+
+// Import visibility utility
+@import "utilities/visibility";
+
+// Import typography rules
+@import "components/typography";
+
+// Import helper classes
+@import "utilities/helpers";
+
+// Import animations
+@import "utilities/animations";
+
+// BASE STYLES FOR ANY PAGE
+@import "components/base";
+
+
+// ╔════════════════════════════════════════════════════╗
+// ║  THE COMPONENTS, USE AS NEEDED                     ║
+// ╚════════════════════════════════════════════════════╝
+
+// Import SVG Icons
+@import "components/icons";
+
+// Import Font Icons
+@import "components/font-icons";
+
+// Import the toggler component styles
+@import "components/toggle-switch.css";
+
+// Import buttons
+@import "components/buttons";
+
+
+// Import Local Header
+// Import breadcrumbs
+@import "components/header-local";
+// Import breadcrumbs
+@import "components/breadcrumb";
+
+// the content headings
+@import "components/content-heading";
+
+// Import form components
+@import "components/forms";
+
+// Import nav file for tabs
+@import "components/nav";
+
+// Import progressbar file for progressbars
+@import "components/progress";
+
+// them tables
+@import "mixins/table-row";
+@import "components/tables";
+
+// the modals
+@import "components/modal";
+
+// the maps
+@import "components/map";
+
+// the numeric filter
+@import "components/numeric-filter";
+
+// the pagination
+@import "components/pagination";
+
+// the scroller
+@import "components/scroller";
+
+// the chat
+@import "components/chat";
+
+// the top navigation
+@import "components/main-nav";
+
+// the side navigation
+@import "components/side-nav-bar";
+
+// the footer
+@import "components/footer";
+
+// the alerts
+@import "components/alerts";
+
+// the avatars
+@import "components/avatar";
+
+// the date picker
+@import "components/date-picker";
+
+// the scheduler
+@import "components/scheduler";
+
+// the dropdown
+@import "components/dropdown";
+
+// the popover
+@import "components/popout";
+
+// the accordion
+@import "components/accordion";
+
+// the inputs
+@import "components/inputs";
+
+// the checkbox
+@import "components/checkbox";
+
+// the radio-button
+// @import "components/radio-button";
+
+// the checkbox
+@import "components/switch";
+
+// the radio
+@import "components/radio";
+
+// the radio
+@import "components/status-indicator";
+
+// inline ialogue (popover)
+@import "components/inline-dialogue";
+
+// the header
+@import "components/header";
+
+// dashboard modules
+@import "components/dashboard-modules";
+
+// charts (the circular one)
+@import "components/chart";
+
+// charts (the circular one)
+@import "components/stepper";
+
+// the tags
+@import "components/tags";
+
+// error pages styles
+@import "components/error-page";
+
+// table of contents (if oyu need one)
+@import "components/toc";
+
+// the password strength meter
+@import "components/password-strength";
+
+// the tooltips
+@import "components/tooltip";
+
+// preformatted monospaced code boxes
+@import "components/code-box";
+
+// bottom-cta-bar
+@import "components/bottom-bar";
+
+// dropzone or drag-and-drop zone
+@import "components/dropzone";
+
+// dropzone or drag-and-drop zone
+@import "components/loader";
+
+// ╔════════════════════════════════════════════════════╗
+// ║  MOBILE SPECIFIC STYLES                            ║
+// ╚════════════════════════════════════════════════════╝
+
+@import "components/mobile";
+
+
+// ╔════════════════════════════════════════════════════╗
+// ║  GUIDE STYLES AND LOST DOGS, DISMISS THESE         ║
+// ╚════════════════════════════════════════════════════╝
+
+// demo styles. (for demo purposes only, do not copy to components)
+@import "demo-styles";
+
+// here are the css rules that don't have any element around the guide
+// maybe they were for future use.
+@import "lost-dogs";
+
+
+// START RTL RULES
+
+// for typography-rtl
+@import "rtl/typography-rtl";
+
+// for RTL base
+@import "rtl/base-rtl";
+
+// for RTL layouts
+@import "rtl/rtl-layout";
+
+// for navigation
+@import "rtl/main-nav-rtl";
+
+// for popout
+@import "rtl/popout-rtl";
+
+// for sidebar nav 
+@import "rtl/side-nav-bar-rtl";
+
+// for footer-rtl
+@import "rtl/footer-rtl";
+
+// for buttons with icons
+@import "rtl/buttons-rtl";
+
+// for checkboxes
+@import "rtl/checkbox-rtl";
+
+// for radio buttons
+// @import "rtl/radio-button-rtl";
+
+// for radio
+@import "rtl/radio-rtl";
+
+// for breadcrumbs
+@import "rtl/breadcrumb-rtl";
+
+// for the date-picker (or calendar)
+@import "rtl/date-picker-rtl";
+
+// status indicator rtl
+@import "rtl/status-indicator-rtl";
+
+// for the scheduler
+@import "rtl/scheduler-rtl";
+
+// for the tables
+@import "rtl/tables-rtl";
+
+// for dropdown
+@import "rtl/dropdown-rtl";
+
+// for modal
+@import "rtl/modal-rtl";
+
+// for chat
+@import "rtl/chat-rtl";
+
+// for maps
+@import "rtl/map-rtl";
+
+// for stepper - in rtl is separated in its own file
+@import "rtl/stepper-rtl";
+
+// for pagination rtl
+@import "rtl/pagination-rtl";
+
+// for password-strength rtl
+@import "rtl/password-strength-rtl";
+
+// for progress bars
+@import "rtl/progress-rtl";
+
+// for inputs / forms
+@import "rtl/inputs-rtl";
+
+// for error-page-rtl
+@import "rtl/errors-page-rtl";
+
+// the avatars
+@import "rtl/avatar-rtl";
+
+// the bottom-bar
+@import "rtl/bottom-bar-rtl";
+
+// dropzone-rtl
+@import "rtl/dropzone-rtl";
+
+
+// dropzone-rtl
+@import "rtl/tags-rtl";
+
+// switch-rtl
+@import "rtl/switch-rtl";
+
+// content-heading-rtl
+@import "rtl/content-heading-rtl";
+
+
+// ╔════════════════════════════════════════════════════╗
+// ║  MOBILE RTL SPECIFIC STYLES                        ║
+// ╚════════════════════════════════════════════════════╝
+
+@import "components/mobile-rtl";
+
+
+// demo styles-rtl. 
+@import "demo-styles-rtl";
+
+
+// ╔════════════════════════════════════════════════════╗
+// ║  MOBILE TEMPORARY LODGE                            ║
+// ╚════════════════════════════════════════════════════╝
+
+@import "mobile-temp";

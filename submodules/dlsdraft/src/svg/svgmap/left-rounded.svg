@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3fa9f5;
+      }
+    </style>
+  </defs>
+  <title>left-rounded</title>
+  <path id="Fill-1" class="cls-1" d="M9.85,12l5,6a.63.63,0,0,1-1,.8L8.55,12.43a.63.63,0,0,1-.14-.4.63.63,0,0,1,.14-.4l5.34-6.41a.63.63,0,0,1,1,.8Z"/>
+  <path id="Fill-3" class="cls-1" d="M12,1.1A10.9,10.9,0,1,0,22.9,12,10.92,10.92,0,0,0,12,1.1M12,24A12,12,0,1,1,24,12,12,12,0,0,1,12,24"/>
+</svg>

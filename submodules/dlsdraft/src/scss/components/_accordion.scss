@@ -1,0 +1,26 @@
+.accordion{
+    &__heading{
+        &::after{
+            display: inline-block;
+            font-family: 'dls-icons' !important;
+            content:"\E921";
+            font-size:inherit;
+            transition: transform 100ms ease;
+        }
+    }
+    &__data{
+        display:block;
+    }
+    &.open{
+        .accordion__heading{
+            &::after{
+                transform:rotate(180deg);
+            }
+        }
+    }
+    &.closed{
+        .accordion__data{
+            display:none;
+        }
+    }
+}

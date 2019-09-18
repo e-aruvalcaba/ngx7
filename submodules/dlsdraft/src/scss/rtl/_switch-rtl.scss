@@ -1,0 +1,33 @@
+// _switch-rtl.scss
+
+html[dir="rtl"] input {
+    &[type=checkbox].cmx-switch {
+        margin-right: 0rem; // modified
+        margin-left: 0.375rem; // added
+
+        & + label{
+
+            &::before{
+                margin-right: 0rem; // modified
+                margin-left: 0.375rem; // added
+            }
+
+            &::after{
+                // right: 2px; // added
+                // left: 0;
+                left: 0;
+                right: 26px; 
+            }
+        }
+
+        &:checked {
+            & + label{
+                &::after {
+                    top: 2px;
+                    right: 2px; // modified
+                    left: 26px; // added
+                }
+            }
+        }
+    }
+}

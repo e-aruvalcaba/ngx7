@@ -1,0 +1,151 @@
+<cmx-alert></cmx-alert>
+<div
+  [ngStyle.xl]="{'margin': '60px'}"
+  [ngStyle.lg]="{'margin': '60px'}"
+  [ngStyle.xs]="{'margin': '10px'}"
+  [ngStyle.sm]="{'margin': '40px'}"
+  [ngStyle.md]="{'margin': '60px'}">
+    <div fxLayout="row" [ngStyle.lg]="{'margin-bottom': '15px'}">
+        <a class="nav-bar-item">
+        <h2>{{ translate('views.sidebar.rccc.menues.general_configurations') }} <span aria-hidden="true" class="cmx-icon-right-single" style="color: #3FA9F5; font-size: 12pt;"></span> {{ translate('rccc.catalogs.unlocktimes.title') }}</h2>
+        </a>
+    </div>
+    <div
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutGap="15px"
+        fxLayoutGap.xs="-10px">
+        <div fxFlex="25">
+        <div
+            data-id="cmx-rccc-search-label"
+            class="cmx-rccc-search-label ">
+            {{translate('rccc.admin.search_label')}}
+        </div>
+        <cmx-dropdown
+            data-id="countryDropDown"
+            class="cmx-input"
+            [closeOnClick]="true"
+            [enableSearch]="true"
+            placeholder="{{selectedCountryPlaceholder}}">
+            <cmx-dropdown-item
+            *ngFor="let country of countries"
+            (click)="selectCountry(country)"
+            [searchValue]="country.entryDesc">
+            {{ (country.entryCode == "") ? "-" : country.entryDesc }}
+            </cmx-dropdown-item>
+        </cmx-dropdown>
+        </div>
+
+        <div fxFlex="25">
+        <cmx-dropdown
+            data-id="productTypeDropDown"
+            class="cmx-input"
+            [closeOnClick]="true"
+            [enableSearch]="true"
+            placeholder="{{selectedMaterialTypePlaceholder}}">
+            <cmx-dropdown-item
+            *ngFor="let materialType of materialTypes"
+            (click)="selectMaterialType(materialType)"
+            [searchValue]="materialType.materialTypeDesc">
+            {{ (materialType.productTypeCode == "") ? "-" : (materialType.productTypeCode + ' - ' + materialType.productTypeDesc) }}
+            </cmx-dropdown-item>
+        </cmx-dropdown>
+        </div>
+
+    </div>
+
+    <cmx-datatable
+        [data]="unlockTimes"
+        [canEdit]="true"
+        [canDelete]="true"
+        [canAdd]="true"
+        (onAdded)="onSave($event)"
+        (onEdited)="onEdit($event)"
+        (onDeleted)="onDelete($event)"
+        (onCancel)="onCancel($event)"
+        [editModal]="true"
+        [alternateRowStyle]="true"
+        errorMaxLenMessage="{{translate('datatable.errors.max_len')}}"
+        errorMinLenMessage="{{translate('datatable.errors.min_len')}}"
+        errorMaxValueMessage="{{translate('datatable.errors.min')}}"
+        errorMinValueMessage="{{translate('datatable.errors.max')}}"
+        errorRequiredMessage="{{translate('datatable.errors.is_required')}}"
+        errorPatternMessage="{{translate('datatable.errors.pattern')}}"
+        labelAddNew="{{translate('datatable.labels.add_new')}}"
+        labelShowAll="{{translate('datatable.labels.show_all')}}"
+        labelSaveConfiguration="{{translate('datatable.labels.save_configuration')}}"
+        labelCancelUpdate="{{translate('datatable.labels.cancel_update')}}"
+        labelEditRecord="{{translate('datatable.labels.edit_record')}}">
+        <cmx-data-table-column
+            property="unlockTimeId"
+            header="{{ translate('rccc.catalogs.fleet_type.fleet_type_code') }}"
+            [isEditable]="false"
+            required="false"
+            [visible]="false">
+        </cmx-data-table-column>
+        <cmx-data-table-column
+            property="countryCode"
+            header="{{ translate('rccc.settings.holidays.country') }}"
+            [isEditable]="true"
+            [isAddable]="true"
+            editModeType="comboBox"
+            [dataSource]="countries"
+            valueProperty="entryCode"
+            displayProperty="entryDesc"
+            labelProperty="countryDesc"
+            required="true"
+            expandedProperties="creationDateTime, userAccountCreation"
+            expandedHeaders="{{ translate('rccc.catalogs.creationDateTime') }}, {{ translate('rccc.catalogs.creationUserId') }}">
+        </cmx-data-table-column>
+        <cmx-data-table-column
+            property="materialTypeId"
+            header="{{ translate('rccc.admin.selected_material_type_label') }}"
+            [isEditable]="true"
+            [isAddable]="true"
+            editModeType="comboBox"
+            [dataSource]="materialTypes"
+            valueProperty="productTypeId"
+            displayProperty="productTypeDesc"
+            labelProperty="materialTypeDesc"
+            required="true"
+            expandedProperties="changedDateTime, userAccountChange"
+            expandedHeaders="{{ translate('rccc.catalogs.changeDateTime') }}, {{ translate('rccc.catalogs.changeUserId') }}">
+        </cmx-data-table-column>
+        <cmx-data-table-column
+            property="unlockTime"
+            header="{{ translate('rccc.catalogs.unlocktimes.threshold') }}"
+            [isEditable]="true"
+            editModeType="number"
+            min="1"
+            max="99"
+            required="true">
+        </cmx-data-table-column>
+    </cmx-datatable>
+    <div class="not-found" *ngIf="!hasItems">
+        {{ translate('database.errors.no_results') }}
+    </div>
+    <cmx-dialog
+                #deleteFrequency
+                data-id="deleteFrequency"
+                [enableFooter]="true"
+                [enableClose]="true"
+                backgroundColor="gray"
+                width="650px"
+                height="260px"
+                minWidth="650px"
+                minHeight="260px">
+                <cmx-dialog-body>
+                  <h3 class="dialog-title">{{messageText}}</h3>
+                </cmx-dialog-body>
+                <cmx-dialog-footer style="text-align: center;">
+                    <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="center center">
+                        <button cmx-button color="blue" (click)="onDeleteDialogConfirm()">
+                            {{translate('views.global.btn_confirm')}}
+                        </button>
+                        <button cmx-button color="'red'" (click)="onDeleteDialogCancel()">
+                            {{translate('views.global.btn_cancel')}}
+                        </button>
+                    </div>
+                </cmx-dialog-footer>
+            </cmx-dialog>
+</div>

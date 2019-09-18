@@ -1,3 +1,8 @@
-<p>
-  cmx-calendar-day works!
-</p>
+<div *ngIf="calendarDay"
+  class="cmx-calendar__day"
+  [class.cmx-calendar__day--selected]="calendarDay.isSelected"
+  [class.cmx-calendar__day--working-day]="calendarDay.isWorkingDay"
+  [class.cmx-calendar__day--non-working-day]="!calendarDay.isWorkingDay"
+  (click)="selectDay(this.date)">
+  {{calendarDay.dayNumber}}
+</div>

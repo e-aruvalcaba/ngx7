@@ -1,3 +1,721 @@
-<p>
-  country-settings works!
-</p>
+<div class="alert-box">
+  <cmx-alert></cmx-alert>
+</div>
+<div style="margin-top: 20px; margin-left: 35px; width: 90%;">
+  <div fxLayout="row" [ngStyle.lg]="{'margin-bottom': '15px'}">
+    <a class="nav-bar-item">
+      <h2>
+        {{ translate('views.sidebar.RCCC_App') }}
+        <span aria-hidden="true" class="cmx-icon-right-single" style="color: #3FA9F5; font-size: 12pt;"></span>
+        {{ translate('digital_confirmation.labels.settings.lbl_country_settings') }}
+      </h2>
+    </a>
+  </div>
+  <div class="form-container">
+    <div fxLayout="row">
+      {{ translate('views.global.lbl_country') }}:
+      <cmx-form-field style="margin-left: 30px;" [error]="false">
+        <input type="text" readonly [(ngModel)]="countrySettings.countryCode" style="background-color: #f3f3f3;"
+        class="input" />
+        <error-message>
+          {{ translate('digital_confirmation.errors.invalid_country_code') }}
+        </error-message>
+      </cmx-form-field>
+    </div>
+    <cmx-tabs id="cmxTabs" [rtl]="false" data-cy="cmx-tab-1">
+      <cmx-tab data-id="general-tab" [title]="translate('digital_confirmation.settings.lbl_general')">
+        <br>
+        <div fxLayout="row">
+          <h3>
+            {{ translate('digital_confirmation.settings.lbl_general') }}
+          </h3>
+        </div>
+        <br>
+        <div fxLayout="row">
+          <div fxLayout="column" fxFlex.xs="70" fxFlex.sm="70" fxFlex.md="50" fxFlex.lg="40" fxFlex="20">
+            <div fxLayout="column" class="input-height">
+              {{ translate('digital_confirmation.settings.lbl_counter_offer_quantity') }}:
+            </div>
+            <div fxLayout="column" class="input-height">
+              {{ translate('digital_confirmation.settings.lbl_counter_offer_horizon') }}:
+            </div>
+          </div>
+          <div fxLayout="column" fxFlex.xs="30" fxFlex.sm="20" fxFlex.md="15" fxFlex.lg="15" fxFlex="15">
+            <div fxLayout="column" class="input-height">
+              <cmx-form-field [error]="checkValidity(countrySettings.counterOfferNumber, 1, 5)">
+                <input data-id="counterOfferNumber" type="number" [(ngModel)]="countrySettings.counterOfferNumber"
+                (keydown)="checkUserInput($event)" style="text-align: right" min="1" max="5" />
+                <error-message>
+                  {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                </error-message>
+              </cmx-form-field>
+            </div>
+            <div fxLayout="column" class="input-height">
+              <cmx-form-field [error]="checkValidity(countrySettings.counterOfferHorizon, 24, 144)">
+                <input data-id="counterOfferSearchLimit" type="number" [(ngModel)]="countrySettings.counterOfferHorizon"
+                (keydown)="checkUserInput($event)" style="text-align: right" min="24" max="720" />
+                <error-message>
+                  {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                </error-message>
+              </cmx-form-field>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div fxLayout="row">
+          <div fxLayout="column" fxFlex.xs="70" fxFlex.sm="70" fxFlex.md="50" fxFlex.lg="40" fxFlex="20">
+            <div fxLayout="column" class="input-height">
+              <div fxLayout="row">
+                {{ translate('digital_confirmation.settings.lbl_enable_commercial_management') }}
+                <sub class="tooltip"
+                  cmx-tooltip="{{translate('digital_confirmation.settings.tooltips.enable_commercial_management')}}">?</sub>
+              </div>
+            </div>
+          </div>
+          <div fxLayout="column" fxFlex.xs="30" fxFlex.sm="20" fxFlex.md="15" fxFlex.lg="15" fxFlex="15">
+            <div fxLayout="column" class="input-height">
+              <label class="check-container">
+                <input type="checkbox" [checked]="countrySettings.fleetConfirmation"
+                (change)="countrySettings.commercialManagement = !countrySettings.commercialManagement">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <!-- table -->
+        </div>
+        <br>
+        <div fxLayout="row">
+          <h3>
+            <div fxLayout="row">
+              {{ translate('digital_confirmation.settings.lbl_ols_multioffer') }}
+              <sub class="tooltip"
+                cmx-tooltip="{{translate('digital_confirmation.settings.tooltips.enable_ols_multioffer')}}"
+                [position]="'left'">?</sub>
+            </div>
+          </h3>
+        </div>
+        <div fxLayout="row">
+          <div fxLayout="column" fxFlex.xs="70" fxFlex.sm="70" fxFlex.md="50" fxFlex.lg="40" fxFlex="20">
+            <div fxLayout="column" class="input-height">
+              {{ translate('digital_confirmation.settings.lbl_ols_offer_quantity') }}:
+            </div>
+            <div fxLayout="column" class="input-height">
+              {{ translate('digital_confirmation.settings.lbl_ols_counter_offer_horizon') }}:
+            </div>
+          </div>
+          <div fxLayout="column" fxFlex.xs="30" fxFlex.sm="20" fxFlex.md="15" fxFlex.lg="15" fxFlex="15">
+            <div fxLayout="column" class="input-height">
+              <cmx-form-field [error]="checkValidity(countrySettings.multiOfferQuantity, 1, 5)">
+                <input type="number" [(ngModel)]="countrySettings.multiOfferQuantity" (keydown)="checkUserInput($event)"
+                style="text-align: right" min="1" max="5" />
+                <error-message>
+                  {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                </error-message>
+              </cmx-form-field>
+            </div>
+            <div fxLayout="column" class="input-height">
+              <cmx-form-field [error]="checkValidity(countrySettings.multiOfferHorizon, 24, 720)">
+                <input type="number" [(ngModel)]="countrySettings.multiOfferHorizon" (keydown)="checkUserInput($event)"
+                style="text-align: right" min="24" max="720" />
+                <error-message>
+                  {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                </error-message>
+              </cmx-form-field>
+            </div>
+          </div>
+          <!-- table -->
+        </div>
+      </cmx-tab>
+      <!-- Material Types Tab -->
+      <cmx-tab data-id="material-types-tab" [title]="translate('digital_confirmation.settings.lbl_material_types')">
+        <br>
+        <div fxLayout="row">
+          <h3>
+            {{ translate('digital_confirmation.settings.lbl_material_types') }}
+          </h3>
+        </div>
+        <br>
+        <div fxLayout="row" *ngFor="let material of materialTypes?.productTypes">
+          <!-- NEW CUSTOM CHECKBOX -->
+          <label class="check-container">
+          <input type="checkbox" [checked]="material.selected" (change)="enableMaterial(material)">
+          <span class="checkmark"></span>
+          {{ translate(material.productTypeDesc) }}
+          </label>
+
+
+
+        </div>
+      </cmx-tab>
+      <cmx-tab data-id="transportation-mode-tab"
+        [title]="translate('digital_confirmation.settings.lbl_transportation_mode')">
+        <br>
+        <div fxLayout="row">
+          <h3>
+            {{ translate('digital_confirmation.settings.lbl_transportation_mode') }}
+          </h3>
+        </div>
+        <br>
+        <div fxLayout="row" *ngFor="let mode of shippingTypes?.shippingTypes">
+          <label class="check-container">
+          <input type="checkbox" [checked]="mode.selected" (change)="enableShippingType(mode)">
+          <span class="checkmark"></span>
+          {{ translate(mode.shippingTypeDesc) }}
+          </label>
+        </div>
+      </cmx-tab>
+      <cmx-tab data-id="shipping-conditions-tab"
+        [title]="translate('digital_confirmation.settings.lbl_shipping_conditions')">
+        <br>
+        <div fxLayout="row">
+          <h3>
+            {{ translate('digital_confirmation.settings.lbl_shipping_conditions') }}
+          </h3>
+        </div>
+        <br>
+        <div fxLayout="row" *ngFor="let ship of shippingConditions?.shippingConditions">
+          <label class="check-container" attr.data-id="shippingConditionCheckbox-{{ship.shippingConditionId}}">
+          <input type="checkbox" [checked]="ship.selected" (change)="enableShippingCondition(ship)">
+          <span class="checkmark"></span>
+          {{ translate(ship.shippingConditionDesc) }}
+          </label>
+
+
+
+
+        </div>
+      </cmx-tab>
+      <cmx-tab data-id="times-tab" [title]="translate('digital_confirmation.settings.lbl_times')">
+        <cmx-tabs>
+          <cmx-tab data-id="times-reservation-time-tab"
+            [title]="translate('digital_confirmation.settings.lbl_reservation_time')">
+            <br>
+            <div fxLayout="row">
+              <h3>
+                <div fxLayout="row">
+                  {{ translate('digital_confirmation.settings.lbl_reservation_time') }}
+                  <sub class="tooltip"
+                    cmx-tooltip="{{translate('digital_confirmation.settings.tooltips.reservation_time')}}"
+                    [position]="'left'">?</sub>
+                </div>
+              </h3>
+            </div>
+            <br>
+            <div fxLayout="row">
+              <div fxLayout="column" fxFlex.xs="30" fxFlex.sm="30" fxFlex.md="25" fxFlex="15">
+                {{translate('digital_confirmation.settings.lbl_origin_data_source')}}
+              </div>
+              <div fxLayout="column" fxFlex.xs="30" fxFlex.sm="20" fxFlex.md="25" fxFlex="17">
+                {{translate('digital_confirmation.settings.lbl_minutes_min_max')}}
+              </div>
+            </div>
+            <br>
+            <div fxLayout="row" *ngFor="let appClient of applicationClients?.applicationClients">
+              <div fxLayout="column" fxFlex.xs="30" fxFlex.sm="30" fxFlex.md="25" fxFlex="15">
+                <div fxLayout="column" class="input-height">
+                  {{appClient?.applicationClientDesc}}
+                </div>
+              </div>
+              <div fxLayout="column" fxFlex.xs="30" fxFlex.sm="20" fxFlex.md="25" fxFlex="17">
+                <div fxLayout="column" class="input-height">
+                  <cmx-form-field [error]="checkValidityReservationTime(appClient?.applicationClientId, 1, 60)">
+                    <input type="number" (change)="updateReservationTime($event, appClient?.applicationClientId)"
+                    [(ngModel)]="appClient.reservationTime" (keydown)="checkUserInput($event)"
+                    style="text-align: right" min="1" max="60" />
+                    <error-message>
+                      {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                    </error-message>
+                  </cmx-form-field>
+                </div>
+              </div>
+            </div>
+          </cmx-tab>
+          <!-- compensation time tab -->
+          <cmx-tab data-id="times-compensation-time-tab"
+            [title]="translate('digital_confirmation.settings.lbl_compensation_time')">
+            <br>
+            <div fxLayout="row">
+              <h3>
+                <div fxLayout="row">
+                  {{ translate('digital_confirmation.settings.lbl_truck_compensation_time') }}
+                  <sub class="tooltip"
+                    cmx-tooltip="{{translate('digital_confirmation.settings.tooltips.truck_compensation_time')}}"
+                    [position]="'left'">?</sub>
+                </div>
+              </h3>
+            </div>
+            <br>
+            <div fxLayout="column">
+              <div fxLayout="row" *ngFor="let geo of geolocationServices?.geolocationServices">
+                <div fxFlex.lt-md="33" fxFlex.lt-lg="18" fxFlex="14" style="padding-top: 24px">
+                  {{geo.geolocationServiceDesc}}
+                </div>
+                <div fxFlex.lt-md="33" fxFlex.lt-lg="18" fxFlex="10" style="padding-top: 24px; padding-right: 10px">
+                  <cmx-form-field *ngIf="geo.calculationTypeId == 1"
+                  [error]="checkValidity(geo.compensationTime, 0, 1440)">
+                  <!-- onkeydown="return event.keyCode !== 69" -->
+                  <input data-id="geolocationServicesMinutes" type="number" (change)="changeCompensationTime(geo)"
+                  [(ngModel)]="geo.compensationTime" (keydown)="checkUserInput($event)" style="text-align: right"
+                  min="1" max="1440" />
+                  <error-message>
+                    {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                  </error-message>
+                  </cmx-form-field>
+                  <cmx-form-field *ngIf="geo.calculationTypeId != 1"
+                  [error]="checkValidity(geo.compensationTime, 0, 100)">
+                  <input data-id="geolocationServicesPercent" type="number" (change)="changeCompensationTime(geo)"
+                  [(ngModel)]="geo.compensationTime" (keydown)="checkUserInput($event)" style="text-align: right"
+                  min="1" max="100" />
+                  <error-message>
+                    {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                  </error-message>
+                  </cmx-form-field>
+                </div>
+                <div fxFlex.lt-md="33" fxFlex.lt-lg="24" fxFlex="18">
+                  <cmx-dropdown class="cmx-input" [closeOnClick]="true"
+                    placeholder="{{geo.calculationTypeId == 1 ? translate('digital_confirmation.settings.lbl_minutes') : translate('digital_confirmation.settings.lbl_percent') }}">
+                    <cmx-dropdown-item (click)="changeCalcType(1, geo)">
+                      {{translate('digital_confirmation.settings.lbl_minutes')}}
+                    </cmx-dropdown-item>
+                    <cmx-dropdown-item (click)="changeCalcType(2, geo)">
+                      {{translate('digital_confirmation.settings.lbl_percent')}}
+                    </cmx-dropdown-item>
+                  </cmx-dropdown>
+                </div>
+              </div>
+            </div>
+          </cmx-tab>
+          <!-- Logistics reaction time tab -->
+          <cmx-tab data-id="times-reaction-time-tab"
+            [title]="translate('digital_confirmation.settings.lbl_logistics_reaction_time')">
+            <br>
+            <div fxLayout="row">
+              <div fxLayout="column" style="margin-right: 10%;">
+                <h3>
+                  <div fxLayout="row">
+                    {{ translate('digital_confirmation.settings.lbl_logistics_reaction_time') }}
+                    <sub class="tooltip"
+                      cmx-tooltip="{{translate('digital_confirmation.settings.tooltips.logistics_reaction_time')}}"
+                      [position]="'left'">?</sub>
+                  </div>
+                </h3>
+              </div>
+              <div fxLayout="column">
+                <h3>
+                  {{ translate('digital_confirmation.settings.lbl_minutes_min_max_0_360') }}
+                </h3>
+              </div>
+            </div>
+            <br>
+            <table style="width: 60%;">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="table-padding">{{translate('rccc.admin.selected_material_type_label')}}</th>
+                </tr>
+                <tr>
+                  <th class="table-padding">{{translate('digital_confirmation.settings.lbl_shipping_condition')}}</th>
+                  <th class="table-padding" *ngFor="let col of countrySettings?.productTypes">
+                    {{translate(col.productTypeDesc)}}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let row of countrySettings?.shippingConditions">
+                  <td class="table-padding">{{translate(row.shippingConditionDesc)}}</td>
+                  <td class="table-padding" *ngFor="let col of countrySettings?.productTypes">
+                    <cmx-form-field [error]="checkValidityReaction(row.shippingConditionId, col.productTypeId, 0, 360)">
+                      <input type="number" style="text-align: right" min="0" max="360"
+                      placeholder="{{getReactionTime(row.shippingConditionId, col.productTypeId)}}"
+                      (change)="addReactionTime(row.shippingConditionId, col.productTypeId, $event)"
+                      (keydown)="checkUserInput($event)" />
+                      <error-message>
+                        {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                      </error-message>
+                    </cmx-form-field>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </cmx-tab>
+          <!-- loading time tab -->
+          <cmx-tab data-id="times-loading-time-tab"
+            [title]="translate('digital_confirmation.settings.lbl_total_cycle_loading_time')">
+            <br>
+            <div fxLayout="row">
+              <div fxLayout="column" style="margin-right: 10%;">
+                <h3>
+                  <div fxLayout="row">
+                    {{ translate('digital_confirmation.settings.lbl_total_cycle_loading_time') }}
+                    <sub class="tooltip"
+                      cmx-tooltip="{{translate('digital_confirmation.settings.tooltips.total_cycle_loading_time')}}"
+                      [position]="'left'">?</sub>
+                  </div>
+                </h3>
+              </div>
+              <div fxLayout="column">
+                <h3>
+                  {{ translate('digital_confirmation.settings.lbl_minutes_min_max_1_360') }}
+                </h3>
+              </div>
+            </div>
+            <br>
+            <table style="width: 40%;" [ngStyle.lt-md]="{'width': '100%'}">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="table-padding">
+                    {{translate('digital_confirmation.settings.lbl_transportation_mode')}}
+                  </th>
+                </tr>
+                <tr>
+                  <th class="table-padding">
+                    {{translate('rccc.admin.selected_material_type_label')}}
+                  </th>
+                  <th class="table-padding" *ngFor="let col of countrySettings?.shippingTypes">
+                    {{translate(col.shippingTypeDesc)}}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let row of countrySettings?.productTypes">
+                  <td class="table-padding" style="width: 20%">{{translate(row.productTypeDesc)}}</td>
+                  <td class="table-padding" style="width: 20%" *ngFor="let col of countrySettings?.shippingTypes">
+                    <cmx-form-field [error]="checkValidityLoading(col.shippingTypeId, row.productTypeId, 1, 360)">
+                      <input [attr.data-id]="'shippingTypeId' + row.productTypeId + col.shippingTypeId" type="number"
+                      style="text-align: right" min="0" max="360"
+                      placeholder="{{getLoadingTime(col.shippingTypeId, row.productTypeId)}}"
+                      (change)="addLoadingTime(col.shippingTypeId, row.productTypeId, $event)"
+                      (keydown)="checkUserInput($event)" />
+                      <error-message>
+                        {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                      </error-message>
+                    </cmx-form-field>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </cmx-tab>
+        </cmx-tabs>
+      </cmx-tab>
+      <!-- delivery time commitment tab -->
+      <cmx-tab data-id="delivery-time-commitment-tab" [title]="translate('digital_confirmation.settings.lbl_delivery')">
+        <br>
+        <div fxLayout="row">
+          <h3>
+            {{ translate('digital_confirmation.settings.lbl_delivery_time_commitment') }}
+          </h3>
+        </div>
+        <table style="width: 70%;">
+          <thead>
+            <tr>
+              <th style="width: 15%;"></th>
+              <th class="table-padding">{{translate('rccc.admin.selected_material_type_label')}}</th>
+            </tr>
+            <tr>
+              <th class="table-padding" style="width: 10%">
+                {{translate('digital_confirmation.settings.lbl_shipping_condition')}}
+              </th>
+              <th class="table-padding" *ngFor="let col of countrySettings?.productTypes">
+                {{translate(col.productTypeDesc)}}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr attr.data-id="deliveryTimeCommitmentRow-{{row.shippingConditionId}}"
+              *ngFor="let row of countrySettings?.shippingConditions">
+              <td class="table-padding" style="width: 10%">{{translate(row.shippingConditionDesc)}}</td>
+              <td class="table-padding" *ngFor="let col of countrySettings?.productTypes">
+                <div style="display: inline-block; width: 165px">
+                  <cmx-dropdown class="cmx-input" [closeOnClick]="true"
+                    placeholder="{{displayWindowOption(row?.shippingConditionId, col?.productTypeId)}}">
+                    <cmx-dropdown-item (click)="processCommitment(row?.shippingConditionId, col?.productTypeId, del)"
+                    *ngFor="let del of deliveryWindows?.deliveryWindows">
+                    {{del.deliveryWindowDesc}}
+                    </cmx-dropdown-item>
+                  </cmx-dropdown>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </cmx-tab>
+      <cmx-tab data-id="offer-calendar-tab" [title]="translate('digital_confirmation.settings.lbl_offer_calendar')">
+        <br>
+        <div fxLayout="row">
+          <h3>
+            {{ translate('digital_confirmation.settings.lbl_offer_calendar') }}
+          </h3>
+        </div>
+        <br>
+        <div fxLayout="row">
+          <div fxLayout="column" class="column-width">
+            <div fxLayout="column">
+              <h3>{{ translate('digital_confirmation.settings.lbl_working_days') }}</h3>
+            </div>
+            <br>
+            <div fxLayout="column" class="input-height">
+              <label class="check-container">
+              <input type="checkbox" [checked]="checkCalendar(7)" (change)="updateCalendar(7)">
+              <span class="checkmark"></span>
+              {{weekDays[0]}}
+              </label>
+              <label class="check-container">
+              <input type="checkbox" [checked]="checkCalendar(6)" (change)="updateCalendar(6)">
+              <span class="checkmark"></span>
+              {{weekDays[1]}}
+              </label>
+              <label class="check-container">
+              <input type="checkbox" [checked]="checkCalendar(5)" (change)="updateCalendar(5)">
+              <span class="checkmark"></span>
+              {{weekDays[2]}}
+              </label>
+              <label class="check-container">
+              <input type="checkbox" [checked]="checkCalendar(4)" (change)="updateCalendar(4)">
+              <span class="checkmark"></span>
+              {{weekDays[3]}}
+              </label>
+              <label class="check-container">
+              <input type="checkbox" [checked]="checkCalendar(3)" (change)="updateCalendar(3)">
+              <span class="checkmark"></span>
+              {{weekDays[4]}}
+              </label>
+              <label class="check-container">
+              <input type="checkbox" [checked]="checkCalendar(2)" (change)="updateCalendar(2)">
+              <span class="checkmark"></span>
+              {{weekDays[5]}}
+              </label>
+              <label class="check-container">
+              <input type="checkbox" [checked]="checkCalendar(1)" (change)="updateCalendar(1)">
+              <span class="checkmark"></span>
+              {{weekDays[6]}}
+              </label>
+            </div>
+          </div>
+          <div fxLayout="column" class="column-width">
+            <h3>{{ translate('digital_confirmation.settings.lbl_non_working_days') }}</h3>
+            <p (click)="addNonWorkingDay()"
+              style="color: #3ec8f3; text-decoration: underline; font-weight: 600; margin: 0 0 0 auto; cursor: pointer;">
+              {{translate('digital_confirmation.settings.lbl_add_date')}}
+            </p>
+            <div data-id="nonWorkingDays" fxLayout="column">
+              <div style="height: 25px;" fxLayout="row" *ngFor="let date of countrySettings?.calendar?.nonWorkingDays">
+                <div fxLayout="column" style="width: 50%;">
+                  {{getFormattedDate(date)}}
+                </div>
+                <div fxLayout="column" style="cursor: pointer; color: #09b5ea;" (click)="deleteDate(date)">
+                  <span class="cmx-icon-delete" aria-hidden="true"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </cmx-tab>
+    </cmx-tabs>
+    <br>
+    <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="end center">
+      <button cmx-button data-id="saveButton" color="blue" (click)="onSave()">
+      {{translate('views.global.btn_save')}}
+      </button>
+    </div>
+  </div>
+  <!-- WINDOW DIALOG -->
+  <cmx-dialog #windowDialog [enableFooter]="true" [enableClose]="true">
+  <cmx-dialog-body fxLayout="column" class="dialog-copy-model">
+    <div fxLayout="row">
+      <h2 style="margin: auto;">{{translate('digital_confirmation.settings.lbl_windows')}}</h2>
+    </div>
+    <div fxLayout="row">
+      <p data-id="deliveryTimeCommitmentWindowsAddShift" (click)="openNewWindow()"
+        style="color: #3ec8f3; text-decoration: underline; font-weight: 600; margin-left: auto; cursor: pointer;">
+        {{translate('digital_confirmation.settings.lbl_add_shift')}}
+      </p>
+      <!--(click)="addShift()" -->
+    </div>
+    <table style="width: 100%; table-layout: fixed;">
+      <thead>
+        <tr>
+          <th>{{translate('digital_confirmation.settings.lbl_number')}}</th>
+          <th>{{translate('digital_confirmation.settings.lbl_start_at')}}</th>
+          <th>{{translate('digital_confirmation.settings.lbl_end_at')}}</th>
+          <th>{{translate('digital_confirmation.settings.lbl_duration')}}</th>
+          <th style="width: 3%;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of windows">
+          <td>{{row.windowNumber}}</td>
+          <td style="padding-right: 40px;">
+            <p>
+              {{row.startAt}}
+            </p>
+          </td>
+          <td style="padding-right: 40px;">
+            <p>
+              {{row.endAt}}
+            </p>
+          </td>
+          <td>{{getDuration(row.startAt, row.endAt)}}</td>
+          <td>
+            <div style="cursor: pointer; color: #09b5ea;" (click)="editShift(row)">
+              <span class="cmx-icon-edit" aria-hidden="true"></span>
+            </div>
+          </td>
+          <td>
+            <div style="cursor: pointer; color: #09b5ea;" (click)="deleteShift(row)">
+              <span class="cmx-icon-delete" aria-hidden="true"></span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td style="color: red">{{translate('digital_confirmation.settings.lbl_total')}}</td>
+          <td style="color: red">{{getTotalDuration()}}</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </cmx-dialog-body>
+  <cmx-dialog-footer style="text-align: center;">
+    <div fxLayout="row">
+      <div fxLayout="column" style="margin-left: auto; margin-right: 8px; width: 20%;">
+        <button data-id="deliveryTimeCommitmentWindowsCancelButton" cmx-button color="blue-inverse"
+          (click)="closeWindowDialog()">
+        {{translate('rccc.catalogs.cancel')}}
+        </button>
+      </div>
+      <div fxLayout="column" style="width: 20%;">
+        <button data-id="deliveryTimeCommitmentWindowsSaveButton" cmx-button color="blue"
+        [disabled]="!canSaveDeliveryTimeCommitmentWindows" (click)="windowOk()">
+        {{translate('views.globals.lblOk')}}
+        </button>
+      </div>
+    </div>
+  </cmx-dialog-footer>
+  </cmx-dialog>
+  <!-- NEW WINDOW DIALOG -->
+  <cmx-dialog #newWindowDialog [enableFooter]="true" [enableClose]="true">
+  <cmx-dialog-body fxLayout="column" class="dialog-copy-model">
+    <div fxLayout="row">
+      <h2 style="margin: auto;">{{translate('digital_confirmation.settings.lbl_new_windows')}}</h2>
+    </div>
+    <table style="width: 100%; table-layout: fixed;">
+      <thead>
+        <tr>
+          <th>{{translate('digital_confirmation.settings.lbl_number')}}</th>
+          <th>{{translate('digital_confirmation.settings.lbl_start_at')}}</th>
+          <th>{{translate('digital_confirmation.settings.lbl_end_at')}}</th>
+          <th>{{translate('digital_confirmation.settings.lbl_duration')}}</th>
+          <th style="width: 3%;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr *ngFor="let row of windows"> -->
+        <tr>
+          <td>{{tempWindow!=null?tempWindow.windowNumber:1}}</td>
+          <td style="padding-right: 40px;">
+            <cmx-dropdown class="cmx-input" [closeOnClick]="true" placeholder="{{_startAtDirty?_startAt:tempwindow?tempwindow.startAt:_startAt}}">
+              <cmx-dropdown-item *ngFor='let op of startAt' (click)="setStartAt(op)">{{op}}
+              </cmx-dropdown-item>
+            </cmx-dropdown>
+          </td>
+          <td style="padding-right: 40px;">
+            <cmx-dropdown class="cmx-input" [closeOnClick]="true" placeholder="{{_endAtDirty?_endAt:tempwindow?tempwindow.endAt:_endAt}}">
+              <cmx-dropdown-item *ngFor='let op of endAt' (click)="setEndAt(op)">{{op}}</cmx-dropdown-item>
+            </cmx-dropdown>
+          </td>
+          <td>{{getDuration(_startAt, _endAt)}}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td style="color: red">{{translate('digital_confirmation.settings.lbl_total')}}</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </cmx-dialog-body>
+  <cmx-dialog-footer style="text-align: center;">
+    <div fxLayout="row">
+      <div fxLayout="column" style="margin-left: auto; margin-right: 8px; width: 20%;">
+        <button data-id="deliveryTimeCommitmentNewWindowsCancelButton" cmx-button color="blue-inverse"
+          (click)="closeNewWindowDialog()">
+        {{translate('rccc.catalogs.cancel')}}
+        </button>
+      </div>
+      <div fxLayout="column" style="width: 20%;">
+        <button data-id="deliveryTimeCommitmentNewWindowsSaveButton" cmx-button color="blue"
+        [disabled]="!canSaveDeliveryTimeCommitmentWindows" (click)="newWindowOk()">
+        {{translate('views.globals.lblOk')}}
+        </button>
+      </div>
+    </div>
+  </cmx-dialog-footer>
+  </cmx-dialog>
+  <cmx-dialog #dynamicWindowDialog [enableFooter]="true" [enableClose]="true">
+  <cmx-dialog-body fxLayout="column" class="dialog-copy-model">
+    <div fxLayout="row">
+      <h2 style="margin: auto;">{{translate('digital_confirmation.settings.lbl_dynamic_window_horizon')}}</h2>
+    </div>
+    <div fxLayout="row">
+      <div style="margin: auto;">{{translate('digital_confirmation.settings.lbl_hours_from_requested')}}</div>
+    </div>
+    <br>
+    <div fxLayout="row" style="margin: auto;">
+      <div fxLayout="column" style="width: 400px;">
+        <div>{{translate('digital_confirmation.settings.lbl_hours_before_after')}}</div>
+      </div>
+      <div fxLayout="column" style="width: 100px;">
+        <cmx-form-field [error]="checkValidity(dynamicWindowHorizon, 1, 8, 'dynamicWindowHorizon')">
+          <input type="number" [(ngModel)]="dynamicWindowHorizon" (keydown)="checkUserInput($event)"
+          style="text-align: right" min="1" max="8" />
+          <error-message>
+            {{ translate('digital_confirmation.settings.lbl_invalid') }}
+          </error-message>
+        </cmx-form-field>
+      </div>
+    </div>
+    <br>
+    <div fxLayout="row">
+      {{translate('digital_confirmation.settings.lbl_time_allowed')}}
+    </div>
+  </cmx-dialog-body>
+  <cmx-dialog-footer style="text-align: center;">
+    <div fxLayout="row">
+      <div fxLayout="column" style="margin-left: auto; margin-right: 8px; width: 20%;">
+        <button data-id="dynamicWindowCancelButton" cmx-button color="blue-inverse"
+          (click)="closeDynamicWindowDialog()">
+        {{translate('rccc.catalogs.cancel')}}
+        </button>
+      </div>
+      <div fxLayout="column" style="width: 20%;">
+        <button data-id="dynamicWindowsSaveButton" cmx-button color="blue" [disabled]="!canSaveDynamicWindowHorizon"
+        (click)="dynamicWindowOk()">
+        {{translate('views.globals.lblOk')}}
+        </button>
+      </div>
+    </div>
+  </cmx-dialog-footer>
+  </cmx-dialog>
+  <cmx-dialog #nonWorkingDaysDialog [enableFooter]="true" [enableClose]="true">
+  <cmx-dialog-body fxLayout="column" class="dialog-copy-model">
+    <div fxLayout="row">
+      <h2 style="margin: auto;">{{translate('digital_confirmation.settings.lbl_non_working_days')}}</h2>
+    </div>
+    <hr style="margin: 10px; border: none; height: 3px; background-color: #333;">
+    <cmx-calendar [(year)]="currentYear" [weekStartAt]="weekStartAt" locale="en" monthWidth="33"
+    (onSelectedDay)="selectDay($event)" [(workingWeekDays)]="workingWeekDays" [(nonWorkingDates)]="nonWorkingDates">
+    </cmx-calendar>
+  </cmx-dialog-body>
+  <cmx-dialog-footer style="text-align: center;">
+    <div fxLayout="row">
+      <div fxLayout="column" style="margin-left: auto; margin-right: 8px; width: 20%;">
+        <button cmx-button color="blue" (click)="closeNonWorkingDay()">
+        {{translate('views.global.btn_save')}}
+        </button>
+      </div>
+    </div>
+  </cmx-dialog-footer>
+  </cmx-dialog>
+</div>

@@ -1,3 +1,28 @@
-<p>
-  language works!
-</p>
+<cmx-alert></cmx-alert>
+<div fxLayout="column" style="display: block"
+  [ngStyle.xl]="{'margin': '60px'}"
+  [ngStyle.lg]="{'margin': '60px'}"
+  [ngStyle.xs]="{'margin': '10px'}"
+  [ngStyle.sm]="{'margin': '40px'}"
+  [ngStyle.md]="{'margin': '60px'}">
+    <div fxFlex="100%" fxLayout="row" [ngStyle.lg]="{'margin-bottom': '15px'}">
+        <a class="nav-bar-item">
+        <h2>
+            {{ translate('views.sidebar.rccc.menues.general_configurations') }}
+            <span aria-hidden="true" class="cmx-icon-right-single" style="color: #3FA9F5; font-size: 12pt;"></span>
+            {{ translate('views.sidebar.language') }}
+        </h2>
+        </a>
+    </div>
+    <div fxFlex="100%" fxLayout="row">
+        <div fxFlex="30%" fxLayout="column">
+            {{ translate('language.select') }}
+        </div>
+        <div fxFlex="50%" fxLayout="column">
+            <cmx-dropdown>
+                <cmx-dropdown-item (click)="changeLanguage('es_MX')">{{ translate('views.header.spanish') }}</cmx-dropdown-item>
+                <cmx-dropdown-item (click)="changeLanguage('en_US')">{{ translate('views.header.english') }}</cmx-dropdown-item>
+            </cmx-dropdown>
+        </div>
+    </div>
+</div>

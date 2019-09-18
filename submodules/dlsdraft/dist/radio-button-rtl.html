@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Radio Button - RTL</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav-rtl.html" rel="import">
+        <link href="partials/sidenav-rtl.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Radio Button</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <!-- radio buttons examples -->
+
+
+                        <form action="" method="">
+                            <h2>Radio</h2>
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-field">
+                                <input checked="checked" id="radio" name="options" type="radio"> <label for="radio">Radio option 1</label>
+                            </div>
+
+
+                            <div class="cmx-form-field">
+                                <input id="radio1" name="options" type="radio"> <label for="radio1">Radio option 2</label>
+                            </div>
+
+
+                            <div class="cmx-form-field">
+                                <input disabled="disabled" id="radio2" name="options" type="radio"> <label for="radio2">Radio option 3 - disabled</label>
+                            </div>
+
+
+                            <div class="cmx-form-field">
+                                <input class="error" id="radio3" name="options" type="radio"> <label for="radio3">Radio option 4 - error demo</label>
+                            </div>
+                        </form>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-9" dir="ltr">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html">
+                                    <code class="language-html">
+&lt;!-- on the root element set the dir attribute for rtl display format --&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;rtl&quot;&gt;
+    [code goes here]
+&lt;/html&gt;
+
+&lt;!-- radio buttons examples --&gt;
+&lt;form action=&quot;&quot; method=&quot;&quot;&gt;
+    &lt;h2&gt;Radio&lt;/h2&gt;
+    &lt;div class=&quot;spacer-32&quot;&gt;&lt;/div&gt;
+
+    &lt;div class=&quot;cmx-form-field&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;radio&quot; name=&quot;options&quot; checked=&quot;checked&quot; /&gt;
+        &lt;label for=&quot;radio&quot;&gt;Radio option 1&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;cmx-form-field&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;radio1&quot; name=&quot;options&quot; /&gt;
+        &lt;label for=&quot;radio1&quot;&gt;Radio option 2&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;cmx-form-field&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;radio2&quot; name=&quot;options&quot; disabled=&quot;disabled&quot; /&gt;
+        &lt;label for=&quot;radio2&quot;&gt;Radio option 3 - disabled&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;cmx-form-field&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;radio3&quot; name=&quot;options&quot; class=&quot;error&quot; /&gt;
+        &lt;label for=&quot;radio3&quot;&gt;Radio option 4 - error demo&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+    </code>
+    <!-- end .language-html --></pre><!-- end data-lang html -->
+
+                                <pre data-lang="sass"><code class="language-css">// _radio-rtl.scss
+// New sass partial created. Overrides only what is needed. It's included after the original buttons.scss styles.
+
+html[dir=&quot;rtl&quot;] input {
+    &amp;[type=radio] {
+        margin-left: 0.375rem; // modified
+        margin-right: 0; // added
+
+        &amp; + label{
+            &amp;::before{
+                margin-left: 0.375rem; // modified
+                margin-right: 0; // added
+            }
+        }
+
+        &amp;:checked {
+            &amp; + label{
+                &amp;::after {
+                    right: 4px; // modified
+                    left: auto; // added
+                }
+            }
+        }
+    }
+}</code></pre>
+                            </div>
+                            <!-- end .data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

@@ -1,0 +1,92 @@
+$stepperSize:40px;
+.cmx-stepper{
+    display:flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    border-bottom:1px solid $bright-blue;
+    height:$stepperSize/2;
+    overflow:visible;
+    margin-bottom: calc(#{$stepperSize} + 1.5rem);
+
+    counter-reset: stepper;
+
+    &__step,
+    &__step--active,
+    &__step--done{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        counter-increment: stepper;
+        height: calc(#{$stepperSize} + 2rem);
+        width: $stepperSize;
+        white-space: nowrap;
+
+        &::before{
+            content:counter(stepper);
+            display:flex;
+            width:$stepperSize;
+            height: $stepperSize;
+            border-radius: $stepperSize/2;
+            background-color: $disabled-grey;
+            color: $true-white;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            flex: 0 0 auto;
+        }
+    }
+    &__step--active{
+        &::before{
+            background-color: $bright-blue;
+        }
+    }
+    &__step--done{
+        &::before{
+            background-color: $bright-green;
+            content:"\E93C";
+            font-family: 'dls-icons';
+            font-size: 1.75rem;
+        }
+    }
+    &__button-bar{
+        position:fixed;
+        bottom:24px;
+        background-color: $true-white;
+        padding: 0.75rem 1rem;
+        box-shadow: 0 -2px 2px $true-black-ten-percent;
+        width: 100%;
+        right: 0;
+        text-align: right;
+
+        .cmx-button{
+            margin: 0 0.375rem;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+.cmx-navbar{
+    & + .page-wrapper{
+        .cmx-stepper{
+            &__button-bar{
+                width: calc(100vw - 160px - 1rem);
+                transition: width 250ms ease;
+            }
+        }
+    }
+    &.collapsed{
+        + .page-wrapper{
+            .cmx-stepper{
+                &__button-bar{
+                    width: calc(100vw - 43px - 1rem);
+                }
+            }
+        }
+    }
+}

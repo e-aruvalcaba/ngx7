@@ -1,0 +1,113 @@
+@import url(https://www.cemexgo.com/cdn/cmx-dls-icons.css);
+@import '../../../../../submodules/dlsdraft/src/scss/variables/_colors.scss';
+
+.not-found {
+    padding: 25px;
+    background: #E7EAEE;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.cmx-rccc-search-label {
+    margin-bottom: -18px;
+    font-size: 12px;
+}
+
+.cmx{
+    &-tabs{
+        list-style:none outside;
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: auto;
+        margin: 0 0 1.25rem 0;
+        padding:0;
+  
+        &::before{
+            content:"tabs_on_desktop"; // just a test to se if it's mobile or desktop
+            display:none;
+        }
+  
+        &::after{
+            content:" ";
+            border-bottom: 1px solid $disabled-grey;
+            flex: 1 1 auto;
+        }
+  
+        &__tab{
+            &:last-child {
+                display: block;
+                float: right;
+                width: 100%;
+                border-bottom: 1px solid $disabled-grey;
+  
+                > ul {
+                    float: right;
+                    list-style: none outside;
+                    display: flex;
+  
+                    > li {
+                        margin: 10px;
+                        > a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            &.active{
+                .cmx-tabs__link{
+                    border-bottom-color: transparent;
+                    border-top-color: $bright-blue;
+                    border-left: 1px solid $disabled-grey;
+                    border-right: 1px solid $disabled-grey;
+                    color: #333;
+                    padding: 1rem 1.25rem;
+                }
+            }
+        }
+        &__link{
+            white-space: nowrap;
+            font-weight: 500;
+            border-bottom: 1px solid $disabled-grey;
+            border-top: 3px solid transparent;
+            padding: 1rem calc(1.25rem + 1px); // adding that pixel to the sides to compensate for the border
+            display: block;
+  
+            &:active{
+                color: #333;
+            }
+  
+            &:focus,&:hover{
+                text-decoration: none;
+            }
+        }
+        &__content{
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+  
+    }
+  }
+  
+  .action-buttons {
+      float: right;
+      list-style: none outside;
+      display: flex;
+      width: 100%;
+  
+      > li {
+          margin: 10px;
+          float: left;
+          > a {
+              text-decoration: none;
+          }
+      }
+  
+  }
+  
+  .cmx-button-link {
+    font-size: 1em;
+  }
+  

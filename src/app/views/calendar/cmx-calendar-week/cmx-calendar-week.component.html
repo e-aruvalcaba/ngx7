@@ -1,3 +1,8 @@
-<p>
-  cmx-calendar-week works!
-</p>
+<div class="cmx-calendar-week" fxLayout="row">
+  <cmx-calendar-day
+    fxFlex
+    *ngFor="let calendarDay of week.calendarDays"
+    (onSelectedDay)="selectDay($event)"
+    [calendarDay]="calendarDay">
+  </cmx-calendar-day>
+</div>

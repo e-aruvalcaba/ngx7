@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Pagination</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Pagination</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>With Hyperlinks</h2>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <ul class="cmx-pagination">
+                            <li class="cmx-pagination__prev">
+                                <a href="#"><span aria-hidden="true" class="cmx-icon-straight-arrow-left"></span> <span class="sr-only">Previous Page</span></a>
+                            </li>
+
+
+                            <li>
+                                <a class="current" href="#">1</a>
+                            </li>
+
+
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+
+
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+
+
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+
+
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+
+
+                            <li class="cmx-pagination__spacer">...</li>
+
+
+                            <li>
+                                <a href="#">12</a>
+                            </li>
+
+
+                            <li class="cmx-pagination__next">
+                                <a href="#"><span aria-hidden="true" class="cmx-icon-straight-arrow-right"></span> <span class="sr-only">Next Page</span></a>
+                            </li>
+                        </ul>
+                        <!-- end .pagination -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+                        <pre data-lang="html"><code class="language-html">&lt;ul class="cmx-pagination"&gt;
+    &lt;li class="cmx-pagination__prev"&gt;
+        &lt;a href="#"&gt;
+            &lt;span class="cmx-icon-straight-arrow-left" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Previous Page&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a class="current" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="cmx-pagination__spacer"&gt;...&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;12&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="cmx-pagination__next"&gt;
+        &lt;a href="#"&gt;
+            &lt;span class="cmx-icon-straight-arrow-right" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Next Page&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-48">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>With Buttons</h2>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <ul class="cmx-pagination">
+                            <li class="cmx-pagination__prev"><button><span aria-hidden="true" class="cmx-icon-straight-arrow-left"></span> <span class="sr-only">Previous Page</span></button>
+                            </li>
+
+
+                            <li><button class="current">1</button>
+                            </li>
+
+
+                            <li><button>2</button>
+                            </li>
+
+
+                            <li><button>3</button>
+                            </li>
+
+
+                            <li><button>4</button>
+                            </li>
+
+
+                            <li><button>5</button>
+                            </li>
+
+
+                            <li class="cmx-pagination__spacer">...</li>
+
+
+                            <li><button>12</button>
+                            </li>
+
+
+                            <li class="cmx-pagination__next"><button><span aria-hidden="true" class="cmx-icon-straight-arrow-right"></span> <span class="sr-only">Next Page</span></button>
+                            </li>
+                        </ul>
+                        <!-- end .pagination -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+                        <pre data-lang="html"><code class="language-html">&lt;ul class="cmx-pagination"&gt;
+    &lt;li class="cmx-pagination__prev"&gt;
+        &lt;button&gt;
+            &lt;span class="cmx-icon-straight-arrow-left" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Previous Page&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;button class="current"&gt;1&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;2&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;3&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;4&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;5&lt;/button&gt;&lt;/li&gt;
+    &lt;li class="cmx-pagination__spacer"&gt;...&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;12&lt;/button&gt;&lt;/li&gt;
+    &lt;li class="cmx-pagination__next"&gt;
+        &lt;button&gt;
+            &lt;span class="cmx-icon-straight-arrow-right" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Next Page&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                    <!-- end .col-md-6 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-48">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>... and the SCSS / CSS code</h2>
+
+
+                        <div data-highlight="">
+                            <div class="demo-wrap-code code-4">
+                                <pre data-lang="sass"><code class="language-css">.cmx-pagination {
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    list-style: none;
+    margin:0;
+    padding: 0;
+
+    &gt; * { // should be a "li", but we leave it open just in case someone decides to use whatever tag
+        
+        margin: 0 8px;
+        line-height: 1rem;
+        
+        &gt; * { // should be a button or hyperlink
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: $radius-2;
+            color: $gray-light;
+            cursor: pointer;
+            display: inline-block;
+            font-family: 'Roboto', sans-serif;
+            font-size: $font-size-14;
+            height: 24px;
+            line-height: 1.375rem;
+            padding: 0;
+            text-decoration: none;
+            text-align: center;
+            transition: 200ms transform ease;
+            width: 24px;
+
+            &amp;:hover,
+            &amp;:focus {
+                border: 1px solid $bright-blue;
+                text-decoration: none;
+                color: $gray-light;
+            }
+
+            &amp;.current {
+                color: $true-white;
+                background: $bright-blue;
+            }
+        }
+    }
+
+    $pnDimensions: 16px;
+
+    &amp;__prev,
+    &amp;__next {
+        height: $pnDimensions;
+        width: $pnDimensions;
+
+        &gt; *{
+            height: $pnDimensions;
+            width: $pnDimensions;
+            line-height: $pnDimensions;
+            color:$bright-blue;
+
+            &amp;:hover {
+                border:none;
+                color:$bright-blue;
+                text-decoration: none;
+                transform:scale(1.2);
+            }
+        }
+    }
+
+    &amp;__spacer{
+        &gt;*{
+            &amp;:hover{
+                border:none;
+                text-decoration: none;
+            }
+        }
+    }
+
+}</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-pagination {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cmx-pagination&gt;* {
+    margin: 0 8px;
+    line-height: 1rem;
+}
+
+.cmx-pagination&gt;*&gt;* {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #636c72;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875rem;
+    height: 24px;
+    line-height: 1.375rem;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    transition: 200ms -webkit-transform ease;
+    transition: 200ms transform ease;
+    transition: 200ms transform ease, 200ms -webkit-transform ease;
+    width: 24px;
+}
+
+.cmx-pagination&gt;*&gt;*:hover,
+.cmx-pagination&gt;*&gt;*:focus {
+    border: 1px solid #3FA9F5;
+    text-decoration: none;
+    color: #636c72;
+}
+
+.cmx-pagination&gt;*&gt;*.current {
+    color: #FFF;
+    background: #3FA9F5;
+}
+
+.cmx-pagination__prev,
+.cmx-pagination__next {
+    height: 16px;
+    width: 16px;
+}
+
+.cmx-pagination__prev&gt;*,
+.cmx-pagination__next&gt;* {
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    color: #3FA9F5;
+}
+
+.cmx-pagination__prev&gt;*:hover,
+.cmx-pagination__next&gt;*:hover {
+    border: none;
+    color: #3FA9F5;
+    text-decoration: none;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.cmx-pagination__spacer&gt;*:hover {
+    border: none;
+    text-decoration: none;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

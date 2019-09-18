@@ -1,0 +1,51 @@
+// START ALERTS DEMO PAGE
+
+.cmx-tag {
+    display: flex;
+    background: #E7EAEE;
+    color: #001B3A;
+    font-size: $font-size-14;
+    line-height: $line-height-16;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin: 0 8px;
+    border: 1px solid #E7EAEE;
+    justify-content: center;
+    align-items: center;
+    
+    &:hover {
+        border: 1px solid $bright-blue;
+    }
+
+    &__message {
+        flex: 1 1 auto;
+        font-size: $font-size-14;
+        line-height: $line-height-16;
+        font-family: "Roboto",sans-serif;
+        font-weight: 500;
+    }
+    
+
+    &__close {
+        flex: 0 0 auto;
+        cursor: pointer;
+        background: none;
+        border: none;
+        width: 10px;
+        height: 14px;
+        display: inline-block;
+        margin-left:0.5rem;
+
+        &:focus{
+            outline: 0;
+        }
+
+        &-icon {
+            width: 10px;
+            height: 10px;
+            fill: $bright-blue;	
+        }
+    }
+}
+
+// END ALERTS DEMO PAGE

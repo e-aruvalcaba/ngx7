@@ -1,0 +1,195 @@
+// START FORMS DEMO PAGE
+// _inputs-rtl.scss
+
+html[dir="rtl"] .cmx-form-group{
+    
+
+    .cmx-form-control {
+        
+        &--icon-trail {
+            input[type] {
+                padding-left: 2.5rem; // modified
+                padding-right: 0; // added
+            }
+            &::before {
+                left:1rem; // modified
+                right: auto; // added
+            }
+        }
+        &--icon-lead {
+            input[type] {
+                padding-right: 2.5rem; // modified
+                padding-left: 0; // added
+            }
+            &::before {
+                right:1rem; // modified
+                left: auto; // added
+            }
+        }
+        &--icon-button-trail {
+            input[type] {
+                padding-left: 2.5rem; // modified
+                padding-right: 1rem; // added
+            }
+            .cmx-button {
+                left: 12px; // modified
+                right: auto;
+            }
+        }
+    } // end form-control
+
+
+    &.active {
+        
+        //number field treatment
+        .cmx-number-field-wrapper {
+            .cmx-number-field-btn {
+                &.cmx-minus-btn {
+                    border-left: 1px solid #ADAEBB; // modified
+                    border-right: 0; // added
+                }
+                &.cmx-plus-btn {
+                    border-right: 1px solid #ADAEBB; // modified
+                    border-left: 0; // added
+                }
+            }
+        } // end number-field-wrapper
+
+        // select filed needs extra rules
+        select {
+            background-position: 1% 55%; // modified from 99% to 1%
+        }	
+    } // end active class
+
+    &.error {
+        
+
+        // select filed needs extra rules
+        select {
+            background-position: 1% 55%; // modified from 99% to 1%
+
+            // rules need to apply also on states
+            &:active,
+            &:focus,
+            &.active,
+            &.focus {
+                background-position: 1% 55%; // modified from 99% to 1%
+            }
+        }
+
+        .cmx-error-message {
+            text-align: right; // modified
+        }
+
+        //number field treatment
+        .cmx-number-field-wrapper {
+            .cmx-number-field-btn {
+                &.cmx-minus-btn {
+                    border-left: 1px solid $true-red; // modified
+                    border-right: 0; // added
+                }
+                &.cmx-plus-btn {
+                    border-right: 1px solid $true-red; // modified
+                    border-left: 0; // added
+                }
+            }
+
+            // a more complex hover interaction on the element
+            // because has the buttons (+/-) contained as sub-elements
+            &:hover {
+                .cmx-minus-btn {
+                    border-left: 1px solid #ADAEBB; // modified
+                    border-right: 0;
+                }
+                .cmx-plus-btn {
+                    border-right: 1px solid #ADAEBB; //modified
+                    border-left: 0;
+                }
+            } // end complex hover interaction
+        } // end number-field-wrapper	
+    } // end error class
+
+    // select
+    select {
+        
+        background-position: 1% 55%; // modified
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.hover,
+        &.focus,
+        &.active {
+            background-position: 1% 55%; // modified
+        }
+    } // end select separate definition
+
+    .cmx-number-field-wrapper {
+        
+        // this rule assures numbers (also negative numbers) are displayed correctly
+        // even if we are in a RTL display
+        input[type="number"] {
+            direction: ltr;
+        }
+
+        .cmx-number-field-btn {
+
+            // positioning the minus button
+            &.cmx-minus-btn {
+
+                right: 1px; // modified
+                left: auto; // added
+                border-left:1px solid #ADAEBB; // modified
+                border-right: 0; // added
+
+                &:hover,
+                &:focus,
+                &:active {
+                    border-left: 1px solid $bright-blue; // modified
+                    border-right: 0; // added
+                }
+            } // end minus-btn
+
+            // positioning the plus button
+            &.cmx-plus-btn {
+                left: 1px; // modified
+                right: auto; // added
+                border-right: 1px solid #ADAEBB; // modified
+                border-left: 0; // added
+
+                &:hover,
+                &:focus,
+                &:active {
+                    border-right: 1px solid $bright-blue; // modified
+                    border-left: 0; // added
+                }
+            } // end plus-btn
+        } // end number field btn
+    } // end number field wrapper
+
+    .cmx-advanced-search-wrapper {
+
+        .cmx-search-tag {
+
+            &:first-child {
+                margin-right:8px; // modified
+                margin-left: 0; // added
+            }
+
+            a {
+                margin-right: 8px; // modified
+                margin-left: 0; // added
+            }
+        }
+
+        input[type="submit"] {
+            left: 0; // modified
+            right: auto; // added
+        }
+
+        .cmx-search-button-icon {
+            left: 8px; // modified
+            right: auto; // added
+        }
+    }
+}

@@ -1,0 +1,209 @@
+@font-face {
+  font-family: 'dls-icons';
+  src:  url('fonts/dls-icons.eot?n7brvl');
+  src:  url('fonts/dls-icons.eot?n7brvl#iefix') format('embedded-opentype'),
+    url('fonts/dls-icons.ttf?n7brvl') format('truetype'),
+    url('fonts/dls-icons.woff?n7brvl') format('woff'),
+    url('fonts/dls-icons.svg?n7brvl#dls-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="cmx-"], [class*=" cmx-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'dls-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cmx-icon-control-center:before {
+  content: "\e900";
+}
+.cmx-icon-user-profile:before {
+  content: "\e901";
+}
+.cmx-icon-scheduler:before {
+  content: "\e902";
+}
+.cmx-icon-track:before {
+  content: "\e903";
+}
+.cmx-icon-driver:before {
+  content: "\e904";
+}
+.cmx-icon-pricing:before {
+  content: "\e905";
+}
+.cmx-icon-payment:before {
+  content: "\e906";
+}
+.cmx-icon-ordering:before {
+  content: "\e907";
+}
+.cmx-icon-accepted-ok:before {
+  content: "\e908";
+}
+.cmx-icon-error:before {
+  content: "\e909";
+}
+.cmx-icon-warning-repeat .path1:before {
+  content: "\e90a";
+  color: rgb(0, 0, 0);
+}
+.cmx-icon-warning-repeat .path2:before {
+  content: "\e90b";
+  margin-left: -1.001953125em;
+  color: rgb(255, 255, 255);
+}
+.cmx-icon-warning .path1:before {
+  content: "\e90c";
+  color: rgb(0, 0, 0);
+}
+.cmx-icon-warning .path2:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.cmx-icon-calendar:before {
+  content: "\e90e";
+}
+.cmx-icon-clock:before {
+  content: "\e90f";
+}
+.cmx-icon-checkbox-active:before {
+  content: "\e910";
+}
+.cmx-icon-checkbox-static:before {
+  content: "\e911";
+}
+.cmx-icon-radio-active:before {
+  content: "\e912";
+}
+.cmx-icon-radio-static:before {
+  content: "\e913";
+}
+.cmx-icon-close:before {
+  content: "\e914";
+}
+.cmx-icon-plus:before {
+  content: "\e915";
+}
+.cmx-icon-minus:before {
+  content: "\e916";
+}
+.cmx-icon-collapse:before {
+  content: "\e917";
+}
+.cmx-icon-expand:before {
+  content: "\e918";
+}
+.cmx-icon-expand-move:before {
+  content: "\e919";
+}
+.cmx-icon-contract-move:before {
+  content: "\e91a";
+}
+.cmx-icon-map-pin:before {
+  content: "\e91b";
+}
+.cmx-icon-up-double:before {
+  content: "\e91c";
+}
+.cmx-icon-down-double:before {
+  content: "\e91d";
+}
+.cmx-icon-left-double:before {
+  content: "\e91e";
+}
+.cmx-icon-right-double:before {
+  content: "\e91f";
+}
+.cmx-icon-up-single:before {
+  content: "\e920";
+}
+.cmx-icon-down-single:before {
+  content: "\e921";
+}
+.cmx-icon-left-single:before {
+  content: "\e922";
+}
+.cmx-icon-right-single:before {
+  content: "\e923";
+}
+.cmx-icon-straight-arrow-up:before {
+  content: "\e924";
+}
+.cmx-icon-straight-arrow-down:before {
+  content: "\e925";
+}
+.cmx-icon-straight-arrow-left:before {
+  content: "\e926";
+}
+.cmx-icon-straight-arrow-right:before {
+  content: "\e927";
+}
+.cmx-icon-download-export:before {
+  content: "\e928";
+}
+.cmx-icon-magnifier-glass:before {
+  content: "\e929";
+}
+.cmx-icon-settings:before {
+  content: "\e92a";
+}
+.cmx-icon-up-rounded-full:before {
+  content: "\e92b";
+}
+.cmx-icon-up-rounded:before {
+  content: "\e92c";
+}
+.cmx-icon-down-rounded-full:before {
+  content: "\e92d";
+}
+.cmx-icon-down-rounded:before {
+  content: "\e92e";
+}
+.cmx-icon-left-rounded-full:before {
+  content: "\e92f";
+}
+.cmx-icon-left-rounded:before {
+  content: "\e930";
+}
+.cmx-icon-right-rounded-full:before {
+  content: "\e931";
+}
+.cmx-icon-right-rounded:before {
+  content: "\e932";
+}
+.cmx-icon-round-minus-full:before {
+  content: "\e933";
+}
+.cmx-icon-round-minus:before {
+  content: "\e934";
+}
+.cmx-icon-round-plus-full:before {
+  content: "\e935";
+}
+.cmx-icon-round-plus:before {
+  content: "\e936";
+}
+.cmx-icon-repeat:before {
+  content: "\e937";
+}
+.cmx-icon-trash:before {
+  content: "\e938";
+}
+.cmx-icon-favourite:before {
+  content: "\e939";
+}
+.cmx-favourite-active:before {
+  content: "\e93a";
+}

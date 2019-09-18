@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.5 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3fa9f5;
+      }
+    </style>
+  </defs>
+  <title>left-double</title>
+  <path id="Fill-1" class="cls-1" d="M7.24,15.83a.71.71,0,0,0,.09-1L1.64,8l5.7-6.83A.71.71,0,0,0,6.24.26L.17,7.54a.71.71,0,0,0,0,.91l6.07,7.29a.71.71,0,0,0,1,.09" transform="translate(0 0)"/>
+  <path id="Fill-4" class="cls-1" d="M13.24,15.83a.71.71,0,0,0,.09-1L7.64,8l5.7-6.83A.71.71,0,0,0,12.24.26L6.17,7.54a.71.71,0,0,0,0,.91l6.07,7.29a.71.71,0,0,0,1,.09" transform="translate(0 0)"/>
+</svg>

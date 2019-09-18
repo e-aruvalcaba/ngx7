@@ -1,0 +1,8 @@
+// _status-indicator-rtl.scss
+
+
+html[dir="rtl"] .cmx-flag-status {
+    float: right; // modified
+    margin-left: 8px; // modified
+    margin-right: 0; // added
+} // end flag-status

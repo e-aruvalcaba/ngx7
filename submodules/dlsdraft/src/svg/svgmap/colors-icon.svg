@@ -1,0 +1,27 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341.8 340.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4197d3;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #4197d3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6px;
+      }
+    </style>
+  </defs>
+  <title>colors-icon</title>
+  <g id="colors_icon">
+    <path class="cls-1" d="M110.61,127.56a104,104,0,1,1-104,104,104.11,104.11,0,0,1,104-104m0-6a110,110,0,1,0,110,110,110,110,0,0,0-110-110Z" transform="translate(-0.61 -1.36)"/>
+    <path class="cls-1" d="M171.36,7.36a104,104,0,1,1-104,104,104.11,104.11,0,0,1,104-104m0-6a110,110,0,1,0,110,110,110,110,0,0,0-110-110Z" transform="translate(-0.61 -1.36)"/>
+    <path class="cls-1" d="M232.41,127.44a104,104,0,1,1-104,104,104.11,104.11,0,0,1,104-104m0-6a110,110,0,1,0,110,110,110,110,0,0,0-110-110Z" transform="translate(-0.61 -1.36)"/>
+    <line class="cls-2" x1="206.56" y1="186.52" x2="191.18" y2="213.89"/>
+    <line class="cls-2" x1="187.41" y1="161.19" x2="155" y2="212.41"/>
+    <line class="cls-2" x1="175.97" y1="150.75" x2="137.37" y2="210.67"/>
+    <line class="cls-2" x1="197.34" y1="173.52" x2="172.17" y2="215.28"/>
+  </g>
+</svg>

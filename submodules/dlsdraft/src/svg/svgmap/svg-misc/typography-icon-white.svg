@@ -1,0 +1,14 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340.07 339.88">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>typography-icon-white</title>
+  <g id="typography_icon" data-name="typography icon">
+    <path class="cls-1" d="M185.32,0H0V38H68.75v189.5h46.88V38h69.69Z" transform="translate(0 0.03)"/>
+    <path class="cls-1" d="M340.06,102.46H291.63L260.38,207.6,229,102.47H180.38L239.6,272l-5.31,13.91q-3.6,9.06-9.92,13t-19.14,3.91l-6.88-.16v34.22a71,71,0,0,0,20,3q34.84,0,50-33.12l3.75-8.91,68-195.35Z" transform="translate(0 0.03)"/>
+  </g>
+</svg>

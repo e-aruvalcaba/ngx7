@@ -1,3 +1,90 @@
-<p>
-  fleet-coverage works!
-</p>
+<div
+    xFlex
+    [ngStyle.xs]="{'margin': '0px'}"
+    [ngStyle]="{'margin': '10px'}"
+    fxLayout="column">
+    <div fxFlex="100%" fxLayout="row">
+        <div fxFlex="200%">
+            <h2>{{ translate('rccc.catalogs.fleet_constraints.title') }} <span aria-hidden="true" class="cmx-icon-right-single" style="color: #3FA9F5; font-size: 12pt;"></span> {{ translate('rccc.catalogs.fleet_coverage.title') }}</h2>
+        </div>
+    </div>
+    <div fxFlex="100%" fxLayout="column" [ngStyle]="{'margin-top': '10px'}">
+        <div class="catalog-container">
+            <cmx-alert></cmx-alert>
+            <cmx-datatable
+                [data]="fleetCoverages"
+                [canEdit]="true"
+                [canDelete]="true"
+                [canAdd]="true"
+                [alternateRowStyle]="true"
+                (onAdded)="OnSaveFleetCoverages($event)"
+                (onEdited)="OnChangeFleetCoverage($event)"
+                (onDeleted)="OnDeleteFleetCoverage($event)"
+                (onCancel)="OnCancel($event)"
+                errorMaxLenMessage="{{translate('datatable.errors.max_len')}}"
+                errorMinLenMessage="{{translate('datatable.errors.min_len')}}"
+                errorMaxValueMessage="{{translate('datatable.errors.min')}}"
+                errorMinValueMessage="{{translate('datatable.errors.max')}}"
+                errorRequiredMessage="{{translate('datatable.errors.is_required')}}"
+                errorPatternMessage="{{translate('datatable.errors.pattern')}}"
+                labelAddNew="{{translate('datatable.labels.add_new')}}"
+                labelShowAll="{{translate('datatable.labels.show_all')}}"
+                labelSaveConfiguration="{{translate('datatable.labels.save_configuration')}}"
+                labelCancelUpdate="{{translate('datatable.labels.cancel_update')}}"
+                labelEditRecord="{{translate('datatable.labels.edit_record')}}"
+                >
+              <cmx-data-table-column
+                  property="fleetCoverageId"
+                  header="{{ translate('rccc.catalogs.fleet_coverage.fleet_coverage') }}"
+                  [visible]="false">
+              </cmx-data-table-column>
+              <cmx-data-table-column
+                [required]="true"
+                property="fleetCoverageCode"
+                header="{{ translate('rccc.catalogs.fleet_coverage.fleet_coverage') }}"
+                [isEditable]="false"
+                [isAddable]="true"
+                editModeType="textbox"
+                expandedProperties="fleetCoverageId, creationDateTime, userAccountCreation"
+                expandedHeaders="Id,{{ translate('rccc.catalogs.creationDateTime') }}, {{ translate('rccc.catalogs.creationUserId') }}">
+              </cmx-data-table-column>
+              <cmx-data-table-column
+                property="fleetCoverageDesc"
+                header="{{ translate('rccc.catalogs.fleet_coverage.description') }}"
+                [isEditable]="true"
+                required="true"
+                editModeType="textbox"
+                expandedProperties="changeDateTime, userAccountChange"
+                expandedHeaders="{{ translate('rccc.catalogs.changeDateTime') }}, {{ translate('rccc.catalogs.changeUserId') }}">
+              </cmx-data-table-column>
+            </cmx-datatable>
+            <div class="not-found " *ngIf="!hasFleetCoverageItems">
+                {{ translate('database.errors.no_results') }}
+            </div>
+            <cmx-dialog
+                #deleteFleetCoverage
+                data-id="deleteFleetCoverage"
+                [enableFooter]="true"
+                [enableClose]="true"
+                backgroundColor="gray"
+                width="650px"
+                height="260px"
+                minWidth="650px"
+                minHeight="260px">
+                <cmx-dialog-body>
+                  <h3 class="dialog-title">{{messageText}}</h3>
+                </cmx-dialog-body>
+                <cmx-dialog-footer style="text-align: center;">
+                    <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="center center">
+                        <button cmx-button color="blue" (click)="OnDeleteDialogConfirm()">
+                            {{translate('views.global.btn_confirm')}}
+                        </button>
+                        <button cmx-button color="'red'" (click)="OnDeleteDialogCancel()">
+                            {{translate('views.global.btn_cancel')}}
+                        </button>
+                    </div>
+                </cmx-dialog-footer>
+            </cmx-dialog>
+        </div>
+    </div>
+</div>

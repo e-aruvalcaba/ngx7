@@ -1,0 +1,16 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341.38 340.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4197d3;
+      }
+    </style>
+  </defs>
+  <title>grid-icon</title>
+  <path class="cls-1" d="M112,7.51v263.9H81V7.51h31m6-6H75v275.9h43V1.51Z" transform="translate(-0.46 -1.51)"/>
+  <path class="cls-1" d="M186.47,7.51v263.9H155.52V7.51h30.95m6-6H149.52v275.9h42.95V1.51Z" transform="translate(-0.46 -1.51)"/>
+  <path class="cls-1" d="M261,7.51v263.9H230V7.51H261m6-6H224v275.9H267V1.51Z" transform="translate(-0.46 -1.51)"/>
+  <path class="cls-1" d="M22.84,342.26a3,3,0,0,1-2.12-.88L1.34,322a3,3,0,0,1-.88-2.12v-.62a3,3,0,0,1,.88-2.12l19.38-19.38A3,3,0,0,1,25,302L7.39,319.57,25,337.14a3,3,0,0,1-2.12,5.12Z" transform="translate(-0.46 -1.51)"/>
+  <path class="cls-1" d="M320.53,322.57H22.21a3,3,0,1,1,0-6H320.53a3,3,0,0,1,0,6Z" transform="translate(-0.46 -1.51)"/>
+  <path class="cls-1" d="M319.46,342.26a3,3,0,0,1-2.12-5.12l17.57-17.57L317.34,302a3,3,0,0,1,4.24-4.24L341,317.14a3,3,0,0,1,.88,2.12v.62A3,3,0,0,1,341,322l-19.38,19.38A3,3,0,0,1,319.46,342.26Z" transform="translate(-0.46 -1.51)"/>
+</svg>

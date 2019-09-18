@@ -1,0 +1,86 @@
+// _date-picker-rtl.scss 
+
+html[dir="rtl"] .cmx-date-picker {
+    
+    &__days-grid {
+
+        .cmx-active-start {    
+            &.first{
+            	// needs to be "to left" in RTL (modified)
+                background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 51%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */	
+            }
+            &.last{
+            	// needs to be "to right" in RTL (modified)
+                background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 51%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */	
+            }
+        }
+
+        .cmx-active-end {
+            &.first{
+            	// needs to be "to left" in RTL (modified)
+                background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 51%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */	
+            }
+            &.last{
+            	// needs to be "to right" in RTL (modified)
+                background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 51%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */	
+            }
+        }
+
+        .cmx-end-range {
+            &.last{
+            	// needs to be "to right" in RTL (modified)
+                background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 50.01%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                
+                .date-picker__day{
+                	// needs to be "to left" in RTL (modified)
+                    background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 50.01%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                }
+            }
+            &.first{
+            	// needs to be "to left" in RTL (modified)
+                background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 50.01%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                
+                .date-picker__day{
+                	// needs to be "to right" in RTL (modified)
+                    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 50.01%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                }
+            }
+        }
+    }
+
+    &__header {
+        > * {
+            &:first-child{
+                text-align: left; // modified
+                margin: 0 0 0 0.5rem; // modified for rtl
+            }
+            &:last-child{
+                text-align: right; // modified
+                margin: 0 0.5rem 0 0; // modified for rtl
+            }
+        }
+    }
+    &__prev-period,
+    &__next-period {	
+        svg {
+            // transform: rotate(180deg); // added
+            // [not needed, since we have dls-icons-rtl icon set]
+        }
+    }
+
+    &__footer {
+        text-align: left; // modified
+        margin-left: 10px; // modified
+        margin-right: 0; // added
+    }
+
+    &__cta{
+        .cmx-button{
+            margin-left:1.25rem; // modified
+            margin-right: 0; // addded
+            &:last-child{
+                margin-left:0; // modified
+            }
+        }
+    }
+}

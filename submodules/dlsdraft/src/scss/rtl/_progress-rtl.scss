@@ -1,0 +1,28 @@
+// Basic progress bar
+// _progress-rtl.scss 
+
+
+html[dir="rtl"] .cmx-progress-bar {
+  &__label {
+    left:0; // modified
+    right: auto; // added
+    text-align: left; // modified
+  }
+}
+
+html[dir="rtl"] .cmx-legend{
+  &__item{
+    float: right; // modified
+  }
+  
+  &__term{
+    float: right; // modified
+
+  }
+
+  &__value{
+    margin-right: 8px; // modified
+    margin-left: 0; // added
+    float: right; // modified
+  }
+}

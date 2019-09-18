@@ -1,0 +1,21 @@
+<svg id="radio-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #003876;
+      }
+
+      .cls-2 {
+        fill: #999;
+      }
+
+      .cls-3 {
+        fill: #fefefe;
+      }
+    </style>
+  </defs>
+  <title>radio-button-base</title>
+  <circle id="inner-fill" class="cls-1" cx="8" cy="8" r="7.53"/>
+  <path id="outer-stroke" class="cls-2" d="M9,17a8,8,0,1,1,8-8A8,8,0,0,1,9,17ZM9,1.94A7.06,7.06,0,1,0,16.06,9,7.07,7.07,0,0,0,9,1.94Z" transform="translate(-1 -1)"/>
+  <circle id="inner-dot" class="cls-3" cx="8" cy="8" r="3.76"/>
+</svg>

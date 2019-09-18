@@ -1,0 +1,16 @@
+<svg id="checkbox-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3fa9f5;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>checkbox-base-2</title>
+  <rect id="check-shape" class="cls-1" width="16" height="16" rx="1" ry="1"/>
+  <polygon id="check-sign" class="cls-2" points="12.03 3 6.44 8.34 3.98 5.99 2 7.88 6.44 12.11 8.41 10.23 14 4.89 12.03 3"/>
+</svg>

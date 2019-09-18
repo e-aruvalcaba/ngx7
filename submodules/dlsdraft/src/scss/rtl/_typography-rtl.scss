@@ -1,0 +1,136 @@
+// Typography 
+// _typography-rtl.scss
+
+// Font name
+$font-name-2:			'NotoSans';
+
+// Font family
+$font-family-2: 		$font-name-2, sans-serif;
+
+// Font imports
+
+// noto
+
+@font-face {
+  font-family: $font-name-2;
+  src: url('../fonts/#{ $font-name-2 }-Regular.ttf');
+  font-weight:400;
+}
+@font-face {
+	font-family: $font-name-2;
+	src: url('../fonts/#{ $font-name-2 }-Bold.ttf'); // fix for David
+	font-weight:700;
+}
+
+
+// Font weight classes
+.noto-bold {
+    font-family: '#{ $font-name-2 }'; 
+    font-weight: $font-bold;
+}
+
+.noto-regular {
+    font-family: '#{ $font-name-2 }'; 
+    font-weight: $font-regular;
+}
+
+// Headings, elements with role of headings
+html[dir="rtl"] h1, 
+html[dir="rtl"] .h1-role {
+	font-family: 	$font-family-2;
+	font-size: 	 	$font-size-30;
+	line-height: 	$line-height-30;
+	font-weight: 	$font-bold;
+	color: 		 	$deep-blue;
+}
+
+html[dir="rtl"] h2, 
+html[dir="rtl"] .h2-role {
+	font-family: 	$font-family-2;
+	font-size:   	$font-size-24;
+	line-height: 	$line-height-24;
+	font-weight: 	$font-medium;
+	color:       	$deep-blue;
+}
+
+html[dir="rtl"] h3, 
+html[dir="rtl"] .h3-role {
+	font-family: 	$font-family-2;
+	font-size:   	$font-size-18;
+	line-height: 	$line-height-18;
+	font-weight: 	$font-regular;
+	color:       	$deep-blue;
+}
+
+html[dir="rtl"] h4, 
+html[dir="rtl"] .h4-role {
+	font-family: 	$font-family-2;
+	font-size:   	$font-size-16;
+	line-height: 	$line-height-16;
+	font-weight: 	$font-regular;
+	color:       	$deep-blue;
+}
+
+html[dir="rtl"] h5, 
+html[dir="rtl"] .h5-role {
+	font-family: 	$font-family-2;
+	font-size:   	$font-size-14;
+	line-height: 	$line-height-16;
+	font-weight: 	$font-medium;
+	color:       	$deep-blue;
+	text-transform: uppercase;
+}
+
+html[dir="rtl"] h6, 
+html[dir="rtl"] .h6-role {
+	font-family: 	$font-family-2;
+	font-size:   	$font-size-12;
+	line-height: 	$line-height-16;
+	font-weight: 	$font-medium;
+	color:       	$deep-blue;
+}
+
+// Table entries styles
+html[dir="rtl"] .table-entry {
+	font-family: 	$font-family-2;
+	font-size: 		$font-size-14;
+	line-height: 	$line-height-16;
+	color: 			$dark-grey;
+}
+
+html[dir="rtl"] .table-entry-strong {
+	font-family: 	$font-family-2;
+	font-size: 		$font-size-14;
+	line-height: 	$line-height-16;
+	color: 			$dark-grey;
+	font-weight: 	$font-bold;
+}
+
+html[dir="rtl"] .breadcrumb {
+	font-family:    $font-family-2;
+	font-size:      $font-size-18;
+	color: 			$deep-blue;
+}
+
+html[dir="rtl"] .table-entry {
+	font-size: $font-size-14;
+	color: $dark-grey;
+}
+
+
+// Input and placeholders style
+html[dir="rtl"] .input-placeholder {
+	font-family: 	$font-family-2;
+	font-size: 		$font-size-14;
+	line-height: 	$line-height-16;
+	color: 			$medium-grey;
+}
+
+html[dir="rtl"] .input-text {
+	font-family: 	$font-family-2;
+	font-size: 		$font-size-14;
+	line-height: 	$line-height-16;
+	color: 			$dark-grey;
+}
+
+

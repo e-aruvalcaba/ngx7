@@ -1,0 +1,71 @@
+svg {
+	pointer-events: none;
+}
+
+
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 			$font-family;
+	background: 			$background-grey;
+	-webkit-font-smoothing: antialiased; // prevent blurry fonts
+
+	position: relative;
+	min-height: 100%;
+}
+
+p {
+	font-size: $font-size-16;
+	line-height: $line-height-20;
+}
+
+.start-icon-white,
+.grid-icon-white,
+.typography-icon-white,
+.colors-icon-white,
+.buttons-icon-white,
+.icons-icon-white,
+.navigation-icon-white,
+.dashboard-modules-icon-white,
+.tables-icon-white,
+.maps-icon-white,
+.forms-icon-white,
+.alerts-icon-white,
+.modals-icon-white,
+.date-time-icon-white,
+.components-icon-white,
+.progressbar-icon-white,
+.mobile-icon-white,
+.missing-page-icon-white,
+.best-practices-icon-white,
+.rtl-icon-white,
+.ltr-icon-white {
+	fill: $true-white;
+}
+.grid-icon,
+.typography-icon,
+.colors-icon,
+.buttons-icon,
+.icons-icon,
+.navigation-icon,
+.dashboard-modules-icon,
+.tables-icon,
+.maps-icon,
+.forms-icon,
+.alerts-icon,
+.modals-icon,
+.date-time-icon,
+.components-icon,
+.progressbar-icon,
+.mobile-icon,
+.missing-page-icon {
+	fill: $bright-blue;
+}
+
+.box-card-icon {
+	width: 80px;
+	height: 80px;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Iconography</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <!-- start icons as fonts -->
+
+
+                <div class="font-icons-wrap">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <h1>Icon Font</h1>
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group">
+                                <div class="cmx-form-control--icon-button-trail">
+                                    <input class="cmx-form-control" id="iconSearch" onkeyup="filterIcons(event)" placeholder="Search" type="text"> <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-magnifier-glass"></span> <span class="sr-only">Search</span></button>
+                                </div>
+                            </div>
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="row" id="fontIcons">
+                            </div>
+                        </div>
+                        <script>
+                        var currentIcon = null;
+                        var iconClasses = [
+                        "cmx-icon-module-control-center",
+"cmx-icon-module-customer-information",
+"cmx-icon-module-delivery-schedule",
+"cmx-icon-module-track",
+"cmx-icon-module-drivers",
+"cmx-icon-module-invoices-payments",
+"cmx-icon-module-payment",
+"cmx-icon-module-order-product-catalogue",
+"cmx-icon-module-user-management",
+"cmx-icon-module-commercial-condition",
+"cmx-icon-check-rounded-active-fill",
+"cmx-icon-error-rounded-fill",
+"cmx-icon-information-rounded-fill",
+"cmx-icon-warning-rounded-fill",
+"cmx-icon-arrow-expand",
+"cmx-icon-question",
+"cmx-icon-calendar",
+"cmx-icon-clock",
+"cmx-icon-checkbox-active",
+"cmx-icon-checkbox-static",
+"cmx-icon-radio-active",
+"cmx-icon-radio-static",
+"cmx-icon-close",
+"cmx-icon-cross-cancel",
+"cmx-icon-plus",
+"cmx-icon-minus",
+"cmx-icon-collapse-square",
+"cmx-icon-expand-square",
+"cmx-icon-arrow-expand-move",
+"cmx-icon-arrow-collapse-move",
+"cmx-icon-pin-current-location",
+"cmx-icon-arrow-up-double",
+"cmx-icon-arrow-down-double",
+"cmx-icon-arrow-left-double",
+"cmx-icon-arrow-right-double",
+"cmx-icon-arrow-up-single",
+"cmx-icon-arrow-down-single",
+"cmx-icon-arrow-left-single",
+"cmx-icon-arrow-right-single",
+"cmx-icon-arrow-up-straight",
+"cmx-icon-arrow-down-straight",
+"cmx-icon-arrow-left-straight",
+"cmx-icon-arrow-right-straight",
+"cmx-icon-download",
+"cmx-icon-search",
+"cmx-icon-settings",
+"cmx-icon-arrow-up-rounded-fill",
+"cmx-icon-arrow-up-rounded",
+"cmx-icon-arrow-down-rounded-fill",
+"cmx-icon-arrow-down-rounded",
+"cmx-icon-arrow-left-rounded",
+"cmx-icon-arrow-left-rounded2",
+"cmx-icon-arrow-right-rounded-fill",
+"cmx-icon-arrow-right-rounded",
+"cmx-icon-minus-rounded-fill",
+"cmx-icon-minus-rounded",
+"cmx-icon-plus-rounded-fill",
+"cmx-icon-plus-rounded",
+"cmx-icon-repeat",
+"cmx-icon-delete",
+"cmx-icon-favourite",
+"cmx-icon-favourite-active",
+"cmx-icon-logo",
+"cmx-icon-check",
+"cmx-icon-brakets",
+"cmx-icon-image",
+"cmx-icon-language",
+"cmx-icon-document",
+"cmx-icon-logout",
+"cmx-icon-quick-view",
+"cmx-icon-menu",
+"cmx-icon-product-line-bulk-cement",
+"cmx-icon-product-line-multiproducts",
+"cmx-icon-product-line-aggregates",
+"cmx-icon-product-line-bag-cement",
+"cmx-icon-product-line-readymix",
+"cmx-icon-product-line-bag-multiproduct",
+"cmx-icon-options-pickup",
+"cmx-icon-options-delivery",
+"cmx-icon-options-own-freight",
+"cmx-icon-blocked",
+"cmx-icon-attachment",
+"cmx-icon-multiple-items",
+"cmx-icon-edit",
+"cmx-icon-clock-fill",
+"cmx-icon-protected",
+"cmx-icon-document-broken",
+"cmx-icon-picture-fill",
+"cmx-icon-picture-broken",
+"cmx-icon-filter",
+"cmx-icon-history",
+"cmx-icon-question-rounded",
+"cmx-icon-pin-error",
+"cmx-icon-pin-poi",
+"cmx-icon-pin-load",
+"cmx-icon-pin-load-3rdparty",
+"cmx-icon-pin-unload",
+"cmx-icon-pin-jobsite-worker",
+"cmx-icon-phone",
+"cmx-icon-share",
+"cmx-icon-upload",
+"cmx-icon-save",
+"cmx-icon-pin-pickup",
+"cmx-icon-print",
+"cmx-icon-e-mail",
+"cmx-icon-arrow-collapse",
+"cmx-icon-chat-outline",
+"cmx-icon-chat-filled",
+"cmx-icon-plane-side",
+"cmx-icon-calendar-event-squares",
+"cmx-icon-arrow-increase",
+"cmx-icon-arrow-decrease",
+"cmx-icon-arrow-continue-outline"
+                        ];
+                        function showIcons(classNames){
+                        let output = "";
+                        for (className of classNames){
+                        output += '<div class="col-md-4 demo-font-box" onclick="showIconDetails(\''+className+'\')"><span class="'+className+'"><\/span> <span class="mls">'+className+'<\/span><\/div>';
+                        }
+                        document.getElementById('fontIcons').innerHTML = output;
+                        }
+                        function showIconDetails(iconClass){
+                        currentIcon = iconClass;
+                        let codeDiv = document.querySelector('#iconCode');
+                        let iconShow = document.querySelector('#iconShow');
+                        iconShow.setAttribute('class','cmx-confirmation__icon '+iconClass);
+                        codeDiv.innerHTML = '&lt;span class="'+iconClass+'" aria-hidden="true"&gt;&lt;/span&gt;';
+                        launchModal('#iconModal');
+                        }
+                        function filterIcons(event){
+                        let val = event.target.value;
+                        if (val!==''){
+                        let newArray = iconClasses.filter((term)=>{return ((term.indexOf(val)>-1)?true:false)});
+                        showIcons(newArray);
+                        }else {
+                        showIcons(iconClasses);
+                        }
+                        }
+
+                        function setIconAttributes(className,darkBg=false){
+                        document.querySelector('#iconCode').innerHTML = '&lt;span class="'+currentIcon+' '+className+'" aria-hidden="true"&gt;&lt;/span&gt;';
+                        if (darkBg) {
+                        className = className + ' bg__true-black';
+                        }
+                        document.querySelector('#iconShow').setAttribute('class','cmx-confirmation__icon '+currentIcon+' '+className);
+                        }
+                        showIcons(iconClasses);
+                        </script>
+                    </div>
+                    <!-- end .row -->
+                </div>
+                <!-- end .font-icons-wrap -->
+            </div>
+            <!-- end .container-fluid -->
+        </div>
+        <!-- end .page-wrapper -->
+    </div>
+    <!-- end #wrapper -->
+
+
+    <div class="cmx-modal cmx-modal--confirmation hidden" id="iconModal">
+        <div class="cmx-modal__container">
+            <button class="cmx-modal__close-button" onclick="closeModal()"><span aria-hidden="true" class="cmx-icon-close"></span> <span class="sr-only">Close</span></button>
+
+            <div class="cmx-modal__section">
+                <div class="cmx-confirmation__icon" id="iconShow">
+                </div>
+
+
+                <div class="demo__icon-color-chooser">
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-true-black')">
+                        <div class="bg__true-black demo__swatch">
+                        </div>
+                        Black
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-true-white',true)">
+                        <div class="bg__true-white demo__swatch demo__swatch--border">
+                        </div>
+                        White
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-true-blue')">
+                        <div class="bg__true-blue demo__swatch">
+                        </div>
+                        Blue
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-bright-blue')">
+                        <div class="bg__bright-blue demo__swatch">
+                        </div>
+                        Blue
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-bright-green')">
+                        <div class="bg__bright-green demo__swatch">
+                        </div>
+                        Green
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-true-red')">
+                        <div class="bg__true-red demo__swatch">
+                        </div>
+                        Red
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-bright-orange')">
+                        <div class="bg__bright-orange demo__swatch">
+                        </div>
+                        Orange
+                    </div>
+                </div>
+
+
+                <div class="width-full" data-highlight="">
+                    <pre data-lang="html"><code class="language-html" id="iconCode"></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

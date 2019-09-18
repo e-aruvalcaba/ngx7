@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 15.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>completed-checkmark</title>
+  <path class="cls-1" d="M18.95.19a.67.67,0,0,0-.93,0L8.23,9.56a.67.67,0,0,1-.93,0L3,5.36a.67.67,0,0,0-.93,0L.19,7A.62.62,0,0,0,0,7.44a.65.65,0,0,0,.2.46l4.32,4.37.93.9L7.31,15a.68.68,0,0,0,.93,0L20.8,2.89a.62.62,0,0,0,0-.9Z" transform="translate(0 0)"/>
+</svg>

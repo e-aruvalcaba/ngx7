@@ -1,0 +1,187 @@
+.cmx-scheduler {
+    width: 100%;
+
+    &__header {
+        position: relative;
+        margin: 0 2px 2px 2px;
+    }
+
+    &__panel-title {
+        width: 100%;
+        height: 32px;
+        background: $true-blue;
+        line-height: 32px;
+        color: $true-white;
+        text-align: center;
+        font-weight: $font-medium;
+        border-radius: $radius-2;
+        display: flex;
+        justify-content: center;
+
+        button {
+            color: $true-white;
+            text-decoration: none;
+            display: inline-block;
+            min-width: 200px;
+            text-align: center;
+            font-size: 1rem;
+
+            &:hover{
+                box-shadow: none;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+
+            &.prev,
+            &.next {
+                font-size: 0.875rem;
+                width: 32px;
+                min-width: 32px;
+                max-width: 32px;
+                height: 32px;
+            }
+        }
+    }
+
+    &__panel-actions-left,
+    &__panel-actions-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+
+        button {
+            margin: 0;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            padding: 0.625rem 0;
+            text-align: center;
+            display: inline-block;
+            &:hover{
+                box-shadow: none;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+            svg {
+                fill: $true-white;
+                width: 13px;
+                height: 13px;
+            }
+        }
+    }
+    &__panel-actions-right {
+        right:0;
+        left: auto;
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+    &__column {
+        background: $true-blue-five-percent;
+        flex-grow: 1;
+        margin: 2px;
+        width: 100%;
+        border-radius: $radius-2;
+
+        &-title {
+            border-radius: $radius-3;
+            background: $medium-blue;
+            text-align: center;
+            font-size: $font-size-12;
+            font-weight: 700;
+            color: $true-white;;
+            height: 19px;
+            margin: 4px;
+        }
+
+        &.cmx-current-day {
+            background: $bright-blue-forty-percent;
+
+            .cmx-scheduler__column-title {
+                background: $bright-blue;
+            }
+        }
+
+        &.cmx-no-activity {
+            .cmx-scheduler__column-title {
+                opacity:0.46;
+            }
+        }
+    }
+    &__filters {
+        line-height: 1;
+        font-size: $font-size-14;
+        padding:0.5rem 0;
+    }
+    &__card {
+        background: $true-white;
+        border-radius: $radius-2;
+        box-shadow: 0 2px 2px $true-black-ten-percent;
+        margin: 4px;
+        font-size: $font-size-12;
+        &-body {
+            padding: 8px;
+
+            .status {
+                margin-bottom: 8px;
+                font-size: $font-size-10;
+                display: flex;
+
+                .status-message {
+                    flex-grow: 1;
+
+                    .flag-status {
+                        margin: 3px 6px 0 0;
+                    }
+                }
+
+                .load-status {
+                    color: $medium-grey;
+                }
+            }
+        }
+
+        &-jobsite{
+            font-weight: 700;
+        }
+        &-note{
+        }
+        &-material{
+            margin-top: 0.675rem;
+            font-size: 0.675rem;
+            color: $gray-lightish;
+        }
+
+        &-footer {
+            padding:0.25rem;
+            min-height: 1.65rem;
+        }
+        &-hour {
+            font-weight: $font-bold;
+            text-align: right;
+        }
+    }
+}
+.cmx-button--link-header-filter{
+    margin-right:3rem;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    [class^="cmx-icon-"]{
+        font-size:0.675rem;
+    }
+    &.cmx-button--link{
+        &:hover,
+        &:focus{
+            text-decoration: none;
+        }
+    }
+}

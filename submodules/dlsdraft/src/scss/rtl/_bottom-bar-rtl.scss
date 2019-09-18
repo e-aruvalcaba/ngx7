@@ -1,0 +1,9 @@
+// START BAR
+// _bottom-bar-rtl.scss
+
+html[dir="rtl"] .cmx-bottom-bar {
+    left: 0; // modified
+    right: auto; //added
+}
+
+// END BAR DEMO PAGE

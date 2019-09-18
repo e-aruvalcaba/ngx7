@@ -1,0 +1,492 @@
+// START FORMS DEMO PAGE
+.cmx-form-group{
+    label {
+        display: inline-block;
+        font-size: $font-size-12;
+        line-height: $line-height-12;
+        color: $deep-blue;
+        padding-bottom: 6px;
+        margin-bottom: 0px;
+        cursor: pointer;
+    } // end label
+
+    .cmx-form-control {
+        display: block;
+        width: 100%;
+        &--icon-trail,
+        &--icon-lead,
+        &--icon-button-trail{
+            width:100%;
+            height:auto;
+            position: relative;
+            &::before{
+                position: absolute;
+                line-height:1.5rem;
+                font-size: 1.5rem;
+                top:0.75rem;
+                color:$bright-blue;
+            }
+        }
+        &--icon-trail{
+            input[type]{
+                padding-right: 2.5rem;
+            }
+            &::before{
+                position: absolute;
+                right:1rem;
+            }
+        }
+        &--icon-lead{
+            input[type]{
+                padding-left: 2.5rem;
+            }
+            &::before{
+                left:1rem;
+            }
+        }
+        &--icon-button-trail{
+            input[type]{
+                padding-right: 2.5rem;
+            }
+            .cmx-button{
+                position: absolute;
+                top: 12px;
+                font-size: 24px;
+                right: 12px;
+                line-height: 24px;
+            }
+        }
+    } // end form-control
+
+
+    &.active {
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"],
+        select,
+        textarea {
+            border: 1px solid $bright-blue;
+            background: $true-white;
+        }
+
+        //number field treatment
+        .cmx-number-field-wrapper {
+            .cmx-number-field-btn {
+                &.cmx-minus-btn {
+                    border-right: 1px solid #ADAEBB;
+                    svg {
+                        fill: $bright-blue;
+                    }
+                }
+                &.cmx-plus-btn {
+                    border-left: 1px solid #ADAEBB;
+                    svg {
+                        fill: $bright-blue;
+                    }
+                }
+            }
+        } // end number-field-wrapper
+
+        // select filed needs extra rules
+        select {
+            -webkit-appearance: none;
+            -webkit-border-radius: $radius-3;
+            background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+            background-position: 99% 55%;
+            background-repeat: no-repeat;
+        }	
+    } // end active class
+
+    &.error {
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"],
+        select,
+        textarea {
+            border:1px solid $true-red;
+            background: $true-red-five-percent;
+
+            &:active,
+            &:focus,
+            &.active,
+            &.focus {
+                outline: 0 none;
+                border-color: $bright-blue;
+                background: $true-white;
+            }
+        }
+
+        // select filed needs extra rules
+        select {
+            -webkit-appearance: none;
+            -webkit-border-radius: $radius-3;
+            background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#EE3D42' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+            background-position: 99% 55%;
+            background-repeat: no-repeat;
+
+            // rules need to apply also on states
+            &:active,
+            &:focus,
+            &.active,
+            &.focus {
+                -webkit-appearance: none;
+                -webkit-border-radius: $radius-3;
+                background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+                background-position: 99% 55%;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .cmx-error-message {
+            font-size: $font-size-12;
+            color: $true-red;
+            width: 100%;
+            display: inline-block;
+            text-align: left;
+        }
+
+        //number field treatment
+        .cmx-number-field-wrapper {
+            .cmx-number-field-btn {
+                &__btn{
+                    color:$true-red;
+                }
+                &.cmx-minus-btn {
+                    border-right: 1px solid $true-red;
+                }
+                &.cmx-plus-btn {
+                    border-left: 1px solid $true-red;
+                }
+            }
+
+            // a more complex hover interaction on the element
+            // because has the buttons (+/-) contained as sub-elements
+            &:hover {
+                .cmx-minus-btn,
+                .cmx-plus-btn {
+                    svg {
+                        fill: $bright-blue;
+                    }
+                }
+                .cmx-minus-btn {
+                    border-right: 1px solid #ADAEBB;
+                }
+                .cmx-plus-btn {
+                    border-left: 1px solid #ADAEBB;
+                }
+            } // end complex hover interaction
+        } // end number-field-wrapper	
+    } // end error class
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="password"],
+    select,
+    textarea {
+        font-size: $font-size-16;
+        line-height: $line-height-16;
+        border-radius: $radius-3;
+        height: 48px;
+        padding: 16px;
+        border: 1px solid #ADAEBB;
+        background: $true-white;
+
+        &:hover, 
+        &:active,
+        &:focus,
+        &.hover,
+        &.active,
+        &.focus {
+            outline: 0 none;
+            border-color: $bright-blue;
+            background: $true-white;
+        }
+
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $medium-grey;
+            font-size: $font-size-16;
+        }
+
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: $medium-grey;
+            font-size: $font-size-16;
+        }
+
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: $medium-grey;
+            font-size: $font-size-16;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+            color: $medium-grey;
+            font-size: $font-size-16;
+        }
+    } // end input(s) basic definition
+
+    // select
+    select {
+        font-size: $font-size-16;
+        line-height: $line-height-18;
+        border-radius: $radius-3;
+        height: 48px;
+        border: 1px solid #ADAEBB;
+        background: $true-white;
+        cursor: pointer;
+        text-indent: 7px;
+        padding: 7px;
+
+        -webkit-appearance: none;
+        -webkit-border-radius: $radius-3;
+        background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+        background-position: 99% 55%;
+        background-repeat: no-repeat;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.hover,
+        &.focus,
+        &.active {
+            outline: 0 none;
+            border-color: $bright-blue;
+            background: $true-white;
+
+            -webkit-appearance: none;
+            -webkit-border-radius: $radius-3;
+            background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#3FA9F5' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+            background-position: 99% 55%;
+            background-repeat: no-repeat;
+        }
+    } // end select separate definition
+
+    // textarea 
+    textarea {
+        min-height: 104px;
+        font-size: $font-size-16;
+        line-height: $line-height-18;
+
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $medium-grey;
+            font-size: $font-size-16;
+            line-height: $line-height-18;
+        }
+
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: $medium-grey;
+            font-size: $font-size-16;
+            line-height: $line-height-18;
+        }
+
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: $medium-grey;
+            font-size: $font-size-16;
+            line-height: $line-height-18;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+            color: $medium-grey;
+            font-size: $font-size-16;
+            line-height: $line-height-18;
+        }
+    }
+
+    // number type
+    input[type="number"] {
+        text-align: center;
+    }
+
+    // hiding the number type spinner
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    .cmx-number-field-wrapper {
+        position: relative;
+
+        // button rules
+        button {
+            cursor: pointer;
+            background: none;
+            border: 0 none;
+            width: 46px;
+            height: 46px;
+            line-height: 46px;
+
+            &:focus,
+            &:active {
+                outline: 0 none;
+            }
+        } // end buttons rules
+
+        .cmx-number-field-btn {
+            display: inline-block;
+            width: 46px;
+            height: 46px;
+            line-height: 46px;
+            
+
+            &__btn{
+                color:$bright-blue;
+            }
+
+            // positioning the minus button
+            &.cmx-minus-btn {
+                position: absolute;
+                bottom: 1px;
+                left: 1px;
+                border-right:1px solid #ADAEBB;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    border-right: 1px solid $bright-blue;
+                }
+            } // end minus-btn
+
+            // positioning the plus button
+            &.cmx-plus-btn {
+                position: absolute;
+                bottom: 1px;
+                right: 1px;
+                border-left: 1px solid #ADAEBB;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    border-left: 1px solid $bright-blue;
+                }
+            } // end plus-btn
+        } // end number field btn
+    } // end number field wrapper
+
+
+    .cmx-mobile-form-group {
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="search"],
+        input[type="password"],
+        select,
+        textarea {
+            height: 40px;
+        }
+
+
+        // adjustments to number field
+
+        .cmx-number-field-wrapper {
+
+            // button rules
+            button {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+            }
+
+            .cmx-number-field-btn {
+                width: 40px;
+                height: 38px;
+                line-height: 40px;
+
+                // positioning the minus button
+                &.cmx-minus-btn {
+                    svg {
+                        width: 16px;
+                        margin-top: 5px;
+                    }
+                } // end minus-btn
+
+                // positioning the plus button
+                &.cmx-plus-btn {
+                    svg {
+                        width: 16px;
+                        margin-top: 6px;
+                    }
+                } // end plus-btn
+            } // end number field btn
+        } // end number-field-wrapper
+    } // end mobile-form-group
+
+    .cmx-advanced-search-wrapper {
+        position: relative;
+        width: 100%;
+        min-height: 48px;
+        background: #fff;
+        border: 1px solid #D7D7D7;
+        border-radius: $radius-3;
+
+        .cmx-search-tag {
+            background: #E7EAEE;
+            color: $deep-blue;
+            font-size: $font-size-14;
+            line-height: $line-height-16;
+            border-radius: $radius-2;
+            display: inline-block;
+            padding:8px 16px;
+            font-weight: bold;
+            margin: 8px 4px;
+
+            &:first-child {
+                margin-left:8px;
+            }
+
+            span {
+                display: inline-block;
+                //border: 1px solid red;
+            }
+
+            a {
+                width: 10px;
+                height: 10px;
+                //border: 1px solid red;
+                display: inline-block;
+                margin-left: 8px;
+
+                svg {
+                    width: 10px;
+                    height: 10px;
+                    //border:1px solid green;
+                }
+            }
+        }
+
+        input[type="text"],
+        input[type="password"], {
+            padding: 0;
+            border: 0 none;
+        }
+
+        input[type="search"] {
+            display: none;
+        }
+
+        input[type="submit"] {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: $bright-blue;
+            border-radius: $radius-3;
+            border: 0 none;
+            cursor: pointer;
+        }
+
+        .cmx-search-button-icon {
+            position: absolute;
+            top: 16px;
+            right: 8px;
+            color: $true-white;
+            cursor: pointer;
+        }
+    }
+}

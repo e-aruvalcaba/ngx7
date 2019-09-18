@@ -1,0 +1,21 @@
+.cmx-content-heading{
+    font-weight: 700;
+    font-size: 0.875rem;
+    color:$gray;
+    border-bottom: 1px solid $gray-fifty-percent;
+    width:100%;
+    padding-bottom: 0.25rem;
+    height:auto;
+
+    span[class^="cmx-icon-"],
+    span[class*="cmx-icon-"]{
+        
+        float:left; 
+
+        &:before{
+            color: $bright-blue;
+            font-size: 1.125rem;
+            margin-right: 0.325rem;
+        }
+    }
+}

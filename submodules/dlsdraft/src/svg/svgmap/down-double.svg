@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 14.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #424242;
+      }
+    </style>
+  </defs>
+  <title>down-double</title>
+  <path class="cls-1" d="M.17,6.74a.68.68,0,0,1,1-.1L8,12.72l6.83-6.07a.68.68,0,0,1,1,.1.8.8,0,0,1-.09,1.07L8.46,14.29a.68.68,0,0,1-.91,0L.26,7.81A.79.79,0,0,1,.17,6.74" transform="translate(0 -0.07)"/>
+  <path class="cls-1" d="M.17.34a.68.68,0,0,1,1-.1L8,6.32,14.83.24a.68.68,0,0,1,1,.1.8.8,0,0,1-.09,1.07L8.46,7.89a.68.68,0,0,1-.91,0L.26,1.41A.79.79,0,0,1,.17.34" transform="translate(0 -0.07)"/>
+</svg>

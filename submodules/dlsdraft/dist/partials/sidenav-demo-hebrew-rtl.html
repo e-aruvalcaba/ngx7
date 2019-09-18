@@ -1,0 +1,123 @@
+<template>
+   <nav id="sidenav" class="cmx-navbar cmx-navbar-static-side">
+      <div class="cmx-navbar__trigger" onclick="toggleSidebar(event)">
+        <span class="cmx-icon-left-double font-true-white" aria-hidden="true"></span>
+        <span class="sr-only">Toggle Sidebar</span>
+      </div>
+      <div  class="cmx-navbar__legal-entity">
+        <div role="button">
+            <div class="cmx-navbar__legal-entity-name">בניית אקמה</div>
+            <div class="cmx-navbar__legal-entity-id">#1233312 
+                <span class="cmx-navbar__legal-entity-toggle cmx-icon-right-single font-true-white" aria-hidden="true"></span>
+                <span class="sr-only">Toggle Legal Entity Selector</span>
+            </div>
+        </div>
+      </div>
+      <ul class="cmx-navbar__menu">
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="#">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="icon-track">
+                     <use xlink:href="#icon-track"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">מְסִלָה</span>
+            </a>
+         </li>
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary active" href="javascript:;" onclick="toggleSub(this)">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="icon-pricing">
+                     <use xlink:href="#icon-pricing"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">חשבוניות ותשלומים</span>
+            </a>
+            <ul class="cmx-navbar__menu-sub">
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="#">לוּחַ מַחווָנִים</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="#">מסמכים כספיים ותשלומים</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="#">בעיות חיוב</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="#">מרכז מסמכים</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="#">דיווחים</a>
+               </li>
+               <li class="cmx-navbar__menu-sub-item">
+                  <a class="cmx-navbar__menu-sub-link" href="#">סֶקֶר</a>
+               </li>    
+            </ul>
+         </li>
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="javascript:;">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="icon-user-profile">
+                     <use xlink:href="#icon-user-profile"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">מידע ללקוחות</span>
+            </a>
+
+            
+         </li>
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="javascript:;">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="icon-scheduler">
+                     <use xlink:href="#icon-scheduler"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">לוח הזמנים של המשלוח</span>
+            </a>
+         </li>
+         
+         
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="index-rtl.html">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="icon">
+                     <use xlink:href="#icon"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">תנאים מסחריים</span>
+            </a>
+         </li>
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="index-rtl.html">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="icon-ordering">
+                     <use xlink:href="#icon-ordering"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">הזמנת מוצרים וקטלוג</span>
+            </a>
+         </li>
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="index-rtl.html">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="icon">
+                     <use xlink:href="#icon"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">ניהול משתמשים</span>
+            </a>
+         </li>
+         <li class="cmx-navbar__menu-item">
+            <a class="cmx-navbar__menu-link primary" href="#">
+               <span class="cmx-navbar__menu-icon">
+                  <svg class="icon-payment">
+                     <use xlink:href="#icon-payment"></use>
+                  </svg>
+               </span>
+               <span class="cmx-navbar__menu-label">???????</span>
+            </a>
+         </li>
+      </ul>
+   </nav>
+</template>

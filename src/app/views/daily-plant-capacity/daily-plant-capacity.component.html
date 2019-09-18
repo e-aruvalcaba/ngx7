@@ -1,3 +1,319 @@
-<p>
-  daily-plant-capacity works!
-</p>
+<cmx-alert></cmx-alert>
+<div
+  [ngStyle.xl]="{'margin': '60px'}"
+  [ngStyle.lg]="{'margin': '60px'}"
+  [ngStyle.xs]="{'margin': '10px'}"
+  [ngStyle.sm]="{'margin': '40px'}"
+  [ngStyle.md]="{'margin': '60px'}">
+  <div fxLayout="row">
+    <a class="nav-bar-item">
+      <h2>{{ translate('rccc.landing_page.modules.rccc_short_title') }} <span aria-hidden="true" class="cmx-icon-right-single" style="color: #3FA9F5; font-size: 12pt;"></span> {{ translate(titleLanguageKey) }}</h2>
+    </a>
+  </div>
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutGap="15px"
+    fxLayoutGap.xs="-10px">
+    <div fxFlex="25">
+      <div
+        data-id="cmx-rccc-search-label"
+        class="cmx-rccc-search-label ">
+        {{translate('rccc.admin.search_label')}}
+      </div>
+      <cmx-dropdown
+        data-id="plantDropDown"
+        class="cmx-input"
+        [closeOnClick]="true"
+        [enableSearch]="true"
+        placeholder="{{selectedPlantDescription}}">
+        <cmx-dropdown-item
+          *ngFor="let plant of myPlants"
+          (click)="getProductTypes(plant)"
+          [searchValue]="plant.plantLabel">
+          {{plant.plantCode}} - {{plant.plantDesc}}
+        </cmx-dropdown-item>
+      </cmx-dropdown>
+    </div>
+    <div fxFlex="25">
+      <cmx-dropdown
+        data-id="productTypeDropDown"
+        class="cmx-input"
+        [closeOnClick]="true"
+        [enableSearch]="true"
+        placeholder="{{selectedProductTypeDescription}}">
+        <cmx-dropdown-item
+          *ngFor="let productType of productTypes"
+          (click)="setProductType(productType)"
+          [searchValue]="productType.productTypeDesc">
+          {{productType.productTypeCode}} - {{productType.productTypeDesc}}
+        </cmx-dropdown-item>
+      </cmx-dropdown>
+    </div>
+
+    <div fxFlex="25"
+    [class.datepicker--error]="datePickerError">
+      <input
+        data-id="dateInput"
+        class="datepicker-input"
+        placeholder="Fecha"
+        value="{{formattedDate}}"
+        (click)="updateDatePicker()"/>
+      <div [hidden]="!showDatePicker">
+        <cmx-datepicker
+          [singleDateSelection]="true"
+          data-id="dateDatePicker"
+          class="datepicker"
+          #datepicker
+          (select)="pickDate($event)"
+          (cancel)="cancelDatePicker()"
+          [tags]="datepickerTags"
+          [startWeekWith]="0"
+          [forbiddenWeekDays]="disabledWeekDays"
+          [disabledDates]="disabledDates">
+        </cmx-datepicker>
+      </div>
+    </div>
+
+    <div fxFlex="20" fxLayoutAlign="center center" *ngIf="haveCommercialManagement">
+      <button style="font-size: 1em;" cmx-button-link (click)="toggleFilters()">
+        <span
+          [class.cmx-icon-plus]="!isFiltersToggled"
+          [class.cmx-icon-minus]="isFiltersToggled"
+          aria-hidden="true"
+        ></span> {{translate(!isFiltersToggled ? 'views.global.btn_more': 'views.global.btn_less')}}
+      </button>
+    </div>
+
+  </div>
+
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutGap="15px"
+    fxLayoutGap.xs="-10px"
+    *ngIf="isFiltersToggled && haveCommercialManagement">
+    <div fxFlex="25">
+      <cmx-dropdown
+        data-id="commercialManagementDropDown"  
+        class="cmx-input"
+        [closeOnClick]="true"
+        [enableSearch]="true"
+        placeholder="{{ selectedCommercialManagementDescription != 'NOT:rccc.admin.selected_commercial_management_label' ? selectedCommercialManagementDescription : translate('rccc.admin.selected_commercial_management_label')}}"
+        
+         ><!--          placeholder="{{translate('rccc.admin.selected_commercial_management_label')}}" -->
+        <cmx-dropdown-item
+          *ngFor="let cm of commercialManagementItems"
+          (click)="setCommercialManagement(cm)"
+          [searchValue]="cm.commercialManagementCode">
+          {{ (cm.commercialManagementCode == "") ? "-" : cm.commercialManagementCode }}
+        </cmx-dropdown-item>
+      </cmx-dropdown>
+    </div>
+    <div fxFlex="25">
+      <cmx-dropdown
+        data-id="customerDropdown"
+        class="cmx-input"
+        [closeOnClick]="true"
+        [enableSearch]="true"
+        placeholder="{{ selectedCustomerDescription != 'NOT:rccc.admin.selected_customer_label' ? selectedCustomerDescription : translate('rccc.admin.selected_customer_label')}}">
+        <cmx-dropdown-item
+          *ngFor="let customer of customersItems"
+          (click)="setCustomer(customer)"
+          [searchValue]="customer.customerCode">
+          {{ (customer.customerCode == "") ? "-" : customer.customerDesc }}
+        </cmx-dropdown-item>
+      </cmx-dropdown>
+    </div>
+    <!-- <div fxFlex="25">
+      <cmx-dropdown
+        data-id="materialDropDown"
+        class="cmx-input"
+        [closeOnClick]="true"
+        [enableSearch]="true"
+        placeholder="{{selectedMaterialDescription}}">
+        <cmx-dropdown-item
+          *ngFor="let material of materials"
+          (click)="setMaterial(material)"
+          [searchValue]="material.materialDesc">
+          {{ (material.materialDesc == "") ? "-" : material.materialDesc }}
+        </cmx-dropdown-item>
+      </cmx-dropdown>
+    </div> -->
+  </div>
+
+  <div data-id="rccc-charts" class="charts" fxFill fxLayout="column" [ngStyle.xs]="{'margin-top': '30px'}">
+    <div *ngIf="!(items) || (items.length == 0)" class="not-found">
+      {{ translate('database.errors.no_results') }}
+    </div>
+
+    <div class="charts__donut-nav"
+      *ngIf="items && (items.length > 0)"
+      fxLayout="row">
+      <div fxLayout="row" fxFlex="50" fxFlex.xs="100">
+        <div fxFlex="10" class="charts__donut-nav-cell">
+          <div>
+            <span (click)="backwardItem()" class="cmx-icon-left-rounded-full font-bright-blue" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div fxFlex="55" fxFlex.xs="80" fxLayoutAlign="center center" class="charts__donut-nav-cell">
+          <span class="charts__donut-nav-cell-title">{{translate(capacityInquiryItem.customerType) | uppercase}}</span>
+        </div>
+        <div fxFlex="10" class="charts__donut-nav-cell">
+          <div>
+            <span (click)="forwardItem()" class="cmx-icon-right-rounded-full font-bright-blue" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      *ngIf="items && (items.length > 0)"
+      data-id="rccc-donut-pie-charts" fxFlexFill fxLayout.xs="column" fxLayout="row">
+
+      <dash-panel fxFlex [title]="translate('rccc.availability_inquiries.tonnage_loads')">
+        <div
+          class="donut-grid-totals"
+          *ngIf="items && (items.length > 0)">
+          <div class="donut-grid-totals__row">
+            <div class="donut-grid-totals__cell-title">
+              {{translate('rccc.charts.labels.tonnage')}}
+            </div>
+            <div class="donut-grid-totals__cell-title">
+              {{translate('rccc.charts.labels.loads')}}
+            </div>
+          </div>
+          <div class="donut-grid-totals__row">
+            <div class="donut-grid-totals__cell">
+              {{translate('rccc.charts.labels.offered')}}
+            </div>
+            <div class="donut-grid-totals__cell donut-grid-totals__cell--highlight">
+              {{capacityInquiryItem.tonsOffered}}
+            </div>
+            <div class="donut-grid-totals__cell">
+              {{translate('rccc.charts.labels.offered')}}
+            </div>
+            <div class="donut-grid-totals__cell donut-grid-totals__cell--highlight">
+              {{capacityInquiryItem.loadsOffered}}
+            </div>
+          </div>
+          <div class="donut-grid-totals__row">
+            <div class="donut-grid-totals__cell">
+              {{translate('rccc.charts.labels.committed')}}
+            </div>
+            <div class="donut-grid-totals__cell donut-grid-totals__cell--highlight">
+              {{capacityInquiryItem.tonsCommitted}}
+            </div>
+            <div class="donut-grid-totals__cell">
+              {{translate('rccc.charts.labels.committed')}}
+            </div>
+            <div class="donut-grid-totals__cell donut-grid-totals__cell--highlight">
+              {{capacityInquiryItem.loadsCommitted}}
+            </div>
+          </div>
+        </div>
+        <div style="width: 50%; margin-left: 25%;">
+          <cmx-comparison-donut-grid-chart
+            [dataSource]="items"
+            nameField="materialType"
+            value1Field="offered"
+            value2Field="committed"
+            label1Field="{{translate('rccc.charts.labels.offered')}}"
+            label2Field="{{translate('rccc.charts.labels.committed')}}">
+          </cmx-comparison-donut-grid-chart>
+        </div>
+      </dash-panel>
+
+      <!-- Pie Chart -->
+      <dash-panel fxFlex [title]="translate('rccc.availability_inquiries.customer_type_share')">
+        <div style="width: 70%; margin-left: 15%; margin-top: 15%;">
+          <cmx-pie-chart
+            *ngIf="customerTypeCapacityItems && (customerTypeCapacityItems.length > 0)"
+            [palette]="customerTypePalette"
+            [dataSource]="customerTypeCapacityItems"
+            nameField="customerType"
+            valueField="tonsOffered">
+          </cmx-pie-chart>
+        </div>
+      </dash-panel>
+    </div>
+
+    <dash-panel
+      *ngIf="items && (items.length > 0)"
+      [title]="translate('rccc.availability_inquiries.hourly_charts')">
+      <div fxLayout="row" fxLayout.xs="column">
+        <!-- Stack Palette -->
+        <div data-id="rccc-stacked-vertical-chart" fxFlex
+          *ngIf="hourlyItems && (hourlyItems.length > 0)">
+          <div class="stacked-vertical-bar-chart">
+            <div fxFill fxLayout="column">
+              <div fxFlex="20" fxLayout="column" fxLayoutAlign="center center">
+                <h4>
+                  {{translate('rccc.charts.labels.tonnage')}}
+                </h4>
+                <h5>
+                  {{translate(capacityInquiryItem.customerType) | uppercase}}
+                </h5>
+              </div>
+              <div fxFlex>
+                <cmx-stacked-vertical-bar-chart
+                  [palette]="stackPalette"
+                  [dataSource]="hourlyItems"
+                  seriesField="data"
+                  nameField="name"
+                  valueField="value"
+                  labelField="label">
+                </cmx-stacked-vertical-bar-chart>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stack Palette -->
+        <div data-id="rccc-stacked-vertical-chart" fxFlex
+          *ngIf="hourlyItems && (hourlyItems.length > 0)">
+          <div class="stacked-vertical-bar-chart">
+            <div fxFill fxLayout="column">
+              <div fxFlex="20" fxLayout="column" fxLayoutAlign="center center">
+                <h4>
+                  {{translate('rccc.charts.labels.loads')}}
+                </h4>
+                <h5>
+                  {{translate(capacityInquiryItem.customerType) | uppercase}}
+                </h5>
+              </div>
+              <div fxFlex>
+                <cmx-stacked-vertical-bar-chart
+                  [palette]="stackPalette"
+                  [dataSource]="hourlyLoadsItems"
+                  seriesField="data"
+                  nameField="name"
+                  valueField="value"
+                  labelField="label">
+                </cmx-stacked-vertical-bar-chart>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </dash-panel>
+  </div>
+  <cmx-dialog
+    #messageDialog
+    data-id="messageDialog"
+    [enableFooter]="true"
+    [enableClose]="true"
+    backgroundColor="gray">
+    <cmx-dialog-body>
+      <h3 class="dialog-title">{{messageText}}</h3>
+    </cmx-dialog-body>
+    <cmx-dialog-footer style="text-align: center;">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <button cmx-button color="blue" (click)="closeMessageDialog()">
+          {{translate('views.global.btn_confirm')}}
+        </button>
+      </div>
+    </cmx-dialog-footer>
+  </cmx-dialog>
+</div>

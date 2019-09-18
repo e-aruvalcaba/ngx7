@@ -1,0 +1,101 @@
+input {
+    &[type=checkbox].cmx-switch {
+        position: absolute;
+        opacity: 0;
+        z-index: 1;
+        width: 40px;
+        height: 16px;
+        margin-right: 0.375rem;
+
+        & + label{
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            &::before{
+                content:" ";
+                display:inline-block;
+                width:40px;
+                height: 16px;
+                box-sizing: border-box;
+                border-width: 0;
+                background-color: $gray-lightish;
+                //border-style: solid;
+                border-radius: 8px;
+                margin-right: 0.375rem;
+                transition: all 100ms ease;
+            }
+            &::after{
+                content:" ";
+                display: block;
+                position: absolute;
+                left:2px;
+                top:2px;
+                width:12px;
+                height:12px;
+                background-color: $true-white;
+                border-radius: 6px;
+                transition: all 100ms ease;
+            }
+        }
+        
+        &:hover {  
+            & + label{
+                &::before{
+                    background-color: $medium-grey;
+                }
+            }
+        }
+
+        &:checked {
+            & + label{
+                &::before{
+                    background-color: $bright-blue;
+                    border-color: $bright-blue;
+                }
+                &::after {
+                    content: ' ';
+                    top: 2px;
+                    left: 26px;
+                    position: absolute;
+                    width: 12px;
+                    height: 12px;
+                    border-left: none;
+                    border-bottom: none;
+                    border-top: none;
+                    border-right: none;
+                    transform: rotate(0);
+                }
+            }
+            &:hover{
+                & + label{
+                    &::before{
+                        background-color: $true-blue;
+                        border-color: $true-blue;
+                    }
+                    &::after {
+                        
+                    }
+                }
+            }
+        }
+
+        &.error { 
+            & + label{
+                &::before{
+                    background-color:$true-red;
+                }
+            }
+        }
+
+        &[disabled] {
+            & + label{
+                &::before{
+                    background-color: $medium-grey;
+                }
+                &::after{
+                    background-color: $gray-lightish;
+                }
+            }
+        }
+    }
+}

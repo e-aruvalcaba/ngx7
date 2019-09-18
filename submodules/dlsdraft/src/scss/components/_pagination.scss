@@ -1,0 +1,81 @@
+.cmx-pagination {
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    list-style: none;
+    margin:0;
+    padding: 0;
+
+    > * { // should be a "li", but we leave it open just in case someone decides to use whatever tag
+        
+        margin: 0 8px;
+        line-height: 1rem;
+        
+        > * { // should be a button or hyperlink
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: $radius-2;
+            color: $gray-light;
+            cursor: pointer;
+            display: inline-block;
+            font-family: 'Roboto', sans-serif;
+            font-size: $font-size-14;
+            height: 24px;
+            line-height: 1.375rem;
+            padding: 0;
+            text-decoration: none;
+            text-align: center;
+            transition: 200ms transform ease;
+            width: 24px;
+
+            &:hover,
+            &:focus {
+                border: 1px solid $bright-blue;
+                text-decoration: none;
+                color: $gray-light;
+            }
+
+            &:focus {
+                border: 0 none;
+                color: $bright-blue;
+            }
+
+            &.current {
+                color: $true-white;
+                background: $bright-blue;
+            }
+        }
+    }
+
+    $pnDimensions: 16px;
+
+    &__prev,
+    &__next {
+        height: $pnDimensions;
+        width: $pnDimensions;
+
+        > *{
+            height: $pnDimensions;
+            width: $pnDimensions;
+            line-height: $pnDimensions;
+            color:$bright-blue;
+
+            &:hover {
+                border:none;
+                color:$bright-blue;
+                text-decoration: none;
+                transform:scale(1.2);
+            }
+        }
+    }
+
+    &__spacer{
+        >*{
+            &:hover{
+                border:none;
+                text-decoration: none;
+            }
+        }
+    }
+
+}

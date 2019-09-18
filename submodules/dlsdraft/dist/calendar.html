@@ -1,0 +1,3761 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Calendar</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Calendar</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Date Selection</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <p>Shown are multiple states for the calendar date range selection.</p>
+
+
+                            <p>The calednar date selection should be used in tables to select a date range to be viewed.</p>
+                        </div>
+                        <!-- end .rules-box -->
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <p>The user can select a single day by selecting a single day and then selecting &quot;apply&quot;.</p>
+
+
+                            <p>If they would like to selet a date range they can simlpy start to hover and move their mouse to make a second selection and then once then selection is made, click apply.</p>
+                        </div>
+                        <!-- end .rules-box -->
+                    </div>
+                    <!-- end .col-md-12 -->
+
+
+                    <div class="spacer-48">
+                    </div>
+                    <!-- start static calendar -->
+
+
+                    <div class="col-md-4">
+                        <h2>Static Calendar</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-date-picker">
+                            <div class="cmx-date-picker__header">
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-left"></span> <span class="sr-only">Previous Month</span></button>
+
+                                <div class="cmx-date-picker__current-period">
+                                    January 2017
+                                </div>
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-right"></span> <span class="sr-only">Next Month</span></button>
+                            </div>
+                            <!-- end .cmx-date-picker__header -->
+
+
+                            <div class="cmx-date-picker__body">
+                                <table class="cmx-date-picker__days-grid">
+                                    <thead>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell">sun</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">mon</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">tue</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">wed</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">thu</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">fri</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">sat</td>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">01</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">02</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">03</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">04</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">05</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">06</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">07</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">08</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">09</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">10</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">11</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">12</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">13</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">14</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">15</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">16</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">17</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">18</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">19</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">20</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">21</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">22</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">23</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">24</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">25</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">26</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">27</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">28</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">29</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">30</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">31</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end .cmx-date-picker__body -->
+
+
+                            <div class="cmx-date-picker__footer">
+                                <div class="cmx-date-picker__cta">
+                                    <button class="cmx-button cmx-button--link cmx-button--link-small">Cancel</button> <button class="cmx-button disabled ripple">Apply</button>
+                                </div>
+                                <!-- end cmx-date-picker__cta -->
+                            </div>
+                            <!-- end .cmx-date-picker__footer -->
+                        </div>
+                        <!-- end .cmx-date-picker -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <h5><strong>Action:</strong>
+                            </h5>
+
+
+                            <div class="spacer-8">
+                            </div>
+
+
+                            <p>User is allowed to select a date range from today’s date through future dates. This is the static state where nothing is selected.</p>
+                        </div>
+
+
+                        <div class="spacer-48">
+                        </div>
+                    </div>
+                    <!-- end .col-md-4 -->
+
+
+                    <div class="col-md-8">
+                        <div data-highlight="">
+                            <div class="demo-wrap-code code-4">
+                                <pre data-lang="html"><code class="language-html">&lt;div class="cmx-date-picker"&gt;
+    &lt;div class="cmx-date-picker__header"&gt;
+        &lt;button class="button button--icon"&gt;
+            &lt;span class="cmx-icon-straight-arrow-left" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Previous Month&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="cmx-date-picker__current-period"&gt;
+            January 2017
+        &lt;/div&gt;
+        &lt;button class="button button--icon"&gt;
+            &lt;span class="cmx-icon-straight-arrow-right" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Next Month&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__header --&gt;
+
+    &lt;div class="cmx-date-picker__body"&gt;
+        &lt;table class="cmx-date-picker__days-grid"&gt;
+            &lt;thead&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;sun&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;mon&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;tue&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;wed&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;thu&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;fri&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;sat&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;01&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;02&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;03&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;04&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;05&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;06&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;07&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;08&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;09&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;10&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;11&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;12&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;13&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;14&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;15&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;16&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;17&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;18&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;19&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;20&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;21&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;22&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;23&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;24&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;25&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;26&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;27&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;28&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;29&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;30&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;31&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__body --&gt;
+
+    &lt;div class="cmx-date-picker__footer"&gt;
+        &lt;div class="cmx-date-picker__cta"&gt;
+            &lt;button class="cmx-button cmx-button--link cmx-button--link-small"&gt;Cancel&lt;/button&gt;
+            &lt;button class="cmx-button disabled ripple"&gt;Apply&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;!-- end cmx-date-picker__cta --&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__footer --&gt;
+&lt;/div&gt;
+&lt;!-- end .cmx-date-picker --&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- end data-highlight -->
+                    </div>
+                    <!-- end .col-md-8 -->
+                    <!-- start first selected -->
+
+
+                    <div class="col-md-4">
+                        <h2>First Selected</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-date-picker">
+                            <div class="cmx-date-picker__header">
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-left"></span> <span class="sr-only">Previous Month</span></button>
+
+                                <div class="cmx-date-picker__current-period">
+                                    January 2017
+                                </div>
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-right"></span> <span class="sr-only">Next Month</span></button>
+                            </div>
+                            <!-- end .cmx-date-picker__header -->
+
+
+                            <div class="cmx-date-picker__body">
+                                <table class="cmx-date-picker__days-grid">
+                                    <thead>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell">sun</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">mon</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">tue</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">wed</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">thu</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">fri</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">sat</td>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">01</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">02</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">03</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">04</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">05</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">06</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">07</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">08</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day active">09</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">10</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">11</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">12</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">13</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">14</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">15</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">16</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">17</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">18</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">19</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">20</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">21</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">22</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">23</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">24</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">25</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">26</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">27</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">28</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">29</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">30</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">31</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end .cmx-date-picker__body -->
+
+
+                            <div class="cmx-date-picker__footer">
+                                <div class="cmx-date-picker__cta">
+                                    <button class="cmx-button cmx-button--link cmx-button--link-small">Cancel</button> <button class="cmx-button ripple" href="#">Apply</button>
+                                </div>
+                                <!-- end cmx-date-picker__cta -->
+                            </div>
+                            <!-- end .cmx-date-picker__footer -->
+                        </div>
+                        <!-- end .cmx-date-picker -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <h5><strong>Action:</strong>
+                            </h5>
+
+
+                            <div class="spacer-16">
+                            </div>
+
+
+                            <p>When the first date is selected the font color changes to white and the background is a blue circle.</p>
+                        </div>
+
+
+                        <div class="spacer-48">
+                        </div>
+                    </div>
+                    <!-- end .col-md-4 -->
+
+
+                    <div class="col-md-8">
+                        <div data-highlight="">
+                            <div class="demo-wrap-code code-5">
+                                <pre data-lang="html"><code class="language-html">&lt;div class="cmx-date-picker"&gt;
+    &lt;div class="cmx-date-picker__header"&gt;
+        &lt;button class="button button--icon"&gt;
+            &lt;span class="cmx-icon-straight-arrow-left" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Previous Month&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="cmx-date-picker__current-period"&gt;
+            January 2017
+        &lt;/div&gt;
+        &lt;button class="button button--icon"&gt;
+            &lt;span class="cmx-icon-straight-arrow-right" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Next Month&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__header --&gt;
+
+    &lt;div class="cmx-date-picker__body"&gt;
+        &lt;table class="cmx-date-picker__days-grid"&gt;
+            &lt;thead&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;sun&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;mon&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;tue&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;wed&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;thu&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;fri&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;sat&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;01&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;02&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;03&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;04&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;05&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;06&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;07&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;08&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day active"&gt;09&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;10&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;11&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;12&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;13&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;14&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;15&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;16&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;17&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;18&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;19&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;20&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;21&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;22&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;23&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;24&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;25&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;26&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;27&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;28&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;29&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;30&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;31&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__body --&gt;
+
+    &lt;div class="cmx-date-picker__footer"&gt;
+        &lt;div class="cmx-date-picker__cta"&gt;
+            &lt;button class="cmx-button cmx-button--link cmx-button--link-small" &gt;Cancel&lt;/button&gt;
+            &lt;button class="cmx-button ripple" href="#"&gt;Apply&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;!-- end cmx-date-picker__cta --&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__footer --&gt;
+&lt;/div&gt;
+&lt;!-- end .cmx-date-picker --&gt;</code></pre>
+                            </div>
+                        </div>
+                        <!-- end data-highlight -->
+                    </div>
+                    <!-- end .col-md-8 -->
+                    <!-- start selecting second -->
+
+
+                    <div class="col-md-4">
+                        <h2>Process of Selecting Second</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <h3>Range forwards</h3>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-date-picker">
+                            <div class="cmx-date-picker__header">
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-left"></span> <span class="sr-only">Previous Month</span></button>
+
+                                <div class="cmx-date-picker__current-period">
+                                    January 2017
+                                </div>
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-right"></span> <span class="sr-only">Next Month</span></button>
+                            </div>
+                            <!-- end .cmx-date-picker__header -->
+
+
+                            <div class="cmx-date-picker__body">
+                                <table class="cmx-date-picker__days-grid">
+                                    <thead>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell">sun</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">mon</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">tue</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">wed</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">thu</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">fri</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">sat</td>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">01</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">02</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">03</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">04</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">05</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">06</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">07</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">08</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-active-start first"><button class="cmx-date-picker__day active">09</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-in-range"><button class="cmx-date-picker__day">10</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-in-range"><button class="cmx-date-picker__day">11</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-end-range last"><button class="cmx-date-picker__day">12</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">13</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">14</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">15</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">16</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">17</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">18</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">19</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">20</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">21</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">22</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">23</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">24</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">25</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">26</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">27</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">28</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">29</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">30</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">31</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end .cmx-date-picker__body -->
+
+
+                            <div class="cmx-date-picker__footer">
+                                <div class="cmx-date-picker__cta">
+                                    <button class="cmx-button cmx-button--link cmx-button--link-small">Cancel</button> <button class="cmx-button ripple" disabled="disabled">Apply</button>
+                                </div>
+                                <!-- end cmx-date-picker__cta -->
+                            </div>
+                            <!-- end .cmx-date-picker__footer -->
+                        </div>
+                        <!-- end .cmx-date-picker -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h3>Range backwards</h3>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-date-picker">
+                            <div class="cmx-date-picker__header">
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-left"></span> <span class="sr-only">Previous Month</span></button>
+
+                                <div class="cmx-date-picker__current-period">
+                                    January 2017
+                                </div>
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-right"></span> <span class="sr-only">Next Month</span></button>
+                            </div>
+                            <!-- end .cmx-date-picker__header -->
+
+
+                            <div class="cmx-date-picker__body">
+                                <table class="cmx-date-picker__days-grid">
+                                    <thead>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell">sun</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">mon</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">tue</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">wed</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">thu</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">fri</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">sat</td>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">01</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">02</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">03</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">04</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">05</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">06</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">07</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">08</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-end-range first"><button class="cmx-date-picker__day hover">09</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-in-range"><button class="cmx-date-picker__day">10</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-in-range"><button class="cmx-date-picker__day">11</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-active-start last"><button class="cmx-date-picker__day active">12</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">13</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">14</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">15</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">16</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">17</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">18</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">19</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">20</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">21</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">22</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">23</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">24</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">25</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">26</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">27</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">28</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">29</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">30</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">31</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end .cmx-date-picker__body -->
+
+
+                            <div class="cmx-date-picker__footer">
+                                <div class="cmx-date-picker__cta">
+                                    <button class="cmx-button cmx-button--link cmx-button--link-small">Cancel</button> <button class="cmx-button ripple" disabled="disabled">Apply</button>
+                                </div>
+                                <!-- end cmx-date-picker__cta -->
+                            </div>
+                            <!-- end .cmx-date-picker__footer -->
+                        </div>
+                        <!-- end .cmx-date-picker -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <h5><strong>Action:</strong>
+                            </h5>
+
+
+                            <div class="spacer-16">
+                            </div>
+
+
+                            <p>Same convention as before for hovering over the next date, the font color changes to blue. The user is also shown a bridge between the two dates in a lighter version of the highlight blue (#3FA9F5 at 20% opactiy).</p>
+                        </div>
+
+
+                        <div class="spacer-48">
+                        </div>
+                    </div>
+                    <!-- end .col-md-4 -->
+
+
+                    <div class="col-md-8">
+                        <div data-highlight="">
+                            <div class="demo-wrap-code code-6">
+                                <pre data-lang="html"><code class="language-html">&lt;!-- RANGE FORWARDS --&gt;
+
+&lt;div class="cmx-date-picker"&gt;
+    &lt;div class="cmx-date-picker__header"&gt;
+        &lt;button class="button button--icon"&gt;
+            &lt;span class="cmx-icon-straight-arrow-left" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Previous Month&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="cmx-date-picker__current-period"&gt;
+            January 2017
+        &lt;/div&gt;
+        &lt;button class="button button--icon"&gt;
+            &lt;span class="cmx-icon-straight-arrow-right" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Next Month&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__header --&gt;
+
+    &lt;div class="cmx-date-picker__body"&gt;
+        &lt;table class="cmx-date-picker__days-grid"&gt;
+            &lt;thead&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;sun&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;mon&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;tue&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;wed&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;thu&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;fri&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;sat&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;01&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;02&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;03&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;04&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;05&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;06&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;07&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;08&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-active-start first"&gt;
+                        &lt;button class="cmx-date-picker__day active"&gt;09&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-in-range"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;10&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-in-range"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;11&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-end-range last"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;12&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;13&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;14&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;15&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;16&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;17&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;18&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;19&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;20&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;21&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;22&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;23&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;24&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;25&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;26&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;27&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;28&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;29&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;30&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;31&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__body --&gt;
+
+    &lt;div class="cmx-date-picker__footer"&gt;
+        &lt;div class="cmx-date-picker__cta"&gt;
+            &lt;button class="cmx-button cmx-button--link cmx-button--link-small" &gt;Cancel&lt;/button&gt;
+            &lt;button class="cmx-button ripple" disabled="disabled"&gt;Apply&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;!-- end cmx-date-picker__cta --&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__footer --&gt;
+&lt;/div&gt;
+&lt;!-- end .cmx-date-picker --&gt;
+
+
+
+&lt;!-- RANGE BACKWARDS --&gt;
+
+&lt;div class="cmx-date-picker"&gt;
+    &lt;div class="cmx-date-picker__header"&gt;
+        &lt;button class="button button--icon"&gt;
+            &lt;span class="cmx-icon-straight-arrow-left" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Previous Month&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="cmx-date-picker__current-period"&gt;
+            January 2017
+        &lt;/div&gt;
+        &lt;button class="button button--icon"&gt;
+            &lt;span class="cmx-icon-straight-arrow-right" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Next Month&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__header --&gt;
+
+    &lt;div class="cmx-date-picker__body"&gt;
+        &lt;table class="cmx-date-picker__days-grid"&gt;
+            &lt;thead&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;sun&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;mon&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;tue&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;wed&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;thu&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;fri&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;sat&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;01&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;02&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;03&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;04&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;05&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;06&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;07&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;08&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-end-range first"&gt;
+                        &lt;button class="cmx-date-picker__day hover"&gt;09&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-in-range"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;10&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-in-range"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;11&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-active-start last"&gt;
+                        &lt;button class="cmx-date-picker__day active"&gt;12&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;13&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;14&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;15&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;16&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;17&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;18&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;19&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;20&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;21&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;22&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;23&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;24&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;25&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;26&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;27&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;28&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;29&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;30&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;31&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__body --&gt;
+
+    &lt;div class="cmx-date-picker__footer"&gt;
+        &lt;div class="cmx-date-picker__cta"&gt;
+            &lt;button class="cmx-button cmx-button--link cmx-button--link-small" &gt;Cancel&lt;/button&gt;
+            &lt;button class="cmx-button ripple" disabled="disabled"&gt;Apply&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;!-- end cmx-date-picker__cta --&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__footer --&gt;
+&lt;/div&gt;
+&lt;!-- end .cmx-date-picker --&gt;
+</code></pre>
+                            </div>
+                        </div>
+                        <!-- end data-highlight -->
+                    </div>
+                    <!-- end .col-md-8 -->
+                    <!-- start both selected -->
+
+
+                    <div class="col-md-4">
+                        <h2>Both Selected</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <h3>End of range is ahead of start</h3>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-date-picker">
+                            <div class="cmx-date-picker__header">
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-left"></span> <span class="sr-only">Previous Month</span></button>
+
+                                <div class="cmx-date-picker__current-period">
+                                    January 2017
+                                </div>
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-right"></span> <span class="sr-only">Next Month</span></button>
+                            </div>
+                            <!-- end .cmx-date-picker__header -->
+
+
+                            <div class="cmx-date-picker__body">
+                                <table class="cmx-date-picker__days-grid">
+                                    <thead>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell">sun</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">mon</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">tue</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">wed</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">thu</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">fri</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">sat</td>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">01</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">02</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">03</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">04</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">05</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">06</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">07</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">08</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-active-start first"><button class="cmx-date-picker__day active">09</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-in-range"><button class="cmx-date-picker__day">10</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-in-range"><button class="cmx-date-picker__day">11</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-active-end last"><button class="cmx-date-picker__day active">12</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">13</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">14</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">15</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">16</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">17</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">18</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">19</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">20</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">21</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">22</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">23</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">24</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">25</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">26</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">27</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">28</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">29</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">30</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">31</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end .cmx-date-picker__body -->
+
+
+                            <div class="cmx-date-picker__footer">
+                                <div class="cmx-date-picker__cta">
+                                    <button class="cmx-button cmx-button--link cmx-button--link-small">Cancel</button> <button class="cmx-button ripple">Apply</button>
+                                </div>
+                                <!-- end cmx-date-picker__cta -->
+                            </div>
+                            <!-- end .cmx-date-picker__footer -->
+                        </div>
+                        <!-- end .cmx-date-picker -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h3>End of range is before start</h3>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-date-picker">
+                            <div class="cmx-date-picker__header">
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-left"></span> <span class="sr-only">Previous Month</span></button>
+
+                                <div class="cmx-date-picker__current-period">
+                                    January 2017
+                                </div>
+                                <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-straight-arrow-right"></span> <span class="sr-only">Next Month</span></button>
+                            </div>
+                            <!-- end .cmx-date-picker__header -->
+
+
+                            <div class="cmx-date-picker__body">
+                                <table class="cmx-date-picker__days-grid">
+                                    <thead>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell">sun</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">mon</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">tue</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">wed</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">thu</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">fri</td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">sat</td>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">01</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">02</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">03</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">04</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">05</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">06</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">07</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day" disabled="disabled">08</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">09</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">10</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-active-end first"><button class="cmx-date-picker__day active">11</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-in-range"><button class="cmx-date-picker__day">12</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-in-range"><button class="cmx-date-picker__day">13</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell cmx-active-start last"><button class="cmx-date-picker__day active">14</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">15</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">16</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">17</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">18</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">19</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">20</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">21</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">22</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">23</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">24</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">25</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">26</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">27</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">28</button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="cmx-date-picker__days-grid-row">
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">29</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">30</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell"><button class="cmx-date-picker__day">31</button>
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+
+                                            <td class="cmx-date-picker__days-grid-cell">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end .cmx-date-picker__body -->
+
+
+                            <div class="cmx-date-picker__footer">
+                                <div class="cmx-date-picker__cta">
+                                    <button class="cmx-button cmx-button--link cmx-button--link-small">Cancel</button> <button class="cmx-button ripple">Apply</button>
+                                </div>
+                                <!-- end cmx-date-picker__cta -->
+                            </div>
+                            <!-- end .cmx-date-picker__footer -->
+                        </div>
+                        <!-- end .cmx-date-picker -->
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <h5><strong>Action:</strong>
+                            </h5>
+
+
+                            <div class="spacer-16">
+                            </div>
+
+
+                            <p>This shows when the user has selected the full date range. If they want to select a new date range, they do not have to clear it - once they make another click it will reset the range.</p>
+                        </div>
+
+
+                        <div class="spacer-48">
+                        </div>
+                    </div>
+                    <!-- end .col-md-4 -->
+
+
+                    <div class="col-md-8">
+                        <div data-highlight="">
+                            <div class="demo-wrap-code code-6">
+                                <pre data-lang="html"><code class="language-html">&lt;!-- END OF RANGE AFTER START --&gt;
+&lt;div class="cmx-date-picker"&gt;
+    &lt;div class="cmx-date-picker__header"&gt;
+        &lt;button class="button button--icon"&gt;
+            &lt;span class="cmx-icon-straight-arrow-left" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Previous Month&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;div class="cmx-date-picker__current-period"&gt;
+            January 2017
+        &lt;/div&gt;
+        &lt;button class="button button--icon"&gt;
+            &lt;span class="cmx-icon-straight-arrow-right" aria-hidden="true"&gt;&lt;/span&gt;
+            &lt;span class="sr-only"&gt;Next Month&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__header --&gt;
+
+    &lt;div class="cmx-date-picker__body"&gt;
+        &lt;table class="cmx-date-picker__days-grid"&gt;
+            &lt;thead&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;sun&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;mon&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;tue&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;wed&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;thu&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;fri&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;sat&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;01&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;02&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;03&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;04&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;05&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;06&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;07&lt;/a&gt;&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;08&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-active-start first"&gt;
+                        &lt;button class="cmx-date-picker__day active"&gt;09&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-in-range"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;10&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-in-range"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;11&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell cmx-active-end last"&gt;
+                        &lt;button class="cmx-date-picker__day active"&gt;12&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;13&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;14&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;15&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;16&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;17&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;18&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;19&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;20&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;21&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;22&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;23&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;24&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;25&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;26&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;27&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;28&lt;/button&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;29&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;30&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                        &lt;button class="cmx-date-picker__day"&gt;31&lt;/button&gt;
+                    &lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                    &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__body --&gt;
+
+    &lt;div class="cmx-date-picker__footer"&gt;
+        &lt;div class="cmx-date-picker__cta"&gt;
+            &lt;button class="cmx-button cmx-button--link cmx-button--link-small" &gt;Cancel&lt;/button&gt;
+            &lt;button class="cmx-button ripple"&gt;Apply&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;!-- end cmx-date-picker__cta --&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-date-picker__footer --&gt;
+&lt;/div&gt;
+&lt;!-- end .cmx-date-picker --&gt;
+
+
+
+&lt;!-- END OF RANGE BEFORE START --&gt;
+
+&lt;div class="cmx-date-picker"&gt;
+&lt;div class="cmx-date-picker__header"&gt;
+    &lt;button class="button button--icon"&gt;
+        &lt;span class="cmx-icon-straight-arrow-left" aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;span class="sr-only"&gt;Previous Month&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="cmx-date-picker__current-period"&gt;
+        January 2017
+    &lt;/div&gt;
+    &lt;button class="button button--icon"&gt;
+        &lt;span class="cmx-icon-straight-arrow-right" aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;span class="sr-only"&gt;Next Month&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;!-- end .cmx-date-picker__header --&gt;
+
+&lt;div class="cmx-date-picker__body"&gt;
+    &lt;table class="cmx-date-picker__days-grid"&gt;
+        &lt;thead&gt;
+            &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;sun&lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;mon&lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;tue&lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;wed&lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;thu&lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;fri&lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;sat&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;01&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;02&lt;/a&gt;&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;03&lt;/a&gt;&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;04&lt;/a&gt;&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;05&lt;/a&gt;&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;06&lt;/a&gt;&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;07&lt;/a&gt;&lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day" disabled="disabled"&gt;08&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;09&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;10&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell cmx-active-end first"&gt;
+                    &lt;button class="cmx-date-picker__day active"&gt;11&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell cmx-in-range"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;12&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell cmx-in-range"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;13&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell cmx-active-start last"&gt;
+                    &lt;button class="cmx-date-picker__day active"&gt;14&lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;15&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;16&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;17&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;18&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;19&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;20&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;21&lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;22&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;23&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;24&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;25&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;26&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;27&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;28&lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="cmx-date-picker__days-grid-row"&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;29&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;30&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;
+                    &lt;button class="cmx-date-picker__day"&gt;31&lt;/button&gt;
+                &lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+                &lt;td class="cmx-date-picker__days-grid-cell"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;!-- end .cmx-date-picker__body --&gt;
+
+&lt;div class="cmx-date-picker__footer"&gt;
+    &lt;div class="cmx-date-picker__cta"&gt;
+        &lt;button class="cmx-button cmx-button--link cmx-button--link-small" &gt;Cancel&lt;/button&gt;
+        &lt;button class="cmx-button ripple"&gt;Apply&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!-- end cmx-date-picker__cta --&gt;
+&lt;/div&gt;
+&lt;!-- end .cmx-date-picker__footer --&gt;
+&lt;/div&gt;
+&lt;!-- end .cmx-date-picker --&gt;
+</code></pre>
+                            </div>
+                        </div>
+                        <!-- end data-highlight -->
+                    </div>
+                    <!-- end .col-md-8 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="code-box" data-collapsed-text="Show SASS / CSS" data-expanded-text="Hide SASS / CSS">
+                            <div data-highlight="">
+                                <pre data-lang="sass"><code class="language-css">.cmx-date-picker {
+    width: 320px;
+    min-height: 240px;
+    background: $true-white;
+    border-radius: $radius-2;
+    font-weight: $font-bold;
+    border-top: 3px solid $bright-blue;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.14);
+    padding: 8px;
+
+    &amp;__header,
+    &amp;__body {
+        width: 100%;
+        text-align: center;
+    }
+    &amp;__days-grid {
+        width: 100%;
+
+        &amp;-row{
+            display: flex;
+            padding: 4px 0;
+            height: 26px;
+            box-sizing: content-box;
+            width: 100%;
+        }
+
+        &amp;-cell {
+            display: block;
+            flex: 1 1 auto;
+            min-width: 36px;
+            width: 36px;
+            height: 26px;
+            font-size: $font-size-12;
+            padding: 0px;
+            text-align: center;
+            color: $deep-blue;
+        }
+        
+        .cmx-active-start {
+            background: rgba(63, 169, 245, 0.2);
+            &amp;.first{
+                background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 51%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */   
+            }
+            &amp;.last{
+                background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 51%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */    
+            }
+        }
+        .cmx-active-end {
+            background: rgba(63, 169, 245, 0.2);
+            &amp;.first{
+                background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 51%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */   
+            }
+            &amp;.last{
+                background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 51%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */    
+            }
+        }
+        .cmx-in-range {
+            background: rgba(63, 169, 245, 0.2);
+        }
+        .cmx-end-range {
+            .cmx-date-picker__day{
+                border-radius:50%;
+            }
+            &amp;.last{
+                background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 50.01%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                
+                .cmx-date-picker__day{
+                    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 50.01%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                }
+            }
+            &amp;.first{
+                background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 50.01%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                
+                .cmx-date-picker__day{
+                    background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(41,137,216,0) 50%,rgba(63, 169, 245, 0.2) 50.01%,rgba(63, 169, 245, 0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                }
+            }
+        }
+    }
+
+    &amp;__day{
+        color: #001B3A;
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        background: none;
+        padding: 0;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+        box-sizing: border-box;
+        font-weight: 700;
+        
+        &amp;:hover,
+        &amp;.hover {
+            color: $bright-blue;
+        }
+
+        &amp;:focus{
+            outline:0;
+        }
+
+        &amp;.active {
+            outline: 0;
+            color: $true-white;
+            background: $bright-blue;
+            border: 1px solid $bright-blue;
+            border-radius: 100%;
+        }
+
+
+
+        &amp;[disabled="disabled"] {
+            color: $disabled-grey;
+            cursor: default;
+            &amp;:hover {
+                color: $disabled-grey;
+            }
+        }
+    }
+
+    &amp;__header {
+        padding-bottom:6px;
+        display:flex;
+        align-items:center;
+        font-size: $font-size-14;
+        color: $deep-blue;
+        line-height: $line-height-14;
+        &gt; * {
+            flex: 1 1 auto;
+            &amp;:first-child,
+            &amp;:last-child{
+                width: 12%;
+                flex: 0 0 auto;
+            }
+            &amp;:first-child{
+                text-align: right;
+                margin: 0 0.5rem 0 0;
+            }
+            &amp;:last-child{
+                text-align: left;
+                margin: 0 0 0 0.5rem;
+            }
+        }
+    }
+    &amp;__prev-period,
+    &amp;__next-period {    
+        svg {
+            width: 6px;
+            fill: $bright-blue;
+        }
+    }
+
+    &amp;__body {
+        text-transform: uppercase;
+    }
+
+    &amp;__footer {
+        text-align: right;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    &amp;__cta{
+        display:flex;
+        justify-content: flex-end;
+        align-items:center;
+        .button{
+            margin-right:1.25rem;
+            &amp;:last-child{
+                margin-right:0;
+            }
+        }
+    }
+}</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-date-picker {
+    width: 320px;
+    min-height: 240px;
+    background: #FFF;
+    border-radius: 2px;
+    font-weight: 700;
+    border-top: 3px solid #3FA9F5;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.14);
+    padding: 8px;
+}
+
+.cmx-date-picker__header,
+.cmx-date-picker__body {
+    width: 100%;
+    text-align: center;
+}
+
+.cmx-date-picker__days-grid {
+    width: 100%;
+}
+
+.cmx-date-picker__days-grid-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4px 0;
+    height: 26px;
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.cmx-date-picker__days-grid-cell {
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-width: 36px;
+    width: 36px;
+    height: 26px;
+    font-size: 0.75rem;
+    padding: 0px;
+    text-align: center;
+    color: #001B3A;
+}
+
+.cmx-date-picker__days-grid .cmx-active-start {
+    background: rgba(63, 169, 245, 0.2);
+}
+
+.cmx-date-picker__days-grid .cmx-active-start.first {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0) 50%, rgba(63, 169, 245, 0.2) 51%, rgba(63, 169, 245, 0.2) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.cmx-date-picker__days-grid .cmx-active-start.last {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0) 50%, rgba(63, 169, 245, 0.2) 51%, rgba(63, 169, 245, 0.2) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.cmx-date-picker__days-grid .cmx-active-end {
+    background: rgba(63, 169, 245, 0.2);
+}
+
+.cmx-date-picker__days-grid .cmx-active-end.first {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0) 50%, rgba(63, 169, 245, 0.2) 51%, rgba(63, 169, 245, 0.2) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.cmx-date-picker__days-grid .cmx-active-end.last {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0) 50%, rgba(63, 169, 245, 0.2) 51%, rgba(63, 169, 245, 0.2) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.cmx-date-picker__days-grid .cmx-in-range {
+    background: rgba(63, 169, 245, 0.2);
+}
+
+.cmx-date-picker__days-grid .cmx-end-range .cmx-date-picker__day {
+    border-radius: 50%;
+}
+
+.cmx-date-picker__days-grid .cmx-end-range.last {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0) 50%, rgba(63, 169, 245, 0.2) 50.01%, rgba(63, 169, 245, 0.2) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.cmx-date-picker__days-grid .cmx-end-range.last .cmx-date-picker__day {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0) 50%, rgba(63, 169, 245, 0.2) 50.01%, rgba(63, 169, 245, 0.2) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.cmx-date-picker__days-grid .cmx-end-range.first {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0) 50%, rgba(63, 169, 245, 0.2) 50.01%, rgba(63, 169, 245, 0.2) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.cmx-date-picker__days-grid .cmx-end-range.first .cmx-date-picker__day {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0) 50%, rgba(63, 169, 245, 0.2) 50.01%, rgba(63, 169, 245, 0.2) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.cmx-date-picker__day {
+    color: #001B3A;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    background: none;
+    padding: 0;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.cmx-date-picker__day:hover,
+.cmx-date-picker__day.hover {
+    color: #3FA9F5;
+}
+
+.cmx-date-picker__day:focus {
+    outline: 0;
+}
+
+.cmx-date-picker__day.active {
+    outline: 0;
+    color: #FFF;
+    background: #3FA9F5;
+    border: 1px solid #3FA9F5;
+    border-radius: 100%;
+}
+
+.cmx-date-picker__day[disabled="disabled"] {
+    color: #D6D6D6;
+    cursor: default;
+}
+
+.cmx-date-picker__day[disabled="disabled"]:hover {
+    color: #D6D6D6;
+}
+
+.cmx-date-picker__header {
+    padding-bottom: 6px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #001B3A;
+    line-height: 0.875rem;
+}
+
+.cmx-date-picker__header&gt;* {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.cmx-date-picker__header&gt;*:first-child,
+.cmx-date-picker__header&gt;*:last-child {
+    width: 12%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.cmx-date-picker__header&gt;*:first-child {
+    text-align: right;
+    margin: 0 0.5rem 0 0;
+}
+
+.cmx-date-picker__header&gt;*:last-child {
+    text-align: left;
+    margin: 0 0 0 0.5rem;
+}
+
+.cmx-date-picker__prev-period svg,
+.cmx-date-picker__next-period svg {
+    width: 6px;
+    fill: #3FA9F5;
+}
+
+.cmx-date-picker__body {
+    text-transform: uppercase;
+}
+
+.cmx-date-picker__footer {
+    text-align: right;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.cmx-date-picker__cta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.cmx-date-picker__cta .button {
+    margin-right: 1.25rem;
+}
+
+.cmx-date-picker__cta .button:last-child {
+    margin-right: 0;
+}
+</code></pre>
+                            </div>
+                            <!-- end data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-48">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Scheduler Layout</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <p>Full page calendars should be used when the information displayed is both date and time specific.</p>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <p><strong>Rules</strong>
+                            </p>
+
+
+                            <div class="spacer-8">
+                            </div>
+
+
+                            <p>1) Limit calendar views to week by week and daily views (one day viewed at a time). Bi-weekly views can be used on special occasions. Refrain from monthly views</p>
+
+
+                            <p>2) Limit each card to high level information. Additional information may be viewed when a card is selected</p>
+
+
+                            <p>3) Highlight the current date, providing the user reference</p>
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+
+
+                    <div class="spacer-32">
+                    </div>
+                    <script>
+                        // we declare it old school so it gets hoisted
+                        function card(args){
+                            document.write(`
+                        <div class="cmx-scheduler__card">
+                            <div class="cmx-scheduler__card-body">
+                                <div class="status">
+                                    <div class="status-message">
+                                        <div class="cmx-flag-status cmx-flag-status--`+args.type+` cmx-flag-status--small"><\/div>`+args.status+`
+                                    <\/div>
+                                    <div class="load-status">`+args.statusNumber+`<\/div>
+                                <\/div>
+                                <!-- end .status -->
+                        
+                                <div class="cmx-scheduler__card-content">
+                                    <div class="cmx-scheduler__card-jobsite">`+args.client+`<\/div>
+                                    <div class="cmx-scheduler__card-note">`+args.note+`<\/div>
+                                    <div class="cmx-scheduler__card-material">`+args.product+`<\/div>
+                                <\/div>
+                                <!-- end .cmx-scheduler__card-content -->
+                            <\/div>
+                            <!-- end .cmx-scheduler__card-body -->
+                        
+                            <div class="cmx-scheduler__card-footer">
+                                <div class="cmx-scheduler__card-hour"><span class="`+args.icon+`"><\/span> `+args.time+`<\/div>
+                            <\/div>
+                            <!-- end .cmx-scheduler__card-footer -->
+                        <\/div>`);
+                        };
+                    </script>
+
+                    <div class="col-md-12">
+                        <div class="cmx-scheduler">
+                            <div class="cmx-scheduler__header">
+                                <div class="cmx-scheduler__panel-title">
+                                    <button class="cmx-button cmx-button--icon cmx-scheduler__panel-action-button prev"><span aria-hidden="true" class="cmx-icon-left-single font-true-white"></span><span class="sr-only">Previous Month</span></button> <button class="cmx-button cmx-button--icon cmx-scheduler__panel-action-button timeframe">January 9 - 15, 2017</button> <button class="cmx-button cmx-button--icon cmx-scheduler__panel-action-button next"><span class="cmx-icon-right-single font-true-white"></span></button>
+                                </div>
+                                <!-- end .scheduler__panel-title -->
+
+
+                                <div class="cmx-scheduler__panel-actions-right">
+                                    <button class="cmx-button cmx-button--icon cmx-scheduler__panel-action-button right"><span aria-hidden="true" class="cmx-icon-settings font-true-white"></span><span class="sr-only">Next Month</span></button>
+                                </div>
+                                <!-- end .scheduler__panel-actions-right -->
+                            </div>
+                            <!-- end .scheduler-header -->
+
+
+                            <div class="cmx-scheduler__filters">
+                                <button class="cmx-button cmx-button--link cmx-button--link-header-filter"><span class="font-true-black">Product Line</span> <span class="cmx-icon-down-single"></span></button><button class="cmx-button cmx-button--link cmx-button--link-header-filter"><span class="font-true-black">Location and POD Name</span> <span class="cmx-icon-down-single"></span></button><button class="cmx-button cmx-button--link cmx-button--link-header-filter"><span class="font-true-black">Status</span> <span class="cmx-icon-down-single"></span></button>
+                            </div>
+
+
+                            <div class="cmx-scheduler__body">
+                                <div class="cmx-scheduler__column current-day">
+                                    <div class="cmx-scheduler__column-title">
+                                        Monday, Jan 9
+                                    </div>
+                                    <script>
+                                        card({
+                                                type:'info-alt',
+                                                status:'Completed',
+                                                statusNumber:'3/3',
+                                                client:'Green Villas MX',
+                                                note:'Warehouse behind jobsite',
+                                                product:'Bag Cement',
+                                                icon:'',
+                                                time:'9:15 a.m.'
+                                        });
+                                        card({
+                                                type:'alert',
+                                                status:'Blocked',
+                                                statusNumber:'',
+                                                client:'Wilder Ranch Orinda',
+                                                note:'South Gates #1',
+                                                product:'Bulk Cement',
+                                                icon:'',
+                                                time:'10:00 a.m. - 11:00 a.m.'
+                                        });
+                                        card({
+                                                type:'disabled',
+                                                status:'Cancelled',
+                                                statusNumber:'2/2',
+                                                client:'Rideback + Co.',
+                                                note:'North Gates',
+                                                product:'Multiproduct',
+                                                icon:'',
+                                                time:'11:45 a.m.'
+                                        });
+                                        card({
+                                                type:'success',
+                                                status:'Confirmed',
+                                                statusNumber:'',
+                                                client:'North High School',
+                                                note:'Warehouse 3',
+                                                product:'Bag Cement & Multiproduct',
+                                                icon:'',
+                                                time:'3:30 p.m.'
+                                        });
+                                        card({
+                                                type:'info',
+                                                status:'In Proccess',
+                                                statusNumber:'1/1',
+                                                client:'North High School',
+                                                note:'West Warehouse',
+                                                product:'Bag Cement & Multiproduct',
+                                                icon:'font-bright-blue cmx-icon-warning',
+                                                time:'12:30 a.m.'
+                                        });
+                                    </script>
+                                </div>
+                                <!-- end .scheduler__column .current-day -->
+
+
+                                <div class="cmx-scheduler__column">
+                                    <div class="cmx-scheduler__column-title">
+                                        Tuesday, Jan 10
+                                    </div>
+                                    <script>
+                                        card({
+                                            type:'success',
+                                            status:'Confirmed',
+                                            statusNumber:'',
+                                            client:'North High School',
+                                            note:'Warehouse 3',
+                                            product:'Bag Cement',
+                                            icon:'',
+                                            time:''
+                                        });
+                                        card({
+                                            type:'alert',
+                                            status:'Blocked',
+                                            statusNumber:'',
+                                            client:'WHigh School River Side',
+                                            note:'West Gates',
+                                            product:'Bag Cement',
+                                            icon:'',
+                                            time:'1:00 p.m.'
+                                        });
+                                    </script>
+                                </div>
+                                <!-- end .scheduler__column -->
+
+
+                                <div class="cmx-scheduler__column">
+                                    <div class="cmx-scheduler__column-title">
+                                        Wednesday, Jan 11
+                                    </div>
+                                    <script>
+                                        card({
+                                                type:'info',
+                                                status:'In Proccess',
+                                                statusNumber:'1/3',
+                                                client:'Wilder Ranch Orinda',
+                                                note:'Jobsite Warehouse 5',
+                                                product:'Bag Cement',
+                                                icon:'font-bright-blue cmx-icon-warning',
+                                                time:'9:15 a.m.'
+                                        });
+                                        card({
+                                                type:'success',
+                                                status:'Confirmed',
+                                                statusNumber:'',
+                                                client:'Rideback + Co.',
+                                                note:'North Gates',
+                                                product:'Bulk Cement',
+                                                icon:'',
+                                                time:'9:00 a.m. - 12:00 a.m.'
+                                        });
+                                        card({
+                                                type:'alert',
+                                                status:'Blocked',
+                                                statusNumber:'',
+                                                client:'Rideback + Co.',
+                                                note:'Warehouse behind jobsite',
+                                                product:'Bag Cement',
+                                                icon:'',
+                                                time:'11:00 a.m.'
+                                        });
+                                    </script>
+                                </div>
+                                <!-- end .scheduler__column -->
+
+
+                                <div class="cmx-scheduler__column">
+                                    <div class="cmx-scheduler__column-title">
+                                        Thursday, Jan 12
+                                    </div>
+                                    <script>
+                                        card({
+                                                type:'disabled',
+                                                status:'Cancelled',
+                                                statusNumber:'',
+                                                client:'Block Office Building',
+                                                note:'North Gates',
+                                                product:'Bag Cement & Multiproduct',
+                                                icon:'',
+                                                time:'During the Day'
+                                        });
+                                        card({
+                                                type:'success',
+                                                status:'Confirmed',
+                                                statusNumber:'',
+                                                client:'Rideback + Co.',
+                                                note:'North Gates',
+                                                product:'Multiproduct',
+                                                icon:'',
+                                                time:'10:00 a.m.'
+                                        });
+                                        card({
+                                                type:'alert',
+                                                status:'Blocked',
+                                                statusNumber:'',
+                                                client:'Rideback + Co.',
+                                                note:'South Gates #1',
+                                                product:'Bag Cement',
+                                                icon:'',
+                                                time:'1:00 p.m.'
+                                        });
+                                        card({
+                                                type:'alert',
+                                                status:'Blocked',
+                                                statusNumber:'',
+                                                client:'Rideback + Co.',
+                                                note:'Warehouse',
+                                                product:'Bag Cement',
+                                                icon:'',
+                                                time:'10:00 AM'
+                                        });
+                                    </script>
+                                </div>
+                                <!-- end .scheduler__column -->
+
+
+                                <div class="cmx-scheduler__column">
+                                    <div class="cmx-scheduler__column-title">
+                                        Friday, Jan 13
+                                    </div>
+                                    <script>
+                                        card({
+                                            type:'success',
+                                            status:'Confirmed',
+                                            statusNumber:'',
+                                            client:'North High School',
+                                            note:'South Red Gates',
+                                            product:'Bulk Cement',
+                                            icon:'',
+                                            time:'8:00 a.m. - 9:30 a.m.'
+                                        });
+                                    </script>
+                                </div>
+                                <!-- end .scheduler__column -->
+
+
+                                <div class="cmx-scheduler__column">
+                                    <div class="cmx-scheduler__column-title">
+                                        Saturday, Jan 14
+                                    </div>
+                                    <script>
+                                        card({
+                                                type:'info',
+                                                status:'In Proccess',
+                                                statusNumber:'1/3',
+                                                client:'Wilder Ranch Orinda',
+                                                note:'South Red Gates',
+                                                product:'Bulk Cement',
+                                                icon:'font-bright-blue cmx-icon-warning',
+                                                time:'9:15 a.m.'
+                                        });
+                                    </script>
+                                </div>
+                                <!-- end .scheduler__column -->
+
+
+                                <div class="cmx-scheduler__column no-activity">
+                                    <div class="cmx-scheduler__column-title">
+                                        Sun Jan 15
+                                    </div>
+                                </div>
+                                <!-- end .scheduler__column .no-activity -->
+                            </div>
+                            <!-- end .scheduler__body -->
+                        </div>
+                        <!-- end .scheduler -->
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-16">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html"><code class="language-html">&lt;div class="cmx-scheduler"&gt;
+    &lt;div class="cmx-scheduler__header"&gt;
+        &lt;div class="cmx-scheduler__panel-title"&gt;
+            &lt;button class="cmx-button cmx-button--icon cmx-scheduler__panel-action-button prev"&gt;
+            &lt;span class="cmx-icon-left-single font-true-white" aria-hidden="true"&gt;&lt;/span&gt;&lt;span class="sr-only"&gt;Previous Month&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class="cmx-button cmx-button--icon cmx-scheduler__panel-action-button timeframe"&gt;
+            January  9 - 15, 2017
+            &lt;/button&gt;
+            &lt;button class="cmx-button cmx-button--icon cmx-scheduler__panel-action-button next"&gt;
+            &lt;span class="cmx-icon-right-single font-true-white"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;!-- end .cmx-scheduler__panel-title --&gt;
+        &lt;div class="cmx-scheduler__panel-actions-right"&gt;
+            &lt;button class="cmx-button cmx-button--icon cmx-scheduler__panel-action-button right"&gt;
+            &lt;span class="cmx-icon-settings font-true-white" aria-hidden="true"&gt;&lt;/span&gt;&lt;span class="sr-only"&gt;Next Month&lt;/span&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;!-- end .cmx-scheduler__panel-actions-right --&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-scheduler-header --&gt;
+    &lt;div class="cmx-scheduler__filters"&gt;
+        &lt;button class="cmx-button cmx-button--link cmx-button--link-header-filter"&gt;&lt;span class="font-true-black"&gt;Product Line&lt;/span&gt; &lt;span class="cmx-icon-down-single"&gt;&lt;/span&gt;&lt;/button&gt;&lt;button class="cmx-button cmx-button--link cmx-button--link-header-filter"&gt;&lt;span class="font-true-black"&gt;Location and POD Name&lt;/span&gt; &lt;span class="cmx-icon-down-single"&gt;&lt;/span&gt;&lt;/button&gt;&lt;button class="cmx-button cmx-button--link cmx-button--link-header-filter"&gt;&lt;span class="font-true-black"&gt;Status&lt;/span&gt; &lt;span class="cmx-icon-down-single"&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="cmx-scheduler__body"&gt;
+        &lt;div class="cmx-scheduler__column current-day"&gt;
+            &lt;div class="cmx-scheduler__column-title"&gt;
+                Monday, Jan 9
+            &lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--info-alt cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Completed
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;3/3&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;Green Villas MX&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;Warehouse behind jobsite&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bag Cement&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; 9:15 a.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--alert cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Blocked
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;Wilder Ranch Orinda&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;South Gates #1&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bulk Cement&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; 10:00 a.m. - 11:00 a.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--disabled cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Cancelled
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;2/2&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;Rideback + Co.&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;North Gates&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Multiproduct&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; 11:45 a.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--success cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Confirmed
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;North High School&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;Warehouse 3&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bag Cement &amp;amp; Multiproduct&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; 3:30 p.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .scheduler__card-footer --&gt;
+            &lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--info cmx-flag-status--small"&gt;&lt;/div&gt;
+                        In Proccess
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;1/1&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;North High School&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;West Warehouse&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bag Cement &amp;amp; Multiproduct&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class="font-bright-blue cmx-icon-warning"&gt;&lt;/span&gt; 12:30 a.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- end .cmx-scheduler__column .current-day --&gt;
+        &lt;div class="cmx-scheduler__column"&gt;
+            &lt;div class="cmx-scheduler__column-title"&gt;Tuesday, Jan 10&lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--success cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Confirmed
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;North High School&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;Warehouse 3&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bag Cement&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--alert cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Blocked
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;WHigh School River Side&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;West Gates&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bag Cement&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; 1:00 p.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- end .cmx-scheduler__column --&gt;
+        &lt;div class="cmx-scheduler__column"&gt;
+            &lt;div class="cmx-scheduler__column-title"&gt;Wednesday, Jan 11&lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--info cmx-flag-status--small"&gt;&lt;/div&gt;
+                        In Proccess
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;1/3&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;Wilder Ranch Orinda&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;Jobsite Warehouse 5&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bag Cement&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class="font-bright-blue cmx-icon-warning"&gt;&lt;/span&gt; 9:15 a.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--success cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Confirmed
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;Rideback + Co.&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;North Gates&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bulk Cement&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; 9:00 a.m. - 12:00 a.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--alert cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Blocked
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;Rideback + Co.&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;Warehouse behind jobsite&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bag Cement&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; 11:00 a.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- end .cmx-scheduler__column --&gt;
+        &lt;div class="cmx-scheduler__column"&gt;
+            &lt;div class="cmx-scheduler__column-title"&gt;Thursday, Jan 12&lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--disabled cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Cancelled
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;Block Office Building&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;North Gates&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bag Cement &amp;amp; Multiproduct&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; During the Day&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--success cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Confirmed
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;Rideback + Co.&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;North Gates&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Multiproduct&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; 10:00 a.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--alert cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Blocked
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;Rideback + Co.&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;South Gates #1&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bag Cement&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; 1:00 p.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--alert cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Blocked
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;Rideback + Co.&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;Warehouse&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bag Cement&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; 10:00 AM&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- end .cmx-scheduler__column --&gt;
+        &lt;div class="cmx-scheduler__column"&gt;
+            &lt;div class="cmx-scheduler__column-title"&gt;Friday, Jan 13&lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--success cmx-flag-status--small"&gt;&lt;/div&gt;
+                        Confirmed
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;North High School&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;South Red Gates&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bulk Cement&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class=""&gt;&lt;/span&gt; 8:00 a.m. - 9:30 a.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- end .cmx-scheduler__column --&gt;
+        &lt;div class="cmx-scheduler__column"&gt;
+            &lt;div class="cmx-scheduler__column-title"&gt;Saturday, Jan 14&lt;/div&gt;
+            &lt;div class="cmx-scheduler__card"&gt;
+                &lt;div class="cmx-scheduler__card-body"&gt;
+                &lt;div class="status"&gt;
+                    &lt;div class="status-message"&gt;
+                        &lt;div class="cmx-flag-status cmx-flag-status--info cmx-flag-status--small"&gt;&lt;/div&gt;
+                        In Proccess
+                    &lt;/div&gt;
+                    &lt;div class="load-status"&gt;1/3&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .status --&gt;
+                &lt;div class="cmx-scheduler__card-content"&gt;
+                    &lt;div class="cmx-scheduler__card-jobsite"&gt;Wilder Ranch Orinda&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-note"&gt;South Red Gates&lt;/div&gt;
+                    &lt;div class="cmx-scheduler__card-material"&gt;Bulk Cement&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-content --&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-body --&gt;
+                &lt;div class="cmx-scheduler__card-footer"&gt;
+                &lt;div class="cmx-scheduler__card-hour"&gt;&lt;span class="font-bright-blue cmx-icon-warning"&gt;&lt;/span&gt; 9:15 a.m.&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- end .cmx-scheduler__card-footer --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- end .cmx-scheduler__column --&gt;
+        &lt;div class="cmx-scheduler__column no-activity"&gt;
+            &lt;div class="cmx-scheduler__column-title"&gt;Sun Jan 15&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- end .cmx-scheduler__column .no-activity --&gt;
+    &lt;/div&gt;
+    &lt;!-- end .cmx-scheduler__body --&gt;
+&lt;/div&gt;
+</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">// start scheduler
+.cmx-scheduler {
+    width: 100%;
+
+    &amp;__header {
+        position: relative;
+        margin: 0 2px 2px 2px;
+    }
+
+    &amp;__panel-title {
+        width: 100%;
+        height: 32px;
+        background: $true-blue;
+        line-height: 32px;
+        color: $true-white;
+        text-align: center;
+        font-weight: $font-medium;
+        border-radius: $radius-2;
+        display: flex;
+        justify-content: center;
+
+        button {
+            color: $true-white;
+            text-decoration: none;
+            display: inline-block;
+            min-width: 200px;
+            text-align: center;
+            font-size: 1rem;
+
+            &amp;.prev,
+            &amp;.next {
+                font-size: 0.875rem;
+                width: 32px;
+                min-width: 32px;
+                max-width: 32px;
+                height: 32px;
+            }
+        }
+    }
+
+    &amp;__panel-actions-left,
+    &amp;__panel-actions-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+
+        button {
+            margin: 0;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            padding: 0.625rem 0;
+            text-align: center;
+            display: inline-block;
+            &amp;:hover{
+                box-shadow: none;
+            }
+            svg {
+                fill: $true-white;
+                width: 13px;
+                height: 13px;
+            }
+        }
+    }
+    &amp;__panel-actions-right {
+        right:0;
+        left: auto;
+    }
+
+    &amp;__body {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+    &amp;__column {
+        background: $true-blue-five-percent;
+        flex-grow: 1;
+        margin: 2px;
+        width: 100%;
+        border-radius: $radius-2;
+
+        &amp;-title {
+            border-radius: $radius-3;
+            background: $medium-blue;
+            text-align: center;
+            font-size: $font-size-12;
+            font-weight: 700;
+            color: $true-white;;
+            height: 19px;
+            margin: 4px;
+        }
+
+        &amp;.current-day {
+            background: $bright-blue-forty-percent;
+
+            .scheduler__column-title {
+                background: $bright-blue;
+            }
+        }
+
+        &amp;.no-activity {
+            .scheduler__column-title {
+                opacity:0.46;
+            }
+        }
+    }
+    &amp;__filters {
+        line-height: 1;
+        font-size: $font-size-14;
+        padding:0.5rem 0;
+    }
+    &amp;__card {
+        background: $true-white;
+        border-radius: $radius-2;
+        box-shadow: 0 2px 2px $true-black-ten-percent;
+        margin: 4px;
+        font-size: $font-size-12;
+        &amp;-body {
+            padding: 8px;
+
+            .status {
+                margin-bottom: 8px;
+                font-size: $font-size-10;
+                display: flex;
+
+                .status-message {
+                    flex-grow: 1;
+
+                    .cmx-flag-status {
+                        margin: 3px 6px 0 0;
+                    }
+                }
+
+                .load-status {
+                    color: $medium-grey;
+                }
+            }
+        }
+
+        &amp;-jobsite{
+            font-weight: 700;
+        }
+        &amp;-note{
+        }
+        &amp;-material{
+            margin-top: 0.675rem;
+            font-size: 0.675rem;
+            color: $gray-lightish;
+        }
+
+        &amp;-footer {
+            padding:0.25rem;
+            min-height: 1.65rem;
+        }
+        &amp;-hour {
+            font-weight: $font-bold;
+            text-align: right;
+        }
+    }
+}
+.cmx-button--link-header-filter{
+    margin-right:3rem;
+    &amp;:last-child{
+        margin-right: 0;
+    }
+    [class^="cmx-icon-"]{
+        font-size:0.675rem;
+    }
+    &amp;.cmx-button--link{
+        &amp;:hover,
+        &amp;:focus{
+            text-decoration: none;
+        }
+    }
+}</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-scheduler {
+    width: 100%;
+}
+.cmx-scheduler__header {
+    position: relative;
+    margin: 0 2px 2px 2px;
+}
+.cmx-scheduler__panel-title {
+    width: 100%;
+    height: 32px;
+    background: #003876;
+    line-height: 32px;
+    color: #FFF;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.cmx-scheduler__panel-title button {
+    color: #FFF;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 200px;
+    text-align: center;
+    font-size: 1rem;
+}
+.cmx-scheduler__panel-title button.prev,
+.cmx-scheduler__panel-title button.next {
+    font-size: 0.875rem;
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    height: 32px;
+}
+.cmx-scheduler__panel-actions-left,
+.cmx-scheduler__panel-actions-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.cmx-scheduler__panel-actions-left button,
+.cmx-scheduler__panel-actions-right button {
+    margin: 0;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    padding: 0.625rem 0;
+    text-align: center;
+    display: inline-block;
+}
+.cmx-scheduler__panel-actions-left button:hover,
+.cmx-scheduler__panel-actions-right button:hover {
+    box-shadow: none;
+}
+.cmx-scheduler__panel-actions-left button svg,
+.cmx-scheduler__panel-actions-right button svg {
+    fill: #FFF;
+    width: 13px;
+    height: 13px;
+}
+.cmx-scheduler__panel-actions-right {
+    right: 0;
+    left: auto;
+}
+.cmx-scheduler__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+.cmx-scheduler__column {
+    background: rgba(0, 42, 89, 0.05);
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin: 2px;
+    width: 100%;
+    border-radius: 2px;
+}
+.cmx-scheduler__column-title {
+    border-radius: 3px;
+    background: #002A59;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #FFF;
+    height: 19px;
+    margin: 4px;
+}
+.cmx-scheduler__column.current-day {
+    background: rgba(63, 169, 245, 0.4);
+}
+.cmx-scheduler__column.current-day .scheduler__column-title {
+    background: #3FA9F5;
+}
+.cmx-scheduler__column.no-activity .scheduler__column-title {
+    opacity: 0.46;
+}
+.cmx-scheduler__filters {
+    line-height: 1;
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
+}
+.cmx-scheduler__card {
+    background: #FFF;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    margin: 4px;
+    font-size: 0.75rem;
+}
+.cmx-scheduler__card-body {
+    padding: 8px;
+}
+.cmx-scheduler__card-body .status {
+    margin-bottom: 8px;
+    font-size: 0.625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.cmx-scheduler__card-body .status .status-message {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.cmx-scheduler__card-body .status .status-message .flag-status {
+    margin: 3px 6px 0 0;
+}
+.cmx-scheduler__card-body .status .load-status {
+    color: #666;
+}
+.cmx-scheduler__card-jobsite {
+    font-weight: 700;
+}
+.cmx-scheduler__card-material {
+    margin-top: 0.675rem;
+    font-size: 0.675rem;
+    color: #B0B0B0;
+}
+.cmx-scheduler__card-footer {
+    padding: 0.25rem;
+    min-height: 1.65rem;
+}
+.cmx-scheduler__card-hour {
+    font-weight: 700;
+    text-align: right;
+}
+.cmx-button--link-header-filter {
+    margin-right: 3rem;
+}
+.cmx-button--link-header-filter:last-child {
+    margin-right: 0;
+}
+.cmx-button--link-header-filter [class^="cmx-icon-"] {
+    font-size: 0.675rem;
+}
+.cmx-button--link-header-filter.cmx-button--link:hover,
+.cmx-button--link-header-filter.cmx-button--link:focus {
+    text-decoration: none;
+}
+</code></pre>
+                            </div>
+                            <!-- end data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                </div>
+                <!-- end .row -->
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

@@ -1,0 +1,15 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3fa9f5;
+      }
+    </style>
+  </defs>
+  <title>calendar-icon</title>
+  <g>
+    <path class="cls-1" d="M15,.5H1A.5.5,0,0,0,.5,1V15a.5.5,0,0,0,.5.5H15a.5.5,0,0,0,.5-.5V1A.5.5,0,0,0,15,.5Zm-.5,1v2H1.5v-2Zm-13,13V4.5h13v10Z" transform="translate(-0.5 -0.5)"/>
+    <path class="cls-1" d="M5.64,7.55l-1.87.93.45.89,1.14-.57v4.32h1V8a.5.5,0,0,0-.72-.45Z" transform="translate(-0.5 -0.5)"/>
+    <path class="cls-1" d="M9.4,7.5A1.9,1.9,0,0,0,7.5,9.4v1.87a1.9,1.9,0,1,0,3.8,0V9.4A1.9,1.9,0,0,0,9.4,7.5Zm.9,3.77a.9.9,0,1,1-1.8,0V9.4a.9.9,0,1,1,1.8,0Z" transform="translate(-0.5 -0.5)"/>
+  </g>
+</svg>

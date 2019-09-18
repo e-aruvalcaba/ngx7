@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.39 23.42">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7ac943;
+      }
+    </style>
+  </defs>
+  <title>map-pin</title>
+  <path id="Fill-1" class="cls-1" d="M8.5,11.12A2.93,2.93,0,1,1,11.43,8.2,2.93,2.93,0,0,1,8.5,11.12M8.5,0A8.19,8.19,0,0,0,.3,8.2c0,6.15,8.2,15.22,8.2,15.22s8.2-9.07,8.2-15.22A8.19,8.19,0,0,0,8.5,0" transform="translate(-0.3)"/>
+</svg>

@@ -1,0 +1,172 @@
+// we change from .profile-circle to avatar cause circle describes the shape 
+// and in the future the profile pic might not be circular
+.cmx-avatar {
+	//default width and height
+	width: 60px;
+	height: 60px;
+
+	// in case we need a different size, here's where you add the class.
+	&--small{
+		width:32px;
+		height:32px;
+	}
+
+	&__image {
+		// we make it round by default
+		clip-path: circle(50% at center);
+		width:100%;
+		height:100%;
+		object-fit: cover; // this prevents a non square image to be shown distorted
+
+		// in case we need adifferent shape, here's where you add it
+		&--square{
+			clip-path: none;
+		}
+	}
+
+	// the manipulator
+	&-manipulator {
+		&__mask{
+			background: $disabled-grey;
+			position: relative;
+			width:100%;
+			overflow: hidden;
+			margin: 0 auto;
+
+			// we give it a default size
+			width:246px;
+			height:246px;
+
+			&:before{
+				content:" ";
+				display: block;
+				background-image: url(data:image/svg+xml,%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20272%20247%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%23ccc%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ctitle%3Eprofile-manipulator-mask%3C%2Ftitle%3E%0A%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M0%2C0V247H272V0ZM136%2C233.5a110%2C110%2C0%2C1%2C1%2C110-110A110%2C110%2C0%2C0%2C1%2C136%2C233.5Z%22%2F%3E%0A%3C%2Fsvg%3E%0A);
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-size: 120%;
+				background-position: center;
+				opacity: 0.54;
+			}
+		}
+	
+		&__image {
+			width:100%;
+			height:100%;
+			object-fit: cover; // this prevents a non square image to be shown distorted
+		}
+	}
+
+	// the clipping slider styles
+	&-clipping-slider{
+		display:flex;
+		width:100%;
+		color: $gray-lightish;
+		align-items: center;
+		&__col{
+			flex: 1 1 auto;
+			padding: 0 0.625rem;
+			&:first-child,
+			&:last-child{
+				padding: 0;
+				flex: 0 0 auto
+			}
+		}
+		&__icon{
+			&--small{
+				font-size: 1.5rem;
+			}
+			&--large{
+				font-size: 2.43rem;
+			}
+		}
+	}
+}
+
+// we have changed the slider from a fake one to a real input type="range", which is available in HTML5
+.cmx-slider {
+	-webkit-appearance: none;
+	margin: 0;
+	width: 100%;
+
+	&:focus {
+		outline: none;
+	}
+
+	// since webkit doesnt have fill upper or fill lower to have a different color in the range and the remainant we hack it through CSS gradients and javascript;
+	@for $i from 0 through 100 {
+		&--pc-#{$i}::-webkit-slider-runnable-track {
+			background: linear-gradient(to right, $bright-blue 0%,$bright-blue 0%+$i, $table-highlight-grey 0%+$i,$table-highlight-grey 100%);
+		}
+	}
+
+	&::-webkit-slider-runnable-track {
+		height: 7px;
+		-webkit-appearance: none;
+		cursor: pointer;
+		background-color:$table-highlight-grey;
+		border-radius: 5px;
+	}
+	&::-webkit-slider-thumb {
+		border-radius:50%;
+		height: 24px;
+		width: 24px;
+		background: $bright-blue;
+		cursor: pointer;
+		-webkit-appearance: none;
+		margin-top: -9px;
+	}
+	&::-moz-range-track {
+		height: 7px;
+		cursor: pointer;
+		background-color:$table-highlight-grey;
+		border-radius: 5px;
+	}
+	&::-moz-range-thumb {
+		border-radius:50%;
+		height: 24px;
+		width: 24px;
+		background: $bright-blue;
+		cursor: pointer;
+		-webkit-appearance: none;
+		margin-top: -9px;
+		border:0;
+	}
+	&::-moz-range-progress {
+		background-color: $bright-blue;
+		height:7px;
+		border-radius:5px;
+	}
+	&::-ms-track {
+		height: 7px;
+		cursor: pointer;
+		background-color:$table-highlight-grey;
+		border-radius: 5px;
+	}
+	&::-ms-fill-lower {
+		background-color: $bright-blue;
+		height:7px;
+		border-radius:5px;
+	}
+	&::-ms-fill-upper {
+		height: 7px;
+		background-color:$table-highlight-grey;
+		border-radius: 5px;
+	}
+	&::-ms-thumb {
+		border-radius:50%;
+		height: 24px;
+		width: 24px;
+		background: $bright-blue;
+		cursor: pointer;
+		-webkit-appearance: none;
+		margin-top: -9px;
+		border:0;
+	}
+	&:focus::-ms-fill-lower {
+		background: $bright-blue;
+	}
+	&:focus::-ms-fill-upper {
+		background: $table-highlight-grey;
+	}
+  }

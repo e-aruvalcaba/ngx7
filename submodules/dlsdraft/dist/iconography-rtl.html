@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Iconography</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav-rtl.html" rel="import">
+        <link href="partials/sidenav-rtl.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <!-- start icons as fonts -->
+
+
+                <div class="font-icons-wrap">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <h1>Icon Font</h1>
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="cmx-form-group">
+                                <div class="cmx-form-control--icon-button-trail">
+                                    <input class="cmx-form-control" id="iconSearch" onkeyup="filterIcons(event)" placeholder="Search" type="text"> <button class="cmx-button cmx-button--icon"><span aria-hidden="true" class="cmx-icon-magnifier-glass"></span> <span class="sr-only">Search</span></button>
+                                </div>
+                            </div>
+
+
+                            <div class="spacer-32">
+                            </div>
+
+
+                            <div class="row" id="fontIcons">
+                            </div>
+                        </div>
+                        <script>
+                            var currentIcon = null;
+                            var iconClasses = [
+                                "cmx-icon-control-center", 
+                                "cmx-icon-user-profile", 
+                                "cmx-icon-scheduler", 
+                                "cmx-icon-track", 
+                                "cmx-icon-driver", 
+                                "cmx-icon-pricing", 
+                                "cmx-icon-payment", 
+                                "cmx-icon-ordering", 
+                                "cmx-icon-accepted-ok", 
+                                "cmx-icon-error", 
+                                "cmx-icon-warning-repeat", 
+                                "cmx-icon-warning", 
+                                "cmx-icon-calendar", 
+                                "cmx-icon-clock", 
+                                "cmx-icon-checkbox-active", 
+                                "cmx-icon-checkbox-static", 
+                                "cmx-icon-radio-active", 
+                                "cmx-icon-radio-static", 
+                                "cmx-icon-close", 
+                                "cmx-icon-plus", 
+                                "cmx-icon-minus", 
+                                "cmx-icon-collapse", 
+                                "cmx-icon-expand", 
+                                "cmx-icon-expand-move", 
+                                "cmx-icon-contract-move", 
+                                "cmx-icon-map-pin", 
+                                "cmx-icon-up-double", 
+                                "cmx-icon-down-double", 
+                                "cmx-icon-left-double", 
+                                "cmx-icon-right-double", 
+                                "cmx-icon-up-single", 
+                                "cmx-icon-down-single", 
+                                "cmx-icon-left-single", 
+                                "cmx-icon-right-single", 
+                                "cmx-icon-straight-arrow-up", 
+                                "cmx-icon-straight-arrow-down", 
+                                "cmx-icon-straight-arrow-left", 
+                                "cmx-icon-straight-arrow-right", 
+                                "cmx-icon-download-export", 
+                                "cmx-icon-magnifier-glass", 
+                                "cmx-icon-settings", 
+                                "cmx-icon-up-rounded-full", 
+                                "cmx-icon-up-rounded", 
+                                "cmx-icon-down-rounded-full", 
+                                "cmx-icon-down-rounded", 
+                                "cmx-icon-left-rounded-full", 
+                                "cmx-icon-left-rounded", 
+                                "cmx-icon-right-rounded-full", 
+                                "cmx-icon-right-rounded", 
+                                "cmx-icon-round-minus-full", 
+                                "cmx-icon-round-minus", 
+                                "cmx-icon-round-plus-full", 
+                                "cmx-icon-round-plus", 
+                                "cmx-icon-repeat", 
+                                "cmx-icon-trash", 
+                                "cmx-icon-favourite", 
+                                "cmx-icon-favourite-active", 
+                                "cmx-icon-logo-face", 
+                                "cmx-icon-check", 
+                                "cmx-icon-expand-control", 
+                                "cmx-icon-questionmark", 
+                                "cmx-icon-brakets", 
+                                "cmx-icon-picture", 
+                                "cmx-icon-language", 
+                                "cmx-icon-document", 
+                                "cmx-icon-logout", 
+                                "cmx-icon-quick-view", 
+                                "cmx-icon-burger-menu", 
+                                "cmx-icon-bulk-cement", 
+                                "cmx-icon-multi-products", 
+                                "cmx-icon-aggregates", 
+                                "cmx-icon-bag-cement", 
+                                "cmx-icon-ready-mix", 
+                                "cmx-icon-blocked", 
+                                "cmx-icon-attachment", 
+                                "cmx-icon-multiple-items", 
+                                "cmx-icon-edit", 
+                                "cmx-icon-clock-fill", 
+                                "cmx-icon-protected", 
+                                "cmx-icon-document-broken", 
+                                "cmx-icon-picture-fill", 
+                                "cmx-icon-picture-broken", 
+                                "cmx-icon-filter", 
+                                "cmx-icon-history", 
+                                "cmx-icon-question-rounded", 
+                                "cmx-icon-pin-error", 
+                                "cmx-icon-pin-poi", 
+                                "cmx-icon-pin-load", 
+                                "cmx-icon-pin-load-3rdparty", 
+                                "cmx-icon-pin-unload", 
+                                "cmx-icon-phone", 
+                                "cmx-icon-share", 
+                                "cmx-icon-upload", 
+                                "cmx-icon-save", 
+                                "cmx-icon-pickup", 
+                                "cmx-icon-print", 
+                                "cmx-icon-e-mail", 
+                                "cmx-icon-arrow-collapse"
+                            ];
+                            function showIcons(classNames) {
+                                let output = "";
+                                for (className of classNames) {
+                                    output += '<div class="col-md-4 demo-font-box" onclick="showIconDetails(\'' + className + '\')"><span class="' + className + '"><\/span> <span class="mls">' + className + '<\/span><\/div>';
+                                }
+                                document.getElementById('fontIcons').innerHTML = output;
+                            }
+
+                            function showIconDetails(iconClass) {
+                                currentIcon = iconClass;
+                                let codeDiv = document.querySelector('#iconCode');
+                                let iconShow = document.querySelector('#iconShow');
+                                iconShow.setAttribute('class', 'cmx-confirmation__icon ' + iconClass);
+                                codeDiv.innerHTML = '&lt;span class="' + iconClass + '" aria-hidden="true"&gt;&lt;/span&gt;';
+                                launchModal('#iconModal');
+                            }
+
+                            function filterIcons(event) {
+                                let val = event.target.value;
+                                if (val !== '') {
+                                    let newArray = iconClasses.filter((term) => {
+                                        return ((term.indexOf(val) > -1) ? true : false)
+                                    });
+                                    showIcons(newArray);
+                                } else {
+                                    showIcons(iconClasses);
+                                }
+                            }
+
+                            function setIconAttributes(className, darkBg = false) {
+                                document.querySelector('#iconCode').innerHTML = '&lt;span class="' + currentIcon + ' ' + className + '" aria-hidden="true"&gt;&lt;/span&gt;';
+                                if (darkBg) {
+                                    className = className + ' bg__true-black';
+                                }
+                                document.querySelector('#iconShow').setAttribute('class', 'cmx-confirmation__icon ' + currentIcon + ' ' + className);
+                            }
+                            showIcons(iconClasses);
+                        </script>
+                    </div>
+                    <!-- end .row -->
+                </div>
+                <!-- end .font-icons-wrap -->
+            </div>
+            <!-- end .container-fluid -->
+        </div>
+        <!-- end .page-wrapper -->
+    </div>
+    <!-- end #wrapper -->
+
+
+    <div class="cmx-modal cmx-modal--confirmation hidden" id="iconModal">
+        <div class="cmx-modal__container">
+            <button class="cmx-modal__close-button" onclick="closeModal()"><span aria-hidden="true" class="cmx-icon-close"></span> <span class="sr-only">Close</span></button>
+
+            <div class="cmx-modal__section">
+                <div class="cmx-confirmation__icon" id="iconShow">
+                </div>
+
+
+                <div class="demo__icon-color-chooser">
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-true-black')">
+                        <div class="bg__true-black demo__swatch">
+                        </div>
+                        Black
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-true-white',true)">
+                        <div class="bg__true-white demo__swatch demo__swatch--border">
+                        </div>
+                        White
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-true-blue')">
+                        <div class="bg__true-blue demo__swatch">
+                        </div>
+                        Blue
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-bright-blue')">
+                        <div class="bg__bright-blue demo__swatch">
+                        </div>
+                        Blue
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-bright-green')">
+                        <div class="bg__bright-green demo__swatch">
+                        </div>
+                        Green
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-true-red')">
+                        <div class="bg__true-red demo__swatch">
+                        </div>
+                        Red
+                    </div>
+
+
+                    <div class="demo__icon-color-picker" onclick="setIconAttributes('font-bright-orange')">
+                        <div class="bg__bright-orange demo__swatch">
+                        </div>
+                        Orange
+                    </div>
+                </div>
+
+
+                <div class="width-full" data-highlight="">
+                    <pre data-lang="html"><code class="language-html" id="iconCode"></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

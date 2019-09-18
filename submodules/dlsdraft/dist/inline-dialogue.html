@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Inline Dialogue</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>CEMEX Inline Dialogue</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="rules-box">
+                            <p>The pin dialogue can be used on map overlays when tracking where a truck is and what contents the truck is carrying.</p>
+
+
+                            <p>The dialogue should only contain the most pertinent information and should not have more than 6 line items.</p>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <p>Because of the nature of when someone would be viewing a truck delivery (on the same day, in real time) a date field is unnecessary.</p>
+
+
+                            <p>If the user wants to close out of the dialogue pin, they can simply click anywhere else on the map, therefore no close icon is needed.</p>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="cmx-popover">
+                            <div class="cmx-popover__header">
+                                Load 52 - CR2944
+                            </div>
+                            <!-- end .popover-header -->
+
+
+                            <div class="cmx-popover__body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <span class="roboto-bold">Ticket:</span>
+                                    </div>
+
+
+                                    <div class="col-md-8">
+                                        99820913
+                                    </div>
+                                </div>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <span class="roboto-bold">Arrival:</span>
+                                    </div>
+
+
+                                    <div class="col-md-8">
+                                        30 Min
+                                    </div>
+                                </div>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <span class="roboto-bold">Driver:</span>
+                                    </div>
+
+
+                                    <div class="col-md-8">
+                                        Harry Mason
+                                    </div>
+                                </div>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <span class="roboto-bold">Mix:</span>
+                                    </div>
+
+
+                                    <div class="col-md-8">
+                                        RC-752-C+F15%
+                                    </div>
+                                </div>
+
+
+                                <div class="spacer-8">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <span class="roboto-bold">Quantity:</span>
+                                    </div>
+
+
+                                    <div class="col-md-8">
+                                        10m<sup>3</sup>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end .popover-body -->
+                        </div>
+                        <!-- end .popover -->
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html"><code class="language-html">&lt;div class="cmx-popover"&gt;
+    &lt;div class="cmx-popover__header"&gt;
+        Heading Text
+    &lt;/div&gt;
+    &lt;div class="cmx-popover__body"&gt;
+
+        &lt;!-- POPOVER CONTENT GOES HERE --&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx-popover {
+    width: 280px;
+    background: $true-white;
+    border-radius: $radius-2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    position: relative;
+
+    &amp;::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-width: 12px;
+        border-style: solid;
+        border-color: transparent transparent $true-white $true-white;
+        bottom: -24px; // we leave as px because this relates to the border width
+        left: calc(50% - 17px); // we leave as px because this relates to the border width (17 is the hypotenuse of 12)
+        box-sizing: border-box;
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &amp;__header {
+        background: $bright-blue;
+        color: $true-white;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        font-size: $font-size-16;
+        line-height: $line-height-16;
+        border-radius: $radius-2;
+        padding: 0.625rem 0.75rem;
+    }
+    &amp;__body {
+        padding: 1rem;          
+    }
+    // end arrow down
+}</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-popover {
+    width: 280px;
+    background: #FFF;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.cmx-popover::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent transparent #FFF #FFF;
+    bottom: -24px;
+    left: calc(50% - 17px);
+    box-sizing: border-box;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.cmx-popover__header {
+    background: #3FA9F5;
+    color: #FFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1rem;
+    border-radius: 2px;
+    padding: 0.625rem 0.75rem;
+}
+
+.cmx-popover__body {
+    padding: 1rem;
+}</code></pre>
+                            </div>
+                            <!-- end data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

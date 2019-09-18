@@ -1,3 +1,498 @@
-<p>
-  bussines-unit-settings works!
-</p>
+<div class="alert-box">
+  <cmx-alert></cmx-alert>
+</div>
+<div fxLayout="column" style="margin-top: 20px; margin-left: 35px; width: 90%">
+  <div fxFlex="100%" fxLayout="row" [ngStyle.lg]="{'margin-bottom': '15px'}">
+    <a class="nav-bar-item">
+      <h2>
+        {{ translate('views.sidebar.rccc.menues.general_configurations') }}
+        <span aria-hidden="true" class="cmx-icon-right-single" style="color: #3FA9F5; font-size: 12pt;"></span>
+        {{ translate('rccc.admin.selected_plant_label') }}
+        <!-- START Adding New Level (BUSINESS UNIT TO NAVIGATION LABEL) 17/06/2019 ARG-->
+        <span *ngIf="currentPlant" aria-hidden="true" class="cmx-icon-right-single" style="color: #3FA9F5; font-size: 12pt;"></span>
+        {{ currentPlant ? currentPlant.plantLabel :'' }}
+        <!-- END Adding New Level (BUSINESS UNIT TO NAVIGATION LABEL) 17/06/2019 ARG-->
+
+      </h2>
+    </a>
+  </div>
+  <div fxFlex="100%" fxLayout="column" [ngStyle]="{'margin-top': '10px'}">
+    <section data-id="business-units-list" *ngIf="!editing">
+      <div class="catalog-container" *ngIf="myPlants">
+        <table class="displayPlants">
+          <thead>
+            <tr>
+              <th style="width: 65%">
+                {{translate('rccc.admin.selected_plant_label')}}
+                <span class="cmx-icon-arrow-down-single font-bright-blue" aria-hidden="true" (click)="sortBy(0)" *ngIf="sortDirection != 1"></span>
+                <span class="cmx-icon-arrow-up-single font-bright-blue" aria-hidden="true" (click)="sortBy(0)" *ngIf="sortDirection == 1"></span>
+              </th>
+              <th>
+                {{translate('digital_confirmation.settings.lbl_is_configured')}}
+                <span class="cmx-icon-arrow-down-single font-bright-blue" aria-hidden="true" (click)="sortBy(1)" *ngIf="sortDirection != 1"></span>
+                <span class="cmx-icon-arrow-up-single font-bright-blue" aria-hidden="true" (click)="sortBy(1)" *ngIf="sortDirection == 1"></span>
+              </th>
+              <th></th><th></th><th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let plant of myPlants">
+              <td>
+                {{plant.plantCode}} - {{plant.plantDesc}}
+              </td>
+              <td>
+                {{checkIfConfigured(plant) ? translate('rccc.admin.selected_plant_label') : translate('views.global.lbl_country')}}
+              </td>
+              <td>
+                <span data-id="editBU" class="cmx-icon-edit font-bright-blue pointer" style="font-size: x-large;" (click)="editBUSettings(plant)"></span>
+              </td>
+              <td>
+                <span class="font-bright-blue pointer" (click)="copyBUSettings(plant)">
+                  <svg
+                    width="7mm"
+                    height="8mm"
+                    viewBox="0 0 7 8">
+                   <g
+                      inkscape:label="Layer 1"
+                      inkscape:groupmode="layer"
+                      id="layer1"
+                      transform="translate(0,-289)">
+                     <g
+                        id="g9998"
+                        transform="matrix(0.07128388,0,0,0.07128388,-27.329344,278.61659)">
+                       <path
+                          transform="matrix(0.26458333,0,0,0.26458333,0,-79.374999)"
+                          inkscape:connector-curvature="0"
+                          id="path9986"
+                          d="m 1467.5788,1266.1956 c 35.7888,-0.7953 38.0642,-1.0294 31.7253,-3.2645 -10.2767,-3.6235 -25.3141,-19.54 -29.3091,-31.0226 -3.1119,-8.9442 -3.273,-15.9024 -3.273,-141.3475 V 958.62083 l 3.7342,-8.08301 c 5.245,-11.35317 17.8603,-24.21028 28.4562,-29.00151 8.874,-4.01266 9.4249,-4.04313 82.3099,-4.55374 63.8279,-0.44715 74.6421,-0.14965 83.1052,2.28622 9.1666,2.63837 11.7958,4.84751 45.4775,38.21124 26.5424,26.2918 36.7976,37.61732 39.8224,43.97847 l 4.0739,8.5676 0.017,85.2471 c 0.017,82.9653 0.105,85.247 3.3123,85.247 1.8125,0 5.6956,-2.0195 8.6291,-4.4879 10.8848,-9.1593 10.3505,-1.8021 10.3505,-142.5354 V 905.1521 l -3.8961,-5.78153 c -2.1429,-3.17984 -6.4979,-7.5348 -9.6777,-9.67769 l -5.7816,-3.89618 h -102.6422 c -109.5685,0 -107.4287,-0.15593 -115.1646,8.39212 -2.8169,3.11268 -5.2042,3.60245 -17.5594,3.60245 -16.4114,0 -16.8164,-0.51818 -9.4465,-12.08747 6.6783,-10.48364 17.0113,-19.36809 27.0124,-23.22561 7.9169,-3.05363 14.5403,-3.24087 114.6399,-3.24087 100.7928,0 106.6763,0.16923 114.8001,3.30205 11.2165,4.32552 25.1498,17.64361 30.2443,28.90884 l 4.0308,8.91332 v 131.94017 c 0,122.1904 -0.2258,132.5871 -3.0562,140.695 -5.5231,15.8211 -19.5601,28.7637 -36.5669,33.7159 l -8.3551,2.433 -1.1624,10.3609 c -2.0944,18.6676 -12.1356,32.9388 -29.162,41.447 l -10.405,5.1994 63.2024,0.4498 c 34.7613,0.2473 -29.327,0.4497 -142.4186,0.4497 -113.0916,0 -188.2718,-0.3855 -167.0671,-0.8568 z m 248.8687,-31.242 c 11.8769,-9.0607 11.7197,-7.3819 11.1959,-119.5467 l -0.468,-100.2403 -22.2757,-0.861 c -20.3949,-0.7883 -22.9533,-1.2591 -30.3028,-5.5755 -15.026,-8.82503 -20.2457,-21.15156 -20.2457,-47.81134 V 944.056 h -70.8572 -70.8572 l -5.7815,3.89617 c -3.1799,2.1429 -7.5348,6.49786 -9.6777,9.6777 l -3.8962,5.78153 v 127.2914 c 0,86.0035 0.5928,128.8561 1.8277,132.1152 1.0052,2.653 3.5112,6.6569 5.5689,8.8976 8.0843,8.803 6.8942,8.7147 111.8268,8.3037 l 97.8046,-0.383 z"
+                          style="opacity:1;fill:#3fa9f5;fill-opacity:1;stroke:none;stroke-width:1.6190635;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                       <path
+                          transform="matrix(0.26458333,0,0,0.26458333,0,-79.374999)"
+                          inkscape:connector-curvature="0"
+                          id="path9988"
+                          d="m 1533.1973,1048.3964 c -10.9063,-3.1536 -14.3396,-16.0564 -6.6508,-24.9951 l 4.1354,-4.8077 h 49.1317 49.1317 l 4.1354,4.8077 c 4.4263,5.1459 5.3692,12.8176 2.284,18.5824 -3.905,7.2967 -10.8128,8.3197 -55.0677,8.1553 -22.8842,-0.085 -44.0791,-0.8692 -47.0997,-1.7426 z"
+                          style="opacity:1;fill:#3fa9f5;fill-opacity:1;stroke:none;stroke-width:1.6190635;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                       <path
+                          transform="matrix(0.26458333,0,0,0.26458333,0,-79.374999)"
+                          inkscape:connector-curvature="0"
+                          id="path9990"
+                          d="m 1526.6169,1114.628 c -6.0976,-6.0976 -5.7442,-15.0815 0.8528,-21.6785 l 5.0587,-5.0587 79.0527,0.4783 79.0527,0.4784 4.1343,4.8077 c 5.718,6.6493 5.404,13.8916 -0.8744,20.17 l -5.0087,5.0087 h -79.0311 -79.0311 z"
+                          style="opacity:1;fill:#3fa9f5;fill-opacity:1;stroke:none;stroke-width:1.6190635;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                       <path
+                          transform="matrix(0.26458333,0,0,0.26458333,0,-79.374999)"
+                          inkscape:connector-curvature="0"
+                          id="path9992"
+                          d="m 1527.683,1184.6517 c -4.1937,-3.5288 -5.2719,-5.7757 -5.2719,-10.9855 0,-5.2099 1.0782,-7.4567 5.2719,-10.9855 l 5.272,-4.4361 h 77.965 77.965 l 5.0087,5.0087 c 6.7341,6.7341 6.7341,14.0916 0,20.8257 l -5.0087,5.0088 h -77.965 -77.965 z"
+                          style="opacity:1;fill:#3fa9f5;fill-opacity:1;stroke:none;stroke-width:1.6190635;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                     </g>
+                   </g>
+                 </svg>
+                </span>
+              </td>
+              <td>
+                <span class="font-bright-blue pointer" (click)="pasteBUSettings(plant)">
+                  <svg
+                    width="7mm"
+                    height="8mm"
+                    viewBox="0 0 7 8">
+                   <g
+                      inkscape:label="Layer 1"
+                      inkscape:groupmode="layer"
+                      id="layer1"
+                      transform="translate(0,-289)">
+                     <g
+                        style="display:inline"
+                        id="g9954"
+                        transform="matrix(0.06684224,0,0,0.06684224,-16.241913,288.31121)">
+                       <path
+                          transform="matrix(0.26458333,0,0,0.26458333,0,-79.374999)"
+                          inkscape:connector-curvature="0"
+                          id="path9939"
+                          d="m 976.38367,758.05165 c -17.27204,-5.97096 -30.09185,-18.25432 -38.77065,-37.14827 l -3.93543,-8.56755 V 580.39566 448.45548 l 5.43935,-11.48172 c 8.79998,-18.57555 26.29254,-32.99022 44.43857,-36.61943 l 5.11206,-1.02241 2.2005,20.27801 c 2.44873,22.56564 5.54458,31.35848 13.89883,39.47555 12.1311,11.78668 11.145,11.64562 81.413,11.64562 h 63.3998 l 8.2114,-4.82672 c 15.6473,-9.1976 20.7608,-20.62595 22.9352,-51.2593 l 1.0864,-15.30597 6.1591,1.14198 c 9.6369,1.78682 25.1917,10.8776 32.8756,19.21366 10.8541,11.77532 15.8021,24.24774 16.6663,42.01076 l 0.728,14.96353 31.5585,31.26707 c 28.6438,28.37931 31.7967,32.08637 34.1373,40.13786 2.1753,7.48273 2.5,22.23476 2.0752,94.27711 -0.4596,77.91768 -0.7743,86.00731 -3.5892,92.26037 -4.2811,9.50989 -12.5054,17.68025 -22.6171,22.46871 l -8.5676,4.05719 -143.078,-0.0392 c -131.91361,-0.0362 -143.75675,-0.27387 -151.77713,-3.04651 z m 293.96423,-20.44422 c 3.2797,-1.64779 7.7134,-5.61602 9.8527,-8.81828 l 3.8895,-5.82231 v -84.56528 -84.56529 l -14.9932,-0.01 c -17.8628,-0.0113 -25.8617,-1.97028 -33.1756,-8.12457 -8.7348,-7.34984 -11.7231,-16.05465 -11.7664,-34.27522 l -0.038,-15.84991 h -58.0059 c -57.4529,0 -58.0614,0.0371 -63.8282,3.88955 -12.3601,8.25709 -11.9222,3.63647 -11.4161,120.47451 l 0.4533,104.65872 4.7743,6.25808 c 2.6845,3.51884 7.1846,6.95485 10.281,7.84994 3.0287,0.87553 39.8198,1.66022 81.7579,1.74375 69.3643,0.13811 76.7897,-0.11875 82.2143,-2.8441 z"
+                          style="opacity:1;fill:#3fa9f5;fill-opacity:1;stroke:none;stroke-width:1.6190635;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                       <path
+                          transform="matrix(0.26458333,0,0,0.26458333,0,-79.374999)"
+                          inkscape:connector-curvature="0"
+                          id="path9941"
+                          d="m 1019.2177,445.45174 c -5.7886,-5.30483 -6.1941,-6.4296 -8.3977,-23.29168 -3.6718,-28.09678 -0.113,-32.82063 24.7263,-32.82063 9.8871,0 13.7958,-0.60656 13.8027,-2.14188 0.05,-11.23178 9.9851,-25.46292 21.3946,-30.64614 20.9511,-9.51786 47.1288,3.81877 50.0357,25.49142 l 0.9362,6.97972 16.2244,0.58682 c 15.5127,0.56108 16.4146,0.80818 20.5637,5.63399 4.0967,4.76489 4.2738,5.77119 3.1665,17.99184 -1.9347,21.35358 -4.0705,28.65824 -9.785,33.4667 l -5.1386,4.32385 H 1086.0232 1025.3 Z m 76.1038,-39.68779 c 4.3567,-2.25295 7.2321,-6.29975 9.4488,-13.29805 1.6143,-5.09689 -2.2678,-14.85612 -7.3489,-18.4742 -3.0728,-2.188 -7.6126,-3.50086 -12.1058,-3.50086 -5.8913,0 -8.241,1.05179 -13.0152,5.82593 -4.776,4.77606 -5.8259,7.12282 -5.8259,13.02266 0,5.89985 1.0499,8.2466 5.8259,13.02267 6.532,6.53194 14.6487,7.73136 23.0211,3.40185 z"
+                          style="opacity:1;fill:#3fa9f5;fill-opacity:1;stroke:none;stroke-width:1.6190635;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                       <path
+                          transform="matrix(0.26458333,0,0,0.26458333,0,-79.374999)"
+                          inkscape:connector-curvature="0"
+                          id="path9943"
+                          d="m 1121.7182,581.05954 c -3.8686,-2.0424 -6.1645,-5.59427 -6.4856,-10.03359 -0.1422,-1.96561 0.061,-4.54057 0.4505,-5.72214 1.0403,-3.15227 4.9526,-6.78932 8.1761,-7.60103 3.7509,-0.94448 73.2589,-0.94448 77.0098,0 3.2235,0.81171 7.1358,4.44876 8.1761,7.60103 0.39,1.18157 0.5927,3.75653 0.4505,5.72214 -0.3211,4.43932 -2.617,7.99119 -6.4856,10.03359 l -2.67,1.40959 h -37.9759 -37.9759 z"
+                          style="opacity:1;fill:#3fa9f5;fill-opacity:1;stroke:none;stroke-width:0.57242537;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                       <path
+                          transform="matrix(0.26458333,0,0,0.26458333,0,-79.374999)"
+                          inkscape:connector-curvature="0"
+                          id="path9945"
+                          d="m 1124.7149,639.75061 c -6.4223,-1.78629 -9.9194,-6.69321 -9.4971,-13.32582 0.2823,-4.43244 2.059,-7.53448 5.7449,-10.02991 l 2.237,-1.51455 63.0496,-0.18139 c 41.6524,-0.11984 63.7691,0.0285 65.1699,0.43724 8.4656,2.46991 11.5989,13.65363 5.7423,20.4958 -4.2934,5.01577 0.5058,4.67941 -68.4444,4.79708 -48.4186,0.0826 -61.7749,-0.059 -64.0022,-0.67845 z"
+                          style="opacity:1;fill:#3fa9f5;fill-opacity:1;stroke:none;stroke-width:0.57242537;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                       <path
+                          transform="matrix(0.26458333,0,0,0.26458333,0,-79.374999)"
+                          inkscape:connector-curvature="0"
+                          id="path9947"
+                          d="m 1124.1664,697.07302 c -6.5218,-2.39653 -9.3649,-6.55717 -8.9486,-13.09563 0.2823,-4.43247 2.059,-7.53452 5.7449,-10.02991 l 2.2371,-1.51455 63.5985,-0.15971 c 63.3533,-0.15909 63.6084,-0.15485 66.2034,1.10134 7.8851,3.8171 9.7197,13.97299 3.6566,20.2415 -4.6289,4.7858 -1.312,4.57037 -69.5489,4.51714 -54.6811,-0.0427 -60.4378,-0.13962 -62.943,-1.06018 z"
+                          style="opacity:1;fill:#3fa9f5;fill-opacity:1;stroke:none;stroke-width:0.57242537;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                     </g>
+                   </g>
+                 </svg>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="not-found" *ngIf="!myPlants">
+          {{ translate('database.errors.no_results') }}
+        </div>
+      </div>
+    </section>
+    <section *ngIf="editing">
+      <cmx-tabs data-id="business-unit-tabs" id="cmxTabs" [rtl]="false" data-cy="cmx-tab-1">
+        <cmx-tab data-id="general-tab" [title]="translate('digital_confirmation.settings.lbl_general')">
+          <br>
+          <div fxLayout="row">
+            <h3>
+              {{ translate('digital_confirmation.settings.lbl_general') }}
+            </h3>
+          </div>
+          <br>
+          <div fxLayout="row" *ngIf="businessUnitSettings">
+            <div fxLayout="column" fxFlex.xs="70" fxFlex.sm="70" fxFlex.md="50" fxFlex.lg="40" fxFlex="20">
+              <div fxLayout="column" class="input-height">
+                <div fxLayout="row">
+                  {{ translate('digital_confirmation.settings.lbl_enable_commercial_management') }}
+                  <sub class="tooltip" cmx-tooltip="{{translate('digital_confirmation.settings.tooltips.enable_commercial_management')}}">?</sub>
+                </div>
+              </div>
+            </div>
+            <div fxLayout="column" fxFlex.xs="30" fxFlex.sm="20" fxFlex.md="15" fxFlex.lg="15" fxFlex="15">
+              <div fxLayout="column" class="input-height">
+                <label class="check-container">
+                  <input type="checkbox" [checked]="businessUnitSettings.commercialManagement"
+                    (change)="businessUnitSettings.commercialManagement = !businessUnitSettings.commercialManagement">
+                  <span class="checkmark" ></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </cmx-tab>
+
+        <!-- material types tab -->
+        <cmx-tab data-id="material-types-tab" [title]="translate('digital_confirmation.settings.lbl_material_types')">
+          <br>
+          <div fxLayout="row">
+            <h3>
+              {{ translate('digital_confirmation.settings.lbl_material_types') }}
+            </h3>
+          </div>
+          <br>
+          <div fxLayout="row" *ngFor="let material of countrySettings?.productTypes">
+            <label class="check-container">
+              <input type="checkbox" [checked]="material.selected" (change)="enableMaterial(material)">
+              <span class="checkmark"></span>
+              {{ translate(material.productTypeDesc) }}
+            </label>
+          </div>
+        </cmx-tab>
+
+        <!-- transportation mode tab -->
+        <cmx-tab data-id="transportation-mode-tab" [title]="translate('digital_confirmation.settings.lbl_transportation_mode')">
+          <br>
+          <div fxLayout="row">
+            <h3>
+              {{ translate('digital_confirmation.settings.lbl_transportation_mode') }}
+            </h3>
+          </div>
+          <br>
+          <div fxLayout="row" *ngFor="let mode of countrySettings?.shippingTypes">
+            <label class="check-container">
+              <input type="checkbox" [checked]="mode.selected" (change)="enableShippingType(mode)">
+              <span class="checkmark"></span>
+              {{ translate(mode.shippingTypeDesc) }}
+            </label>
+          </div>
+        </cmx-tab>
+        <cmx-tab [title]="translate('digital_confirmation.settings.lbl_shipping_conditions')">
+          <br>
+          <div fxLayout="row">
+            <h3>
+              {{ translate('digital_confirmation.settings.lbl_shipping_conditions') }}
+            </h3>
+          </div>
+          <br>
+          <div fxLayout="row" *ngFor="let ship of countrySettings?.shippingConditions">
+            <label class="check-container" attr.data-id="shippingConditionCheckbox-{{ship.shippingConditionId}}">
+              <input type="checkbox" [checked]="ship.selected" (change)="enableShippingCondition(ship)">
+              <span class="checkmark"></span>
+              {{ translate(ship.shippingConditionDesc) }}
+            </label>
+          </div>
+        </cmx-tab>
+        <cmx-tab [title]="translate('digital_confirmation.settings.lbl_times')">
+          <cmx-tabs>
+
+            <cmx-tab [title]="translate('digital_confirmation.settings.lbl_compensation_time')">
+              <br>
+              <div fxLayout="row">
+                <h3>
+                  <div fxLayout="row">
+                    {{ translate('digital_confirmation.settings.lbl_truck_compensation_time') }}
+                    <sub class="tooltip" cmx-tooltip="{{translate('digital_confirmation.settings.tooltips.truck_compensation_time')}}">?</sub>
+                  </div>
+                </h3>
+              </div>
+              <br>
+              <div fxLayout="column">
+                <div fxLayout="row" *ngFor="let geo of geolocationServices?.geolocationServices">
+                  <div fxFlex.lt-md="33" fxFlex.lt-lg="18" fxFlex="14" style="padding-top: 24px">
+                    {{geo.geolocationServiceDesc}}
+                  </div>
+                  <div fxFlex.lt-md="33" fxFlex.lt-lg="18" fxFlex="10" style="padding-top: 24px; padding-right: 10px">
+                    <cmx-form-field *ngIf="geo.calculationTypeId == 1" [error]="checkValidity(geo.compensationTime, 0, 1440)">
+                      <input
+                        onkeydown="return event.keyCode !== 69"
+                        type="number" (keydown)="checkUserInput($event)" (change)="changeCompensationTime(geo)" [(ngModel)]="geo.compensationTime"
+                        style="text-align: right" min="0" max="1440"/>
+                      <error-message>
+                        {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                      </error-message>
+                    </cmx-form-field>
+                    <cmx-form-field *ngIf="geo.calculationTypeId != 1" [error]="checkValidity(geo.compensationTime, 0, 100)">
+                      <input type="number" (keydown)="checkUserInput($event)" (change)="changeCompensationTime(geo)" [(ngModel)]="geo.compensationTime"
+                        style="text-align: right" min="0" max="100"/>
+                      <error-message>
+                        {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                      </error-message>
+                    </cmx-form-field>
+                  </div>
+                  <div fxFlex.lt-md="33" fxFlex.lt-lg="24" fxFlex="18">
+                    <cmx-dropdown class="cmx-input" [closeOnClick]="true"
+                      placeholder="{{geo.calculationTypeId == 1 ? translate('digital_confirmation.settings.lbl_minutes') : translate('digital_confirmation.settings.lbl_percent') }}">
+                        <cmx-dropdown-item (click)="changeCalcType(1, geo)">
+                          {{translate('digital_confirmation.settings.lbl_minutes')}}
+                        </cmx-dropdown-item>
+                        <cmx-dropdown-item (click)="changeCalcType(2, geo)">
+                          {{translate('digital_confirmation.settings.lbl_percent')}}
+                        </cmx-dropdown-item>
+                    </cmx-dropdown>
+                  </div>
+                </div>
+              </div>
+            </cmx-tab>
+
+            <cmx-tab [title]="translate('digital_confirmation.settings.lbl_logistics_reaction_time')">
+              <br>
+              <div fxLayout="row">
+                <div fxLayout="column" style="margin-right: 10%;">
+                  <h3>
+                    <div fxLayout="row">
+                      {{ translate('digital_confirmation.settings.lbl_logistics_reaction_time') }}
+                      <sub class="tooltip" [position]="'left'" cmx-tooltip="{{translate('digital_confirmation.settings.tooltips.logistics_reaction_time')}}">?</sub>
+                    </div>
+                  </h3>
+                </div>
+                <div fxLayout="column">
+                  <h3>
+                    {{ translate('digital_confirmation.settings.lbl_minutes_min_max_0_360') }}
+                  </h3>
+                </div>
+              </div>
+              <br>
+              <table style="width: 60%;">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th class="table-padding">{{translate('rccc.admin.selected_material_type_label')}}</th>
+                  </tr>
+                  <tr>
+                    <th class="table-padding">{{translate('digital_confirmation.settings.lbl_shipping_condition')}}</th>
+                    <th class="table-padding" *ngFor="let col of businessUnitSettings?.productTypes">
+                      {{translate(col.productTypeDesc)}}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let row of businessUnitSettings?.shippingConditions">
+                    <td class="table-padding">{{translate(row.shippingConditionDesc)}}</td>
+                    <td class="table-padding" *ngFor="let col of businessUnitSettings?.productTypes">
+                      <cmx-form-field [error]="checkValidityReaction(row.shippingConditionId, col.productTypeId, 0, 360)">
+                        <input type="number" (keydown)="checkUserInput($event)" style="text-align: right" min="0" max="360"
+                          placeholder="{{getReactionTime(row.shippingConditionId, col.productTypeId)}}"
+                          (change)="addReactionTime(row.shippingConditionId, col.productTypeId, $event)"/>
+                        <error-message>
+                          {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                        </error-message>
+                      </cmx-form-field>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </cmx-tab>
+
+            <cmx-tab [title]="translate('digital_confirmation.settings.lbl_total_cycle_loading_time')">
+              <br>
+              <div fxLayout="row">
+                <div fxLayout="column" style="margin-right: 10%;">
+                  <h3>
+                    <div fxLayout="row">
+                      {{ translate('digital_confirmation.settings.lbl_total_cycle_loading_time') }}
+                      <sub class="tooltip" cmx-tooltip="{{translate('digital_confirmation.settings.tooltips.total_cycle_loading_time')}}">?</sub>
+                    </div>
+                  </h3>
+                </div>
+                <div fxLayout="column">
+                  <h3>
+                    {{ translate('digital_confirmation.settings.lbl_minutes_min_max_1_360') }}
+                  </h3>
+                </div>
+              </div>
+              <br>
+              <table style="width: 40%;" [ngStyle.lt-md]="{'width': '100%'}">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th class="table-padding">{{translate('digital_confirmation.settings.lbl_transportation_mode')}}</th>
+                  </tr>
+                  <tr>
+                    <th class="table-padding">{{translate('rccc.admin.selected_material_type_label')}}</th>
+                    <th class="table-padding" *ngFor="let col of businessUnitSettings?.shippingTypes">
+                      {{translate(col.shippingTypeDesc)}}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let row of businessUnitSettings?.productTypes">
+                    <td class="table-padding" style="width: 20%">{{translate(row.productTypeDesc)}}</td>
+                    <td class="table-padding" style="width: 20%" *ngFor="let col of businessUnitSettings?.shippingTypes">
+                      <cmx-form-field [error]="checkValidityLoading(col.shippingTypeId, row.productTypeId, 1, 360)">
+                        <input type="number" (keydown)="checkUserInput($event)" style="text-align: right" min="0" max="360"
+                          placeholder="{{getLoadingTime(col.shippingTypeId, row.productTypeId)}}"
+                          (change)="addLoadingTime(col.shippingTypeId, row.productTypeId, $event)"/>
+                        <error-message>
+                          {{ translate('digital_confirmation.settings.lbl_invalid') }}
+                        </error-message>
+                      </cmx-form-field>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </cmx-tab>
+          </cmx-tabs>
+        </cmx-tab>
+        <cmx-tab [title]="translate('digital_confirmation.settings.lbl_offer_calendar')">
+          <br>
+          <div fxLayout="row">
+            <h3>
+              {{ translate('digital_confirmation.settings.lbl_offer_calendar') }}
+            </h3>
+          </div>
+          <br>
+          <div fxLayout="row">
+            <div fxLayout="column" class="column-width">
+              <div fxLayout="column">
+                <h3>{{ translate('digital_confirmation.settings.lbl_working_days') }}</h3>
+              </div>
+              <br>
+              <div fxLayout="column" class="input-height">
+                <label class="check-container">
+                  <input type="checkbox" [checked]="checkCalendar(7)" (change)="updateCalendar(7)">
+                  <span class="checkmark"></span>
+                  {{weekDays[0]}}
+                </label>
+                <label class="check-container">
+                  <input type="checkbox" [checked]="checkCalendar(6)" (change)="updateCalendar(6)">
+                  <span class="checkmark"></span>
+                  {{weekDays[1]}}
+                </label>
+                <label class="check-container">
+                  <input type="checkbox" [checked]="checkCalendar(5)" (change)="updateCalendar(5)">
+                  <span class="checkmark"></span>
+                  {{weekDays[2]}}
+                </label>
+                <label class="check-container">
+                  <input type="checkbox" [checked]="checkCalendar(4)" (change)="updateCalendar(4)">
+                  <span class="checkmark"></span>
+                  {{weekDays[3]}}
+                </label>
+                <label class="check-container">
+                  <input type="checkbox" [checked]="checkCalendar(3)" (change)="updateCalendar(3)">
+                  <span class="checkmark"></span>
+                  {{weekDays[4]}}
+                </label>
+                <label class="check-container">
+                  <input type="checkbox" [checked]="checkCalendar(2)" (change)="updateCalendar(2)">
+                  <span class="checkmark"></span>
+                  {{weekDays[5]}}
+                </label>
+                <label class="check-container">
+                  <input type="checkbox" [checked]="checkCalendar(1)" (change)="updateCalendar(1)">
+                  <span class="checkmark"></span>
+                  {{weekDays[6]}}
+                </label>
+              </div>
+            </div>
+            <div fxLayout="column" class="column-width">
+              <h3>{{ translate('digital_confirmation.settings.lbl_non_working_days') }}</h3>
+              <p (click)="addNonWorkingDay()" style="color: #3ec8f3; text-decoration: underline; font-weight: 600; margin: 0 0 0 auto; cursor: pointer;">
+                {{translate('digital_confirmation.settings.lbl_add_date')}}
+              </p>
+              <div fxLayout="column" class="input-height">
+                <div fxLayout="row" *ngFor="let date of businessUnitSettings?.calendar?.nonWorkingDays">
+                  <div fxLayout="column" style="width: 50%;">
+                    {{getFormattedDate(date)}}
+                  </div>
+                  <div fxLayout="column" style="cursor: pointer; color: #09b5ea;" (click)="deleteDate(date)">
+                    <span class="cmx-icon-delete" aria-hidden="true"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </cmx-tab>
+      </cmx-tabs>
+      <br>
+      <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="end center">
+        <button
+          cmx-button
+          data-id="saveButton"
+          color="blue"
+          (click)="onSave()">
+          {{translate('views.global.btn_save')}}
+        </button>
+      </div>
+    </section>
+  </div>
+  <cmx-dialog
+    #nonWorkingDaysDialog
+    [enableFooter]="true"
+    [enableClose]="true">
+    <cmx-dialog-body fxLayout="column" class="dialog-copy-model">
+      <div fxLayout="row">
+        <h2 style="margin: auto;">{{translate('digital_confirmation.settings.lbl_non_working_days')}}</h2>
+      </div>
+      <hr style="margin: 10px; border: none; height: 3px; background-color: #333;">
+      <cmx-calendar
+        [(year)]="currentYear"
+        [weekStartAt]="weekStartAt"
+        locale="en"
+        monthWidth="33"
+        (onSelectedDay)="selectDay($event)"
+        [(workingWeekDays)]="workingWeekDays"
+        [(nonWorkingDates)]="nonWorkingDates">
+      </cmx-calendar>
+    </cmx-dialog-body>
+    <cmx-dialog-footer style="text-align: center;">
+      <div fxLayout="row">
+        <div fxLayout="column" style="margin-left: auto; margin-right: 8px; width: 20%;">
+          <button
+            cmx-button
+            color="blue"
+            (click)="closeNonWorkingDay()">
+            {{translate('views.global.btn_save')}}
+          </button>
+        </div>
+      </div>
+    </cmx-dialog-footer>
+  </cmx-dialog>
+</div>

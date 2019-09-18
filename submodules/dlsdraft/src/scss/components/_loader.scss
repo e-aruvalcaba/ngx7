@@ -1,0 +1,139 @@
+.cmx-spinner {
+
+	line-height: 1;
+
+	&__24x24 {
+		// sized in rem units
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	&__48x48 {
+		// sized in rem units
+		width: 3rem;
+		height: 3rem;
+		margin-bottom: 0.5rem;
+	}
+
+	&__84x84 {
+		// sized in rem units
+		width: 5.25rem;
+		height: 5.25rem;
+		margin-bottom: 0.5rem;
+	}
+
+	&__message {
+		color: $medium-blue;
+		font-size: $font-size-16;
+	}
+}
+
+@-webkit-keyframes tile5_Animation {
+	0%{opacity: 0.8;}
+	71.43%{opacity: 0.05;}
+	76.19%{opacity: 1;}
+	100%{opacity: 0.8;}
+}
+@keyframes tile5_Animation {
+	0%{opacity: 0.8;}
+	71.43%{opacity: 0.05;}
+	76.19%{opacity: 1;}
+	100%{opacity: 0.8;}
+}
+@-webkit-keyframes tile4_Animation {
+	0%{opacity: 0.6;}
+	52.38%{opacity: 0.05;}
+	57.14%{opacity: 1;}
+	100%{opacity: 0.6;}
+}
+@keyframes tile4_Animation {
+	0%{opacity: 0.6;}
+	52.38%{opacity: 0.05;}
+	57.14%{opacity: 1;}
+	100%{opacity: 0.6;}
+}
+@-webkit-keyframes tile3_Animation {
+	0%{opacity: 0.4;}
+	33.33%{opacity: 0.05;}
+	38.10%{opacity: 1;}
+	100%{opacity: 0.4;}
+}
+@keyframes tile3_Animation{
+	0%{opacity: 0.4;}
+	33.33%{opacity: 0.05;}
+	38.10%{opacity: 1;}
+	100%{opacity: 0.4;}
+}
+@-webkit-keyframes tile2_Animation {
+	0%{opacity: 0.2;}
+	14.29%{opacity: 0.05;}
+	19.05%{opacity: 1;}
+	100%{opacity: 0.2;}
+}
+@keyframes tile2_Animation{
+	0%{opacity: 0.2;}
+	14.29%{opacity: 0.05;}
+	19.05%{opacity: 1;}
+	100%{opacity: 0.2;}
+}
+@-webkit-keyframes tile1_Animation {
+	0%{opacity: 1;}
+	95.24%{opacity: 0.05;}
+	100%{opacity: 1;}
+}
+@keyframes tile1_Animation {
+	0%{opacity: 1;}
+	95.24%{opacity: 0.05;}
+	100%{opacity: 1;}
+}
+.spinner-svg *{
+	-webkit-animation-duration: 0.7s;
+	animation-duration: 0.7s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
+	animation-timing-function: cubic-bezier(0, 0, 1, 1);
+	transform-box: fill-box;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+.tile5{
+	fill: #002a59;
+	-webkit-animation-name: tile5_Animation;
+	animation-name: tile5_Animation;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	opacity: 0.8;
+}
+.tile4{
+	fill: #002a59;
+	-webkit-animation-name: tile4_Animation;
+	animation-name: tile4_Animation;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	opacity: 0.6;
+}
+.tile3{
+	fill: #002a59;
+	-webkit-animation-name: tile3_Animation;
+	animation-name: tile3_Animation;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	opacity: 0.4;
+}
+.tile2{
+	fill: #002a59;
+	-webkit-animation-name: tile2_Animation;
+	animation-name: tile2_Animation;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	opacity: 0.2;
+}
+.tile1{
+	fill: #002a59;
+	-webkit-animation-name: tile1_Animation;
+	animation-name: tile1_Animation;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	opacity: 1;
+}

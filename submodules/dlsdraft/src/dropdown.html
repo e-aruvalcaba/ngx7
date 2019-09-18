@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Dropdown</title>
+    <link href="partials/favicon.html" rel="import">
+</head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Dropdown</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Dropdown filters</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <p>Selection boxes are the main way to filter in tables.</p>
+
+
+                            <p>Only use the dropdown selection box when necessary. If the user already has an option to filter (IE by all locations in the header) then do not duplicate this filter option in the table.</p>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="cmx-select-dd">
+                            <div class="cmx-select-dd__options--checks">
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-all" type="checkbox"> <label for="checkbox-all"><span>All</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-active" type="checkbox"> <label for="checkbox-active"><span>Active</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-pending" type="checkbox"> <label for="checkbox-pending"><span>Pending</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-inactive" type="checkbox"> <label for="checkbox-inactive"><span>In-Active</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+                            </div>
+                        </div>
+                        <!-- end .select-dd -->
+                    </div>
+                    <!-- end .col-md-6 -->
+
+
+                    <div class="col-md-6">
+                        <div data-highlight="">
+                            <div class="demo-wrap-code code-1">
+                                <pre data-lang="html"><code class="language-html">&lt;div class="cmx-select-dd"&gt;
+    &lt;div class="cmx-select-dd__options--checks"&gt;
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-all" /&gt;
+                &lt;label for="checkbox-all"&gt;
+                    &lt;span&gt;All&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-active" /&gt;
+                &lt;label for="checkbox-active"&gt;
+                    &lt;span&gt;Active&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-pending" /&gt;
+                &lt;label for="checkbox-pending"&gt;
+                    &lt;span&gt;Pending&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-inactive" /&gt;
+                &lt;label for="checkbox-inactive"&gt;
+                    &lt;span&gt;In-Active&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end .select-dd --&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx-select-dd {
+    width: auto;
+    position: relative; // or absolute
+    border-top: 3px solid $bright-blue;
+    background: $true-white;
+    border-radius: $radius-3;
+    box-shadow: 0 8px 13px rgba(0,0,0,0.3);
+    min-height: 160px;
+    max-height: 220px;
+    display: flex;
+    flex-direction: column;
+
+    &amp;__filter{
+        background: $true-white;
+        border-bottom: 1px solid #dadada;
+        margin: 0 1rem;
+        display:flex;
+        align-items: center;
+        flex: 0 0 auto;
+    
+        &amp;-icon{
+            color:$bright-blue;
+        }
+
+        &amp;-input {
+            border:0;
+            width: 100%;
+            display: inline-block;
+            height: 3rem;
+            line-height:3rem;
+            font-size: $font-size-14;
+
+            &amp;:focus {
+                outline: 0 none;
+            }
+        }
+    }
+
+    &amp;__options,
+    &amp;__options--checks{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    &amp;__option {
+        padding: 0.625rem 2rem;
+        cursor:pointer;
+        
+        &amp;:hover {
+            background-color: $background-grey;
+        }
+
+        &amp;:first-child {
+            margin-top: 1.5rem;
+        }
+
+        &amp;:last-child {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &amp;__options--checks{
+        
+        .cmx-select-dd__option{
+            cursor: default;
+            
+            &amp;:hover{
+                background-color: inherit;
+            }
+        }
+    }
+}
+</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-select-dd {
+    width: auto;
+    position: relative;
+    border-top: 3px solid #3FA9F5;
+    background: #FFF;
+    border-radius: 3px;
+    box-shadow: 0 8px 13px rgba(0, 0, 0, 0.3);
+    min-height: 160px;
+    max-height: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.cmx-select-dd__filter {
+    background: #FFF;
+    border-bottom: 1px solid #dadada;
+    margin: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.cmx-select-dd__filter-icon {
+    color: #3FA9F5;
+}
+
+.cmx-select-dd__filter-input {
+    border: 0;
+    width: 100%;
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 0.875rem;
+}
+
+.cmx-select-dd__filter-input:focus {
+    outline: 0 none;
+}
+
+.cmx-select-dd__options,
+.cmx-select-dd__options--checks {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.cmx-select-dd__option {
+    padding: 0.625rem 2rem;
+    cursor: pointer;
+}
+
+.cmx-select-dd__option:hover {
+    background-color: #F4F6F9;
+}
+
+.cmx-select-dd__option:first-child {
+    margin-top: 1.5rem;
+}
+
+.cmx-select-dd__option:last-child {
+    margin-bottom: 0.5rem;
+}
+
+.cmx-select-dd__options--checks .cmx-select-dd__option {
+    cursor: default;
+}
+
+.cmx-select-dd__options--checks .cmx-select-dd__option:hover {
+    background-color: inherit;
+}</code></pre>
+                            </div>
+                            <!-- end demo-wrap-code -->
+                        </div>
+                        <!-- end data-highlight -->
+                    </div>
+                    <!-- end .col-md-6 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-48">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Dropdown Select List</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-select-dd">
+                            <div class="cmx-select-dd__options">
+                                <div class="cmx-select-dd__option">
+                                    Alabama
+                                </div>
+
+
+                                <div class="cmx-select-dd__option">
+                                    Alaska
+                                </div>
+
+
+                                <div class="cmx-select-dd__option">
+                                    Arizona
+                                </div>
+
+
+                                <div class="cmx-select-dd__option">
+                                    Alabama
+                                </div>
+
+
+                                <div class="cmx-select-dd__option">
+                                    Arkansas
+                                </div>
+
+
+                                <div class="cmx-select-dd__option">
+                                    California
+                                </div>
+
+
+                                <div class="cmx-select-dd__option">
+                                    Colorado
+                                </div>
+
+
+                                <div class="cmx-select-dd__option">
+                                    Connecticut
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end .select-dd -->
+                    </div>
+                    <!-- end .col-md-6 -->
+
+
+                    <div class="col-md-6">
+                        <div data-highlight="">
+                            <div class="demo-wrap-code code-2">
+                                <pre data-lang="html"><code class="language-html">&lt;div class="cmx-select-dd"&gt;
+    &lt;div class="cmx-select-dd__options"&gt;
+        &lt;div class="cmx-select-dd__option"&gt;Alabama&lt;/div&gt;
+        &lt;div class="cmx-select-dd__option"&gt;Alaska&lt;/div&gt;
+        &lt;div class="cmx-select-dd__option"&gt;Arizona&lt;/div&gt;
+        &lt;div class="cmx-select-dd__option"&gt;Alabama&lt;/div&gt;
+        &lt;div class="cmx-select-dd__option"&gt;Arkansas&lt;/div&gt;
+        &lt;div class="cmx-select-dd__option"&gt;California&lt;/div&gt;
+        &lt;div class="cmx-select-dd__option"&gt;Colorado&lt;/div&gt;
+        &lt;div class="cmx-select-dd__option"&gt;Connecticut&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx-select-dd {
+    width: auto;
+    position: relative; // or absolute
+    border-top: 3px solid $bright-blue;
+    background: $true-white;
+    border-radius: $radius-3;
+    box-shadow: 0 8px 13px rgba(0,0,0,0.3);
+    min-height: 160px;
+    max-height: 220px;
+    display: flex;
+    flex-direction: column;
+
+    &amp;__filter{
+        background: $true-white;
+        border-bottom: 1px solid #dadada;
+        margin: 0 1rem;
+        display:flex;
+        align-items: center;
+        flex: 0 0 auto;
+    
+        &amp;-icon{
+            color:$bright-blue;
+        }
+
+        &amp;-input {
+            border:0;
+            width: 100%;
+            display: inline-block;
+            height: 3rem;
+            line-height:3rem;
+            font-size: $font-size-14;
+
+            &amp;:focus {
+                outline: 0 none;
+            }
+        }
+    }
+
+    &amp;__options,
+    &amp;__options--checks{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    &amp;__option {
+        padding: 0.625rem 2rem;
+        cursor:pointer;
+        
+        &amp;:hover {
+            background-color: $background-grey;
+        }
+
+        &amp;:first-child {
+            margin-top: 1.5rem;
+        }
+
+        &amp;:last-child {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &amp;__options--checks{
+        
+        .cmx-select-dd__option{
+            cursor: default;
+            
+            &amp;:hover{
+                background-color: inherit;
+            }
+        }
+    }
+}
+</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-select-dd {
+    width: auto;
+    position: relative;
+    border-top: 3px solid #3FA9F5;
+    background: #FFF;
+    border-radius: 3px;
+    box-shadow: 0 8px 13px rgba(0, 0, 0, 0.3);
+    min-height: 160px;
+    max-height: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.cmx-select-dd__filter {
+    background: #FFF;
+    border-bottom: 1px solid #dadada;
+    margin: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.cmx-select-dd__filter-icon {
+    color: #3FA9F5;
+}
+
+.cmx-select-dd__filter-input {
+    border: 0;
+    width: 100%;
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 0.875rem;
+}
+
+.cmx-select-dd__filter-input:focus {
+    outline: 0 none;
+}
+
+.cmx-select-dd__options,
+.cmx-select-dd__options--checks {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.cmx-select-dd__option {
+    padding: 0.625rem 2rem;
+    cursor: pointer;
+}
+
+.cmx-select-dd__option:hover {
+    background-color: #F4F6F9;
+}
+
+.cmx-select-dd__option:first-child {
+    margin-top: 1.5rem;
+}
+
+.cmx-select-dd__option:last-child {
+    margin-bottom: 0.5rem;
+}
+
+.cmx-select-dd__options--checks .cmx-select-dd__option {
+    cursor: default;
+}
+
+.cmx-select-dd__options--checks .cmx-select-dd__option:hover {
+    background-color: inherit;
+}</code></pre>
+                            </div>
+                            <!-- end demo-wrap-code -->
+                        </div>
+                        <!-- end data-highlight -->
+                    </div>
+                    <!-- end .col-md-6 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-48">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Selection Box with Search</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="rules-box">
+                            <p>Selection boxes with search can be used in the experience, but should be used very sparingly.</p>
+
+
+                            <p>There should never be more than one selection box with search in a table.</p>
+                        </div>
+
+
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="">
+                        </div>
+
+
+                        <div class="cmx-select-dd">
+                            <div class="cmx-select-dd__filter">
+                                <span aria-hidden="true" class="cmx-select-dd__filter-icon cmx-icon-magnifier-glass"></span> <input class="cmx-select-dd__filter-input" placeholder="Search by Contract Number" type="search" value="">
+                            </div>
+
+
+                            <div class="cmx-select-dd__options--checks">
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-all-items" type="checkbox"> <label for="checkbox-all-items"><span>All</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-item-1" type="checkbox"> <label for="checkbox-item-1"><span>Contract #123243824384</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-item-2" type="checkbox"> <label for="checkbox-item-2"><span>Contract #829347289357</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-item-3" type="checkbox"> <label for="checkbox-item-3"><span>Contract #23492387448</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-item-4" type="checkbox"> <label for="checkbox-item-4"><span>Contract #12312523532</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-item-5" type="checkbox"> <label for="checkbox-item-5"><span>Contract #12312235435</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-item-6" type="checkbox"> <label for="checkbox-item-6"><span>Contract #123243824384</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-item-7" type="checkbox"> <label for="checkbox-item-7"><span>Contract #829347289357</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-item-8" type="checkbox"> <label for="checkbox-item-8"><span>Contract #23492387448</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-item-9" type="checkbox"> <label for="checkbox-item-9"><span>Contract #12312523532</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+
+
+                                <div class="cmx-select-dd__option">
+                                    <div class="cmx-form-field">
+                                        <input id="checkbox-item-10" type="checkbox"> <label for="checkbox-item-10"><span>Contract #12312235435</span></label>
+                                    </div>
+                                    <!-- end .form-field -->
+                                </div>
+                                <!-- end .select-dd__option -->
+                            </div>
+                        </div>
+                        <!-- end .select-dd-->
+                    </div>
+                    <!-- end .col-md-6 -->
+
+
+                    <div class="col-md-6">
+                        <div data-highlight="">
+                            <div class="demo-wrap-code code-3">
+                                <pre data-lang="html"><code class="language-html">&lt;div class="cmx-select-dd"&gt;
+    &lt;div class="cmx-select-dd__filter"&gt;
+        &lt;span class="cmx-select-dd__filter-icon cmx-icon-magnifier-glass" aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;input class="cmx-select-dd__filter-input" type="search" value="" placeholder="Search by Contract Number" /&gt;
+    &lt;/div&gt;
+    &lt;div class="cmx-select-dd__options--checks"&gt;
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-all" /&gt;
+                &lt;label for="checkbox-all"&gt;
+
+                    &lt;span&gt;All&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-active" /&gt;
+                &lt;label for="checkbox-active"&gt;
+
+                    &lt;span&gt;Contract #123243824384&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-pending" /&gt;
+                &lt;label for="checkbox-pending"&gt;
+
+                    &lt;span&gt;Contract #829347289357&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-inactive" /&gt;
+                &lt;label for="checkbox-inactive"&gt;
+
+                    &lt;span&gt;Contract #23492387448&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-inactive" /&gt;
+                &lt;label for="checkbox-inactive"&gt;
+                    &lt;span&gt;Contract #12312523532&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-inactive" /&gt;
+                &lt;label for="checkbox-inactive"&gt;
+                    &lt;span&gt;Contract #12312235435&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-active" /&gt;
+                &lt;label for="checkbox-active"&gt;
+                    &lt;span&gt;Contract #123243824384&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-pending" /&gt;
+                &lt;label for="checkbox-pending"&gt;
+                    &lt;span&gt;Contract #829347289357&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-inactive" /&gt;
+                &lt;label for="checkbox-inactive"&gt;
+                    &lt;span&gt;Contract #23492387448&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-inactive" /&gt;
+                &lt;label for="checkbox-inactive"&gt;
+                    &lt;span&gt;Contract #12312523532&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+
+        &lt;div class="cmx-select-dd__option"&gt;
+            &lt;div class="cmx-form-field"&gt;
+                &lt;input type="checkbox" id="checkbox-inactive" /&gt;
+                &lt;label for="checkbox-inactive"&gt;
+                    &lt;span&gt;Contract #12312235435&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;!-- end .form-field --&gt;
+        &lt;/div&gt;
+        &lt;!-- end .select-dd__option --&gt;
+    &lt;/div&gt;
+    
+&lt;/div&gt;
+&lt;!-- end .select-dd--&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx-select-dd {
+    width: auto;
+    position: relative; // or absolute
+    border-top: 3px solid $bright-blue;
+    background: $true-white;
+    border-radius: $radius-3;
+    box-shadow: 0 8px 13px rgba(0,0,0,0.3);
+    min-height: 160px;
+    max-height: 220px;
+    display: flex;
+    flex-direction: column;
+
+    &amp;__filter{
+        background: $true-white;
+        border-bottom: 1px solid #dadada;
+        margin: 0 1rem;
+        display:flex;
+        align-items: center;
+        flex: 0 0 auto;
+    
+        &amp;-icon{
+            color:$bright-blue;
+        }
+
+        &amp;-input {
+            border:0;
+            width: 100%;
+            display: inline-block;
+            height: 3rem;
+            line-height:3rem;
+            font-size: $font-size-14;
+
+            &amp;:focus {
+                outline: 0 none;
+            }
+        }
+    }
+
+    &amp;__options,
+    &amp;__options--checks{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    &amp;__option {
+        padding: 0.625rem 2rem;
+        cursor:pointer;
+        
+        &amp;:hover {
+            background-color: $background-grey;
+        }
+
+        &amp;:first-child {
+            margin-top: 1.5rem;
+        }
+
+        &amp;:last-child {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &amp;__options--checks{
+        
+        .cmx-select-dd__option{
+            cursor: default;
+            
+            &amp;:hover{
+                background-color: inherit;
+            }
+        }
+    }
+}
+</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-select-dd {
+    width: auto;
+    position: relative;
+    border-top: 3px solid #3FA9F5;
+    background: #FFF;
+    border-radius: 3px;
+    box-shadow: 0 8px 13px rgba(0, 0, 0, 0.3);
+    min-height: 160px;
+    max-height: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.cmx-select-dd__filter {
+    background: #FFF;
+    border-bottom: 1px solid #dadada;
+    margin: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.cmx-select-dd__filter-icon {
+    color: #3FA9F5;
+}
+
+.cmx-select-dd__filter-input {
+    border: 0;
+    width: 100%;
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 0.875rem;
+}
+
+.cmx-select-dd__filter-input:focus {
+    outline: 0 none;
+}
+
+.cmx-select-dd__options,
+.cmx-select-dd__options--checks {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.cmx-select-dd__option {
+    padding: 0.625rem 2rem;
+    cursor: pointer;
+}
+
+.cmx-select-dd__option:hover {
+    background-color: #F4F6F9;
+}
+
+.cmx-select-dd__option:first-child {
+    margin-top: 1.5rem;
+}
+
+.cmx-select-dd__option:last-child {
+    margin-bottom: 0.5rem;
+}
+
+.cmx-select-dd__options--checks .cmx-select-dd__option {
+    cursor: default;
+}
+
+.cmx-select-dd__options--checks .cmx-select-dd__option:hover {
+    background-color: inherit;
+}</code></pre>
+                            </div>
+                            <!-- end demo-wrap-code -->
+                        </div>
+                        <!-- end data-highlight -->
+                    </div>
+                    <!-- end .col-md-6 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-48">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+</body>
+</html>

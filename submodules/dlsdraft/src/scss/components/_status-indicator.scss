@@ -1,0 +1,48 @@
+.cmx-flag-status {
+    float: left;
+    width: 24px;
+    height: 16px;
+    display: inline-block;
+    border-radius: $radius-2;
+    margin-right: 8px;
+    margin-top: 2px;
+  
+    &--small {
+        width: 14px;
+        height: 8px;
+    }
+  
+    &--mobile {
+        width: 10px;
+        height: 10px;
+    }
+  
+    &--alert {
+        background: $true-red;
+    }
+  
+    &--success {
+        background: $bright-green;
+    }
+  
+    &--warning {
+        background: $bright-orange;
+    }
+  
+    &--disabled {
+        background: $disabled-grey;
+    }
+  
+    &--info {
+        background: $bright-blue;
+    }
+  
+    &--info-alt{
+        background: $night-blue;
+    }
+
+    &__label {
+        font-size: $font-size-14;
+        line-height: $line-height-18;
+    }
+  } // end flag-status

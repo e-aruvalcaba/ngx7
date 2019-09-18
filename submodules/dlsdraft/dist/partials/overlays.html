@@ -1,0 +1,131 @@
+<template>
+    <!-- start legal modal -->
+    <div id="tcModal" class="cmx-modal hidden">
+        <div class="cmx-modal__container">
+            <button class="cmx-modal__close-button" onClick="closeModal()">
+                <span class="cmx-icon-close" aria-hidden="true"></span>
+                <span class="sr-only">Close</span></span>
+            </button>
+            <div class="cmx-modal__section flex__item--fixed">
+                <h2>Terms + Conditions</h2>
+            </div>
+            <div class="cmx-modal__section flex__item--lose">
+                <div class="scroller scroller--border-top">
+                    <div class="scroller__content">
+                        <p><span class="roboto-medium">9. DELIVERY AND INDEMNIFICATION.</span> Seller's responsibility for delivery shall cease FOB shipping point or, if Seller agrees to deliver FOB delivery
+                        site, at the curbside or street or frontage of the address of delivery. If Buyer requires Seller to cross a curb line or enter upon private property to make delivery on site, Buyer shall be responsible to provide safe and adequate access and such delivery shall be at the risk of Buyer. Following delivery, Buyer shall be responsible for compliance with all governmental regulations and ordinances with regard to disposal, storage or placement of the same and shall indemnify and hold Seller harmless against all claims for personal injuries, including death, and any damage to private or public property arising from the delivery, storage, use, disposal or handling of said Materials. Unless otherwise specifically agreed, shipments will be made only during normal business hours, but not Saturdays, Sundays, or holidays recognized by Seller or labor unions under contract with Seller. If Buyer is in default under this Agreement or any of its contracts or obligations with Seller, Seller may, at its sole option and without prejudice to any of its other remedies: (i) postpone further deliveries or shipments until such default is remedied; or (ii) terminate any and all obligations under any contract or obligation and refuse further performance without any liability to Buyer.</p>
+
+                        <div class="spacer-16"></div>
+
+                        <p><span class="roboto-medium">10. TITLE OF SECTION</span> Seller's responsibility for delivery shall cease FOB shipping point or, if Seller agrees to deliver FOB delivery
+                        site, at the curbside or street or frontage of the address of delivery. If Buyer requires Seller to cross a curb line or enter upon private property to make delivery on site, Buyer shall be responsible to provide safe and adequate access and such delivery shall be at the risk of Buyer. Following delivery, Buyer shall be responsible for compliance with all governmental regulations and ordinances with regard to disposal, storage or placement of the same and shall indemnify and hold Seller harmless against all claims for personal injuries, including death, and any damage to private or public property</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cmx-modal__section flex__item--fixed cmx-modal__section--buttons">
+                <button class="cmx-button ripple" onClick="closeModal()">Ok</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile language selection -->
+    <div id="mobileLanguageSelection" class="cmx-language mobile-only hidden">
+        <div class="cmx-language__options">
+            <div class="cmx-language__heading">
+                Language Selection
+            </div>
+            <ul class="cmx-language__options-list">
+                <li class="cmx-language__options-item">
+                    <div class="cmx-form-field">
+                        <input type="radio" name="lang" checked="checked" />
+                        <label for="radio">English</label>
+                    </div>
+                </li>
+                <li class="cmx-language__options-item">
+                    <div class="cmx-form-field">
+                        <input type="radio" name="lang" />
+                        <label for="radio">Español</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="cmx-language__footer">
+            <button class="cmx-button cmx-button--support ripple margin-right" onclick="toggleClass('#mobileLanguageSelection','hidden')">Cancel</button>
+            <button class="cmx-button ripple" onclick="toggleClass('#mobileLanguageSelection','hidden')">Apply</button>
+        </div>
+    </div>
+
+    <!-- mobile notification selection -->
+    <div id="mobileNotificationSelection" class="cmx-modal hidden">
+        <div class="cmx-modal__container">
+            <button class="cmx-modal__close-button" onClick="closeModal()">
+                <span class="cmx-icon-close" aria-hidden="true"></span>
+                <span class="sr-only">Close</span></span>
+            </button>
+            <div class="cmx-modal__section flex__item--fixed">
+                <h2>Notifications</h2>
+            </div>
+            <div class="cmx-modal__section flex__item--lose">
+                <div class="scroller scroller--border-top">
+                    <div class="scroller__content">
+                        <div class="cmx-notifications__list">
+                            <div class="cmx-notifications__entry">
+                                <div class="cmx-notifications__entry-icon">
+                                    <svg class="icon-warning-red">
+                                        <use xlink:href="#icon-warning"></use>
+                                    </svg>
+                                </div>
+                                <div class="cmx-notifications__entry-data">
+                                    <h4 class="cmx-notifications__entry-title">Customer Information</h4>
+                                    <p class="cmx-notifications__entry-text">The jobsite <strong>Wilder Ranch</strong> has just been created. Would you like to place an order?</p>
+                                    <a class="cmx-notifications__entry-cta" href="#">Order</a>
+                                </div>
+                                <!-- end notifications__entry-data -->
+                            </div>
+                            <!-- end notifications__entry -->
+
+                            
+
+                            <div class="cmx-notifications__entry">
+                                <div class="cmx-notifications__entry-icon">
+                                    <svg class="icon-warning-red">
+                                        <use xlink:href="#icon-warning"></use>
+                                    </svg>
+                                </div>
+                                <div class="cmx-notifications__entry-data">
+                                    <h4 class="cmx-notifications__entry-title">Quotation and Pricing</h4>
+                                    <p class="cmx-notifications__entry-text"><strong>2311112 - Rideback Eastern River Valley</strong> You have a new quotation ready for review.</p>
+                                    <a class="cmx-notifications__entry-cta" href="#">Review</a>
+                                </div>
+                                <!-- end notifications__entry-data -->
+                            </div>
+                            <!-- end notifications__entry -->
+
+                            
+
+                            <div class="cmx-notifications__entry">
+                                <div class="cmx-notifications__entry-icon">
+                                    <svg class="icon-warning-red">
+                                        <use xlink:href="#icon-warning"></use>
+                                    </svg>
+                                </div>
+                                <div class="cmx-notifications__entry-data">
+                                    <h4 class="cmx-notifications__entry-title">Track and Trace</h4>
+                                    <p class="cmx-notifications__entry-text">The delivery for <strong>Wilder Ranch Orinda</strong> is in jeopardy due to an accident on the interstate with no exit route.</p>
+                                    <a class="cmx-notifications__entry-cta" href="#">Manage</a>
+                                </div>
+                                <!-- end notifications__entry-data -->
+                            </div>
+                            <!-- end notifications__entry -->
+                        </div>
+                        <!-- end notifications__list -->
+                    </div>
+                </div>
+            </div>
+            <div class="cmx-modal__section flex__item--fixed cmx-modal__section--buttons">
+                <button class="cmx-button ripple">View All Notifications</button>
+            </div>
+        </div>
+        <!-- end cmx-modal__container -->
+    </div>
+</template>

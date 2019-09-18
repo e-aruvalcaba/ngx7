@@ -1,0 +1,100 @@
+// Basic progress bar
+.cmx-progress-bar {
+  position: relative;
+  display:flex;
+  font-size: $progress-font-size;
+  line-height: $progress-height;
+  background-color: $disabled-grey;
+
+
+  &__ammount {
+    height: $progress-height;
+    color: $progress-bar-color;
+    background-color: $bright-blue;
+
+    &.success{
+      background-color: $bright-green;
+    }
+    &.warning{
+      background-color: $bright-orange;
+    }
+    &.error{
+      background-color: $true-red;
+    }
+    // and them color codes (for color purposes)
+    &.red{
+      background-color: $true-red;
+    }
+    &.orange{
+      background-color: $bright-orange;
+    }
+    &.green{
+      background-color: $bright-green;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    right:0;
+    top: $progress-height;
+    font-size: $font-size-10;
+    color: #818C9E;
+    text-align: right;
+  }
+}
+
+.cmx-legend{
+  &__item{
+    float: left;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  
+  &__term{
+    display: inline-block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: $disabled-grey;
+    margin-top: 4px;
+
+    &.blue {
+      background: $bright-blue;
+    }
+
+    &.green {
+      background: $bright-green;
+    }
+
+    &.red {
+      background: $true-red;
+    }
+
+    &.orange {
+      background: $bright-orange;
+    }
+  }
+
+  &__value{
+    margin-left: 8px;
+    width: calc(100% - 32px);
+    float: left;
+
+    &-heading {
+      font-size: $font-size-18;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    &-desc {
+      line-height: $line-height-18;
+      display: inline-block;
+    }
+  }
+}
+
+
+
+
+

@@ -1,0 +1,114 @@
+@import url(https://www.cemexgo.com/cdn/cmx-dls-icons.css);
+@import '../../../../../submodules/dlsdraft/src/scss/variables/_colors.scss';
+
+.pointer {
+    cursor: pointer;
+}
+
+.displayPlants tr:nth-child(even) {
+    background: #e8ebef;
+}
+
+.displayPlants th, td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+}
+
+.right input[type='number'] {
+    text-align: right;
+}
+
+.column-width {
+    width: 33%;
+    word-wrap: break-word;
+}
+
+.input-height {
+    height: 70px;
+}
+
+.table-padding {
+    padding: 5px;
+}
+
+.tooltip {
+    color: #3fb1f8;
+    margin-left: 5px;
+}
+
+.alert-box {
+  position: absolute;
+  top: 50px;
+  left: 35px;
+  z-index: 10000;
+  width: 100%;
+}
+
+/* CUSTOM CHECKBOX STYLES*/
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  // font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.check-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check-container input:checked ~ .checkmark {
+  background-color: #3FA9F5;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.check-container .checkmark:after {
+  left: 7px;
+  top: 1px;
+  width: 7px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

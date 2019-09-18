@@ -1,0 +1,149 @@
+// Colors
+
+
+// Primary
+
+$true-white: 				#FFF;
+$true-black: 				#000;
+$true-blue: 				#003876;
+$medium-blue: 				#002A59;
+$medium-grey: 				#666;
+$dark-grey: 				#333;
+$background-grey: 			#F4F6F9;
+
+
+// Highlight and status
+$true-red: 					#EE3D42;
+$true-red-light:			#ef9a9a;
+$true-red-dark:				#b71c1c;
+
+$bright-orange: 			#FBB03B;
+$bright-orange-light:		#ffcc80;
+$bright-orange-dark:		#ff8f00;
+
+$bright-green: 				#7AC943;
+$bright-green-light:		#c5e1a5;
+$bright-green-dark:			#1b5e20;
+
+$bright-blue: 				#3FA9F5;
+$bright-blue-light:			#81d4fa;
+$bright-blue-dark:			#01579B;
+
+$deep-blue: 				#001B3A; 
+
+$table-highlight-grey: 		#E8EBEF;
+
+$table-row-active:			#CCE4F8;
+
+$disabled-grey: 			#D6D6D6;
+
+
+// Hovers and active
+$active-blue: 				#2684C7;
+$active-green:		 		#66B330;
+
+// Colors with opacity
+$true-white-ten-percent:	rgba(255, 255, 255, 0.1);
+$true-red-five-percent:		rgba(238, 61, 66, 0.05);
+$true-blue-five-percent:	rgba(0,42,89,0.05);
+$bright-blue-forty-percent:	rgba(63,169,245,0.40);
+$true-black-zero-percent:	rgba(0,0,0,0);
+$true-black-ten-percent:	rgba(0,0,0,0.1);
+$true-black-eighty-percent:	rgba(0,0,0,0.8);
+$gray-fifty-percent:		rgba(70, 74, 76, 0.5);
+$deep-blue-eighty-percent:	rgba(0, 27, 58, 0.8);
+
+
+// needs to be standardized somehow
+.font-true-red {
+	color: $true-red;
+}
+
+.font-true-white {
+	color: $true-white;
+}
+
+.font-true-black {
+	color: $true-black;
+}
+
+.font-true-blue {
+	color: $true-blue;
+}
+
+.font-medium-blue {
+	color: $medium-blue;
+}
+
+.font-medium-grey {
+	color: $medium-grey;
+}
+
+.font-dark-grey {
+	color: $dark-grey;
+}
+
+.font-bright-orange {
+	color: $bright-orange;
+}
+
+.font-bright-green {
+	color: $bright-green;
+}
+
+.font-bright-blue {
+	color: $bright-blue;
+}
+
+.font-deep-blue {
+	color: $deep-blue;
+}
+
+
+
+// backgrounds
+
+.bg__true-red {
+	background-color: $true-red;
+}
+
+.bg__true-white {
+	background-color: $true-white;
+}
+
+.bg__true-black {
+	background-color: $true-black;
+}
+
+.bg__true-blue {
+	background-color: $true-blue;
+}
+
+.bg__medium-blue {
+	background-color: $medium-blue;
+}
+
+.bg__medium-grey {
+	background-color: $medium-grey;
+}
+
+.bg__dark-grey {
+	background-color: $dark-grey;
+}
+
+.bg__bright-orange {
+	background-color: $bright-orange;
+}
+
+.bg__bright-green {
+	background-color: $bright-green;
+}
+
+.bg__bright-blue {
+	background-color: $bright-blue;
+}
+
+.bg__deep-blue {
+	background-color: $deep-blue;
+}
+

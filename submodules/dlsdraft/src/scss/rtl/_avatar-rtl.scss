@@ -1,0 +1,16 @@
+// we change from .profile-circle to avatar cause circle describes the shape 
+// and in the future the profile pic might not be circular
+
+// _avatar-rtl.scss
+
+
+// we have changed the slider from a fake one to a real input type="range", which is available in HTML5
+html[dir="rtl"] .cmx-slider {
+	
+	// since webkit doesnt have fill upper or fill lower to have a different color in the range and the remainant we hack it through CSS gradients and javascript;
+	@for $i from 0 through 100 {
+		&--pc-#{$i}::-webkit-slider-runnable-track {
+			background: linear-gradient(to left, $bright-blue 0%,$bright-blue 0%+$i, $table-highlight-grey 0%+$i,$table-highlight-grey 100%); // modified
+		}
+	}
+  }

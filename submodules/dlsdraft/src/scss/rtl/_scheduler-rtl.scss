@@ -1,0 +1,51 @@
+// _scheduler-rtl.scss
+
+html[dir="rtl"] .cmx-scheduler {
+
+    &__panel-title {
+
+        button {
+
+            &.prev,
+            &.next {
+                // transform: rotate(180deg); // added
+                // [ not needed, since we have dls-icons-rtl iconset ]
+            }
+        }
+    }
+
+    &__panel-actions-left,
+    &__panel-actions-right {
+        right: 0; // modified
+        left: auto; // added
+    }
+    &__panel-actions-right {
+        left:0; // modified
+        right: auto; // modified
+    }
+
+    &__card {
+    
+        &-body {
+            
+            .status {
+                
+                .status-message {
+
+                    .flag-status {
+                        margin: 3px 0 0 6px; // modified
+                    }
+                }
+            }
+        }
+    }
+}
+
+html[dir="rtl"] .cmx-button--link-header-filter{
+    margin-left:3rem; // changed
+    
+    &:first-child {
+        margin-left: 0; // modified
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.78 14.9">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3fa9f5;
+      }
+    </style>
+  </defs>
+  <title>export</title>
+  <path class="cls-1" d="M15.16,13.88H.62a.62.62,0,1,0,0,1.24H15.16a.62.62,0,0,0,0-1.24Z" transform="translate(0 -0.22)"/>
+  <path class="cls-1" d="M7.19,12.49a.6.6,0,0,0,.72,0L13.68,8a.5.5,0,0,0,.07-.74A.59.59,0,0,0,13,7.23l-4.78,3.7V.85a.62.62,0,0,0-1.24,0V10.93L2.15,7.23a.6.6,0,0,0-.79.07A.5.5,0,0,0,1.43,8Z" transform="translate(0 -0.22)"/>
+</svg>

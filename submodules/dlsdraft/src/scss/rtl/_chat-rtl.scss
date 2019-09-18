@@ -1,0 +1,108 @@
+// _chat-rtl.scss
+
+html[dir="rtl"] .chat{
+    &__input{
+
+        input[type="text"] {
+        }
+
+        button{
+            left: 1.5rem; // modified
+            right: auto; // added;
+        }
+    }
+    
+    &__entry {
+
+        &:nth-child(even){
+
+            .chat__entry-content {
+                float: left; // modified
+            }
+        }
+        &:nth-child(odd){
+            .chat__entry-body {
+                &::before {
+                    left: auto; // modified
+                    right: 100%; // modified
+                    border-right: 8px solid #F4F6F9; // modified
+                    border-left: transparent; // modified
+                }	
+            }
+        }
+
+        &-content {
+            float: right; // modified
+        }
+        &-header {
+            float: right; // modified
+    
+            .time {
+                float: right; // modified
+            }
+        
+            .author {
+                float: left; // modified
+            }
+        }
+        &-body {
+            &::before {
+                right: auto; // modified
+                left: 100%; // modified
+                border-left: 8px solid $bright-blue; // modified
+                border-right: transparent; // modified
+            }
+        }
+    }
+}
+
+
+// change the look of the chat-modal on small screens
+
+@media (max-width: 48rem) {
+
+    html[dir="rtl"] .chat{
+
+        &__entry {
+
+            float: left; // modified
+
+            &:nth-child(even){
+                .chat__entry{
+                    &-content {
+                        float: left; // modified
+                        margin-left: 10px; // modified
+                        margin-right: 0; // added
+                    }
+                    &-body {
+                        &::before {
+                            left: auto; // modified
+                            right: 100%; // modified
+                            border-right: 8px solid $bright-blue; // modified
+                            border-left: transparent; // modified
+                        }
+                    }
+                }
+            } 
+
+            &:nth-child(odd){
+                .chat__entry{
+                    &-content {
+                        margin-right: 10px; // modified
+                        margin-left: 0; // added
+                    }
+                    &-body {
+                        &::before {
+                            right: auto; // modified
+                            left: 100%; // modified
+                            border-left: 8px solid #F4F6F9; // modified
+                            border-right: transparent; // modified
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// end .modal-chat

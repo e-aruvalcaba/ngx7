@@ -1,0 +1,17 @@
+html[dir="rtl"] .mobile-breadcrumbs {
+    font-size: $font-size-16;
+
+    span {
+        display: inline-block;
+    }
+
+    .delimiter {
+        width: 6px;
+        height: 6px;
+        background: $bright-blue;
+        display: inline-block;
+        border-radius: $radius-2;
+        vertical-align: middle;
+        margin: 0 8px;
+    }
+}

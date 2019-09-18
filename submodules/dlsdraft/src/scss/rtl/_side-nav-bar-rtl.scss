@@ -1,0 +1,139 @@
+// side-nav-bar-rtl.scss
+
+html[dir="rtl"]{
+	.cmx{
+		&-navbar {
+			background-image: linear-gradient(to left, $medium-blue 43px, $true-blue 42px);
+			
+			&__trigger{
+				left:0;
+				right:auto;
+			}
+			&__menu{
+				&-sub {
+					margin-right: 43px;
+					margin-left: 0;
+				}
+				&-label{
+					padding: 0.875rem 0.75rem 0 0;
+				}
+			}
+			&.entity-selector-open{
+				.cmx-navbar{
+					&__legal-entity{
+						&-toggle{
+							transform: rotate(-90deg);
+						}
+					}
+				}
+			}
+			&.collapsed{
+				.cmx-navbar{
+					&__legal-entity{
+						transform: translate(160px, 0);
+						max-height:0;
+					}
+					&__menu-label{
+						padding-left:auto;
+						padding-right:0;
+					}
+				}
+				
+				& + .page-wrapper{
+					margin-left: auto;
+					margin-right: 43px;
+				}
+			}
+		}
+	}
+}
+
+// ╔══════════════════════════════╗
+// ║  MOBILE-RTL SPECIFIC STYLES  ║
+// ╚══════════════════════════════╝
+
+@media (max-width : 576px) {
+	html[dir="rtl"]{
+		.cmx{
+			&-navbar,
+			&-navbar.cmx-navbar-static-side{
+				left:auto;
+				right:-100%;
+				transition: right 250ms ease;
+			}
+
+			&-navbar{
+				background-image:none;
+				& + .page-wrapper{
+					margin-right: 0 !important;
+					margin-left:auto;
+					margin-top:0;
+				}
+				&__trigger{
+					right:15px;
+					left:auto;
+					transition: right 250ms ease;
+                }
+                
+				&__legal-entity{
+					&-listing{
+						left:auto;
+						right:-100%;
+					}
+					&-footer{
+						text-align: left;
+					}
+				}
+				&__menu{
+					width: $sidebar-width;
+					background-image:linear-gradient(to left, $medium-blue 43px, $true-blue 43px);
+				}
+	
+	
+				&.collapsed{ // in responsive this is actually the expanded status
+					transform:none;
+					right:0;
+	
+					.cmx-navbar{
+						&__trigger{
+							transform:none;
+							left:auto;
+							right:calc(100vw - 36px);
+						}
+
+						&__legal-entity{
+							transform:none;
+							max-height:200px;
+						}
+	
+						&__menu{
+
+							&-link{ // we are this specific to allow buttons as well
+								text-align: right;
+							}
+
+							&-label{
+								padding-right: 0.75rem;
+								padding-left:0;
+							}
+						}
+					}
+				}
+	
+				&.entity-selector-open{
+					right:-100%;
+					left:auto;
+
+					.cmx-navbar{
+						&__legal-entity{
+							&-listing{
+								left:auto;
+								right:0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

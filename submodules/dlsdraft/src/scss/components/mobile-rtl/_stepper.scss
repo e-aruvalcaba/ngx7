@@ -1,0 +1,134 @@
+html[dir="rtl"] .mobile-stepper {
+    width: 100%;
+    position: absolute; // WARNING: in real case scenario should be FIXED
+    bottom: 0;
+    height: 48px;
+    background: $bright-blue;
+
+    .prev {
+        width: 48px;
+        height: 48px;
+        float: right; // modified
+
+        &.hidden-arrow {
+            // hide the element when on first position
+            a {
+                display: none;
+            }
+        }
+        
+        a {
+            width: 48px;
+            height: 48px;
+            display: inline-block;
+            border-left: 1px solid $true-white; // modified
+            
+            svg {
+                fill: $true-white;
+                padding: 4px;
+                margin: 12px;
+            }
+        }
+    }
+
+    .next {
+        width: 48px;
+        height: 48px;
+        float: left; // modified
+
+        a {
+            width: 48px;
+            height: 48px;
+            display: inline-block;
+            border-right: 1px solid $true-white; // modified
+            
+            svg {
+                fill: $true-white;
+                padding: 4px;
+                margin: 12px;
+            }	
+        }
+    }
+
+    .current {
+        text-align: center;
+        width: calc(100% - 96px);
+        float: right;
+        line-height: 48px;
+
+        a {
+            color: $true-white;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            height: 48px;
+
+            svg {
+                position: relative;
+                top: 7px;
+                left: 4px;
+                padding: 4px;
+                fill: $true-white;
+            }
+        }
+    }
+
+    .stepper-open {
+        width: 100%;
+        min-height: 160px;
+        background: $background-grey;
+        border-bottom: 1px solid $true-white;
+        position: absolute;
+        bottom: 48px;
+        color: $bright-blue;
+        font-size: $font-size-16;
+        padding: 30px;
+
+        .step {
+            margin-bottom: 20px;
+            color: $true-white;
+
+            a {
+                text-decoration: none;
+                color: $bright-blue;
+            }
+        }
+
+        .cmx-step-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: $bright-blue;
+            float: right; // modified
+            text-align: center;
+            margin-left: 16px; // modified
+            margin-right: 0;
+            font-weight: bold;
+            position: relative;
+
+            .bottom-connector {
+                width: 1px;
+                height: 20px;
+                background: $bright-blue;
+                display: inline-block;
+                position: absolute;
+                top: 24px;
+                left: 12px
+            }
+
+            &.cmx-step-completed {
+                background: $bright-green;
+            }
+
+            &.cmx-step-disabled {
+                background: #2E5E92;
+                color: $true-white;
+            }
+
+            svg {
+                fill: $true-white;
+                width: 13px;
+            }
+        }
+    }
+}

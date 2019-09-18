@@ -1,0 +1,12 @@
+// _radio-button-rtl.scss
+
+html[dir="rtl"] input {
+
+    &[type=radio] {
+        
+        + label span {
+            padding-right: .25em; // modified
+            padding-left: 0; // added
+        }
+    }
+}

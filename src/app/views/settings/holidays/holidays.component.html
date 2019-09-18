@@ -1,3 +1,214 @@
-<p>
-  holidays works!
-</p>
+<div fxFlex fxLayout="column" [ngStyle.xl]="{'margin': '60px'}" [ngStyle.lg]="{'margin': '60px'}" [ngStyle.xs]="{'margin': '15px', 'margin-right': '20px'}" [ngStyle.sm]="{'margin': '40px'}" [ngStyle.md]="{'margin': '60px'}">
+  <div fxFlex fxLayout="row" [ngStyle.lg]="{'margin-bottom': '25px'}" [ngStyle.xs]="{'margin-bottom': '15px'}" [ngStyle.sm]="{'margin-bottom': '35px'}" [ngStyle.md]="{'margin-bottom': '35px'}">
+      <div fxFlex>
+          <h2 [ngStyle.xs]="{'font-size': '0em !important'}">{{ translate('views.sidebar.rccc.menues.general_configurations') }}
+
+      <span
+        aria-hidden="true"
+        class="cmx-icon-right-single"
+        style="color: #3FA9F5; font-size: 12pt;">
+      </span> {{ translate('rccc.settings.holidays.screenTitle') }}
+    </h2>
+      </div>
+  </div>
+  <div fxFlex="100%" fxLayout="row" fxLayout.xs="column" fxLayoutGap="15px" fxLayoutGap.xs="5px" [ngStyle]="{'margin-top': '10px'}" [ngStyle.xs]="{'margin-top': '54px'}">
+      <div fxFlex [ngStyle.xs]="{'margin-bottom': '-10px !important'}">
+          <div class="cmx-rccc-search-label" data-id="cmx-rccc-search-label">
+              {{ translate('rccc.admin.search_label') }}
+          </div>
+          <cmx-dropdown
+            data-id="countryDropDown"
+            class="cmx-input"
+            [closeOnClick]="true"
+            [enableSearch]="true"
+            placeholder="{{selectedCountryDescription}}">
+              <cmx-dropdown-item
+                *ngFor="let country of countries"
+                (click)="getCountries(country)"
+                [searchValue]="country.entryDesc">
+                {{ (country.entryCode == "") ? "-" : country.entryDesc }}
+              </cmx-dropdown-item>
+          </cmx-dropdown>
+      </div>
+      <div fxFlex>
+          <cmx-dropdown data-id="monthsDropDown" class="cmx-input" [closeOnClick]="true" [enableSearch]="true" placeholder="{{formattedDate}}">
+              <cmx-dropdown-item *ngFor="let month of holidayMonths" (click)="pickDate(month)" [searchValue]="month.entryDesc">
+                  {{month.monthName}} {{month.year}}
+              </cmx-dropdown-item>
+          </cmx-dropdown>
+      </div>
+      <div fxFlex></div>
+  </div>
+  <div fxFlex="100%" fxLayout="column" [ngStyle]="{'margin-top': '100px'}" [ngStyle.xs]="{'margin-top': '170px'}">
+      <div class="catalog-container">
+          <div style="width: 100%;" fxFill>
+              <ul class="cmx-tabs" data-selected-text="Search Results" *ngIf="displayTabs">
+                  <li class="cmx-tabs__tab active">
+                      <a class="cmx-tabs__link">{{ translate('rccc.views.labels.search_result') }}</a>
+                  </li>
+                  <li class="cmx-tabs__tab">
+                      <ul>
+                          <li>
+                              <button data-id="addHolidayButton" style="font-size: 1em;" cmx-button-link href="#" (click)="OnAddHoliday()">
+                                  <span class="cmx-icon-plus" aria-hidden="true"></span> {{ translate('rccc.settings.holidays.add') }}
+                              </button>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+          <cmx-alert></cmx-alert>
+          <cmx-table [dataSource]="holidays" *ngIf="hasHolidays">
+              <ng-container *cmxHeaderTemplate="let table">
+                  <div fxLayout="row">
+                      <cmx-header-cell fxFlex="15" fxFlex.xs="40" fxLayout fxLayoutAlign="start start">
+                          {{ translate('rccc.settings.holidays.holidayName') }}
+                      </cmx-header-cell>
+                      <cmx-header-cell fxFlex="35" fxLayout fxLayoutAlign="start start" fxShow fxShow.xs="false">
+                          {{ translate('rccc.settings.holidays.holidayDescription') }}
+                      </cmx-header-cell>
+                      <cmx-header-cell fxFlex="20" fxLayout fxLayoutAlign="start start" fxShow fxShow.xs="false">
+                          {{ translate('rccc.settings.holidays.holidayDate') }}
+                      </cmx-header-cell>
+                      <cmx-header-cell fxFlex="20" fxFlex.xs="40" fxLayout fxLayoutAlign="start start">
+                          {{ translate('rccc.settings.holidays.applyDate') }}
+                      </cmx-header-cell>
+                      <cmx-header-cell fxFlex="10" fxFlex.xs="15" fxLayout fxLayoutAlign="end start"></cmx-header-cell>
+                  </div>
+              </ng-container>
+              <ng-container *cmxRowTemplate="let $element">
+                  <div fxLayout="row" cmx-table-item>
+                      <cmx-cell fxFlex="15" fxLayout="row" fxFlex.xs="40" fxLayoutAlign="start start">
+                          {{ $element.name }}
+                      </cmx-cell>
+                      <cmx-cell fxFlex="35" fxLayout="row" fxLayoutAlign="start start" fxShow fxShow.xs="false">
+                          {{ $element.holidayDesc }}
+                      </cmx-cell>
+                      <cmx-cell fxFlex="20" fxLayout="row" fxLayoutAlign="start start" fxShow fxShow.xs="false">
+                          {{ $element.date.iso }}
+                      </cmx-cell>
+                      <cmx-cell fxFlex="20" fxLayout="row" fxFlex.xs="40" fxLayoutAlign="start start">
+                          {{ $element.affectedDate }}
+                      </cmx-cell>
+                      <cmx-cell fxFlex="10" fxFlex.xs="15" fxLayout="row" fxLayoutAlign="center center">
+                          <button [attr.data-id]="'viewHolidayButton-' + holidays.indexOf($element)" cmx-button-link (click)="OnViewHolidayDetail($element)">
+                              <span class="cmx-icon-quick-view" aria-hidden="true"></span>
+                          </button>
+                          <button [attr.data-id]="'editHolidayButton-' + holidays.indexOf($element)" cmx-button-link (click)="OnEditHoliday($element)">
+                              <span class="cmx-icon-edit" aria-hidden="true"></span>
+                          </button>
+                          <button [attr.data-id]="'deleteHolidayButton-' + holidays.indexOf($element)" cmx-button-link (click)="DeleteHoliday($element)">
+                              <span class="cmx-icon-delete" aria-hidden="true"></span>
+                          </button>
+                      </cmx-cell>
+                  </div>
+              </ng-container>
+          </cmx-table>
+          <div class="not-found" *ngIf="!hasHolidays">
+              {{ translate('database.errors.no_results') }}
+          </div>
+          <cmx-dialog #deleteHoliday data-id="deleteHoliday" [enableFooter]="true" [enableClose]="true" 
+          backgroundColor="gray" width="650px" height="260px" minWidth="650px" minHeight="260px">
+              <cmx-dialog-body>
+                  <h3 class="dialog-title">{{messageText}}</h3>
+              </cmx-dialog-body>
+              <cmx-dialog-footer style="text-align: center;">
+                  <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="center center">
+                      <button data-id="deleteHolidayConfirmButton" cmx-button color="blue" (click)="OnDeleteDialogConfirm()">
+                          {{translate('views.global.btn_confirm')}}
+                      </button>
+                      <button data-id="deleteHolidayCancelButton" cmx-button color="'red'" (click)="OnDeleteDialogCancel()">
+                          {{translate('views.global.btn_cancel')}}
+                      </button>
+                  </div>
+              </cmx-dialog-footer>
+          </cmx-dialog>
+          <cmx-dialog #detailDialog data-id="detailDialog" [enableFooter]="false" [enableClose]="true" backgroundColor="gray"
+           width="650px" height="260px" minWidth="650px" minHeight="260px">
+              <cmx-dialog-body>
+                  <div fxFlex fxLayout="column" fxLayout.xs="column">
+                      <div fxFlex [ngStyle]="{'margin': '10px 0'}">
+                          <h3 class="dialog-title detail-title">{{ selectedHoliday?.name }}</h3>
+                      </div>
+                      <div fxFlex [ngStyle]="{'margin': '5px 0'}">
+                          {{ selectedHoliday?.holidayDesc }}
+                      </div>
+                      <div fxFlex="100%" fxLayout="column" fxFill>
+                          <div fxFlex="100%" fxFill fxLayout="row" fxLayoutGap="10px">
+                              <div>
+                                  <span class="cmx-icon-calendar" aria-hidden="true"></span>
+                              </div>
+                              <div>{{ FormatDetailDate(selectedHoliday?.date?.iso) }}</div>
+                          </div>
+                          <div fxFlex="100%" fxFill fxLayout="row" fxLayoutGap="10px">
+                              <div>
+                                  <span class="cmx-icon-pin-current-location" aria-hidden="true"></span>
+                              </div>
+                              <div>{{ selectedHoliday?.country?.countryDesc }}</div>
+                          </div>
+                      </div>
+                  </div>
+              </cmx-dialog-body>
+          </cmx-dialog>
+          <cmx-dialog #editorDialog data-id="editorDialog" [enableFooter]="true" [enableClose]="true" backgroundColor="gray" 
+          minHeight="550px" width="650px" heigth="550px">
+              <cmx-dialog-body>
+                  <div fxFlex fxLayout="column" fxLayout.xs="column">
+                      <div fxFlex [ngStyle]="{'margin': '10px 0'}">
+                          <h5 class="dialog-title crud-title ">{{ translate(selectedHoliday?.holidayId === 0 ? 'rccc.settings.holidays.addNewTitle' : 'rccc.settings.holidays.editTitle') }}</h5>
+                      </div>
+                      <div fxFlex fxLayoutGap="5px">
+                          <form novalidate fxLayout="column" [formGroup]="formGroup">
+                              <div fxFlex="100%" fxFill fxLayout="column" fxLayoutGap="10px">
+
+                                  <div fxFlex="100%" fxFill fxLayout="column">
+                                      <cmx-form-field title="{{ translate('rccc.settings.holidays.holidayDate') }}" [error]="holidayDate.invalid">
+                                          <datepicker-input #holidayDatePicker [formControl]="holidayDate" data-id="holidayDatePicker" class="cmx-input__div--align stretch" (select)="PickHolidayDate($event)" [singleDateSelection]="true">
+                                          </datepicker-input>
+                                          <error-message>{{ GetErrorMessage(holidayDate, 'rccc.settings.holidays.error.holidayDateRequired') }}</error-message>
+                                      </cmx-form-field>
+                                  </div>
+                              </div>
+                              <div fxFlex="100%" fxFill fxLayout="column" fxLayoutGap="10px">
+                                  <div fxFlex="100%" fxFill fxLayout="column">
+                                      <cmx-form-field title="{{ translate('rccc.settings.holidays.applyDate') }}" [error]="affectedDate.invalid">
+                                          <datepicker-input #affectionDatePicker [formControl]="affectedDate" data-id="affectionDatePicker" class="cmx-input__div--align stretch" (select)="PickAffectedDate($event)" [singleDateSelection]="true">
+                                          </datepicker-input>
+                                          <error-message>{{ GetErrorMessage(affectedDate, 'rccc.settings.holidays.error.affectedDateRequired') }}</error-message>
+                                      </cmx-form-field>
+                                  </div>
+                              </div>
+                              <div fxFlex="100%" fxFill fxLayout="column" fxLayoutGap="10px">
+                                  <div fxFlex="100%" fxFill fxLayout="column">
+                                      <cmx-form-field title="{{ translate('rccc.settings.holidays.holidayName') }}" [error]="name.invalid">
+                                          <input type="text" width="100%" formControlName="name" class="input" />
+                                          <error-message>{{ GetErrorMessage(name, 'rccc.settings.holidays.error.holidayNameRequired') }}</error-message>
+                                      </cmx-form-field>
+                                  </div>
+                              </div>
+                              <div fxFlex="100%" fxFill fxLayout="column" fxLayoutGap="10px">
+                                  <div fxFlex="100%" fxFill fxLayout="column">
+                                      <cmx-form-field title="{{ translate('rccc.settings.holidays.holidayDescription') }}" [error]="holidayDesc.invalid">
+                                          <textarea width="100%" rows="5" formControlName="holidayDesc"></textarea>
+                                          <error-message>{{ GetErrorMessage(holidayDesc, 'rccc.settings.holidays.error.holidayDescriptionRequired') }}</error-message>
+                                      </cmx-form-field>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </cmx-dialog-body>
+              <cmx-dialog-footer style="text-align: left;">
+                  <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="end center">
+                      <button cmx-button [color]="'blue-inverse'" (click)="OnUpsertDialogCancel()">
+                          {{translate('views.global.btn_cancel')}}
+                      </button>
+                      <button cmx-button color="blue" (click)="OnUpsertDialogConfirm()" [disabled]="formGroup.invalid">
+                          {{translate('views.global.btn_save')}}
+                      </button>
+                  </div>
+              </cmx-dialog-footer>
+          </cmx-dialog>
+      </div>
+  </div>
+</div>

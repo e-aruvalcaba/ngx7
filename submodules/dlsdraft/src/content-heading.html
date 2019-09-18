@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Content Heading</title>
+    <link href="partials/favicon.html" rel="import">
+</head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Content Headings</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h3 class="cmx-content-heading"><span class="cmx-icon-map-pin"></span> LOCATION</h3>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html"><code class="language-html">&lt;!-- Use class "content-heading" plus your desired font-icon class --&gt;
+
+&lt;h3 class=&quot;cmx-content-heading&quot;&gt;
+    &lt;span class=&quot;cmx-icon-map-pin&quot;&gt;&lt;/span&gt;
+    LOCATION
+&lt;/h3&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx-content-heading{
+    font-weight: 700;
+    font-size: 0.875rem;
+    color:$gray;
+    border-bottom: 1px solid $gray-fifty-percent;
+    width:100%;
+    padding-bottom: 0.25rem;
+    height:auto;
+
+    span[class^=&quot;cmx-icon-&quot;],
+    span[class*=&quot;cmx-icon-&quot;]{
+        
+        float:left; 
+
+        &amp;:before{
+            color: $bright-blue;
+            font-size: 1.125rem;
+            margin-right: 0.325rem;
+        }
+    }
+}</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-content-heading {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #464a4c;
+    border-bottom: 1px solid rgba(70, 74, 76, 0.5);
+    width: 100%;
+    padding-bottom: 0.25rem;
+    height: auto;
+}
+
+.cmx-content-heading span[class^="cmx-icon-"]:before,
+.cmx-content-heading span[class*="cmx-icon-"]:before {
+    color: #3FA9F5;
+    font-size: 1.125rem;
+    margin-right: 0.325rem;
+}</code></pre>
+                            </div>
+                            <!-- end data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+</body>
+</html>

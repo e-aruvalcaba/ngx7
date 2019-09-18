@@ -1,0 +1,95 @@
+// START ALERTS DEMO PAGE
+.cmx{
+    &-alert{
+        &-bar{
+            display: flex;
+            color: $true-white;
+            font-size: $font-size-14;
+            line-height: $line-height-16;
+            overflow:hidden;
+            max-height: 65px;
+            transition: max-height 500ms ease;
+        
+            &__action {
+                font-size: $font-size-14;
+                color: $true-white;
+                line-height: $line-height-16;
+                text-decoration: underline;
+                display: inline-block;
+                background: none;
+                border:none;
+                font-family: $font-family;
+                font-weight: $font-bold;
+                margin:0;
+                padding:0;
+                cursor:pointer;
+                &:focus{
+                    outline:none;
+                }
+        
+                &:hover{
+                    color: $true-white;
+                }
+            }
+        
+            &__message {
+                flex: 1 1 auto;
+                padding: 0.5rem 1rem;
+                font-size: $font-size-14;
+                line-height: $line-height-16;
+                font-family: "Roboto",sans-serif;
+                font-weight: 500;
+            }
+            &__close {
+                flex: 0 0 auto;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                background: none;
+                border: none;
+                color: $true-white;
+                font-size: 1rem;
+        
+                &:focus{
+                    outline: 0;
+                }
+            }
+        
+            &--error {
+                background: $true-red;
+            }
+        
+            &--warning {
+                background: $bright-orange;
+            }
+        
+            &--info {
+                background: $bright-blue;
+            }
+        
+            &--success {
+                background: $bright-green;
+            }
+
+            &.hidden{
+                max-height:0;
+                transition: max-height 500ms ease;
+                overflow: hidden;
+            }
+        }
+        &-wrapper{
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+        }
+    }
+}
+@media (max-width : 576px) {
+    .cmx{
+        &-alert{
+            &-wrapper{
+                position: fixed;
+            }
+        }
+    }
+}
+// END ALERTS DEMO PAGE

@@ -1,0 +1,79 @@
+html[dir="rtl"] .mobile-notification {
+    background: $true-white;
+    font-size: $font-size-12;
+    line-height: $line-height-16;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+
+    .emphasis {
+        font-weight: bold;
+        color: #484848;
+    }
+
+    .mobile-notification-header {
+        width: 100%;
+        padding: 20px;
+        clear: both;
+        float: left;
+
+        .logo {
+            float: left;
+        }
+
+        .mobile-notification-title {
+            float: left;
+            margin: 5px 3px;
+            color: #484848;
+        }
+
+        .mobile-notification-time-stamp {
+            float: left;
+            display: inline-block;
+            color: #7E7E7E;
+        }
+
+        .round-delimiter {
+            float: left;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #7E7E7E;
+            margin: 11px 4px;
+        }
+
+        .moment {
+            float: left;
+            padding: 4px;
+        }
+
+        .arrow {
+            display: inline-block;
+            float: left;
+            margin-top: 2px;
+
+            svg {
+                fill: #7E7E7E;
+                width: 12px;
+                height: 4px;
+            }
+        }
+    }
+
+    .mobile-notification-body {
+        padding: 15px 20px 15px 20px;
+        width: 100%;
+        color: #7e7e7e;
+    }
+
+    .mobile-notification-footer {
+        padding: 10px 20px;
+        background: #EEEEEE;
+
+        a {
+            text-transform: uppercase;
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: 700;
+        }
+    }
+
+}

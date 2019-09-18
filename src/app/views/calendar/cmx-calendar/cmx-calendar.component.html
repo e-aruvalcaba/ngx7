@@ -1,3 +1,9 @@
-<p>
-  cmx-calendar works!
-</p>
+<div fxLayout="row" fxLayoutWrap class="cmx-calendar">
+    <div [fxFlex]="monthWidth" *ngFor="let month of months">
+      <cmx-calendar-month
+        [month]="month"
+        [weekDays]="weekDays"
+        (onSelectedDay)="selectDay($event)">
+      </cmx-calendar-month>
+    </div>
+  </div>  

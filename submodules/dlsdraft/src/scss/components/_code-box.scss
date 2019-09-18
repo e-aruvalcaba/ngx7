@@ -1,0 +1,57 @@
+// CODE TOOLBAR
+pre.code-toolbar {
+	position: relative;
+}
+
+pre.code-toolbar > .toolbar {
+	position: absolute;
+	top: .4em !important;
+	right: .4em !important;
+	opacity: 0.3 !important;
+}
+
+pre.code-toolbar:hover > .toolbar {
+	opacity: 1 !important;
+}
+
+pre.code-toolbar > .toolbar .toolbar-item {
+	display: inline-block;
+}
+
+pre.code-toolbar > .toolbar a {
+	cursor: pointer;
+}
+
+pre.code-toolbar > .toolbar button {
+	background: none;
+	border: 0 !important;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+	-webkit-user-select: none; /* for button */
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+pre.code-toolbar > .toolbar a,
+pre.code-toolbar > .toolbar button,
+pre.code-toolbar > .toolbar span {
+  color: #555 !important;
+  font-size: .8em;
+  padding: 0 .5em;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important; 
+}
+
+pre.code-toolbar > .toolbar a:hover,
+pre.code-toolbar > .toolbar a:focus,
+pre.code-toolbar > .toolbar button:hover,
+pre.code-toolbar > .toolbar button:focus,
+pre.code-toolbar > .toolbar span:hover,
+pre.code-toolbar > .toolbar span:focus {
+	color: inherit;
+	text-decoration: none;
+}

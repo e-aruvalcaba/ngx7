@@ -1,0 +1,12 @@
+<svg id="checkbox" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.89 15.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>checkbox-base</title>
+  <rect id="checkbox-inside" class="cls-1" x="1" y="1" width="13.89" height="13.89" rx="0.87" ry="0.87"/>
+  <path id="checbox-stroke" d="M14.08.05H1.92A1.87,1.87,0,0,0,.05,1.92V14.08a1.87,1.87,0,0,0,1.87,1.87H14.08a1.87,1.87,0,0,0,1.87-1.87V1.92A1.87,1.87,0,0,0,14.08.05Zm.87,14a.87.87,0,0,1-.87.87H1.92a.87.87,0,0,1-.87-.87V1.92a.87.87,0,0,1,.87-.87H14.08a.87.87,0,0,1,.87.87Z" transform="translate(-0.05 -0.05)"/>
+</svg>

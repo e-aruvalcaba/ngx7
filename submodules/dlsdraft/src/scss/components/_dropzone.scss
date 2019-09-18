@@ -1,0 +1,133 @@
+// _dropzone.scss 
+
+@import './dropzone-base.scss';
+
+
+//** start custom styling
+
+/* The total progress gets shown by event listeners */
+
+#total-progress {
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
+/* Hide the progress bar when finished */
+
+#previews .dz-success .progress {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+/* Hide the start and cancel buttons and show the delete button */
+
+#previews .dz-success .start,
+#previews .dz-success .cancel {
+  display: none;
+}
+
+#previews .dz-success .delete {
+  display: block;
+}
+
+.cmx-dropzone { // was fileinput-button
+  width: 100%;
+  background: #FFF;
+  display: inline-block;
+  padding: 20px;
+  border: 1px dashed #ACAEBA;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    border: 1px dashed $bright-blue;
+  }
+
+  > span {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 100%;
+    padding: 4px;
+    cursor: pointer;
+    pointer-events:none;
+  }
+
+  &__primary-message {
+    font-family: $font-name;
+    font-size: $font-size-14;
+  }
+
+  &__simulate-link {
+    color: $bright-blue;
+    display: inline;
+  }
+
+  &__secondary-message {
+    font-family: $font-name;
+    font-size: $font-size-12;
+  }
+}
+
+.cmx-preview-container {
+  float: left;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #eaeaea;
+}
+
+.cmx-error-message-container {
+  float: left;
+  background-color: transparent;
+  font-size: $font-size-12;
+  font-family: $font-name;
+  color: $true-red;
+}
+
+.cmx-filename { // was name
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: $font-name;
+  font-size: $font-size-14;
+  line-height: $line-height-24;
+}
+
+.cmx-filesize { // was size
+  text-align: right;
+  font-family: $font-name;
+  font-size: $font-size-14;
+  line-height: $line-height-24;
+}
+
+.cmx-progress-bar-container { // was progress-bar-container
+  background-color: transparent;
+  float: left;
+  width: 100%;
+
+  .cmx-progress { // was cmx-progress
+    // width is set just for demo
+    width: 65%;
+    height: 5px;
+    background: $bright-blue; 
+    border:1px solid $bright-blue;
+    margin-top: 10px;
+  }
+
+  .cmx-progress-bar-success { // was progress-bar-success
+    background: $bright-green;
+  }
+}
+
+.cmx-buttons-container {
+  button {
+    float:left; 
+    padding: 4px 0;
+  }
+}
+//** end basic styling
+
+.dz-drag-hover{
+  border-style: solid;
+  border-color: $bright-blue;
+}

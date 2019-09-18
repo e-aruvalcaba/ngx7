@@ -1,0 +1,267 @@
+@import '../../../../submodules/dlsdraft/src/scss/variables/_colors.scss';
+@import '../plant-capacity/plant-capacity.component.scss';
+@import url(https://www.cemexgo.com/cdn/cmx-dls-icons.css);
+
+.toggler {
+    position: relative;
+}
+
+.floating {
+    position: absolute;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.input-date {
+    padding: 0.5rem;
+    height: 48px;
+    border: 1px solid #ADAEBB;
+    background: white;
+    color: black;
+    border-radius: 3px;
+}
+
+.input-date__icon {
+    fill: #37a8f8;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.input-date__input {
+  font-family: "Roboto",sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.transparent {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.cmx-input__div--align {
+    margin-top: 24px;
+}
+
+.stretch {
+  width: 100%;
+}
+
+.spacer {
+  height: 60px;
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+.import-file-input {
+  display: none;
+}
+
+.dialog-copy-model {
+  font-size: 0.9rem;
+}
+
+.dialog-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+}
+
+.dialog-subtitle {
+    color: #333333;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.datepicker-title  {
+	color: #333333;
+	font-family: Roboto;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 16px;
+}
+
+.not-found {
+  padding: 25px;
+  background: #E7EAEE;
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 60px;
+    /* 5/5S/5SE/5C  Portrait and landscape */
+    @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+        margin-top: 15px;
+    }
+
+
+    /* iPhone 6/7/8 Portrait */
+    @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+        margin-top: 15px;
+    }
+
+    /* iPad 1, 2, Mini, Air Portrait */
+    @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1) {
+        margin-top: 15px;
+    }
+}
+
+.cmx-rccc-search-label {
+    margin-bottom: -18px;
+    font-size: 12px;
+}
+
+.copy-dialog-title {
+    color: #333333;
+    font-family: Roboto;
+    font-size: 24px !important;
+    font-weight: bold;
+    line-height: 28px;
+    text-align: center;
+}
+
+.copy-dialog-reference-date-title {
+    color: #333333;
+    font-family: Roboto;
+    font-size: 20px !important;
+    line-height: 24px;
+    text-align: center;
+
+    /* 5/5S/5SE/5C  Portrait */
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+        font-size: 13px !important;
+    }
+
+    /* iPhone 6/7/8 Portrait */
+    @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+        font-size: 13px !important;
+    }
+}
+
+.dialog-title {
+    border-bottom: none !important;
+}
+
+.cmx{
+  &-tabs{
+      list-style:none outside;
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      overflow-x: auto;
+      margin: 0 0 1.25rem 0;
+      padding:0;
+
+      &::before{
+          content:"tabs_on_desktop"; // just a test to se if it's mobile or desktop
+          display:none;
+      }
+
+      &::after{
+          content:" ";
+          border-bottom: 1px solid $disabled-grey;
+          flex: 1 1 auto;
+      }
+
+      &__tab{
+          &:last-child {
+              display: block;
+              float: right;
+              width: 100%;
+              border-bottom: 1px solid $disabled-grey;
+
+              > ul {
+                  float: right;
+                  list-style: none outside;
+                  display: flex;
+
+                  > li {
+                      margin: 10px;
+                      > a {
+                          text-decoration: none;
+                      }
+                  }
+              }
+          }
+          &.active{
+              .cmx-tabs__link{
+                  border-bottom-color: transparent;
+                  border-top-color: $bright-blue;
+                  border-left: 1px solid $disabled-grey;
+                  border-right: 1px solid $disabled-grey;
+                  color: #333;
+                  padding: 1rem 1.25rem;
+              }
+          }
+      }
+      &__link{
+          white-space: nowrap;
+          font-weight: 500;
+          border-bottom: 1px solid $disabled-grey;
+          border-top: 3px solid transparent;
+          padding: 1rem calc(1.25rem + 1px); // adding that pixel to the sides to compensate for the border
+          display: block;
+
+          &:active{
+              color: #333;
+          }
+
+          &:focus,&:hover{
+              text-decoration: none;
+          }
+      }
+      &__content{
+          display: none;
+          &.active{
+              display: block;
+          }
+      }
+
+  }
+}
+
+.action-buttons {
+    float: right;
+    list-style: none outside;
+    display: flex;
+    width: 100%;
+
+    > li {
+        margin: 10px;
+        float: left;
+        > a {
+            text-decoration: none;
+        }
+    }
+
+}
+
+.cmx-button-link {
+  font-size: 1em;
+}

@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14.84">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3fa9f5;
+      }
+    </style>
+  </defs>
+  <title>legal-entity-icon</title>
+  <path class="cls-1" d="M16.93,14.11,8.93.25a.52.52,0,0,0-.87,0l-8,13.86a.5.5,0,0,0,.43.75h16a.5.5,0,0,0,.43-.75Zm-14.55-2h1.7l-1,1.77H1.37Zm1.83,1.77,1-1.77h6.81a.5.5,0,0,0,.43-.75L8.93,5.19a.52.52,0,0,0-.87,0l-3.41,5.9H3L8.5,1.5l7.13,12.36Zm1.6-2.77L8.5,6.44l2.69,4.65Z" transform="translate(0 -0.02)"/>
+</svg>

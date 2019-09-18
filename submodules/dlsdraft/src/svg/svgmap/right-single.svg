@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.5 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b0b0b0;
+      }
+    </style>
+  </defs>
+  <title>right-single</title>
+  <path id="icon-right-single" class="cls-1" d="M.26,15.83a.71.71,0,0,1-.09-1L5.86,8,.17,1.17A.71.71,0,0,1,1.26.26L7.33,7.54a.71.71,0,0,1,0,.91L1.26,15.74a.71.71,0,0,1-1,.09" transform="translate(0 0)"/>
+</svg>

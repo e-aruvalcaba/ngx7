@@ -1,0 +1,17 @@
+.cmx-calendar__day {
+    text-align: center;
+    cursor: pointer;
+}
+
+.cmx-calendar__day--working-day {
+    color: #3FA9F5;
+}
+
+.cmx-calendar__day--non-working-day {
+    color: #EE3D42;
+}
+
+.cmx-calendar__day--selected {
+    border: 2px solid #EE3D42;
+    border-radius: 50%;
+}

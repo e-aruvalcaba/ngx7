@@ -1,0 +1,25 @@
+<svg style="display:none;">
+  <defs>
+  		<symbol id="icon-accepted-ok">
+  			<title>accepted-ok</title>
+    		<path id="Combined-Shape" class="icon-accepted-ok" d="M19.86,27.56l-5.48-5.48a2,2,0,0,0-2.82,0l-3,3a2,2,0,0,0,0,2.82l9.89,9.89a2,2,0,0,0,2.85,0L39.63,19.45a2,2,0,0,0,0-2.83l-3-3a2,2,0,0,0-2.83,0ZM24,.08A24.14,24.14,0,1,1,0,24.22,24.07,24.07,0,0,1,24,.08Z" transform="translate(0 -0.08)"/>
+		</symbol>
+		<symbol id="icon-calendar">
+			<title>calendar-icon</title>
+			  <g id="calendar" class="icon-calendar">
+			    <rect id="Rectangle-path" class="cls-1" x="0.5" y="0.5" width="14" height="14"/>
+			    <path id="Shape" class="cls-1" d="M1,4H15" transform="translate(-0.5 -0.5)"/>
+			    <polyline id="Shape-2" data-name="Shape" class="cls-1" points="3.5 8.43 5.37 7.5 5.37 12.63"/>
+			    <rect id="Rectangle-path-2" data-name="Rectangle-path" class="cls-1" x="7.5" y="7.5" width="2.8" height="4.67" rx="1.4" ry="1.4"/>
+			  </g>
+		</symbol>
+  </defs>  
+</svg>
+
+<svg class="icon-accepted-ok">
+	<use xlink:href="#accepted-ok"></use>
+</svg>
+
+<svg class="icon-calendar">
+	<use xlink:href="#icon-calendar"></use>
+</svg>

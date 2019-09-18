@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Tabs</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Tabs</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="rules-box">
+                            <p>Tabs may be used in the detailed page views of products instead of using multiple vertical sections of displayed information.</p>
+
+
+                            <p>If using a tab structure, no more than 3 tab options should be used.</p>
+                        </div>
+                    </div>
+                    <!-- end .col-md-9 -->
+
+
+                    <div class="spacer-32">
+                    </div>
+
+
+                    <div class="col-md-9">
+                        <div class="cmx-tabs-wrapper">
+                            <div class="cmx-tabs-container">
+                                <ul class="cmx-nav cmx-nav-tabs">
+                                    <li class="cmx-nav-item">
+                                        <a class="cmx-nav-link" href="#">Particular Prices</a>
+                                    </li>
+
+
+                                    <li class="cmx-nav-item">
+                                        <a class="cmx-nav-link active" href="#">General Prices</a>
+                                    </li>
+
+
+                                    <li class="cmx-nav-item">
+                                        <a class="cmx-nav-link" href="#">Custom Quote</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end .cmx-tabs-container -->
+                        </div>
+                        <!-- end .cmx-tabs-wrapper -->
+                    </div>
+                    <!-- end .col-md-9 -->
+
+
+                    <div class="spacer-32">
+                    </div>
+
+
+                    <div class="col-md-9">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html"><code class="language-html">&lt;div class=&quot;cmx-tabs-wrapper&quot;&gt;
+  &lt;div class=&quot;cmx-tabs-container&quot;&gt;
+    &lt;ul class=&quot;cmx-nav cmx-nav-tabs&quot;&gt;
+      &lt;li class=&quot;cmx-nav-item&quot;&gt;
+        &lt;a class=&quot;cmx-nav-link&quot; href=&quot;#&quot;&gt;Particular Prices&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;cmx-nav-item&quot;&gt;
+        &lt;a class=&quot;cmx-nav-link active&quot; href=&quot;#&quot;&gt;General Prices&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;cmx-nav-item&quot;&gt;
+        &lt;a class=&quot;cmx-nav-link&quot; href=&quot;#&quot;&gt;Custom Quote&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;!-- end .cmx-tabs-container --&gt;
+&lt;/div&gt;
+&lt;!-- end .cmx-tabs-wrapper --&gt;</code></pre>
+
+                                <pre data-lang="sass"><code class="language-css">.cmx{
+  &amp;-nav{
+    list-style: none;
+    padding: 	0;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    &amp;-header{
+      min-height: 	88px;
+      background: 	$medium-blue;
+      padding: 		24px 16px;
+      color: 			$true-white;
+      font-family: 	$font-family;
+      font-size: 		$font-size-14;
+      
+      p {
+        font-weight: $font-regular;
+      }
+
+      a {
+        color: 		$true-white;
+        font-weight: $font-bold;
+      }
+    }
+
+    &amp;-link{
+      display: block;
+      padding: $nav-link-padding;
+    
+      @include hover-focus {
+        text-decoration: none;
+      }
+    
+      // Disabled state lightens text and removes hover/tab effects
+      &amp;.cmx-disabled {
+        color: $nav-disabled-link-color;
+        cursor: $cursor-disabled;
+      }
+    }
+
+    //
+    // Tabs
+    //
+
+    @mixin active-tab(){
+      color: $dark-grey;
+      background-color: transparent;
+      border-color: $disabled-grey $disabled-grey $background-grey;
+      border-top: 3px solid $bright-blue;
+      border-right:1px solid $disabled-grey;
+      border-left:1px solid $disabled-grey;
+      padding: 13px 24px 16px;
+    }
+
+    &amp;-tabs{
+      overflow-y: hidden;
+
+      &amp;-wrapper {
+        overflow: hidden;
+        height: 58px;
+      }
+
+      &amp;-container {
+        overflow-x: auto;
+      }
+
+      &amp;::after{
+        content:"";
+        flex: 1 1 auto;
+        border-bottom: 1px solid $disabled-grey;
+      }
+
+      .cmx{
+        &amp;-nav{
+
+          &amp;-item {
+            margin-bottom: -$nav-tabs-border-width;
+            white-space: nowrap;
+    
+            &amp;.show .nav-link {
+              @include active-tab();
+            }
+          }
+    
+          &amp;-link {
+            border-bottom:1px solid $disabled-grey;
+            font-weight: $font-medium;
+            color: $bright-blue;
+            font-size: 15px;
+            padding: 16px 24px 15px;
+            box-sizing: border-box;
+        
+            &amp;:hover {
+              background: none;
+              color: $bright-blue;
+            }
+        
+            &amp;.disabled {
+              color: $nav-disabled-link-color;
+              background-color: transparent;
+              border-color: transparent;
+            }
+    
+            &amp;.active{
+              @include active-tab();
+            }
+          }
+        }
+
+        &amp;-dropdown-menu {
+          // Make dropdown border overlap tab border
+          margin-top: -$nav-tabs-border-width;
+      
+          // Remove the top rounded corners here since there is a hard edge above the menu
+          @include border-top-radius(0);
+        }
+      }
+      
+    }
+
+    // Tabbable tabs
+    //
+    // Hide tabbable panes to start, show them when `.active`
+
+    &amp;-tab{
+      &amp;-content{
+        &gt; .tab-pane {
+          display: none;
+        }
+        &gt; .active {
+          display: block;
+        }
+      }
+    }
+
+    //
+    // Pills
+    //
+
+    @mixin active-pill(){
+      color: $nav-pills-active-link-color;
+      cursor: default;
+      background-color: $nav-pills-active-link-bg;
+    }
+
+    &amp;-pills {
+
+      .cmx{
+        &amp;-nav{
+          &amp;-link {
+            @include border-radius($nav-pills-border-radius);
+            &amp;.active{
+              @include active-pill();
+            }
+          }
+          &amp;-item{
+            &amp;.show{
+              .cmx-nav-link {
+                @include active-pill();
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //
+    // Justified variants
+    //
+
+    &amp;-fill {
+      .cmx-nav-item {
+        flex: 1 1 auto;
+        text-align: center;
+      }
+    }
+
+    &amp;-justified {
+      .cmx-nav-item {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &amp;-navbar{
+    &amp;-default{
+      background-color: $true-blue;
+    }
+  }
+}</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-nav {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.cmx-nav-header {
+  min-height: 88px;
+  background: #002A59;
+  padding: 24px 16px;
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+}
+
+.cmx-nav-header p {
+  font-weight: 400;
+}
+
+.cmx-nav-header a {
+  color: #FFF;
+  font-weight: 700;
+}
+
+.cmx-nav-link {
+  display: block;
+  padding: 0.5em 1em;
+}
+
+.cmx-nav-link:focus,
+.cmx-nav-link:hover {
+  text-decoration: none;
+}
+
+.cmx-nav-link.cmx-disabled {
+  color: #636c72;
+  cursor: not-allowed;
+}
+
+.cmx-nav-tabs {
+  overflow-y: hidden;
+}
+
+.cmx-nav-tabs-wrapper {
+  overflow: hidden;
+  height: 58px;
+}
+
+.cmx-nav-tabs-container {
+  overflow-x: auto;
+}
+
+.cmx-nav-tabs::after {
+  content: "";
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  border-bottom: 1px solid #D6D6D6;
+}
+
+.cmx-nav-tabs .cmx-nav-item {
+  margin-bottom: -1px;
+  white-space: nowrap;
+}
+
+.cmx-nav-tabs .cmx-nav-item.show .nav-link {
+  color: #333;
+  background-color: transparent;
+  border-color: #D6D6D6 #D6D6D6 #F4F6F9;
+  border-top: 3px solid #3FA9F5;
+  border-right: 1px solid #D6D6D6;
+  border-left: 1px solid #D6D6D6;
+  padding: 13px 24px 16px;
+}
+
+.cmx-nav-tabs .cmx-nav-link {
+  border-bottom: 1px solid #D6D6D6;
+  font-weight: 500;
+  color: #3FA9F5;
+  font-size: 15px;
+  padding: 16px 24px 15px;
+  box-sizing: border-box;
+}
+
+.cmx-nav-tabs .cmx-nav-link:hover {
+  background: none;
+  color: #3FA9F5;
+}
+
+.cmx-nav-tabs .cmx-nav-link.disabled {
+  color: #636c72;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.cmx-nav-tabs .cmx-nav-link.active {
+  color: #333;
+  background-color: transparent;
+  border-color: #D6D6D6 #D6D6D6 #F4F6F9;
+  border-top: 3px solid #3FA9F5;
+  border-right: 1px solid #D6D6D6;
+  border-left: 1px solid #D6D6D6;
+  padding: 13px 24px 16px;
+}
+
+.cmx-nav-tabs .cmx-dropdown-menu {
+  margin-top: -1px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.cmx-nav-tab-content&gt;.tab-pane {
+  display: none;
+}
+
+.cmx-nav-tab-content&gt;.active {
+  display: block;
+}
+
+.cmx-nav-pills .cmx-nav-link {
+  border-radius: 0.25rem;
+}
+
+.cmx-nav-pills .cmx-nav-link.active {
+  color: #fff;
+  cursor: default;
+  background-color: #139DF2;
+}
+
+.cmx-nav-pills .cmx-nav-item.show .cmx-nav-link {
+  color: #fff;
+  cursor: default;
+  background-color: #139DF2;
+}
+
+.cmx-nav-fill .cmx-nav-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.cmx-nav-justified .cmx-nav-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  text-align: center;
+}</code></pre>
+                            </div>
+                            <!-- end data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+            </div>
+        </div>
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

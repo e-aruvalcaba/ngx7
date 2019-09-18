@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.97 18.93">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3fa9f5;
+      }
+    </style>
+  </defs>
+  <title>orders-icon</title>
+  <path class="cls-1" d="M17.47,4.89a.49.49,0,0,0,0-.21l0,0,0,0a.49.49,0,0,0-.15-.13l0,0L9.2.55a.5.5,0,0,0-.44,0l-8,3.9A.5.5,0,0,0,.5,4.9V15a.5.5,0,0,0,.28.45l8,3.9h0a.47.47,0,0,0,.42,0h0l8-3.9a.5.5,0,0,0,.28-.45V4.9Zm-16,.32L9,1.56,15.83,4.9,8.77,8.35a.5.5,0,0,0-.28.45v9.34l-7-3.41Zm8,12.92v-9l7-3.41v9Z" transform="translate(-0.5 -0.5)"/>
+</svg>

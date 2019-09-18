@@ -1,0 +1,201 @@
+// START MODALS PAGE
+
+body.cmx-modal-open{
+    overflow:hidden;
+}
+
+.cmx-modal{
+    // we set the backdrop styles here
+    display: block;
+    background-color: rgba(0,0,0,0.25);
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height: 100vh;
+    z-index: 2002;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    pointer-events: all;
+
+    &.hidden{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__container{
+        max-width: 784px;
+        margin: 0 auto;
+        background: $true-white;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+        position: relative;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__close-button{
+        background:none;
+        border: none;
+        color: $bright-blue;
+        display: block;
+        height: 22px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right:24px;
+        top:24px;
+        width: 22px;
+        z-index: 1;
+        .cmx-icon-close{
+            font-size: 24px;
+            line-height: 24px;
+            height:24px;
+            width:24px;
+            display: block;
+        }
+    }
+
+    &__section{
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        margin-left:2.5rem;
+        margin-right:2.5rem;
+
+        padding:0.75rem 0;
+        flex:1 1 auto;
+        position: relative;
+
+        &.fixed{
+            flex:0 0 auto;
+        }
+
+        &:first-of-type{
+            margin-top:2.5rem;
+            padding-top:0;
+        }
+        &:last-of-type{
+            padding-bottom: 0;
+            margin-bottom:2.5rem;
+        }
+
+        &.cmx-has-separator{
+            border-bottom: 1px solid $gray-lightish;
+        }
+
+        &--buttons{
+            text-align: right;
+        }
+    }
+
+    &--interactive {
+        h2, h3 {
+            font-size: 		$font-size-22;
+            line-height: 	$line-height-32;
+            color: 			$dark-grey;
+        }
+        h3{
+            margin-bottom: 1.5rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &--confirmation{
+        .cmx-modal__section{
+            text-align: center;
+            min-height: 300px;
+            display:flex;
+            align-items: center;
+            justify-content:center;
+            flex-direction: column;
+        }
+        .cmx-confirmation__message {
+            font-size: 		$font-size-22;
+            line-height: 	$line-height-32;
+            color: 			$dark-grey;
+        }
+
+        .cmx-confirmation__icon {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 2rem;
+            font-size: 8rem;
+            line-height: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &--terms{
+        .cmx-modal__container{
+            max-height: 70vh;
+            height: 100%;
+        }
+    }
+    &--chat{
+        .cmx-modal__container{
+            max-height: 70vh;
+            height: 100%;
+        }
+        .cmx-modal__section{
+
+            margin-top: 2.5rem;
+            margin-bottom: 0;
+            margin-left:0;
+            margin-right:0;
+
+            padding:0;
+            flex:1 1 auto;
+            position: relative;
+        }
+    }
+}
+
+
+// END MODALS PAGE
+
+@media (max-width : 576px) {
+    .cmx{
+        &-modal{
+            transition: opacity 250ms ease;
+            &__container{
+                height:100vh;
+                box-shadow: none;
+            }
+            &__section{
+                margin-left:1rem;
+                margin-right:1rem;
+                margin-top:0.5rem;
+                margin-bottom: 0.5rem;
+                padding:0;
+                &:first-of-type{
+                    margin-top:1rem;
+                }
+                &:last-of-type{
+                    margin-bottom:1rem;
+                }
+
+                &--buttons{
+                    box-shadow: 0 -2px 2px rgba(0,0,0,0.1);
+                    padding:1rem;
+                    margin:0;
+                }
+            }
+            &__close-button{
+                right:20px;
+                top:20px;
+                .cmx-icon-close{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size:24px;
+                }
+            }
+        }
+    }
+}

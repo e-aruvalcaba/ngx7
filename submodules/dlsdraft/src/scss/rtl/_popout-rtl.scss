@@ -1,0 +1,12 @@
+// _popout-rtl.scss
+
+html[dir="rtl"] .popout{
+
+    &--bottom-left{
+        &::before{
+            top: -8px;
+            left: 20px; // modified
+            right: auto; // added
+        }
+    }
+}

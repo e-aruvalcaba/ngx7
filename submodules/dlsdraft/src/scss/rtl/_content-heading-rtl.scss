@@ -1,0 +1,20 @@
+// _content-heading-rtl.scss
+
+html[dir="rtl"] .cmx-content-heading {
+
+	font-weight: 700;
+    font-size: 0.875rem;
+
+    span[class^="cmx-icon-"],
+    span[class*="cmx-icon-"]{
+        
+        float:right; 
+
+        &:before{
+            color: $bright-blue;
+            font-size: 1.125rem;
+            margin-right: 0rem; // modified;
+            margin-left: 0.325rem; // added
+        }
+    }
+}

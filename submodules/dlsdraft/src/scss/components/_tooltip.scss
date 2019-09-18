@@ -1,0 +1,53 @@
+// TOOLTIP
+.cmx-tooltip {
+	border: 1px solid $dark-grey;
+	border-radius: $radius-3;
+	color: $table-highlight-grey;
+	font-size: $font-size-12;
+	background: $dark-grey;
+	padding: 0.5rem 1rem;
+	position: absolute;
+	font-weight: 500;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		margin-left: -10px;
+		bottom: -13px;
+		left: 50%;
+		box-sizing: border-box;
+		border: 6px solid black;
+		border-color: transparent transparent $dark-grey $dark-grey;
+		transform-origin: 0 0;
+		transform: rotate(-45deg);
+	}
+	
+	&--up{
+		&::after{
+			border-color: $dark-grey $dark-grey transparent transparent;
+			bottom:auto;
+			top: 0;
+		}
+	}
+	
+	&--left{
+		&::after{
+			border-color: $dark-grey transparent transparent $dark-grey;
+			bottom:auto;
+			left: 1px;
+			top:50%
+		}
+	}
+	
+	&--right{
+		&::after{
+			border-color: transparent $dark-grey $dark-grey transparent;
+			bottom:auto;
+			right: -4px;
+			top:50%;
+			left:auto;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+// _tags-rtl.scss partial
+
+html[dir="rtl"] .cmx-tag {
+	&__close {
+    	margin-left:0; // modified
+    	margin-right:0.5rem; // added
+    }
+}

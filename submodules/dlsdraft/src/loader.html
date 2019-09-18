@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Loader</title>
+    <link href="partials/favicon.html" rel="import">
+</head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <!--
+            <div class="cmx-alert-bar cmx-alert-bar--error">
+                <p class="cmx-alert-bar__message">PLEASE NOTE! These are just experimental samples. Don't use any of them in development or production. WIP (Work in progress)</p>
+                <button class="cmx-alert-bar__close">
+                    <button class="cmx-alert-bar__close">
+                        <span aria-hidden="true" class="cmx-icon-close"></span>
+                        <span class="sr-only">Dismiss Alert</span>
+                    </button>
+                </button>
+            </div>
+            -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="spacer-32">
+                        </div>
+
+                        <h1>Loader</h1>
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Introduction</h2>
+                        <div class="spacer-16"></div>
+                        <p>Loader gives to the user feedback that system is working in background and that the user has to wait before for example content is loaded. Loader has clockwise ongoing animation with additional text.</p>
+                    </div>
+                    <!-- end .col-md-6 -->
+                    
+                    <div class="col-md-6">
+                        <h2>Principles</h2>
+                        <div class="spacer-16"></div>
+                        <p>Spinner loader is used in components where is expected that content is not loaded instantly, the loading process will take a while. Spinner is placed in a square and additional text is placed in a box.</p>
+                    </div>
+                    <!-- end .col-md-6 -->
+
+                    <div class="spacer-16"></div>
+
+                    <div class="col-md-12">
+                        <h2>Best practices and recommendations</h2>
+                        <div class="spacer-16"></div>
+                        <div class="rules-box">
+                            <ul>
+                                <li>Loader is aligned to the center of the component.</li>
+                                <li>Additional text is placed under spinner and aligned to the center.</li>
+                                <li>Additional text is not used with spinner in input fields.</li>
+                                <li>In input fields is loader aligned to the right and it conveys information that system is working, e.g., something is happening (processing) in the background.</li>
+                                <li>In buttons is loader placed on the left side of the text and the button becomes wider to preserve recommended space between elements inside the button like the text and loader animation.</li>
+                                <li>Loader in button should be used on the end of complete flow for actions like finishing order or submitting. Additional text in the button has three states which is described in States of loading.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+
+                    <div class="spacer-32"></div>
+
+                    <div class="col-md-6">
+                        <div class="demo-border cmx-header-local">
+                            <div class="demo-border__legend">
+                                Loader is aligned to the center of the component.
+                            </div>
+                            <img class="img-responsive" src="/images/loader_centre_alignment.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- end .col-md-6 -->
+
+                    <div class="col-md-6">
+                        <div class="demo-border cmx-header-local">
+                            <div class="demo-border__legend">
+                                Additional text is placed under spinner and aligned to the center.
+                            </div>
+                            <img class="img-responsive" src="/images/loader_in_cards.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- end .col-md-6 -->
+
+                    <div class="spacer-32"></div>
+
+                    <div class="col-md-6">  
+                        <div class="demo-border cmx-header-local">
+                            
+                            <div class="demo-border__legend">
+                                Additional text is not used with spinner in input fields.
+                            </div>
+
+                            <img class="img-responsive" src="/images/loader_input_field.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- end .col-md-6 -->
+
+                    <div class="spacer-32"></div>
+
+                    <div class="col-md-12">
+                        <div class="demo-border cmx-header-local">
+                            <div class="demo-border__legend">
+                                In buttons is loader placed on the left side of the text and the button becomes wider to preserve recommended space between elements inside the button like the text and loader animation.
+                            </div>
+
+                            <img class="img-responsive" src="/images/loader_submit_buttons.jpg" alt="">
+                        </div>
+                        <!-- end .demo-border -->
+                    </div>
+                    <!-- end .col-md-12 -->
+
+                    <div class="spacer-32"></div>
+                </div>
+                <!-- end .row -->
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>The types and versions</h2>
+                        <div class="spacer-16"></div>
+                        <p>Basically the Spinner loader consists of two parts – spinner (SVG animation) and additional text. Spinner is partly transparent and ongoing. Additional text is not transparent and without animation.</p>
+                        <div class="spacer-16"></div>
+                        <p>There are 3 sizes of the loader, calculated for the desktop screens:</p>
+                        <div class="spacer-16"></div>
+                    </div>
+                    <!-- end .col-md-6 -->
+                </div>
+                <!-- end .row -->
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        
+                        <h5><strong>1. Small spinner (24x24px)</strong></h5>
+                        <div class="spacer-16"></div>
+
+                        <!-- CODE SNIPPET FOR SMALL SPINNER -->
+                        <div class="demo-border demo-spinner-height">
+                            <div class="demo-border__legend">
+                                24 x 24px (1.5rem x 1.5rem)
+                            </div>
+                            <div class="text-center demo-vertical-center-container">
+                                <div class="cmx-spinner demo-vertical-center">
+                                    <svg class="cmx-spinner__24x24 spinner-svg" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+
+                                        <title>spinner</title>
+
+                                        <g data-name="Layer_1" class="spinner-group">
+                                            <path d="M5.54217,14.08524A6.76819,6.76819,0,0,1,5.2675,12.864L3.37023,11.0987,1.5,12.982a10.47954,10.47954,0,0,0,4.29864,7.51612l-.3387-2.65327L7.98207,17.446A6.71757,6.71757,0,0,1,5.54217,14.08524Z" data-name="Tile_5" class="tile5"></path>
+                                            <path d="M15.93072,17.47448a6.77729,6.77729,0,0,1-5.20663,1.15862L8.45662,19.88716,9.67379,22.2437a10.53325,10.53325,0,0,0,8.49473-1.7571l-2.63646-.499Z" data-name="Tile_4" class="tile4"></path>
+                                            <path d="M21.02336,17.35435l-2.62571.42734-.49391-2.53532a6.71522,6.71522,0,0,0,.505-5.3324l0-.00011,2.27286,1.1552L21.9713,8.72269l.01155.03263A10.45038,10.45038,0,0,1,21.02336,17.35435Z" data-name="Tile_3" class="tile3"></path>
+                                            <path d="M12.00156,5.2497a6.79087,6.79087,0,0,1,4.89081,2.11662l2.57528.31549.40353-2.62032A10.561,10.561,0,0,0,11.96281,1.5l1.84053,1.95158Z" data-name="Tile_2" class="tile2"></path>
+                                            <path d="M5.54414,9.9154A6.74589,6.74589,0,0,1,9.07591,5.90232l1.09618-2.34551L7.79754,2.36336A10.49148,10.49148,0,0,0,1.96173,8.78685L4.385,7.6461Z" data-name="Tile_1" class="tile1"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <!-- end cmx-spinner -->
+                            </div>
+                            <!-- end .text-center -->
+                        </div>
+                        <!-- end .demo-border -->
+
+                        <div class="spacer-32"></div>
+                        <p> Designed for:</p>
+                        <div class="spacer-16"></div>
+                        <ul>
+                            <li><strong>buttons</strong> (with or without text),</li>
+                            <li><strong>input fields</strong> (without text)</li>
+                        </ul>
+                        <div class="spacer-16"></div>
+                        <p> Size &amp; style: width - 24px, height - 24px;</p> 
+
+                        <div class="spacer-32"></div>
+                    </div>
+                    <!-- end .col-md-4 -->
+
+                    <div class="col-md-4">
+                        
+                        <h5><strong>2. Moderate spinner (48px48px)</strong></h5>
+                        <div class="spacer-16"></div>
+
+                        <!-- CODE SNIPPET FOR MODERATE SPINNER -->
+                        <div class="demo-border demo-spinner-height">
+                            <div class="demo-border__legend">
+                                48 x 48px (3rem x 3rem)
+                            </div>
+                            <div class="text-center demo-vertical-center-container">
+                                <div class="cmx-spinner demo-vertical-center">
+                                    <svg class="cmx-spinner__48x48 spinner-svg" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+
+                                        <title>spinner</title>
+
+                                        <g data-name="Layer_1" class="spinner-group">
+                                            <path d="M5.54217,14.08524A6.76819,6.76819,0,0,1,5.2675,12.864L3.37023,11.0987,1.5,12.982a10.47954,10.47954,0,0,0,4.29864,7.51612l-.3387-2.65327L7.98207,17.446A6.71757,6.71757,0,0,1,5.54217,14.08524Z" data-name="Tile_5" class="tile5"></path>
+                                            <path d="M15.93072,17.47448a6.77729,6.77729,0,0,1-5.20663,1.15862L8.45662,19.88716,9.67379,22.2437a10.53325,10.53325,0,0,0,8.49473-1.7571l-2.63646-.499Z" data-name="Tile_4" class="tile4"></path>
+                                            <path d="M21.02336,17.35435l-2.62571.42734-.49391-2.53532a6.71522,6.71522,0,0,0,.505-5.3324l0-.00011,2.27286,1.1552L21.9713,8.72269l.01155.03263A10.45038,10.45038,0,0,1,21.02336,17.35435Z" data-name="Tile_3" class="tile3"></path>
+                                            <path d="M12.00156,5.2497a6.79087,6.79087,0,0,1,4.89081,2.11662l2.57528.31549.40353-2.62032A10.561,10.561,0,0,0,11.96281,1.5l1.84053,1.95158Z" data-name="Tile_2" class="tile2"></path>
+                                            <path d="M5.54414,9.9154A6.74589,6.74589,0,0,1,9.07591,5.90232l1.09618-2.34551L7.79754,2.36336A10.49148,10.49148,0,0,0,1.96173,8.78685L4.385,7.6461Z" data-name="Tile_1" class="tile1"></path>
+                                        </g>
+                                    </svg>
+                                    <p class="cmx-spinner__message">Please wait</p>
+                                </div>
+                            </div>
+                            <!-- end .text-center -->
+                        </div>
+                        <!-- end .demo-border -->
+
+                        <div class="spacer-32"></div>
+                        <p>Designed for:</p>
+                        <div class="spacer-16"></div>
+                        <ul>
+                            <li><strong>small tables</strong></li>
+                            <li><strong>modal</strong></li>
+                            <li><strong>cards</strong></li>
+                        </ul>
+                        <div class="spacer-16"></div>
+                        <p>Size &amp; style:  width - 48px, height - 48px;
+                            <br /> Font family: Roboto Regular, 
+                            <br/>Font size: 16px, 8px gap between spinner and text
+                        </p>
+
+                        <div class="spacer-32"></div>
+                    </div>
+                    <!-- end .col-md-4 -->
+
+                    <div class="col-md-4">
+                        <h5><strong>3. Big spinner (84px84px)</strong></h5>
+                        <div class="spacer-16"></div>
+
+                        <!-- CODE SNIPPET FOR BIG SPINNER -->
+                        <div class="demo-border demo-spinner-height">
+                            <div class="demo-border__legend">
+                                84 x 84px (5.25rem x 5.25rem)
+                            </div>
+
+                            <div class="text-center demo-vertical-center-container">
+                                <div class="cmx-spinner demo-vertical-center">
+                                    <svg class="cmx-spinner__84x84 spinner-svg" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+
+                                        <title>spinner</title>
+
+                                        <g data-name="Layer_1" class="spinner-group">
+                                            <path d="M5.54217,14.08524A6.76819,6.76819,0,0,1,5.2675,12.864L3.37023,11.0987,1.5,12.982a10.47954,10.47954,0,0,0,4.29864,7.51612l-.3387-2.65327L7.98207,17.446A6.71757,6.71757,0,0,1,5.54217,14.08524Z" data-name="Tile_5" class="tile5"></path>
+                                            <path d="M15.93072,17.47448a6.77729,6.77729,0,0,1-5.20663,1.15862L8.45662,19.88716,9.67379,22.2437a10.53325,10.53325,0,0,0,8.49473-1.7571l-2.63646-.499Z" data-name="Tile_4" class="tile4"></path>
+                                            <path d="M21.02336,17.35435l-2.62571.42734-.49391-2.53532a6.71522,6.71522,0,0,0,.505-5.3324l0-.00011,2.27286,1.1552L21.9713,8.72269l.01155.03263A10.45038,10.45038,0,0,1,21.02336,17.35435Z" data-name="Tile_3" class="tile3"></path>
+                                            <path d="M12.00156,5.2497a6.79087,6.79087,0,0,1,4.89081,2.11662l2.57528.31549.40353-2.62032A10.561,10.561,0,0,0,11.96281,1.5l1.84053,1.95158Z" data-name="Tile_2" class="tile2"></path>
+                                            <path d="M5.54414,9.9154A6.74589,6.74589,0,0,1,9.07591,5.90232l1.09618-2.34551L7.79754,2.36336A10.49148,10.49148,0,0,0,1.96173,8.78685L4.385,7.6461Z" data-name="Tile_1" class="tile1"></path>
+                                        </g>
+                                    </svg>
+                                    <p class="cmx-spinner__message">Please wait</p>
+                                </div>
+                                <!-- end .cmx-spinner -->
+                            </div>
+                            <!-- end .text-center -->
+                        </div>
+                        <!-- end .demo-border -->
+
+                        <div class="spacer-32"></div>
+                        <p> Designed for:</p>
+                        <div class="spacer-16"></div>
+                        <ul>
+                            <li><strong>full-screen loading</strong></li>
+                            <li><strong>main content area</strong></li>
+                            <li><strong>big tables</strong></li>
+                        </ul>
+                        <div class="spacer-16"></div>
+                        <p> Size &amp; style: width - 84px, height - 84px; 
+                            <br/>Font family: Roboto Regular, 
+                            <br/>Font size: 16px, 8px gap between spinner and text
+                        </p>
+                        
+                        <div class="spacer-32"></div>
+                    </div>
+                    <!-- end .col-md-4 -->
+                    
+                </div>
+                <!-- end .row -->
+
+                <div class="spacer-32"></div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>States</h2>
+                        <div class="spacer-16"></div>
+                        <p>Loader has 3 states determined by time to inform user about actual state of the system. Spinner animation is not changing but what is changing is the additional text.</p>
+                        <div class="spacer-16"></div>
+                    </div>
+                    <!-- end .col-md-6 -->
+                </div>
+                <!-- end .row -->
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5><strong>1. State in case of quick loading</strong></h5>
+                        <div class="spacer-16"></div>
+                        <p> When loading takes less then 10 seconds, text says: <i>Please wait</i></p>
+                    </div>
+                    <!-- end .col-md-6 -->
+
+                    <div class="col-md-6">
+                        <div class="demo-border cmx-header-local">
+                            <div class="text-center">
+                                <div class="cmx-spinner">
+                                    <svg class="cmx-spinner__84x84 spinner-svg" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+
+                                        <title>spinner</title>
+
+                                        <g data-name="Layer_1" class="spinner-group">
+                                            <path d="M5.54217,14.08524A6.76819,6.76819,0,0,1,5.2675,12.864L3.37023,11.0987,1.5,12.982a10.47954,10.47954,0,0,0,4.29864,7.51612l-.3387-2.65327L7.98207,17.446A6.71757,6.71757,0,0,1,5.54217,14.08524Z" data-name="Tile_5" class="tile5"></path>
+                                            <path d="M15.93072,17.47448a6.77729,6.77729,0,0,1-5.20663,1.15862L8.45662,19.88716,9.67379,22.2437a10.53325,10.53325,0,0,0,8.49473-1.7571l-2.63646-.499Z" data-name="Tile_4" class="tile4"></path>
+                                            <path d="M21.02336,17.35435l-2.62571.42734-.49391-2.53532a6.71522,6.71522,0,0,0,.505-5.3324l0-.00011,2.27286,1.1552L21.9713,8.72269l.01155.03263A10.45038,10.45038,0,0,1,21.02336,17.35435Z" data-name="Tile_3" class="tile3"></path>
+                                            <path d="M12.00156,5.2497a6.79087,6.79087,0,0,1,4.89081,2.11662l2.57528.31549.40353-2.62032A10.561,10.561,0,0,0,11.96281,1.5l1.84053,1.95158Z" data-name="Tile_2" class="tile2"></path>
+                                            <path d="M5.54414,9.9154A6.74589,6.74589,0,0,1,9.07591,5.90232l1.09618-2.34551L7.79754,2.36336A10.49148,10.49148,0,0,0,1.96173,8.78685L4.385,7.6461Z" data-name="Tile_1" class="tile1"></path>
+                                        </g>
+                                    </svg>
+                                    <p class="cmx-spinner__message">Please wait</p>
+                                </div>
+                            </div>
+                            <!-- end .text-center -->
+                        </div>
+                        <!-- end .demo-border -->
+                    </div>
+                    <!-- end .col-md-6 -->
+                </div>
+                <!-- end .row -->
+
+                <div class="spacer-32"></div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5><strong>2. State when loading takes more time</strong></h5>
+                        <div class="spacer-16"></div>
+                        <p> When loading takes more than 10 seconds and less than 60 seconds, text says: <i>It takes longer than expected, please wait</i></p>
+                        <p>Information that it takes longer than expected is placed on first line and on second line is the call to wait.</p>
+                    </div>
+                    <!-- end .col-md-6 -->
+
+                    <div class="col-md-6">
+                        <div class="demo-border cmx-header-local">
+                            <div class="text-center">
+                                <div class="cmx-spinner">
+                                    <svg class="cmx-spinner__84x84 spinner-svg" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+
+                                        <title>spinner</title>
+
+                                        <g data-name="Layer_1" class="spinner-group">
+                                            <path d="M5.54217,14.08524A6.76819,6.76819,0,0,1,5.2675,12.864L3.37023,11.0987,1.5,12.982a10.47954,10.47954,0,0,0,4.29864,7.51612l-.3387-2.65327L7.98207,17.446A6.71757,6.71757,0,0,1,5.54217,14.08524Z" data-name="Tile_5" class="tile5"></path>
+                                            <path d="M15.93072,17.47448a6.77729,6.77729,0,0,1-5.20663,1.15862L8.45662,19.88716,9.67379,22.2437a10.53325,10.53325,0,0,0,8.49473-1.7571l-2.63646-.499Z" data-name="Tile_4" class="tile4"></path>
+                                            <path d="M21.02336,17.35435l-2.62571.42734-.49391-2.53532a6.71522,6.71522,0,0,0,.505-5.3324l0-.00011,2.27286,1.1552L21.9713,8.72269l.01155.03263A10.45038,10.45038,0,0,1,21.02336,17.35435Z" data-name="Tile_3" class="tile3"></path>
+                                            <path d="M12.00156,5.2497a6.79087,6.79087,0,0,1,4.89081,2.11662l2.57528.31549.40353-2.62032A10.561,10.561,0,0,0,11.96281,1.5l1.84053,1.95158Z" data-name="Tile_2" class="tile2"></path>
+                                            <path d="M5.54414,9.9154A6.74589,6.74589,0,0,1,9.07591,5.90232l1.09618-2.34551L7.79754,2.36336A10.49148,10.49148,0,0,0,1.96173,8.78685L4.385,7.6461Z" data-name="Tile_1" class="tile1"></path>
+                                        </g>
+                                    </svg>
+                                    <p class="cmx-spinner__message">It takes longer than expected, <br/>please wait</p>
+                                </div>
+                            </div>
+                            <!-- end .text-center -->
+                        </div>
+                        <!-- end .demo-border -->
+                    </div>
+                    <!-- end .col-md-6 -->
+                </div>
+                <!-- end .row -->
+
+                <div class="spacer-32"></div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5><strong>3. State in case that some error occurred or it is taking a long time</strong></h5>
+                        <div class="spacer-16"></div>
+                        <p> When loading takes more than 60 seconds, text says: <i>Error occurred during loading, please refresh.</i></p>
+                        <p>&quot;Refresh&quot; is used as a text button and after click it refreshes webpage.</p>
+                        <p>Information that error occurred during loading is placed on first line and on second line is the call to refresh page.</p>
+                    </div>
+                    <!-- end .col-md-6 -->
+
+                    <div class="col-md-6">
+                        <div class="demo-border cmx-header-local">
+                            <div class="text-center">
+                                <div class="cmx-spinner">
+                                    <svg class="cmx-spinner__84x84 spinner-svg" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+
+                                        <title>spinner</title>
+
+                                        <g data-name="Layer_1" class="spinner-group">
+                                            <path d="M5.54217,14.08524A6.76819,6.76819,0,0,1,5.2675,12.864L3.37023,11.0987,1.5,12.982a10.47954,10.47954,0,0,0,4.29864,7.51612l-.3387-2.65327L7.98207,17.446A6.71757,6.71757,0,0,1,5.54217,14.08524Z" data-name="Tile_5" class="tile5"></path>
+                                            <path d="M15.93072,17.47448a6.77729,6.77729,0,0,1-5.20663,1.15862L8.45662,19.88716,9.67379,22.2437a10.53325,10.53325,0,0,0,8.49473-1.7571l-2.63646-.499Z" data-name="Tile_4" class="tile4"></path>
+                                            <path d="M21.02336,17.35435l-2.62571.42734-.49391-2.53532a6.71522,6.71522,0,0,0,.505-5.3324l0-.00011,2.27286,1.1552L21.9713,8.72269l.01155.03263A10.45038,10.45038,0,0,1,21.02336,17.35435Z" data-name="Tile_3" class="tile3"></path>
+                                            <path d="M12.00156,5.2497a6.79087,6.79087,0,0,1,4.89081,2.11662l2.57528.31549.40353-2.62032A10.561,10.561,0,0,0,11.96281,1.5l1.84053,1.95158Z" data-name="Tile_2" class="tile2"></path>
+                                            <path d="M5.54414,9.9154A6.74589,6.74589,0,0,1,9.07591,5.90232l1.09618-2.34551L7.79754,2.36336A10.49148,10.49148,0,0,0,1.96173,8.78685L4.385,7.6461Z" data-name="Tile_1" class="tile1"></path>
+                                        </g>
+                                    </svg>
+                                    <p class="cmx-spinner__message">Error occurred during loading,<br /> please <a href=""><u>refresh.</u></a></p>
+                                </div>
+                            </div>
+                            <!-- end .text-center -->
+                        </div>
+                        <!-- end .demo-border -->
+                    </div>
+                    <!-- end .col-md-6 -->
+                </div>
+                <!-- end .row -->
+
+                <div class="spacer-32"></div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Animation</h2>
+                        <div class="spacer-16"></div>
+                    </div>
+                    <!-- end .col-md-12 -->
+
+                    <div class="col-md-12">
+                        <p>Duration of one loop is 0,7 second. Here is table how tiles loosing and restoring opacity:</p>
+                        <div class="spacer-16"></div>
+                        <table class="table table-responsive table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+
+                                    <th>0s</th>
+
+                                    <th>0,110s</th>
+
+                                    <th>0,147s</th>
+
+                                    <th>0,257s</th>
+
+                                    <th>0,294s</th>
+
+                                    <th>0,404s</th>
+
+                                    <th>0,441s</th>
+
+                                    <th>0,551s</th>
+
+                                    <th>0,558s</th>
+
+                                    <th>0,7s</th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1. Arrow</th>
+
+                                    <td>100%</td>
+
+                                    <td>85%</td>
+
+                                    <td>80%</td>
+
+                                    <td>65%</td>
+
+                                    <td>60%</td>
+
+                                    <td>45%</td>
+
+                                    <td>40%</td>
+
+                                    <td>25%</td>
+
+                                    <td>20%</td>
+
+                                    <td>5%</td>
+                                </tr>
+
+
+                                <tr>
+                                    <th scope="row">2. Arrow</th>
+
+                                    <td>80%</td>
+
+                                    <td>65%</td>
+
+                                    <td>60%</td>
+
+                                    <td>45%</td>
+
+                                    <td>40%</td>
+
+                                    <td>25%</td>
+
+                                    <td>20%</td>
+
+                                    <td>5%</td>
+
+                                    <td>100%</td>
+
+                                    <td>85%</td>
+                                </tr>
+
+
+                                <tr>
+                                    <th scope="row">3. Arrow</th>
+
+                                    <td>60%</td>
+
+                                    <td>45%</td>
+
+                                    <td>40%</td>
+
+                                    <td>25%</td>
+
+                                    <td>20%</td>
+
+                                    <td>5%</td>
+
+                                    <td>100%</td>
+
+                                    <td>85%</td>
+
+                                    <td>80%</td>
+
+                                    <td>65%</td>
+                                </tr>
+
+
+                                <tr>
+                                    <th scope="row">4. Arrow</th>
+
+                                    <td>40%</td>
+
+                                    <td>25%</td>
+
+                                    <td>20%</td>
+
+                                    <td>5%</td>
+
+                                    <td>100%</td>
+
+                                    <td>85%</td>
+
+                                    <td>80%</td>
+
+                                    <td>65%</td>
+
+                                    <td>60%</td>
+
+                                    <td>45%</td>
+                                </tr>
+
+
+                                <tr>
+                                    <th scope="row">5. Arrow</th>
+
+                                    <td>20%</td>
+
+                                    <td>5%</td>
+
+                                    <td>100%</td>
+
+                                    <td>85%</td>
+
+                                    <td>80%</td>
+
+                                    <td>65%</td>
+
+                                    <td>60%</td>
+
+                                    <td>45%</td>
+
+                                    <td>40%</td>
+
+                                    <td>25%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="spacer-16"></div>
+                    </div>
+                    <!-- end .col-md-12 -->
+
+                    <div class="col-md-6">
+                        <p>Each tile loses its opacity until it reaches 5% and then it is restored to 100%.</p>
+                        <div class="spacer-16"></div>
+                        <div class="demo-image-container">
+                            <img alt="demo image" class="img-responsive" src='/images/loader_01.png'>
+                        </div>
+                    </div>
+                    <!-- end .col-md-6 -->
+                </div>
+                <!-- end .row -->
+
+                <div class="spacer-32"></div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Globalization</h2>
+                        <div class="spacer-16"></div>
+                        <p><strong>Both RTL and LTR versions of spinner animation are same (clockwise).</strong> One exception is the text information, the flow how the text is read:</p>
+                        <div class="spacer-16"></div>
+                        <ul>
+                            <li>For RTL markets the additional text follows principles of RTL writing and it is centered aligned.</li>
+                            <li>LTR version has the text flow from left to right.</li>
+                        </ul>
+                    </div>
+                    <!-- end .col-md-6 -->
+                </div>
+                <!-- end .row -->
+            </div>
+            <!-- end .container-fluid -->
+        </div>
+        <!-- end .page-wrapper -->
+    </div>
+    <!-- end #wrapper -->
+    <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Maps - RTL</title>
+    <link href="partials/favicon.html" rel="import">
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav-rtl.html" rel="import">
+        <link href="partials/sidenav-rtl.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Maps</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+                <!-- end .row -->
+
+
+                <div class="row">
+                    <div class="spacer-32">
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <h2>Simple Map</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <!-- in this container we insert a map -->
+
+
+                        <div class="cmx-map">
+                            <div class="cmx-map__container" id="map">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+
+
+                    <div class="spacer-32">
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <h2>Map with Bottom Ribbon</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-map">
+                            <div class="cmx-map__container" id="map2">
+                            </div>
+
+
+                            <div class="cmx-map__overlay cmx-map__overlay--bottom">
+                                <dl class="cmx-map__legend">
+                                    <dd>
+                                        <div class="cmx-map__legend-item">
+                                            <dl>
+                                                <dt class="cmx-map__legend-dot bg__bright-blue">
+                                                </dt>
+
+
+                                                <dd class="cmx-map__legend-label">Plant Location</dd>
+                                            </dl>
+                                        </div>
+
+
+                                        <div class="cmx-map__legend-item">
+                                            <dl>
+                                                <dt class="cmx-map__legend-dot bg__bright-green">
+                                                </dt>
+
+
+                                                <dd class="cmx-map__legend-label">Delivery Address Location</dd>
+                                            </dl>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+
+
+                    <div class="spacer-32">
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <h2>Map with Side Pannel</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-map demo__tall-map">
+                            <div class="cmx-map__container" id="map3">
+                            </div>
+
+
+                            <div class="cmx-map__overlay cmx-map__overlay--left">
+                                <div class="cmx-map__input-group">
+                                    <label for="latitude">Latitude:</label> <input id="latitude" name="" readonly type="text" value="25.686614">
+                                </div>
+
+
+                                <div class="cmx-map__input-group">
+                                    <label for="longitude">Longitude:</label> <input id="longitude" name="" readonly type="text" value="-100.316113">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+                <!-- end .row -->
+
+
+                <div class="spacer-32">
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-9" dir="ltr">
+                        <div class="code-box" data-collapsed-text="Show code snippet" data-expanded="true" data-expanded-text="Hide code snippet">
+                            <div data-highlight="">
+                                <pre data-lang="html">
+                                    <code class="language-html">
+&lt;!-- on the root element set the dir attribute for rtl display format --&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;rtl&quot;&gt;
+    [code goes here]
+&lt;/html&gt;
+
+&lt;!-- html structure same as ltr --&gt;
+&lt;!-- Simple map example --&gt;
+&lt;!-- in this container we insert a map --&gt;
+&lt;div class=&quot;cmx-map&quot;&gt;
+    &lt;div class=&quot;cmx-map__container&quot; id=&quot;map&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Map with Bottom Ribbon --&gt;
+&lt;div class=&quot;cmx-map&quot;&gt;
+    &lt;div class=&quot;cmx-map__container&quot; id=&quot;map2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;cmx-map__overlay cmx-map__overlay--bottom&quot;&gt;
+        &lt;dl class=&quot;cmx-map__legend&quot;&gt;
+            &lt;div class=&quot;cmx-map__legend-item&quot;&gt;
+                &lt;dt class=&quot;cmx-map__legend-dot bg__bright-blue&quot;&gt;&lt;/dt&gt;
+                &lt;dd class=&quot;cmx-map__legend-label&quot;&gt;Plant Location&lt;/dd&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;cmx-map__legend-item&quot;&gt;
+                &lt;dt class=&quot;cmx-map__legend-dot bg__bright-green&quot;&gt;&lt;/dt&gt;
+                &lt;dd class=&quot;cmx-map__legend-label&quot;&gt;Delivery Address Location&lt;/dd&gt;
+            &lt;/div&gt;
+        &lt;/dl&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Map with Side Pannel --&gt;
+&lt;div class=&quot;cmx-map demo__tall-map&quot;&gt;
+    &lt;div class=&quot;cmx-map__container&quot; id=&quot;map3&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;cmx-map__overlay cmx-map__overlay--left&quot;&gt;
+        &lt;div class=&quot;cmx-map__input-group&quot;&gt;
+            &lt;label for=&quot;latitude&quot;&gt;Latitude:&lt;/label&gt;
+            &lt;input id=&quot;latitude&quot; type=&quot;text&quot; name=&quot;&quot; value=&quot;25.686614&quot; readonly /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;cmx-map__input-group&quot;&gt;
+            &lt;label for=&quot;longitude&quot;&gt;Longitude:&lt;/label&gt;
+            &lt;input id=&quot;longitude&quot; type=&quot;text&quot; name=&quot;&quot; value=&quot;-100.316113&quot; readonly /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    </code>
+    <!-- end .language-html --></pre><!-- end data-lang html -->
+
+                                <pre data-lang="sass"><code class="language-css">// _maps-rtl.scss
+// Small partial created
+
+html[dir=&quot;rtl&quot;] .cmx-map{
+
+    &amp;__legend{
+        line-height: 12px;
+
+        &amp;-item{
+            margin-left: 1rem; // modified
+            margin-right: 0; // added
+        }
+
+        &amp;-label{
+            margin-right: 0; // added
+        }
+
+        &amp;-dot{
+            margin-left: 0.5rem; // modified
+            margin-right: 0; //added
+        }
+    }
+    &amp;__input-group {
+
+
+        input[type=&quot;text&quot;] {
+            text-align: right; // added
+            direction: ltr;
+        }
+    }
+}</code></pre>
+                            </div>
+                            <!-- end .data-highlight -->
+                        </div>
+                        <!-- end .code-box -->
+                    </div>
+                    <!-- end .col-md-9 -->
+                </div>
+                <!-- end .row -->
+            </div>
+            <!-- end .container-fluid -->
+        </div>
+        <!-- end .page-wrapper -->
+        <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+        <script type="text/javascript">
+        function loadMaps() {
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+
+                center: {
+                  lat: 25.686614,
+                  lng: -100.316113
+                  //to get the latitude and longitude use: http://www.latlong.net/
+                },
+
+                zoom: 12,
+                styles: [
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    }
+                ], // snazzymaps.com
+
+                zoomControl: true,
+                mapTypeControl: false,
+                scaleControl: false,
+                streetViewControl: false,
+                rotateControl: false,
+                fullscreenControl: false,
+                scrollwheel: false,
+                draggable: true,
+                zoomControlOptions: {
+                  position: google.maps.ControlPosition.TOP_LEFT // modified from TOP_RIGHT
+                },
+
+                mapTypeControlOptions: {
+                   position: google.maps.ControlPosition.TOP_CENTER
+                }
+            });
+            // end map
+
+            var map2 = new google.maps.Map(document.getElementById('map2'), {
+                
+                center: {
+                    lat: 25.686614,
+                    lng: -100.316113
+                    //to get the latitude and longitude use: http://www.latlong.net/
+                },
+
+                zoom: 12,
+                styles: [
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    }
+                ], // snazzymaps.com
+
+                zoomControl: true,
+                mapTypeControl: false,
+                scaleControl: false,
+                streetViewControl: false,
+                rotateControl: false,
+                fullscreenControl: false,
+                scrollwheel: false,
+                draggable: true,
+                zoomControlOptions: {
+                  position: google.maps.ControlPosition.TOP_LEFT // modified from TOP_RIGHT
+                },
+
+                mapTypeControlOptions: {
+                   position: google.maps.ControlPosition.TOP_CENTER
+                }
+            });
+            // end map2
+
+
+            var map3 = new google.maps.Map(document.getElementById('map3'), {
+                
+                center: {
+                    lat: 25.686614,
+                    lng: -100.316113
+                    //to get the latitude and longitude use: http://www.latlong.net/
+                },
+
+                zoom: 12,
+                styles: [
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    }
+                ], // snazzymaps.com
+
+                zoomControl: true,
+                mapTypeControl: false,
+                scaleControl: false,
+                streetViewControl: false,
+                rotateControl: false,
+                fullscreenControl: false,
+                scrollwheel: false,
+                draggable: true,
+                zoomControlOptions: {
+                  position: google.maps.ControlPosition.TOP_LEFT // modified from TOP_RIGHT
+                },
+
+                mapTypeControlOptions: {
+                   position: google.maps.ControlPosition.TOP_CENTER
+                }
+            });
+            // end map3
+
+        }
+        </script> 
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDGXHr3cQ3bhZ--3fgRZ7Y6NwfvZGTcaZI&callback=loadMaps" type="text/javascript">
+        </script> 
+    </div>
+<script type="text/javascript" src="./js/app.bundle.js"></script></body>
+</html>

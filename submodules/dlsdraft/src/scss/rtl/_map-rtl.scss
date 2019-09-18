@@ -1,0 +1,29 @@
+// _maps-rtl.scss
+
+html[dir="rtl"] .cmx-map{
+
+    &__legend{
+        line-height: 12px;
+
+        &-item{
+            margin-left: 1rem; // modified
+            margin-right: 0; // added
+        }
+
+        &-label{
+            margin-right: 0; // added
+        }
+
+        &-dot{
+            margin-left: 0.5rem; // modified
+            margin-right: 0; //added
+        }
+    }
+    &__input-group {
+
+        input[type="text"] {
+            text-align: right; // added
+            direction: ltr;
+        }
+    }
+}

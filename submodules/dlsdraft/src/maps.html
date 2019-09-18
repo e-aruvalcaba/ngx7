@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width" name="viewport">
+
+    <title>CEMEX Maps</title>
+    <link href="partials/favicon.html" rel="import">
+</head>
+
+<body>
+    <link href="partials/icons.html" rel="import">
+
+    <div id="wrapper">
+        <link href="partials/topnav.html" rel="import">
+        <link href="partials/sidenav.html" rel="import">
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="spacer-32">
+                        </div>
+
+
+                        <h1>Maps</h1>
+
+
+                        <div class="spacer-32">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <p>Used in the design of applications to accompany pages where the location address is a main data component of the page. Maps are used to visually indicate the position of a location for users, ensuring the exact location.</p>
+
+
+                        <p>The style applied to the map can be found on <a href="https://snazzymaps.com/style/109752/aaa" target="_blank">snazzymaps.com</a>.</p>
+                    </div>
+
+
+                    <div class="spacer-32">
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <h2>Simple Map</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+                        <!-- in this container we insert a map -->
+
+
+                        <div class="cmx-map">
+                            <div class="cmx-map__container" id="map">
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="">
+                            <pre data-lang="html">
+                                <code class="language-html">&lt;div class="cmx-map"&gt;
+    &lt;div class="cmx-map__container" id="map"&gt;&lt;/div&gt;
+&lt;/div&gt;</code>
+                            </pre>
+                        </div>
+                    </div>
+
+
+                    <div class="spacer-32">
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <h2>Map with Bottom Ribbon</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-map">
+                            <div class="cmx-map__container" id="map2">
+                            </div>
+
+
+                            <div class="cmx-map__overlay cmx-map__overlay--bottom">
+                                <dl class="cmx-map__legend">
+                                    <dd>
+                                        <div class="cmx-map__legend-item">
+                                            <dl>
+                                                <dt class="cmx-map__legend-dot bg__bright-blue">
+                                                </dt>
+
+
+                                                <dd class="cmx-map__legend-label">Plant Location</dd>
+                                            </dl>
+                                        </div>
+
+
+                                        <div class="cmx-map__legend-item">
+                                            <dl>
+                                                <dt class="cmx-map__legend-dot bg__bright-green">
+                                                </dt>
+
+
+                                                <dd class="cmx-map__legend-label">Delivery Address Location</dd>
+                                            </dl>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div data-highlight="">
+                            <pre data-lang="html">
+                                <code class="language-html">&lt;div class="cmx-map"&gt;
+    &lt;div class="cmx-map__container" id="map2"&gt;&lt;/div&gt;
+    &lt;div class="cmx-map__overlay map__overlay--bottom"&gt;
+        &lt;dl class="cmx-map__legend"&gt;
+            &lt;div class="cmx-map__legend-item"&gt;
+                &lt;dt class="cmx-map__legend-dot bg__bright-blue"&gt;&lt;/dt&gt;
+                &lt;dd class="cmx-map__legend-label"&gt;Plant Location&lt;/dd&gt;
+            &lt;/div&gt;
+            &lt;div class="cmx-map__legend-item"&gt;
+                &lt;dt class="cmx-map__legend-dot bg__bright-green"&gt;&lt;/dt&gt;
+                &lt;dd class="cmx-map__legend-label"&gt;Delivery Address Location&lt;/dd&gt;
+            &lt;/div&gt;
+        &lt;/dl&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                            </pre>
+                        </div>
+                    </div>
+                    <!-- end .col-md-12 -->
+
+
+                    <div class="spacer-32">
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <h2>Map with Side Pannel</h2>
+
+
+                        <div class="spacer-16">
+                        </div>
+
+
+                        <div class="cmx-map demo__tall-map">
+                            <div class="cmx-map__container" id="map3">
+                            </div>
+
+
+                            <div class="cmx-map__overlay cmx-map__overlay--left">
+                                <div class="cmx-map__input-group">
+                                    <label for="latitude">Latitude:</label> <input id="latitude" name="" readonly type="text" value="25.686614">
+                                </div>
+
+
+                                <div class="cmx-map__input-group">
+                                    <label for="longitude">Longitude:</label> <input id="longitude" name="" readonly type="text" value="-100.316113">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div data-highlight="">
+                            <pre data-lang="html">
+                                <code class="language-html">&lt;div class="cmx-map"&gt;
+    &lt;div class="cmx-map__container" id="map3"&gt;&lt;/div&gt;
+    &lt;div class="cmx-map__overlay cmx-map__overlay--left"&gt;
+        &lt;div class="cmx-map__input-group"&gt;
+            &lt;label for="latitude"&gt;Latitude:&lt;/label&gt;
+            &lt;input id="latitude" type="text" name="" value="25.686614" readonly /&gt;
+        &lt;/div&gt;
+        &lt;div class="cmx-map__input-group"&gt;
+            &lt;label for="longitude"&gt;Longitude:&lt;/label&gt;
+            &lt;input id="longitude" type="text" name="" value="-100.316113" readonly /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                        </pre>
+                        </div>
+
+
+                        <div class="spacer-48">
+                        </div>
+
+
+                        <h2>... and the code required for all instances</h2>
+
+
+                        <div data-highlight="">
+                            <div class="demo-wrap-code code-2">
+                                <pre data-lang="sass"><code class="language-css">.cmx-map{
+    min-height: 200px;
+    position: relative;
+    &amp;__container{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    &amp;__overlay {
+        background: rgba(0,0,0,0.7);
+        position: absolute; 
+        z-index: 99;
+
+        &amp;--bottom{
+            width  : 100%;
+            height : 32px;
+            bottom: 0px;
+            padding:0.625rem;
+        }
+
+        &amp;--left{
+            top:0;
+            width: 284px;
+            height: 100%;
+            padding: 7rem 1rem;
+        }
+
+        
+    }
+    &amp;__legend{
+        line-height: 12px;
+        &amp;-item{
+            display:inline-flex;
+            margin-right:1rem;
+            &amp;:last-of-type{
+                margin-right: 0;
+            }
+        }
+        &amp;-label{
+            font-size: $font-size-10;
+            line-height: $line-height-14;
+            color: $true-white;
+        }
+        &amp;-dot{
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+    }
+    &amp;__input-group {
+        margin-bottom: 1.5rem;
+        
+        label {
+            display: inline-block;
+            width: 100%;
+            color: $gray-lightish;
+            font-size: $font-size-12;
+            line-height: $line-height-12;
+        }
+
+        input[type="text"] {
+            background: none;
+            color: $gray-lightish;
+            width: 100%;
+            border: 0 none;
+            border-bottom: 1px solid $gray-lightish;
+            font-size: $font-size-18;
+            line-height: $line-height-20;
+            font-weight: $font-light;
+            padding-bottom: 0.375rem;
+        }
+    }
+}</code></pre>
+
+                                <pre data-lang="css"><code class="language-css">.cmx-map {
+    min-height: 200px;
+    position: relative;
+}
+
+.cmx-map__container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cmx-map__overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 99;
+}
+
+.cmx-map__overlay--bottom {
+    width: 100%;
+    height: 32px;
+    bottom: 0px;
+    padding: 0.625rem;
+}
+
+.cmx-map__overlay--left {
+    top: 0;
+    width: 284px;
+    height: 100%;
+    padding: 7rem 1rem;
+}
+
+.cmx-map__legend {
+    line-height: 12px;
+}
+
+.cmx-map__legend-item {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: 1rem;
+}
+
+.cmx-map__legend-item:last-of-type {
+    margin-right: 0;
+}
+
+.cmx-map__legend-label {
+    font-size: 0.625rem;
+    line-height: 0.875rem;
+    color: #FFF;
+}
+
+.cmx-map__legend-dot {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.cmx-map__input-group {
+    margin-bottom: 1.5rem;
+}
+
+.cmx-map__input-group label {
+    display: inline-block;
+    width: 100%;
+    color: #B0B0B0;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+}
+
+.cmx-map__input-group input[type="text"] {
+    background: none;
+    color: #B0B0B0;
+    width: 100%;
+    border: 0 none;
+    border-bottom: 1px solid #B0B0B0;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    font-weight: 300;
+    padding-bottom: 0.375rem;
+}</code></pre>
+
+                                <pre data-lang="javaScript"><code class="language-js">&lt;script&gt;
+
+// we append the 'loadMaps' to window so to guarantee it is a global variable
+// the loadMaps portion is the one to specify in the callback parameter of the maps API call.
+
+window.loadMaps = function(){
+
+    // Find the DOM element where the map is going to be inserted.
+    // We find it here with getElementById, but it can be any DOM element reference.
+    
+    // You could specify the target of an event instead or find the element with querySelector.
+
+    var wrappingElementId = 'map1'; // write the id of the destination element
+    
+    var wrappingElement = document.getElementById(wrappingElementId); // the wrapping DOM element
+    
+    
+    var map3 = new google.maps.Map(wrappingElement, {
+        
+        center: {
+            lat: 25.686614,
+            lng: -100.316113
+            //to get the latitude and longitude use: http://www.latlong.net/
+        },
+
+        zoom: 12,
+        styles: [
+            {
+                "featureType": "administrative.country",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.province",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.province",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            }
+        ], // snazzymaps.com
+
+        zoomControl: true,
+        mapTypeControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        rotateControl: false,
+        fullscreenControl: false,
+        scrollwheel: false,
+        draggable: true,
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.TOP_RIGHT
+        },
+
+        mapTypeControlOptions: {
+            position: google.maps.ControlPosition.TOP_CENTER
+        }
+    });
+
+}
+&lt;/script&gt;
+&lt;script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&amp;callback=loadMaps"&gt;&lt;/script&gt;</code></pre>
+                            </div>
+                            <!-- end demo-wrap-code -->
+                        </div>
+                        <!-- end data-highlight -->
+                    </div>
+                    <!-- end .col-md-12 -->
+                </div>
+            </div>
+        </div>
+        <!-- end #wrapper -->
+        <link href="partials/footer.html" rel="import"><link href="partials/overlays.html" rel="import">
+        <script type="text/javascript">
+        function loadMaps() {
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+
+                center: {
+                  lat: 25.686614,
+                  lng: -100.316113
+                  //to get the latitude and longitude use: http://www.latlong.net/
+                },
+
+                zoom: 12,
+                styles: [
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    }
+                ], // snazzymaps.com
+
+                zoomControl: true,
+                mapTypeControl: true,
+                scaleControl: false,
+                streetViewControl: false,
+                rotateControl: true,
+                scrollwheel: false,
+                draggable: true,
+                fullscreenControl: true,
+                zoomControlOptions: {
+                  position: google.maps.ControlPosition.RIGHT_CENTER
+                },
+
+                mapTypeControlOptions: {
+                   position: google.maps.ControlPosition.TOP_CENTER,
+                   style: google.maps.MapTypeControlStyle.DEFAULT
+                },
+
+                fullscreenControlOptions: {
+                    position: google.maps.ControlPosition.TOP_RIGHT 
+                }
+            });
+            // end map
+
+            var map2 = new google.maps.Map(document.getElementById('map2'), {
+                
+                center: {
+                    lat: 25.686614,
+                    lng: -100.316113
+                    //to get the latitude and longitude use: http://www.latlong.net/
+                },
+
+                zoom: 12,
+                styles: [
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    }
+                ], // snazzymaps.com
+
+                zoomControl: true,
+                mapTypeControl: false,
+                scaleControl: false,
+                streetViewControl: false,
+                rotateControl: false,
+                fullscreenControl: false,
+                scrollwheel: false,
+                draggable: true,
+                zoomControlOptions: {
+                  position: google.maps.ControlPosition.TOP_RIGHT
+                },
+
+                mapTypeControlOptions: {
+                   position: google.maps.ControlPosition.TOP_CENTER
+                }
+            });
+            // end map2
+
+
+            var map3 = new google.maps.Map(document.getElementById('map3'), {
+                
+                center: {
+                    lat: 25.686614,
+                    lng: -100.316113
+                    //to get the latitude and longitude use: http://www.latlong.net/
+                },
+
+                zoom: 12,
+                styles: [
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    }
+                ], // snazzymaps.com
+
+                zoomControl: true,
+                mapTypeControl: false,
+                scaleControl: false,
+                streetViewControl: false,
+                rotateControl: false,
+                fullscreenControl: false,
+                scrollwheel: false,
+                draggable: true,
+                zoomControlOptions: {
+                  position: google.maps.ControlPosition.TOP_RIGHT
+                },
+
+                mapTypeControlOptions: {
+                   position: google.maps.ControlPosition.TOP_CENTER
+                }
+            });
+            // end map3
+
+        }
+        </script> 
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDGXHr3cQ3bhZ--3fgRZ7Y6NwfvZGTcaZI&callback=loadMaps" type="text/javascript">
+        </script> 
+    </div>
+</body>
+</html>

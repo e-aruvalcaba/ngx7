@@ -1,0 +1,119 @@
+.mobile-overlay-bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 4;
+    position: absolute; //i think, this should be FIXED (has to be tested)
+    top:0;
+    left:0;
+
+    .close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 16px;
+        height: 16px;
+        
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: $true-white;
+        }
+    }
+}
+
+.mobile-overlay-message {
+    width: 94%;
+    background: $true-white;
+    position: absolute;
+    z-index: 5;
+    margin: 40% 3%;
+    padding: 16px;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.3);
+
+    .mobile-overlay-content {
+        margin-bottom: 20px;
+
+        p {
+            font-size: $font-size-16;
+            line-height: $line-height-18;
+        }
+    }
+
+    .mobile-message-cta-container {
+        text-align: right;
+    }
+
+    a {
+        &.mobile-message-cta {
+            display: inline-block;
+            font-size: $font-size-14;
+            font-weight: $font-bold;
+            text-transform: uppercase;
+            margin-left: 20px;
+        }
+    }
+    
+    // in case we have a notification inside
+    &.mobile-notification {
+
+        .mobile-notification-header {
+            padding: 0;
+        }
+
+        .mobile-notification-body {
+            padding: 0;
+        }
+
+        .mobile-notification-footer {
+            padding: 0;
+        }
+    }
+}
+
+.mobile-bottom-message {
+    width: 100%;
+    z-index: 5;
+    position: absolute;
+    bottom: 0;
+    background: #333;
+    padding: 16px;
+    color: $true-white;
+
+    display: flex;
+    align-items: center;
+
+    .mobile-bottom-content {
+        font-size: 14px;
+        line-height: $line-height-16;
+    }
+
+    .mobile-bottom-cta {
+        min-width: 80px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+.mobile-demo-wrap,
+.mobile-content-wrap {
+    padding: 12px;
+    overflow-y: scroll;
+    position: absolute;
+    width:100%;
+    height:calc(100% - 50px);
+    bottom: 0;
+}
+
+
+.page-wrapper {
+    margin: 2px 0 0 160px;
+    position: relative;
+
+	.paragraph-group {
+		p:last-child {
+			margin-bottom: 2rem;
+		}
+	}
+}

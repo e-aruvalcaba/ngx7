@@ -1,0 +1,353 @@
+// Buttons
+
+.cmx-button {
+	
+	// WE DEFAULT TO THE BRIGHT BLUE BUTTON
+
+	display: 				inline-block;
+	min-width: 				85px;
+	border-radius:  		$radius-2;
+	border: 				$solid-1-bright-blue;
+	padding: 				8px 16px;
+	font-family: 			$font-family;
+	font-size: 				$font-size-16;
+	line-height: 			$line-height-16;
+	font-weight: 			$font-bold;
+	color: 					$true-white;
+	background: 			$bright-blue;
+	text-align: 			center;
+	cursor: 				pointer;
+	transition: 			all 0.2s;
+	overflow: 				hidden;
+	vertical-align: 		bottom; //added to prevent padding on hyperlink button
+	white-space: 			nowrap;
+
+	// the variant with 100% width
+
+	&--block {
+		width: 100%;
+		display: block;
+	}
+
+	// THE BRIGHT GREEN VARIANT
+
+	&--primary {
+		background: 		$bright-green;
+		border: 	 		$solid-1-bright-green;
+	}
+
+	// interactive states of buttons - definitions of the hover and focus states
+
+	&:hover,
+	&:focus{
+		text-decoration: 	none;
+		color: 			 	$true-white;
+		box-shadow: 	 	0 2px 4px rgba(0,0,0,0.45);
+		outline: 			0;
+
+		&.cmx-button--support-full {
+			color: 			$bright-blue;
+		}
+	}
+
+	// active and active focused states
+
+	&:active,
+	&:active:focus{
+		text-decoration: 	none;
+		color: 			 	$true-white;
+		box-shadow: 		none;
+	}
+
+	&.cmx-button--text--icon {
+		&:hover,
+		&:focus {
+			span[class*='cmx-icon'] {
+				text-shadow: 0 2px 4px rgba(0,0,0,0.45);
+				text-decoration: none;
+			}
+			.cmx-button-text-label {
+				box-shadow: none;
+				text-shadow: none;
+				text-decoration: underline;
+			}
+		}
+
+		&:focus {
+			span[class*='cmx-icon'] {
+				color: $true-blue;
+			}
+			.cmx-button-text-label {
+				color: $true-blue;
+			}
+		}
+
+		&[disabled="disabled"], 
+		&.disabled {
+			&:hover,
+			&:focus {
+				span[class*="cmx-icon"],
+				.cmx-button-text-label {
+					text-shadow:none;
+					text-decoration: none;
+					color: $disabled-grey;
+					border: none;
+				}
+			}
+		}
+		&.cmx-button--icon{
+			text-shadow: none;
+		}
+	}
+
+	// the disabled button styles
+
+	&.disabled,
+	&[disabled="disabled"] {
+		transition: 		none;
+		cursor: 			not-allowed;
+		background: 		$disabled-grey;
+		border: 			$solid-1-disabled-grey;
+		color: 				$true-white;
+		overflow:			hidden;
+
+		&:hover {
+			box-shadow: 	none;
+			text-decoration: none;
+		}
+		&::after{
+			display:none !important;
+		}
+	}
+
+	// the styles for an icon within the button
+
+	&__icon {
+		width: 16px;
+		height: 16px;
+		float: left;
+		display: inline-block;
+		margin-right: 8px;
+
+		svg {
+			width: 16px;
+			height: 16px;
+			fill: $true-white;
+		}
+	}
+
+
+	// THE BACK TO TOP BUTTONS
+
+	&.back-top-button {
+		width: 35px;
+		height: 35px;
+		display: inline-block;
+		border-radius: 50%;
+		background: $bright-blue;
+		text-align: center;
+		min-width: auto;
+		padding: 0;
+
+		svg {
+			fill: $true-white;
+			width: 17px;
+			margin-top: 4px;
+		}
+
+		&:active,
+		&:focus {
+			background: $active-blue;
+		}
+	}
+
+
+
+	// THE SUPPORT BUTTONS STYLES
+
+	&--support {
+		border: 				$solid-1-bright-blue;
+		color: 					$bright-blue;
+		background: 			transparent;
+
+
+		// the styles for the icon within the support buttons
+		.cmx-button__icon {
+			width: 16px;
+			height: 16px;
+			float: left;
+			display: inline-block;
+			margin-right: 8px;
+	
+			svg {
+				width: 16px;
+				height: 16px;
+				fill: $bright-blue;
+			}
+		}
+		
+		
+		// support buttons have a variant with white fill
+		&.is-full{
+			background:		 	$true-white;
+			color: 				$bright-blue;
+			border: 			$solid-1-bright-blue;
+		}
+	
+		// hover and focus stules for support buttons
+		&:hover,
+		&:focus{
+			text-decoration: none;
+			color: 			 	$bright-blue;
+			box-shadow: 	 	0 2px 4px rgba(0,0,0,0.45);
+			outline:			0;
+		}
+
+		// active and active-focused styles for support buttons
+		&:active,
+		&:active:focus{
+			text-decoration: 	none;
+			color: 			 	$bright-blue;
+			box-shadow: 		none;
+		}
+	
+		// disabled styles for support and support with white background buttons
+		&.disabled,
+		&[disabled="disabled"],
+		&.is-full.disabled,
+		&.is-full[disabled="disabled"] {
+			transition: 		none;
+			cursor: 			not-allowed;
+			border: 			$solid-1-disabled-grey;
+			color: 				$disabled-grey;
+			overflow:			hidden;
+			background: 		transparent;
+			box-shadow: 		none;
+
+			// style for icon before the button label
+			.cmx-button__icon {
+				svg {
+					fill: $disabled-grey;
+				}
+			} 
+
+			// reaffirmation of the color in the active/disabled style that is available for links (that do not respoect a disabled attribute)
+			&:active,
+			:active:focus{
+				color: 				$disabled-grey;
+			}
+			
+			// reaffirmation of the hover state in the active/disabled style that is available for links (that do not respoect a disabled attribute)
+			&:hover {
+				box-shadow: 	none;
+			}
+		}
+
+		// reaffirmation of the qhite background color within the disabled version of the full support buttons
+		&.is-full.disabled,
+		&.is-full[disabled="disabled"] {
+			background: 		$true-white;
+		}
+	}
+
+
+	// link buttons (cause sometimes we need a button that looks like a link)
+	&--link,
+	&--icon {
+
+		// essentially we are resetting the button defaults
+		min-width: 				0;
+		border-radius:  		0;
+		border: 				none;
+		padding: 				0;
+		line-height: 			$line-height-16;
+		font-weight: 			normal;
+		color: 					$bright-blue;
+		background: 			none;
+		text-align: 			left;
+		cursor: 				pointer;
+		transition: 			all 0.2s;
+		overflow: 				visible;
+		vertical-align: 		bottom; //added to prevent padding on hyperlink button
+		white-space: 			normal;
+		font-family: 			"Roboto", sans-serif;
+		font-weight: 			$font-medium;
+		font-size: 				$font-size-14;
+		line-height: 			$line-height-16;
+	}
+	
+	&--link{
+		
+		// the medium size styles
+		&-medium {
+			font-size: 			$font-size-18;
+			line-height: 		$line-height-24;
+		}
+
+		// the hover and focus states
+		&:hover,
+		&:focus{
+			color:				$bright-blue;
+			text-decoration:	underline;
+			background:			none;
+			box-shadow: 		none;
+		}
+
+		// the active and active focus states of the link variant
+		&:active,
+		&:active:focus{
+			color:				$active-blue;
+			text-decoration:	underline;
+		}
+
+		// the disabled styles of the link button
+		&[disabled="disabled"],
+		&.disabled{
+			background: 		none;
+			color: 				$disabled-grey;
+			border:				none;
+
+			&:hover,
+			&:focus{
+				text-decoration: none;
+			}
+
+			&:active,
+			&:active:focus{
+				color:			$disabled-grey;
+			}
+		}
+	}
+
+	&--icon{
+		&__icon{
+			width:1rem;
+			height:1rem;
+		}
+		&:hover,&:focus {
+			color: $bright-blue;
+			box-shadow: none;
+			text-shadow: 0 2px 4px rgba(0,0,0,0.45);
+		}
+		&:active, &:active:focus, &:active:hover, &:active:hover:focus {
+			color: $bright-blue-dark;
+			text-shadow: none;
+			box-shadow: none;
+		}
+
+		&[disabled="disabled"], 
+		&.disabled {
+			background: transparent;
+			color: $disabled-grey;
+			border: none;
+			&:hover{
+				text-shadow:none;
+			}
+			&:active, &:active:focus, &:active:hover, &:active:hover:focus {
+				color: $disabled-grey;
+				text-shadow: none;
+				box-shadow: none;
+			}
+		}
+	}
+}

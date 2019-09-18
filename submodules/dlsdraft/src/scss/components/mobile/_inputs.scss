@@ -1,0 +1,23 @@
+.cmx-mobile-search-group {
+    position: relative;
+
+    input[type="text"],
+    input[type="search"] {
+        padding-right: 50px;
+    }
+
+    button[type="submit"] {
+        width: auto;
+        min-width: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 12px;
+
+        svg {
+            fill: $true-white;
+            width: 19px;
+            height: 19px;
+        }
+    }
+}
