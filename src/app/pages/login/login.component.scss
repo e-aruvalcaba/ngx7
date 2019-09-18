@@ -1,0 +1,22 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/images/login-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.login-form {
+  width: 25rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .login-form {
+    width: 100%;
+  }
+}

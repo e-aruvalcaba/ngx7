@@ -1,0 +1,38 @@
+image: alejandropinson/cyp:2.0.0
+options:
+  max-time: 20
+definitions:
+  caches:
+    git-modules: .git/modules
+  steps:
+    - step: &build-step
+        name: Build app and linting
+        caches:
+          - node
+          - git-modules
+        script:
+          # install dependencies
+          - git submodule update --recursive --init
+          - yarn install
+          # linting
+          - yarn lint
+          # build
+          - yarn build:prod
+          # e2e testing
+          - yarn cy:test
+        artifacts:
+          - cypress/screenshots/**
+          - cypress/videos/**
+pipelines:
+  pull-requests:
+    '**':
+      - step: *build-step
+  branches:
+    master:
+      - step: *build-step
+    develop:
+      - step: *build-step
+    release/*:
+      - step: *build-step
+    hotfix/*:
+      - step: *build-step
