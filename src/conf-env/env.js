@@ -1,12 +1,26 @@
 (function() {
-  window.API_HOST = 'https://uscldcnxapmsa01.azure-api.net/';
   window.COUNTLY_KEY = '56cc30d0da706ccb84d642e3275da73543c71768';
   window.ROLLOUT_APP_KEY = '5bb24a54bae7137e6c9de19e';
-  window.API_HOST_FULL = '';
+  //window.API_HOST = 'https://uscldcnxapmsa01.azure-api.net/';
+  //For dev env
+  window.API_HOST_FULL = 'https://uscldcnxapmd01.azure-api.net/';
+  window.API_HOST = 'https://uscldcnxapmd01.azure-api.net/';
+  //For dev2 env
+  //window.API_HOST_FULL = 'https://uscldcnxapmsa01.azure-api.net/';
+  //window.API_HOST = 'https://uscldcnxapmsa01.azure-api.net/';
+
+  //For qa env
+  //window.API_HOST_FULL = 'https://uscldcnxapmq01.azure-api.net/';
+  //window.API_HOST = 'https://uscldcnxapmq01.azure-api.net/';
+
+  //For qa2 env
+  //window.API_HOST_FULL = 'https://uscldcnxwarccct01.azurewebsites.net';
+  //window.API_HOST = 'https://uscldcnxwarccct01.azurewebsites.net';
+
   window.API_ORG = '';
   window.API_ENV = '';
   window.ENV = 'not';
-  window.APP_CODE = 'Foreman_App';
+  window.APP_CODE = 'OrderProductCat_App';
   window.CLIENT_ID = '';
   window.HOST_EUROPE = 'localhost:4200';
   window.HOST_AMERICA = 'localhost:4200';

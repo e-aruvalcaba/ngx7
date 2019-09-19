@@ -1,4 +1,4 @@
-<!-- <cmx-alert></cmx-alert>
+<!-- <cmx-alert></cmx-alert> -->
 <div fxLayout="column" style="display: block"
   [ngStyle.xl]="{'margin': '60px'}"
   [ngStyle.lg]="{'margin': '60px'}"
@@ -20,11 +20,8 @@
         </div>
         <div fxFlex="50%" fxLayout="column">
             <cmx-dropdown>
-                <cmx-dropdown-item (click)="changeLanguage('es_MX')">{{ translate('views.header.spanish') }}</cmx-dropdown-item>
-                <cmx-dropdown-item (click)="changeLanguage('en_US')">{{ translate('views.header.english') }}</cmx-dropdown-item>
+                <cmx-dropdown-item [disableTick]="true" (click)="changeLanguage(language.languageISO)" *ngFor="let language of languages">{{ language.languageName }}</cmx-dropdown-item>
             </cmx-dropdown>
         </div>
     </div>
-</div> -->
-
-Esto funciona
+</div>

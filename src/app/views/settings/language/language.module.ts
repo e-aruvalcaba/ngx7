@@ -6,6 +6,7 @@ import { LanguageComponent } from './language.component';
 
 @NgModule({
   declarations: [LanguageComponent],
+  providers: [lazySharedConfig.providers],
   imports: [
     CommonModule,
     LanguageRoutingModule,

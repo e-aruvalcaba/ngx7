@@ -154,7 +154,7 @@ export class CnxGblOrgService {
    */
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-      debugger;
+      // debugger;
       console.error(error);
 
       let message = "";

@@ -10,7 +10,8 @@ export class InterceptedHttp extends HttpClient {
       const langISO = url.slice(-5);
       langISO.slice(-1);
       // tslint:disable-next-line:max-line-length
-      url = 'https://uscldcnxwaadmq01.azurewebsites.net/api/Translation/translate/user-provisioning/' + langISO;
+      // url = 'https://uscldcnxwaadmq01.azurewebsites.net/api/Translation/translate/user-provisioning/' + langISO;
+      url = 'https://uscldcnxwaadmq01.azurewebsites.net/translate/translate/OrderProductCat_App/' + langISO; //momently fixed
     } else if (url.indexOf('/translate/getLanguages') > -1) {
       url = 'https://uscldcnxwaadmq01.azurewebsites.net/api/Translation/getLanguages';
     }
