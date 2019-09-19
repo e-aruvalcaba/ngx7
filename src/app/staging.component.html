@@ -1,0 +1,53 @@
+<div class="container">
+  <cmx-datatable
+    [data]="stagingData"
+    canEdit="true"
+    canDelete="true"
+    canAdd="true"
+    (onChanged)="changeHandler($event)"
+    (onEdited)="editHandler($event)"
+    (onAdded)="addHandler($event)"
+    (onDeleted)="deleteHandler($event)">
+    <cmx-data-table-column
+      property="stagingId"
+      header="Id"
+      [isEditable]="false"
+      visible="false"
+      editModeType="number">
+    </cmx-data-table-column>
+    <cmx-data-table-column
+      property="description"
+      header="staging description"
+      editModeType="textbox"
+      required="true"
+      isAddable="true"
+      isEditable="false"
+      expandedProperties="creationDateTime, userIdCreation"
+      expandedHeaders="Creation Date\Time, User Id Creation">
+    </cmx-data-table-column>
+    <cmx-data-table-column
+      property="type"
+      header="staging type"
+      editModeType="comboBox"
+      [dataSource]="TYPESDATA"
+      valueProperty="typeId"
+      displayProperty="description"
+      labelProperty="typeDescription"
+      required="true"
+      expandedProperties="changedDateTime, userIdChange"
+      expandedHeaders="Change Date\Time, User Id Change">
+    </cmx-data-table-column>
+    <cmx-data-table-column
+      property="moffett"
+      header="moffett"
+      editModeType="checkbox"
+      required="false">
+    </cmx-data-table-column>
+    <cmx-data-table-column
+      property="crane"
+      header="crane"
+      editModeType="checkbox"
+      required="false">
+    </cmx-data-table-column>
+  </cmx-datatable>
+</div>

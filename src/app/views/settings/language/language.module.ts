@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { lazySharedConfig } from '../../../lazyshared.module';
 import { LanguageRoutingModule } from './language-routing.module';
 import { LanguageComponent } from './language.component';
 
@@ -8,7 +8,8 @@ import { LanguageComponent } from './language.component';
   declarations: [LanguageComponent],
   imports: [
     CommonModule,
-    LanguageRoutingModule
+    LanguageRoutingModule,
+    lazySharedConfig.imports
   ]
 })
 export class LanguageModule { }

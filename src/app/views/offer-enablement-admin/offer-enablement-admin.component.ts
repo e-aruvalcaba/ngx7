@@ -30,7 +30,7 @@ import * as moment from 'moment';
 import { HOURS } from '../../data/hours';
 import { ICustomer } from '../../models/customer.interface';
 import { IMaterial } from '../../models/material.interface';
-import { AlertService } from '@cemex/cmx-alert-v7'; //updated from v2
+import { Alert, AlertService } from '@cemex/cmx-alert-v7'; //updated from v2
 import { ICountrySettings, ShippingCondition } from '../../models/country-settings.interface';
 import { CmxDatepickerComponent } from '@cemex/cmx-datepicker-v4';
 

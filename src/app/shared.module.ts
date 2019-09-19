@@ -20,7 +20,8 @@ import { CmxCheckboxModule } from '@cemex/cmx-checkbox-v4';
 import { CmxTableModule } from '@cemex/cmx-table-v7';
 import { CmxDialogModule } from '@cemex/cmx-dialog-v7';
 import { CmxPanelCardModule } from '@cemex/cmx-panel-card-v1/dist';
-import { AlertModule } from '@cemex/cmx-alert-v7';
+import { AlertModule, AlertService } from '@cemex/cmx-alert-v7';
+import { CmxCapacityTableModule } from '@cemex/cmx-capacity-table-v2';
 
 import { HttpModule } from '@angular/http';
 
@@ -29,9 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { StagingComponent } from './pages/staging/staging.component';
 
 export const sharedConfig: NgModule = {
-  providers: [FormatterService],
+  providers: [FormatterService, AlertService],
   imports: [
-    BrowserModule,
+    // BrowserModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
@@ -47,6 +48,7 @@ export const sharedConfig: NgModule = {
     CmxCheckboxModule,
     CmxDropdownModule,
     CmxPanelCardModule,
+    CmxCapacityTableModule,
     HttpModule,
     HttpClientModule,
     RouterModule.forRoot([
@@ -141,7 +143,7 @@ export const sharedConfig: NgModule = {
       { path: '**', redirectTo: 'app' }
     ])
   ],
-  declarations: [StartComponent, AppComponent, TestComponent, LoginComponent],
+  declarations: [StartComponent, AppComponent, TestComponent, LoginComponent, StagingComponent],
   bootstrap: [StartComponent]
 };
 export class AppModuleShared { }

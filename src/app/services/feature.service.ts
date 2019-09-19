@@ -6,10 +6,11 @@ import { Broadcaster } from '@cemex-core/events-v7';
 export class FeatureToggleService {
   public static featureList: Map<string, IFeatureItem> = new Map<string, IFeatureItem>();
   public static language = '';
+
   // Must be set on path constants
 
-  public static PRODUCT_PATH = 'PRODUCT_PATH';
-  public static ENVIRONMENT = 'PRODUCT_PATH';
+  public static PRODUCT_PATH = "OrderProductCat_App";//'PRODUCT_PATH';
+  public static ENVIRONMENT = "development";//'PRODUCT_PATH';
   public static USE_LOCAL_MANIFEST = 'USE_LOCAL_MANIFEST';
 
   /**

@@ -1,8 +1,20 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
-import { CmxSidebarComponent, ICustomSubOption } from '@cemex/cmx-sidebar-v7';
+// import { Component, ViewChild, OnInit } from '@angular/core';
+import { CmxSidebarComponent,ICustomOption,IApplicationMenu, ICustomSubOption } from '@cemex/cmx-sidebar-v7';
 import { Broadcaster } from '@cemex-core/events-v7';
-
 import { TranslationService } from '@cemex-core/angular-localization-v7';
+import { Component, ViewChild, OnInit, AfterViewInit, HostListener, Injector } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { SessionService } from '@cemex-core/angular-services-v7';
+import { CnxGblOrgService } from '../app/services/cnx-gbl-org.service';
+import { SecurityService } from '../app/services/security.service';
+import { ApplicationMenu } from '../app/models/menu';
+import { VersionToggle } from '../app/services/versionToggle.service';
+
+//Updated to v7 from v4
+// import { CmxSidebarComponent, ICustomOption, ICustomSubOption, IApplicationMenu } from '@cemex/cmx-sidebar-v4/dist';import { IAppMenuItem, IUserProfile, ICustomer, ILegalEntity } from "@cemex-core/types-v2/dist/index.interface";
+// import { Broadcaster } from '@cemex-core/events-v1/dist';
+// import { TranslationService } from '@cemex-core/angular-localization-v1/dist';
+
 
 @Component({
   selector: 'app-component',

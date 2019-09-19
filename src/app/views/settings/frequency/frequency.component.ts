@@ -7,8 +7,9 @@ import { RCCC_APP_MENUES } from '../../../data/rccc-app-menues';
 import { IAppMenu } from '../../../models/app-menu.interface';
 
 import { CmxDialogComponent } from '@cemex/cmx-dialog-v7'; //updated from v4
-// import { DATEPICKER_ENGLISH_SETUP } from '../../../data/datepicker-english-setup'; //need to fix
-// import { DATEPICKER_SPANISH_SETUP } from '../../../data/datepicker-spanish-setup'; //need to fix
+import { DATEPICKER_ENGLISH_SETUP } from '../../../data/datepicker-english-setup'; //need to fix
+import { DATEPICKER_SPANISH_SETUP } from '../../../data/datepicker-spanish-setup'; //need to fix
+import { IDatepickerSetup } from '../../../data/IDatepickerSetup';
 // import { IDatepickerSetup } from '@cemex/cmx-datepicker-v4';  //need to fix not supported for v7
 import { Country } from '../../../models/Country';
 

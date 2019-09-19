@@ -16,7 +16,7 @@ import { VersionToggle } from '../../services/versionToggle.service';
 
 @Component({
   selector: 'app-plant-capacity',
-  templateUrl: './plant-capacity.component.html',
+  // templateUrl: './plant-capacity.component.html',
   styleUrls: ['./plant-capacity.component.scss']
 })
 export class PlantCapacityComponent {
@@ -106,6 +106,9 @@ export class PlantCapacityComponent {
    * To call on init in child components
    */
   protected onInit() {
+
+    console.log("PLANT CAPACITY INICIALIZADO");
+    console.log(this.api);
     this.date = this.toDate = this.fromDate = new Date();
     this.formattedDate = this.formattedFromDate = this.formattedToDate = this.stringHelper.formatDate(this.date);
     this.datepickerTags = null;

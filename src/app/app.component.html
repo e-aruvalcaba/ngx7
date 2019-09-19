@@ -2,7 +2,10 @@
   (clickMenuButton)="clickMenuButton($event)"
   [rtl]="selectedLanguage?.textFloat == 'right'"
 ></cmx-nav-header>
-<cmx-sidebar [rtl]="selectedLanguage?.textFloat == 'right'" (collapseEvent)="collapseEvent($event)"></cmx-sidebar>
+<cmx-sidebar [rtl]="selectedLanguage?.textFloat == 'right'" (collapseEvent)="collapseEvent($event)"
+                                                            (customOptionEvent)="customOptionEvent($event)"
+                                                            [menuItems]="customMenuItems"
+                                                            [pathMobileLang]="'settings/language'"></cmx-sidebar>
 <div id="layout" class="content">
   <router-outlet></router-outlet>
 </div>

@@ -270,7 +270,7 @@ export class CnxGblOrgService {
   getCustomerTypeCapacityItemsStatus(): Observable<ICustomerTypeCapacity[]> {
     return this.customerTypeCapacityItemsSubject;
   } // end function getDailyPlantCapacityItemsStatus
-
+ 
   /**
    * Sets the awaiting status to true
    */

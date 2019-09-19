@@ -12,10 +12,11 @@ import { forEach } from '@angular/router/src/utils/collection';
 import { CmxDialogComponent } from '@cemex/cmx-dialog-v7'; //updated from v4
 
 //-----------------------------------------------------------------------------------
-//-------------------------  NEED TO FIX COMPONENT - NO SUPPORT FOR V7
-// import { DATEPICKER_ENGLISH_SETUP } from '../../../data/datepicker-english-setup';
-// import { DATEPICKER_SPANISH_SETUP } from '../../../data/datepicker-spanish-setup';
+//-------------------------  NEED TO FIX DATEPICKER COMPONENT V2 - NO SUPPORT FOR V7
+import { DATEPICKER_ENGLISH_SETUP } from '../../../data/datepicker-english-setup';
+import { DATEPICKER_SPANISH_SETUP } from '../../../data/datepicker-spanish-setup';
 // import { IDatepickerSetup } from '@cemex/cmx-datepicker-v2';
+import { IDatepickerSetup } from '../../../data/IDatepickerSetup';
 import { StringHelperService } from '../../../services/string-helper.service';
 import { Country, CountryEntity } from '../../../models/Country';
 import { Holiday } from '../../../models/Holiday';

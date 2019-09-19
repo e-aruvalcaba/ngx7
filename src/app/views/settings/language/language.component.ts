@@ -1,4 +1,5 @@
 import { Component, ViewChild, OnInit, AfterViewInit, HostListener } from '@angular/core';
+
 import { TranslationService } from '@cemex-core/angular-localization-v7'; //updated from v1
 @Component({
   selector: 'language-component',
