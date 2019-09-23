@@ -15,6 +15,16 @@ import { CmxDataTableModule } from '@cemex/cmx-datatable-v1';
 import { CmxChartModule } from '@cemex/cmx-chart-v1';
 import { AlertModule, AlertService } from '@cemex/cmx-alert-v7';
 import { FormatterService } from '@cemex-core/angular-localization-v7';
+import { CmxFormFieldModule } from '@cemex/cmx-form-field-v4';
+import { CmxTooltipModule } from '@cemex/cmx-tooltip-v4';
+import { FormsModule } from '@angular/forms';
+import { CmxTabsModule } from '@cemex/cmx-tabs-v4';
+import { CmxFlugeeService, CmxFlugeeModule } from '@cemex/cmx-flugee-v7';
+import { CmxCalendarWeekComponent } from './views/calendar/cmx-calendar-week/cmx-calendar-week.component';
+import { CmxCalendarMonthComponent } from './views/calendar/cmx-calendar-month/cmx-calendar-month.component';
+import { CmxCalendarDayComponent } from './views/calendar/cmx-calendar-day/cmx-calendar-day.component';
+import { CmxCalendarComponent } from './views/calendar/cmx-calendar/cmx-calendar.component';
+import { CmxCalendarModule } from './views/calendar/cmx-calendar/cmx-calendar.module';
 
 
 export const lazySharedConfig: NgModule = {
@@ -35,4 +45,25 @@ export const lazySharedConfig: NgModule = {
   declarations: [],
   bootstrap: []
 };
+
+export const lazySettingsSharedConfig: NgModule = {
+  providers: [FormatterService, AlertService, CmxFlugeeService],
+  imports: [
+    FlexLayoutModule,
+    CmxDropdownModule,
+    CmxDatepickerModule,
+    CmxDialogModule,
+    AlertModule,
+    CmxFormFieldModule,
+    CmxTooltipModule,
+    FormsModule,
+    CmxTabsModule,
+    CmxFlugeeModule,
+    CmxCalendarModule
+  ],
+  declarations: [],
+  exports: [],
+  bootstrap: []
+};
+
 export class LazyModuleShared { }

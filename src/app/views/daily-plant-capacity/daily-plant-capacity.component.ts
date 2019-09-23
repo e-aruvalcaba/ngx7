@@ -1,22 +1,12 @@
-import {
-  Component, OnInit, Injector, OnDestroy,
-  ViewChild,
-  ViewChildren,
-  QueryList,
-  AfterViewInit,
-} from '@angular/core';
-import { Observable, Subscription } from 'rxjs/Rx';
+import { Component, Injector, ViewChild, ViewChildren, QueryList } from '@angular/core';
+import { Subscription } from 'rxjs/Rx';
 import { PlantCapacityComponent } from '../plant-capacity/plant-capacity.component';
 import { IDailyPlantCapacityItem } from '../../models/daily-plant-capacity-item.interface';
-import { Plant } from '../../models/plant';
 import { ICustomerTypeCapacity } from '../../models/customer-type-capacity.interface';
-import { BLUE_RED_PALETTE } from '../../data/blue-red-palette';
 import { STACK_PALETTE } from '../../data/stack-palette';
 import { ICapacityInquiryItem } from '../../models/capacity-inquiry-item.interface';
-import { ISeriesItem } from '../../models/series-item.interface';
 import { IHourlySeriesItem } from '../../models/hourly-series-item.interface';
 import { ProductType } from '../../models/product-type';
-import { DashPanelComponent }  from '../dash-panel/dash-panel.component';
 import { CmxDialogComponent } from '@cemex/cmx-dialog-v7'; //updated from v4
 import { ICommercialManagement } from '../../models/commercial-management.interface';
 import { ICustomer } from '../../models/customer.interface';

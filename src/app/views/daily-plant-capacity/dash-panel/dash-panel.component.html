@@ -1,0 +1,14 @@
+<div class="dash-panel">
+    <div class="dash-panel__header">
+        <div class="dash-panel__header-icon" aria-hidden="true">
+          <span class="{{cmxIcon}}"></span>
+        </div>
+        <div class="dash-panel__header-title">{{title}}</div>
+    </div>
+    <div class="dash-panel__body">
+      <ng-content></ng-content>
+    </div>
+    <div class="dash-panel__cta">
+      <a *ngIf="linkUrl" [href]="linkUrl">{{urlText}}</a>
+    </div>
+</div>

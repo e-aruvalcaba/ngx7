@@ -402,28 +402,30 @@ export class CountrySettingsComponent extends PlantCapacityComponent {
     }
 
     this.warningMessage = "";
+
+    
   }//End on init
 
   ngAfterViewInit() {
-    this.dialogs.forEach(
-      (dialog, index) => {
-        switch (index) {
-          case 0:
-            this.windowDialog = dialog;
-            break;
-          case 1:
-            this.newWindowDialog = dialog;
-            break;
-          case 2:
-            this.dynamicWindowDialog = dialog;
-            break;
-          case 3:
-            this.nonWorkingDaysDialog = dialog;
-            break;
-        }
-      }
-    );
-  }
+    // this.dialogs.forEach(
+    //   (dialog, index) => {
+    //     switch (index) {
+    //       case 0:
+    //         this.windowDialog = dialog;
+    //         break;
+    //       case 1:
+    //         this.newWindowDialog = dialog;
+    //         break;
+    //       case 2:
+    //         this.dynamicWindowDialog = dialog;
+    //         break;
+    //       case 3:
+    //         this.nonWorkingDaysDialog = dialog;
+    //         break;
+    //     }
+    //   }
+    // ); //Error ExpressionChangedAfterItHasBeenChecked selectedid:undefined current selectedid:0 
+  } // end after view init
 
   // ============================================================================================================
 

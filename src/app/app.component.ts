@@ -111,12 +111,11 @@ export class AppComponent implements OnInit {
     injector: Injector
   ) {
 
-
     //FROM NEW BOILERPLATE ----------------------------------
     this.ts.setLanguage('en_US');
 
     this.ts.getSelectedLanguage().subscribe(language => {
-      debugger;
+      // debugger;
       this.selectedLanguage = language;
       console.log('selectedLanguage', this.selectedLanguage);
     });

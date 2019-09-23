@@ -14,7 +14,7 @@ import { Plant } from '../../models/plant';
 import { ISeriesItem } from '../../models/series-item.interface';
 import { IHourlySeriesItem } from '../../models/hourly-series-item.interface';
 import { ProductType } from '../../models/product-type';
-import { DashPanelComponent }  from '../dash-panel/dash-panel.component';
+import { DashPanelComponent }  from '../daily-plant-capacity/dash-panel/dash-panel.component';
 import { CmxDialogComponent } from '@cemex/cmx-dialog-v7'; //updated from v4
 import { IMatrixValue, IMatrixColumn, IMatrixRow } from '../../models/datamatrix.interface';
 import { IFleetCapacityReportItem } from '../../models/fleet-capacity-report-item.interface';

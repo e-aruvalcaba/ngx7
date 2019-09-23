@@ -1,11 +1,14 @@
 import { Component, Input } from '@angular/core';
 
+/**
+ * This components holds the home options
+ */
 @Component({
-  selector: 'app-dash-panel',
+  selector: 'dash-panel',
   templateUrl: './dash-panel.component.html',
-  styleUrls: ['./dash-panel.component.scss']
+  styleUrls: [ './dash-panel.component.scss' ]
 })
-export class DashPanelComponent{
+export class DashPanelComponent {
 
   @Input() title: string;
   @Input() public urlLink: string;

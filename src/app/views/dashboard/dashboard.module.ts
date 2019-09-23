@@ -3,12 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
+import { lazySharedConfig } from '.././../lazyshared.module';
 
 @NgModule({
   declarations: [DashboardComponent],
+  providers:[lazySharedConfig.providers],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    lazySharedConfig.imports
   ]
 })
 export class DashboardModule { }
