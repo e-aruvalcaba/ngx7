@@ -25,6 +25,8 @@ import * as moment from 'moment';
 import { Observable } from 'rxjs';
 import { ComboMonth } from '../../../models/Month';
 import { DatepickerInputComponent } from '@cemex/cmx-form-field-v4';
+import { inject } from '@angular/core/testing';
+import { Inject } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'holidays',
@@ -66,7 +68,22 @@ export class HolidaysComponent extends PlantCapacityComponent {
   @ViewChild('holidayDatePicker') private holidayDatePicker: DatepickerInputComponent;
   @ViewChild('affectionDatePicker') private affectionDatePicker: DatepickerInputComponent;
 
+  /**
+   * Creates an instance of HolidaysComponent
+   *
+   * @param Injecto
+   * @param formBuilder
+   */
+  constructor(
+    injector: Injector,
+    private formbuilder: FormBuilder
+  ) {
+    super(injector);
+  } // end constructor
+
+
   ngOnInit() {
+
     this.date = new Date();
     this.onCreateForm();
     this.session.menuApplicationItems.subscribe(
@@ -133,23 +150,12 @@ export class HolidaysComponent extends PlantCapacityComponent {
     this.api.stopWaiting();
   } // end function setup
 
-  /**
-   * Creates an instance of HolidaysComponent
-   *
-   * @param Injecto
-   * @param formBuilder
-   */
-  constructor(
-    injector: Injector,
-    private formbuilder: FormBuilder
-  ) {
-    super(injector);
-  } // end constructor
 
   /**
    * OnAddHoliday
    */
   public OnAddHoliday() {
+
     this.isEditingHoliday = false;
     let newHoliday = new Holiday();
 

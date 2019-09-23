@@ -106,7 +106,7 @@ export class PlantCapacityComponent {
    * To call on init in child components
    */
   protected onInit() {
-
+    debugger;
     console.log("PLANT CAPACITY INICIALIZADO");
     console.log(this.api);
     this.date = this.toDate = this.fromDate = new Date();

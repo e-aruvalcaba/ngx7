@@ -163,9 +163,9 @@
 
                                   <div fxFlex="100%" fxFill fxLayout="column">
                                       <cmx-form-field title="{{ translate('rccc.settings.holidays.holidayDate') }}" [error]="holidayDate.invalid">
-                                          <datepicker-input #holidayDatePicker [formControl]="holidayDate" data-id="holidayDatePicker" class="cmx-input__div--align stretch" (select)="PickHolidayDate($event)" [singleDateSelection]="true">
+                                          <datepicker-input #holidayDatePicker  [formControl]="holidayDate" data-id="holidayDatePicker" class="cmx-input__div--align stretch" (select)="PickHolidayDate($event)" [singleDateSelection]="true">
                                           </datepicker-input>
-                                          <error-message>{{ GetErrorMessage(holidayDate, 'rccc.settings.holidays.error.holidayDateRequired') }}</error-message>
+                                        <error-message>{{ GetErrorMessage(holidayDate, 'rccc.settings.holidays.error.holidayDateRequired') }}</error-message>
                                       </cmx-form-field>
                                   </div>
                               </div>
